@@ -1,0 +1,129 @@
+
+.quote{
+    text-align: center;
+    color: #fff;
+    &__text{
+        color: #fff;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 60px;
+        position: relative;
+        padding: 0 70px;
+        margin-bottom: 30px;
+        &:after, &:before{
+            content: '"';
+            display: block;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 110px;
+            font-weight: 700;
+            line-height: 60px;
+            position: absolute;
+            top: 0;
+        }
+        &:before{
+            left: 0;
+        }
+        &:after{
+            right: 0;
+        }
+    }
+    &__autor{
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        text-transform: uppercase;
+        &:before{
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #f39c12;
+            margin: 0 auto 20px;
+        }
+    }
+}
+.team-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__item{
+        width: 269px;
+        padding: 25px 15px 30px;
+        border-top: 4px solid transparent;
+        text-align: center;
+        p{
+            line-height: 28px;
+            color: #737373;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+        &:hover{
+            background-color: #f0f0f0;
+            border-color:#f39c12;
+            .team-list__job:after{
+                background-color: #e74c3c;
+            }
+        }
+    }
+    &__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 62px;
+        background-color: #e8f8f4;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 6px solid #f2f2f2;
+        position: relative;
+        margin: 0 auto 25px;
+        &:after{
+            position: absolute;
+            top: -7px;
+            left: 0;
+            display: block;
+            content: '';
+            width: 202px;
+            height: 202px;
+            border-radius: 50%;
+            border: 1px solid #e6e6e6;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+    &__job{
+        color: #999999;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        &:after{
+            content: '';
+            display: block;
+            margin: 10px auto 15px;
+            width: 20px;
+            height: 4px;
+            background-color: #cccccc;
+        }
+    }
+
+}
+.social{
+    &__link{
+        color: #999999;
+        font-size: 18px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 12px;
+        &:hover{
+            color: #f39c12;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
