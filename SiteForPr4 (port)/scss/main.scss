@@ -1,0 +1,19 @@
+
+body{
+	min-width: 320px;
+	font-family: "Open Sans", Arial, sans-serif;
+	line-height: 1;
+}
+
+.wrapper{
+	max-width: 1250px;
+	width: 100%;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+@import 'vars';
+@import 'fonts';
+@import 'libs';
+@import 'custom';
+
