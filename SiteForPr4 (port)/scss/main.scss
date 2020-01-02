@@ -3,10 +3,18 @@ body{
 	min-width: 320px;
 	font-family: "Open Sans", Arial, sans-serif;
 	line-height: 1;
+	background-color: #0b041ac7;
 }
 h2{
 	color: #fff;
 	font-size: 20px;
+	line-height: 20px;
+}
+.hr{
+	height: 1px;
+	background: #ffffff;
+	margin: 0 40px;
+	opacity: 0.2;
 }
 .wrapper{
 	max-width: 1250px;
