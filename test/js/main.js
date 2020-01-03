@@ -1,6 +1,5 @@
 
-$(document).ready(function(){
-    $('.popular-wrap__slider').slick({
+    settings = {
         arrows: true,
         appendArrows: $('.popular-wrap__slider-menu'),
         prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>',
@@ -9,16 +8,31 @@ $(document).ready(function(){
         dotsClass: 'popular-dots',
         appendDots: $('.popular-wrap__slider-dots'),
         slidesToShow: 3,
-        rows: 2,
+        slidesToScroll: 2,
         responsive: [
             {
                 breakpoint: 1120,
-                setting: {
+                settings: {
                     slidesToShow: 2,
-
-                }
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 780,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '15px',
+                },
             }
-        ],
-    });
+        ]
+    }
+
+    if($(window).width() > 779) {
+        settings['rows'] = '2'
+    };
+    
+    $('.popular-wrap__slider').slick(settings);
   
-})
