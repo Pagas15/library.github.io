@@ -1,0 +1,25 @@
+
+body{
+	min-width: 320px;
+	font-family: 'Gotham Pro Medium', Arial, sans-serif;
+	line-height: 1;
+	letter-spacing: 1px;
+}
+
+h2{
+	font-family: 'Gotham Pro Regular';
+	font-size: 31px;
+	line-height: 31px;
+	color: #fff;
+}
+
+.wrapper{
+	max-width: 1280px;
+	width: 100%;
+	padding: 0 64px;
+	margin: 0 auto;
+}
+
+@import 'fonts';
+@import 'custom';
+
