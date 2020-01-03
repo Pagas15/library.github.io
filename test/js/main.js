@@ -26,6 +26,16 @@
                     centerMode: true,
                     centerPadding: '15px',
                 },
+            },
+            {
+                breakpoint: 374,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0px',
+                },
             }
         ]
     }
