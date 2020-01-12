@@ -90,15 +90,11 @@
 /* project ================================================= */
 
 .project{
-    background: url(../img/bg.jpg) no-repeat center center;
-    background-size: cover;
+    background: rgb(19 , 19 , 23);
     
     display: flex;
     align-items: center;
     justify-content: center;
-    & .wrapper{
-        background: rgb(19 , 19 , 23);
-    }
     &-wrap{
         h3{
             padding-bottom: 40px;
@@ -111,7 +107,7 @@
         &__item{
             display: inline-flex;
             height:auto;
-            margin-bottom: 30px;
+            padding: 50px 0;
             &:hover{
                 .project-wrap__img{
                     transform: scale(1.2);
@@ -123,12 +119,11 @@
             }
         }
         &__img-box{
-            width: 480px;
-            
-            height: 210px;
+            max-width: 480px;
+            max-height: 320px;
             position: relative;
-            // overflow: hidden;
             transition: 0.5s;
+            flex: none;
             a{
                 display: block;
                 position: absolute;
@@ -141,7 +136,7 @@
         &__img{
             width: 100%;
             height: 100%;
-            transition: 10s;
+            transition: 2s;
             img{
                 width: 100%;
                 height: 100%;
@@ -169,7 +164,8 @@
 .btn-botton{
     position: absolute;
     bottom: 35px;
-    right: 50px;
+    left: 50%;
+    transform: translate(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,7 +178,9 @@
     transition: .5s;
 }
 
+@media (max-width:1199px){
 
+}
 @media (max-width:992px){
     .headbox{
         &-wrap{
@@ -228,10 +226,21 @@
     .project-wrap__img-box{
         margin: auto;
     }
-    .project-wrap{
-        text-align: center;
-        padding: 30px 0;
+    .project{
+        &-wrap{
+            text-align: center;
+            padding: 30px 0;
+            &__item{
+                &:hover{
+                    .project-wrap__img{
+                        transform: scale(1.002);
+                    }
+                    
+                }
+            }
+        }
     }
+    
 }
 
 @media(max-width: 589px){
