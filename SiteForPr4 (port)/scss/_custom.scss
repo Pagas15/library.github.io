@@ -97,13 +97,19 @@
     align-items: center;
     justify-content: center;
     & .wrapper{
-        background: #1F2229;
+        background: rgb(19 , 19 , 23);
     }
     &-wrap{
+        h3{
+            padding-bottom: 40px;
+        }
         padding: 90px 0;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         &__item{
-            background-color: rgba(83, 28, 145, 0.137);
-            display: flex;
+            display: inline-flex;
             height:auto;
             margin-bottom: 30px;
             &:hover{
