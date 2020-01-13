@@ -95,6 +95,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    & .wrapper{
+        background: rgb(32, 32, 39);
+    }
     &-wrap{
         h3{
             padding-bottom: 40px;
@@ -105,7 +108,7 @@
         flex-direction: column;
         align-items: center;
         &__item{
-            display: inline-flex;
+            display: flex;
             height:auto;
             padding: 50px 0;
             &:hover{
@@ -146,37 +149,27 @@
         &__text-box{
             padding: 20px 30px;
             width: 100%;
+            max-width: 380px;
             min-height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-
+        &__center-text{
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 17px;
+            line-height: 21px;
+        }
         &__date{
             margin-top: 20px;
             color: #ffffff;
             font-size: 17px;
-            line-height: 19px;
+            line-height: 21px;
         }
     }
 }
 
-.btn-botton{
-    position: absolute;
-    bottom: 35px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    box-shadow: 0 0 6px 1px #fff;
-    background-color: #fff;
-    color: #fff;
-    opacity: .2;
-    transition: .5s;
-}
 
 @media (max-width:1199px){
 
@@ -191,23 +184,7 @@
     }
 }
 
-@media(min-width: 767px){
-    .btn-botton{
-        background-color: transparent;
-        box-shadow: 0 0 6px 1px #fff;;
-        opacity: 1;
-    }
-}
 @media(max-width: 767px){
-    .btn-botton{
-        bottom: 20px;
-        right: 15px;
-        width: 35px;
-        height: 35px;
-        background-color: #fff;
-        opacity: .2;
-        transition: .5s;
-    }
     
     
     .headbox{
