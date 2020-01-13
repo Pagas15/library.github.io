@@ -1,43 +1,4 @@
 
-/* loading ================================================= */
-
-// .loading{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   height: 100vh;
-//   background: black;
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   bottom: 0;
-//   z-index: 999999;
-//   transition: 0.3s;
-//   &-hide{
-//     opacity: 0;
-//   }
-//   &__text{
-//     display: flex;
-//     color: white;
-//     font-size: 2rem;
-//     font-family: Lato, sans-serif;
-//     letter-spacing: 0.5rem;
-//     text-transform: uppercase;
-    
-//     span {
-//         animation: shrink 2s infinite;
-//     }
-//   }
-// }
-
-// @keyframes shrink {
-//     50% {
-//       transform: scale(0);
-//     }
-//   }
-/* headbox ================================================= */
-
 .headbox{
     background: url(../img/bghead.jpg) no-repeat center center;
     background-size: cover;
