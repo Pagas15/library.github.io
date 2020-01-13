@@ -112,8 +112,23 @@
             display: flex;
             height:auto;
             padding: 50px 0;
+            position: relative;
+            &:after{
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+                height: 2px;
+                width: 98%;
+                background: rgb(19 , 19 , 23);
+            }
             &:last-child{
                 margin-bottom: 0;
+                &:after{
+                    display: none;
+                }
             }
         }
         &__img-box{
@@ -165,6 +180,7 @@
     }
 }
 .btn-view{
+    margin-top: 10px;
     display: block;
     padding: 10px 5px;
     text-align: center;
@@ -182,16 +198,38 @@
 }
 
 
-@media (max-width:1199px){
-
-}
-@media (max-width:992px){
+@media(max-width:992px){
+    .project-wrap__text-box{
+        flex: 1;
+    }
     .headbox{
         &-wrap{
             h1{
                 font-size: 70px;
             }
         }
+    }
+    .project{
+        &-wrap{
+            &__item{
+                display: block;
+            }
+            &__img-box{
+                margin: auto;
+            }
+            &__text-box{
+                margin: auto;
+                width: 100%;
+                max-width: 528px;
+                text-align: center;
+            }
+        }
+    }
+    .btn-view{
+        margin: auto;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 374px;
     }
 }
 
@@ -206,24 +244,27 @@
             }
         }
     }
-
-    .project-wrap__item{
-        display: block;
-        margin-left: auto;
-    }
-    .project-wrap__img-box{
-        margin: auto;
-    }
     .project{
         &-wrap{
             text-align: center;
             padding: 30px 0;
+            h3{
+                padding-bottom: 0;
+            }
+            &__item{
+            display: block;
+            }
+            &__img-box{
+                margin: auto;
+            }
         }
     }
-    
 }
 
 @media(max-width: 589px){
+    .wrapper{
+        padding: 0 15px;
+    }
     .headbox{
         &-wrap{
             padding: 10px;
@@ -263,13 +304,24 @@
             }
         }
     }
-
-    .project-wrap__img-box{
-        width: 100%;
-    }
     .project-wrap{
+        h3{
+            font-size: 36px;
+        }
         h2{
             font-size: 16px;
+            line-height: 16px;
+        }
+        &__item{
+            padding: 25px 0;
+        }
+        &__img-box{
+            min-width: 0;
+            width: 100%;
+            padding: 0 5px;
+        }
+        &__center-text{
+            font-size: 14px;
             line-height: 16px;
         }
         &__date{
