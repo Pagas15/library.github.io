@@ -5,11 +5,11 @@
     background-size: cover;
 
     
+    height: 100vh;
     display: flex;
     align-items: center;
 
     &-wrap{
-        height: 100vh;
         max-width: 850px;
         margin: auto;
         padding: 20px;
