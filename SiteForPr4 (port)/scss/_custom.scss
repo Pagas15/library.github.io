@@ -3,8 +3,8 @@
     background-image: url(../img/bghead.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: 0px;
 
-    
     height: 100vh;
     display: flex;
     align-items: center;
@@ -35,7 +35,8 @@
 }
 
 /* nav ================================================= */
-.project{
+
+.footer{
     [tooltip]{
         &:before{
             display: none;
@@ -238,6 +239,45 @@ nav{
     }
 }
 
+/* services ================================================= */
+
+.services{
+    background-image: url(../img/bgservices.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        &__item{
+            margin-top: 30px;
+            border: 1px solid #ffffff;
+            width: 400px;
+            padding: 30px 20px;
+            background-color: rgba(248, 248, 248, 0.884);
+            h4{
+                text-align: center;
+                font-size: 20px;
+                color: #070707;
+            }
+            p{
+                margin-top: 20px;
+                color: #070707;
+                font-size: 17px;
+                line-height: 23px;
+            }
+        }
+    }
+    &-wrap{
+        padding: 40px 0;
+    }
+}
+
 /* Fotter ================================================= */
 
 .footer{
@@ -282,6 +322,17 @@ nav{
                 margin: auto;
                 width: 100%;
                 max-width: 528px;
+                text-align: center;
+            }
+        }
+    }
+        
+    .services{
+        &-list{
+            display: block;
+            &__item{
+                margin: auto;
+                margin-top: 30px;
                 text-align: center;
             }
         }
@@ -388,6 +439,13 @@ nav{
         &__date{
             font-size: 14px;
             line-height: 16px;
+        }
+    }
+    .services{
+        &-list{
+            &__item{
+                width: 100%;
+            }
         }
     }
 }
