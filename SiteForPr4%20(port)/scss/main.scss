@@ -1,0 +1,35 @@
+
+body{
+	min-width: 320px;
+	font-family: "Open Sans", Arial, sans-serif;
+	line-height: 1;
+	background-color: #0b041ac7;
+}
+h2{
+	color: rgb(0, 164, 185);
+	font-size: 24px;
+	line-height: 20px;
+}
+h3{
+	font-size: 50px;
+	text-align: center;
+	color: #eeeeee;
+}
+h4{
+	
+}
+.hr{
+	height: 1px;
+	background: #eeeeee;
+	margin: 0 40px;
+	opacity: 0.2;
+}
+.wrapper{
+	max-width: 1250px;
+	width: 100%;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+@import 'custom';
+
