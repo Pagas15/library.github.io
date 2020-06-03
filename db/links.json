@@ -1,0 +1,20 @@
+[
+  {
+    "link": "<a href='https://t.me/pagas15'><i class='fa fa-telegram' aria-hidden='true'></i></a>"
+  },
+  {
+    "link": "<a href='https://www.instagram.com/pagas15/'><i class='fa fa-instagram' aria-hidden='true'></i></a>"
+  },
+  {
+    "link": "<a href='https://www.facebook.com/anton.klymko'><i class='fa fa-facebook' aria-hidden='true'></i></a>"
+  },
+  {
+    "link": "<span tooltip='Кликните чтобы скопировать мою электронную почту в буфер обмена'><a class='email' href='mailto:ghbdtn1104202@gmail.com' target='_self' data-clipboard-text='ghbdtn1104202@gmail.com'><i class='fa fa-envelope' aria-hidden='true'></i></a></span>"
+  },
+  {
+    "link": "<a href='https://vk.com/anton_klymko.pagas15'><i class='fa fa-vk' aria-hidden='true'></i></a>"
+  },
+  {
+    "link": "<a href='https://www.linkedin.com/in/pagas15/'><i class='fa fa-linkedin' aria-hidden='true'></i></a>"
+  }
+]
