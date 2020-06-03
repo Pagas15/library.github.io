@@ -10,7 +10,7 @@
   {
     "dispate": "y",
     "image": "img/listImg/mini.png",
-    "link": "https://pagas15.github.io/SiteForPr2%20(mini)/",
+    "link": "https://test.lantos.monster/mini/",
     "name": "mini",
     "description": "Свёрстано для креативной студии, которая создаёт дизайны, бренды и сайты с посадкой на WordPress",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
@@ -18,7 +18,7 @@
   {
     "dispate": "y",
     "image": "img/listImg/portfolio-photograf.png",
-    "link": "https://pagas15.github.io/photograf-portfolio/",
+    "link": "https://test.lantos.monster/photograf-portfolio/",
     "name": "Photograf-portfolio",
     "description": "Сверстал сайт портфолио для фотографа, было особенно приятно верстать так как был приятный дизайн сайта",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
@@ -26,7 +26,7 @@
   {
     "dispate": "y",
     "image": "img/listImg/test-slider.png",
-    "link": "https://pagas15.github.io/test/",
+    "link": "https://test.lantos.monster/test-slider/",
     "name": "Test-slider",
     "description": "Сделал для заказчика адаптивный слайдер.",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider"
