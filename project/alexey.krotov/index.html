@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	
+	<meta charset="UTF-8">
+
+	<title>Alexey Krotov</title>
+
+	<meta name="viewport" content="width=device-width, instial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+  <section class="nav-bar-phone" id="nav-bar-phone">
+    <div class="nav-bar-phone__head-line-wrap">
+      <div class="nav-bar-phone__head-line">
+        <h1>Alexey Krotov</h1>
+        <div class="nav-bar-phone__head-btn" id="nav-bar-phone__head-btn">
+          <div class="nav-bar-phone__btn-line">
+            <div class="nav-bar-phone__btn-square"></div>
+            <div class="nav-bar-phone__btn-square act-none"></div>
+            <div class="nav-bar-phone__btn-square"></div>
+          </div>
+          <div class="nav-bar-phone__btn-line">
+            <div class="nav-bar-phone__btn-square act-none"></div>
+            <div class="nav-bar-phone__btn-square act-none"></div>
+            <div class="nav-bar-phone__btn-square act-none"></div>
+          </div>
+          <div class="nav-bar-phone__btn-line">
+            <div class="nav-bar-phone__btn-square"></div>
+            <div class="nav-bar-phone__btn-square act-none"></div>
+            <div class="nav-bar-phone__btn-square"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-bar-phone__list">
+      <nav>
+        <ul class="nav-bar-head__list">
+          <li class="nav-bar-head__item"><a href="javascript: void(0)" class="nav-bar-head__link" onclick="sections('.head-box')">ГЛАВНАЯ</a></li>
+          <li class="nav-bar-head__item"><a href="javascript: void(0)" class="nav-bar-head__link" onclick="sections('.work-box')" name-tabs="work-box">РАБОТЫ</a></li>
+          <li class="nav-bar-head__item"><a href="javascript: void(0)" class="nav-bar-head__link" onclick="sections('.biography')">БИОГРАФИЯ</a></li>
+          <li class="nav-bar-head__item"><a href="javascript: void(0)" class="nav-bar-head__link" onclick="contactsTab()">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="contacts-tab" id="contacts-tab">
+      <ul class="contacts__list">
+        <li class="contacts__item"><a class="contacts__link" href="https://www.instagram.com/krotov.alexey/" target="_blank"><div class="contacts__img contacts__img--inst"><img src="img/elements/instagram.svg" alt=""></div><span class="dis-phone-none">krotov.alexey</span></a></li>
+        <li class="contacts__item"><a class="contacts__link" href="tel:79164676802" target="_blank"><div class="contacts__img contacts__img--tel"><img src="img/elements/whatsapp.svg" alt=""></div><span class="dis-phone-none">+ 7 (916) 467 68 02</span></a></li>
+        <li class="contacts__item"><a class="contacts__link" href="mailto:krotov-artist@yandex.ru" target="_blank"><div class="contacts__img contacts__img--mail"><img src="img/elements/email.svg" alt=""></div><span class="dis-phone-none">krotov-artist@yandex.ru</span></a></li>
+      </ul>
+    </div>
+  </section>
+	<section class="head wrapper head-header head-box" id="head" tab-section>
+      <h1>Alexey Krotov</h1>
+			<div class="head-wrap">
+				<div class="head__header">
+					<div class="head__left">
+						<div class="head__text-center">
+							<p>Lorem Ipsum has been the 
+								industry's standard dummy text 
+								ever since the 1500s, when an 
+								unknown printer took a galley of 
+								type and scrambled it to make a 
+								type specimen book. It has 
+								survived not only five centuries, 
+								but also the leap into electronic 
+								typesetting, remaining essentially 
+								unchanged. It was popularised in 
+								the 1960s with the release of 
+								Letraset sheets containing Lorem 
+								Ipsum passages, and more 
+								recently with desktop publishing 
+								software like Aldus PageMaker 
+								including versions of Lorem 
+								Ipsum. Why do we use it?
+							</p>
+						</div>
+					</div>
+          <div class="head__right img"><div class="head__img"><img src="img/head/bg1.jpg" alt=""></div></div>
+          <p class="head__mask-name"><nobr>Alexey <span class="head__mask-name--k">K</span>rotov</nobr></p>
+				</div>
+			</div>
+	</section>
+	<section class="head wrapper head-botton head-box" tab-section>
+		<div class="head__botton">
+			<div class="head__left img"><div class="head__img"><img src="img/head/bg2.jpg" alt=""></div></div>
+			<div class="head__right">
+				<div class="nav-bar nav-bar-head">
+					<nav>
+						<ul class="nav-bar-head__list">
+              <li class="nav-bar-head__item"><a href="#head" class="nav-bar-head__link">ГЛАВНАЯ</a></li>
+              <li class="nav-bar-head__item"><a href="javascript: void(0)" class="nav-bar-head__link" name-tabs="work-box">РАБОТЫ</a></li>
+              <li class="nav-bar-head__item"><a href="#biography" class="nav-bar-head__link">БИОГРАФИЯ</a></li>
+              <li class="nav-bar-head__item"><a href="#contacts" class="nav-bar-head__link">КОНТАКТЫ</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="head__text-center bg-grey">
+					<p>
+						Lorem Ipsum has been the industry’s standard dummy text ever since the 
+						1500s, when an unknown printer took a galley of type and scrambled it to make 
+						a type specimen book. It has survived not only five centuries, but also the leap 
+						into electronic typesetting, remaining essentially unchanged. It was 
+						popularised in the 1960s with the release of Letraset sheets containing Lorem 
+						Ipsum passages, and more recently with desktop publishing software like 
+						Aldus PageMaker including versions of Lorem Ipsum. Why do we use it?
+					</p>
+				</div>
+			</div>
+		</div>
+
+  </section>
+	<section class="head wrapper head-botton work-box hideSection" tab-section="works" style="display: none;">
+    <div class="nav-bar nav-bar-head">
+      <nav>
+        <ul class="nav-bar-head__list nav-bar-head__list-tabs">
+          <li class="nav-bar-head__item"><a href="#" class="nav-bar-head__link nav-bar-head__link-blue"></a></li>
+          <li class="nav-bar-head__item"><a href="#head" class="nav-bar-head__link">ГЛАВНАЯ</a></li>
+          <li class="nav-bar-head__item"><a href="javascript: void(0)" class="nav-bar-head__link" name-tabs="work-box">РАБОТЫ</a></li>
+          <li class="nav-bar-head__item"><a href="#biography" class="nav-bar-head__link">БИОГРАФИЯ</a></li>
+          <li class="nav-bar-head__item"><a href="#contacts" class="nav-bar-head__link">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class='box-tab-cont'>
+      <div class='tab-cont tab_1' >
+        <div class="head__botton tab-img">
+          <div class="head__left img"><div class="head__img"><img src="img/tabs/tab_1/13.jpg" alt=""></div></div>
+          <div class="head__right">
+            <div class="head__text-center bg-grey">
+              <div>
+                <h2>
+                  Нормандия
+                </h2>
+                <p>
+                  Lorem Ipsum has been the industry’s 
+                  standard dummy text ever since the 
+                  1500s, when an unknown printer took 
+                  a galley of type and scrambled it to 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='tab-cont hide tab_2' >
+        <div class="head__botton tab-img">
+          <div class="head__left img"><div class="head__img"><img src="img/tabs/tab_2/2.jpg" alt=""></div></div>
+          <div class="head__right">
+            <div class="head__text-center bg-grey">
+              <div>
+                <h2>
+                  НАТЮРМОРТЫ
+                </h2>
+                <p>
+                  Lorem Ipsum has been the industry’s 
+                  standard dummy text ever since the 
+                  1500s, when an unknown printer took 
+                  a galley of type and scrambled it to 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='tab-cont hide tab_3'>
+        <div class="head__botton tab-img">
+          <div class="head__left img"><div class="head__img"><img src="img/tabs/tab_3/4.jpg" alt=""></div></div>
+          <div class="head__right">
+            <div class="head__text-center bg-grey">
+              <div>
+                <h2>
+                  КОРФУ
+                </h2>
+                <p>
+                  Lorem Ipsum has been the industry’s 
+                  standard dummy text ever since the 
+                  1500s, when an unknown printer took 
+                  a galley of type and scrambled it to 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='tab-cont hide tab_4'>
+        <div class="head__botton tab-img">
+          <div class="head__left img"><div class="head__img"><img src="img/tabs/tab_4/10.jpg" alt=""></div></div>
+          <div class="head__right">
+            <div class="head__text-center bg-grey">
+              <div>
+                <h2>
+                  ВЕНЕЦИЯ
+                </h2>
+                <p>
+                  Lorem Ipsum has been the industry’s 
+                  standard dummy text ever since the 
+                  1500s, when an unknown printer took 
+                  a galley of type and scrambled it to 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='tab-cont hide tab_5'>
+        <div class="head__botton tab-img">
+          <div class="head__left img"><div class="head__img"><img src="img/tabs/tab_5/1.jpg" alt=""></div></div>
+          <div class="head__right">
+            <div class="head__text-center bg-grey">
+              <div>
+                <h2>
+                  ИНОЕ
+                </h2>
+                <p>
+                  Lorem Ipsum has been the industry’s 
+                  standard dummy text ever since the 
+                  1500s, when an unknown printer took 
+                  a galley of type and scrambled it to 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='tab-cont hide tab_oll'>ВСЕ РАБОТЫ</div>
+    </div>
+
+	</section>
+	<section class="work wrapper work-box hideSection" tab-section="works" style="display: none;">
+			<div class="tab-wrap">
+        <div class="nav-tab-list tabs">
+          <ul class="nav-tab-list__row">
+              <li class="nav-tab-list__item active"><a href=".tab_1" class="nav-tab-list__link">НОРМАНДИЯ</a></li>
+              <li class="nav-tab-list__item"><a href=".tab_2" class="nav-tab-list__link">НАТЮРМОРТЫ</a></li>
+              <li class="nav-tab-list__item"><a href=".tab_3" class="nav-tab-list__link">КОРФУ</a></li>
+              <li class="nav-tab-list__item"><a href=".tab_4" class="nav-tab-list__link">ВЕНЕЦИЯ</a></li>
+              <li class="nav-tab-list__item"><a href=".tab_5" class="nav-tab-list__link">ИНОЕ</a></li>
+              <!-- <div class="nav-tab-list__oll-work nav-tab-list__item mob"><a href=".tab_oll" class="nav-tab-list__link">ВСЕ РАБОТЫ</a></div> -->
+
+          </ul>
+          <!-- <div class="nav-tab-list__item nav-tab-list__oll-work pc"><a href=".tab_oll" class="nav-tab-list__link">ВСЕ РАБОТЫ</a></div> -->
+        </div>
+      </div>
+      <div class='box-tab-cont box-tab-cont__img'>
+        <div class='tab-cont tab_1' >
+          <div class="nav-tab-img">
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/1.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/2.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_1/3.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/4.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/5.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/6.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/7.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_1/8.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_1/9.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_1/10.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/11.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/12.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/13.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_1/14.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class='tab-cont hide tab_2' >
+          <div class="nav-tab-img">
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_2/1.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_2/2.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_2/3.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class='tab-cont hide tab_3' >
+          <div class="nav-tab-img">
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_3/1.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_3/2.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_3/3.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_3/4.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_3/5.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_3/6.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_3/7.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_3/8.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_3/9.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class='tab-cont tab_4 hide'>
+          <div class="nav-tab-img">
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/1.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/2.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_4/3.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/4.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/5.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/6.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/7.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_4/8.jpg" alt=""></div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/9.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_4/10.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__long"><img class="nav-tab-img__img" src="img/tabs/tab_4/11.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class='tab-cont hide tab_5'>
+          <div class="nav-tab-img">
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_5/1.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_5/2.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_5/3.jpg" alt=""></div>
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_5/4.jpg" alt=""></div>
+            </div>
+            <div class="nav-tab-img__row nav-tab-img__short">
+              <div class="nav-tab-img__row-inside"><img class="nav-tab-img__img" src="img/tabs/tab_5/5.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class='tab-cont hide tab_oll'>ВСЕ РАБОТЫ</div> -->
+      </div>
+	</section>
+  <section class="interior wrapper hideSections" tab-section>
+    <h2>В ИНТЕРЬЕРЕ</h2>
+    <div class="interior-slider-wrap bg-grey">
+      <div class="interior-slider">
+        <div>
+          <div class="interior-slider__item">
+            <div class="interior-slider__images">
+              <div class="interior-slider__img interior-slider__img1"><img class="interior-slider__img-img" src="img/interior/forder1/name1.jpg" alt=""></div>
+              <div class="interior-slider__img-column">
+                <div class="interior-slider__img interior-slider__img2"><img class="interior-slider__img-img" src="img/interior/forder1/name2.jpg" alt=""></div>
+                <div class="interior-slider__img interior-slider__img2"><img class="interior-slider__img-img" src="img/interior/forder1/name3.jpg" alt=""></div>
+              </div>
+            </div>
+            <div class="interior-slider__box-text">
+              <div class="interior-slider__name-about">
+                <h3 class="interior-slider__name">НАЗВАНИЕ</h3>
+                <div class="interior-slider__info">
+                  <div class="interior-slider__size">23×54</div>
+                  <div class="interior-slider__materials">Масло, холст</div>
+                </div>
+              </div>
+              <p class="interior-slider__about">
+                Lorem Ipsum has been the industry’s 
+                standard dummy text ever since the 
+                1500s, when an unknown printer took 
+                a galley of type and scrambled it to 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="interior-slider__item">
+            <div class="interior-slider__images">
+              <div class="interior-slider__img interior-slider__img1"><img class="interior-slider__img-img" src="img/interior/forder2/name1.jpg" alt=""></div>
+              <div class="interior-slider__img-column">
+                <div class="interior-slider__img interior-slider__img2"><img class="interior-slider__img-img" src="img/interior/forder2/name2.jpg" alt=""></div>
+                <div class="interior-slider__img interior-slider__img2"><img class="interior-slider__img-img" src="img/interior/forder2/name3.jpg" alt=""></div>
+              </div>
+            </div>
+            <div class="interior-slider__box-text">
+              <div class="interior-slider__name-about">
+                <h3 class="interior-slider__name">НАЗВАНИЕ</h3>
+                <div class="interior-slider__info">
+                  <div class="interior-slider__size">23×54</div>
+                  <div class="interior-slider__materials">Масло, холст</div>
+                </div>
+              </div>
+              <p class="interior-slider__about">
+                Lorem Ipsum has been the industry’s 
+                standard dummy text ever since the 
+                1500s, when an unknown printer took 
+                a galley of type and scrambled it to 
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="interior-slider__item">
+            <div class="interior-slider__images">
+              <div class="interior-slider__img interior-slider__img1"><img class="interior-slider__img-img" src="img/interior/forder3/name1.jpg" alt=""></div>
+              <div class="interior-slider__img-column">
+                <div class="interior-slider__img interior-slider__img2"><img class="interior-slider__img-img" src="img/interior/forder3/name2.jpg" alt=""></div>
+                <div class="interior-slider__img interior-slider__img2"><img class="interior-slider__img-img" src="img/interior/forder3/name3.jpg" alt=""></div>
+              </div>
+            </div>
+            <div class="interior-slider__box-text">
+              <div class="interior-slider__name-about">
+                <h3 class="interior-slider__name">НАЗВАНИЕ</h3>
+                <div class="interior-slider__info">
+                  <div class="interior-slider__size">23×54</div>
+                  <div class="interior-slider__materials">Масло, холст</div>
+                </div>
+              </div>
+              <p class="interior-slider__about">
+                Lorem Ipsum has been the industry’s 
+                standard dummy text ever since the 
+                1500s, when an unknown printer took 
+                a galley of type and scrambled it to 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="interior-slider__arrows">
+      </div>
+    </div>
+  </section>
+  <section class="biography wrapper hideSections" id="biography" tab-section>
+    <h2>БИОГРАФИЯ</h2>
+    <div class="biography-wrap">
+      <div class="biography__block">
+        <div class="biography__left"><div class="biography__img"><img src="img/biography/img1.jpg" alt=""></div></div>
+        <div class="biography__right"><p class="biography__text">
+          Lorem Ipsum has been the industry’s standard dummy text ever since 
+          the 1500s, when an unknown printer took a galley of type and 
+          scrambled it to make a type specimen book. It has survived not only 
+          five centuries, but also the leap into electronic typesetting, remaining 
+          essentially unchanged. It was popularised in the 1960s with the 
+          release of Letraset sheets containing Lorem Ipsum passages, and 
+          more recently with desktop publishing software like Aldus PageMaker 
+          including versions of Lorem Ipsum. Why do we use it?
+        </p></div>
+      </div>
+      <div class="biography__block">
+        <div class="biography__left"><p class="biography__text">
+          Lorem Ipsum has been the industry’s standard dummy text ever since 
+          the 1500s, when an unknown printer took a galley of type and 
+          scrambled it to make a type specimen book. It has survived not only 
+          five centuries, but also the leap into electronic typesetting, remaining 
+          essentially unchanged. It was popularised in the 1960s with the 
+          release of Letraset sheets containing Lorem Ipsum passages, and 
+          more recently with desktop publishing software like Aldus PageMaker 
+          including versions of Lorem Ipsum. Why do we use it?
+        </p></div>
+        <div class="biography__right"><div class="biography__img"><img src="img/biography/img2.jpg" alt=""></div></div>
+      </div>
+      <div class="biography__block">
+        <div class="biography__left"><div class="biography__img"><img src="img/biography/img3.jpg" alt=""></div></div>
+        <div class="biography__right biography__centerr"><p class="biography__text">
+          Lorem Ipsum has been the industry’s standard dummy text ever since 
+          the 1500s, when an unknown printer took a galley of type and 
+          scrambled it to make a type specimen book. It has survived not only 
+          five centuries, but also the leap into electronic typesetting, remaining 
+          essentially unchanged. It was popularised in the 1960s with the 
+          release of Letraset sheets containing Lorem Ipsum passages, and 
+          more recently with desktop publishing software like Aldus PageMaker 
+          including versions of Lorem Ipsum. Why do we use it?
+        </p></div>
+      </div>
+    </div>
+
+  </section>
+  <section class="contacts wrapper" id="contacts">
+    <ul class="contacts__list">
+      <li class="contacts__item"><a class="contacts__link" href="https://www.instagram.com/krotov.alexey/" target="_blank"><span class="dis-phone-none">krotov.alexey</span><div class="contacts__img contacts__img--inst"><img src="img/elements/instagram.svg" alt=""></div></a></li>
+      <li class="contacts__item"><a class="contacts__link" href="tel:79164676802" target="_blank"><span class="dis-phone-none">+ 7 (916) 467 68 02</span><div class="contacts__img contacts__img--tel"><img src="img/elements/whatsapp.svg" alt=""></div></a></li>
+      <li class="contacts__item"><a class="contacts__link" href="mailto:krotov-artist@yandex.ru" target="_blank"><span class="dis-phone-none">krotov-artist@yandex.ru</span><div class="contacts__img contacts__img--mail"><img src="img/elements/email.svg" alt=""></div></a></li>
+    </ul>
+  </section>
+  <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+	<!-- <script type="text/javascript" src="js/scripts.min.js"></script> -->
+</body>
+</html>

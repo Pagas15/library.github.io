@@ -1,0 +1,32 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url-eot, $f-url-emb, $f-url-woff, $f-url-ttr){
+	@font-face{
+		font-family: $f-name;
+		src: url($f-url-eot);
+		src: url($f-url-eot) format('embedded-opentype'),
+		url($f-url-woff) format('woff'),
+		url($f-url-ttr) format('truetype');
+		font-weight: $f-weight;
+		font-style: $f-style;}}
+
+// Example
+@include font('Cinzel', normal, 700, '../fonts/Cinzel-Bold.eot', '../fonts/Cinzel-Bold.eot?#iefix', '../fonts/Cinzel-Bold.woff', '../fonts/Cinzel-Bold.ttf');
+@include font('Cinzel', normal, 400, '../fonts/Cinzel-Regular.eot', '../fonts/Cinzel-Regular.eot?#iefix', '../fonts/Cinzel-Regular.woff', '../fonts/Cinzel-Regular.ttf');
+@include font('MyriadPro', normal, 700, '../fonts/MyriadPro-BoldCond.eot', '../fonts/MyriadPro-BoldCond.eot?#iefix', '../fonts/MyriadPro-BoldCond.woff', '../fonts/MyriadPro-BoldCond.ttf');
+@include font('MyriadPro', normal, 400, '../fonts/MyriadPro-LightCond.eot', '../fonts/MyriadPro-LightCond.eot?#iefix', '../fonts/MyriadPro-LightCond.woff', '../fonts/MyriadPro-LightCond.ttf');
+@include font('MyriadPro', italic, 400, '../fonts/MyriadPro-LightIt.eot', '../fonts/MyriadPro-LightIt.eot?#iefix', '../fonts/MyriadPro-LightIt.woff', '../fonts/MyriadPro-LightIt.ttf');
+@include font('MyriadPro', normal, 300, '../fonts/MyriadPro-Light.eot', '../fonts/MyriadPro-Light.eot?#iefix', '../fonts/MyriadPro-Light.woff', '../fonts/MyriadPro-Light.ttf');
+@include font('MyriadPro', normal, 900, '../fonts/MyriadPro-Black.eot', '../fonts/MyriadPro-Black.eot?#iefix', '../fonts/MyriadPro-Black.woff', '../fonts/MyriadPro-Black.ttf');
+
+
