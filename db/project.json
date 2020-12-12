@@ -2,7 +2,7 @@
   {
     "dispate": "y",
     "image": "img/listImg/alexey.krotov.png",
-    "link": "https://test.lantos.monster/alexey.krotov/",
+    "link": "https://pagas15.github.io/project/alexey.krotov/",
     "name": "Alexey Krotov",
     "description": "Сделано сайт-портфолио для художника, с интересной механикой сайта",
     "technology": "В работе использовались: html5, css3, js, Cross browser, Slick slider"
@@ -10,7 +10,7 @@
   {
     "dispate": "y",
     "image": "img/listImg/mini.png",
-    "link": "https://test.lantos.monster/mini/",
+    "link": "https://pagas15.github.io/project/mini/",
     "name": "mini",
     "description": "Свёрстано для креативной студии, которая создаёт дизайны, бренды и сайты с посадкой на WordPress",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
@@ -18,7 +18,7 @@
   {
     "dispate": "y",
     "image": "img/listImg/portfolio-photograf.png",
-    "link": "https://test.lantos.monster/photograf-portfolio/",
+    "link": "https://pagas15.github.io/project/photograf-portfolio/",
     "name": "Photograf-portfolio",
     "description": "Сверстал сайт портфолио для фотографа, было особенно приятно верстать так как был приятный дизайн сайта",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
@@ -42,7 +42,7 @@
   {
     "dispate": "y",
     "image": "img/listImg/withbeartea.png",
-    "link": "https://test.lantos.monster/withbeartea/",
+    "link": "https://pagas15.github.io/project/withbeartea/",
     "name": "With Bear Tea",
     "description": "Сделано приветсвенное страницой с формой отправки на кнопке 'Скачать прайс'",
     "technology": "В работе использовались: html5, css3, js, Cross browser"
