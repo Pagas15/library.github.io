@@ -30,7 +30,7 @@
     "name": "With Bear Tea",
     "description": "Сделано приветсвенное страницой с формой отправки на кнопке 'Скачать прайс'",
     "technology": "В работе использовались: html5, css3, js, Cross browser"
-  }
+  },
   {
     "dispate": "y",
     "image": "img/listImg/usmile.png",
@@ -54,5 +54,5 @@
     "name": "Form",
     "description": "Сверстал рабочую форму отправки, которая появляется через определённый интервал времени (10 секунд) и отправляет данные на email",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, php"
-  },
+  }
 ]
