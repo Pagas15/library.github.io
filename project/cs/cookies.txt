@@ -1,9 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-champclub.net	TRUE	/	FALSE	1999999999	PHPSESSID	c2jh7arl3lnokm7fcfirfonj73
-champclub.net	TRUE	/	FALSE	1999999999	_language	5316d142ba6d522e1f7dbd1e80d76d644f9c95ab7081cf1da21599c490203c98a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_language%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D
-champclub.net	TRUE	/	FALSE	1999999999	userBrowser	9a106b67553c527f9f2bb13da98d46aed20748300e37d09c7d9f22cfe769d6d6a%3A2%3A%7Bi%3A0%3Bs%3A11%3A%22userBrowser%22%3Bi%3A1%3Bs%3A32%3A%22427b635f02fc9d1772990d0375ac6e12%22%3B%7D
-champclub.net	TRUE	/	FALSE	1999999999	_csrf	a305415aa307bb80b1e545b986108fdfa4b0a6f8785547999bb4e3d4d5b6c71ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22CluRivcu62LuCd3NqQdufm3EwQTrUgdw%22%3B%7D
-t.me	TRUE	/	FALSE	1999999999	stel_ssid	97e6875ec746e91483_15040257591496549636
-t.me	TRUE	/	FALSE	1999999999	samesite	None
-
