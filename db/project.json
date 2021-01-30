@@ -1,6 +1,14 @@
 [
   {
     "dispate": "y",
+    "image": "img/listImg/usmile.png",
+    "link": "https://usmileclinic.ru/",
+    "name": "USMILE",
+    "description": "Выполненная верстка и натяжка для стамалогической поликлиники",
+    "technology": "В работе использовались: html5, css3, js(+jquery), Cross browser, Slick slider"
+  },
+  {
+    "dispate": "y",
     "image": "img/listImg/alexey.krotov.png",
     "link": "https://pagas15.github.io/project/alexey.krotov/",
     "name": "Alexey Krotov",
