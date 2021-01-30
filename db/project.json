@@ -1,11 +1,11 @@
 [
   {
     "dispate": "y",
-    "image": "img/listImg/usmile.png",
-    "link": "https://usmileclinic.ru/",
-    "name": "USMILE",
-    "description": "Выполненная верстка и натяжка для стамалогической поликлиники",
-    "technology": "В работе использовались: html5, css3, js(+jquery), Cross browser, Slick slider"
+    "image": "img/listImg/portfolio-photograf.png",
+    "link": "https://pagas15.github.io/project/photograf-portfolio/",
+    "name": "Photograf-portfolio",
+    "description": "Сверстал сайт портфолио для фотографа, было особенно приятно верстать так как был приятный дизайн сайта",
+    "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
   },
   {
     "dispate": "y",
@@ -25,11 +25,19 @@
   },
   {
     "dispate": "y",
-    "image": "img/listImg/portfolio-photograf.png",
-    "link": "https://pagas15.github.io/project/photograf-portfolio/",
-    "name": "Photograf-portfolio",
-    "description": "Сверстал сайт портфолио для фотографа, было особенно приятно верстать так как был приятный дизайн сайта",
-    "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
+    "image": "img/listImg/withbeartea.png",
+    "link": "https://pagas15.github.io/project/withbeartea/",
+    "name": "With Bear Tea",
+    "description": "Сделано приветсвенное страницой с формой отправки на кнопке 'Скачать прайс'",
+    "technology": "В работе использовались: html5, css3, js, Cross browser"
+  }
+  {
+    "dispate": "y",
+    "image": "img/listImg/usmile.png",
+    "link": "https://usmileclinic.ru/",
+    "name": "USMILE",
+    "description": "Выполненная верстка и натяжка для стамалогической поликлиники",
+    "technology": "В работе использовались: html5, css3, js(+jquery), Cross browser, Slick slider"
   },
   {
     "dispate": "y",
@@ -47,12 +55,4 @@
     "description": "Сверстал рабочую форму отправки, которая появляется через определённый интервал времени (10 секунд) и отправляет данные на email",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, php"
   },
-  {
-    "dispate": "y",
-    "image": "img/listImg/withbeartea.png",
-    "link": "https://pagas15.github.io/project/withbeartea/",
-    "name": "With Bear Tea",
-    "description": "Сделано приветсвенное страницой с формой отправки на кнопке 'Скачать прайс'",
-    "technology": "В работе использовались: html5, css3, js, Cross browser"
-  }
 ]
