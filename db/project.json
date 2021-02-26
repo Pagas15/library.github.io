@@ -4,7 +4,7 @@
     "image": "img/content/listImg/portfolio-photograf.png",
     "link": "https://pagas15.github.io/project/photograf-portfolio/",
     "name": "Photograf-portfolio",
-    "description": "Сверстал сайт портфолио для фотографа, было особенно приятно верстать так как был приятный дизайн сайта",
+    "description": "Сделал сайт, для фотографа с минималистическим стилем для простого и быстрого ознакомления",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
   },
   {
@@ -12,7 +12,7 @@
     "image": "img/content/listImg/alexey.krotov.png",
     "link": "https://pagas15.github.io/project/alexey.krotov/",
     "name": "Alexey Krotov",
-    "description": "Сделано сайт-портфолио для художника, с интересной механикой сайта",
+    "description": "Сайт для фотографа, для ознакомления с ним и его работ в разных стилях",
     "technology": "В работе использовались: html5, css3, js, Cross browser, Slick slider"
   },
   {
@@ -28,7 +28,7 @@
     "image": "img/content/listImg/withbeartea.png",
     "link": "https://pagas15.github.io/project/withbeartea/",
     "name": "With Bear Tea",
-    "description": "Сделано приветсвенное страницой с формой отправки на кнопке 'Скачать прайс'",
+    "description": "Сделана приветственная страничка для ознакомления и формой отправки на кнопке 'Скачать прайс'",
     "technology": "В работе использовались: html5, css3, js, Cross browser"
   },
   {
@@ -36,7 +36,7 @@
     "image": "img/content/listImg/usmile.png",
     "link": "https://usmileclinic.ru/",
     "name": "USMILE",
-    "description": "Выполненная верстка и натяжка для стамалогической поликлиники",
+    "description": "Выполненная верстка и натяжка главной страницы для стоматологической поликлиники. В процессе выполнения был пересмотрен дизайн и переделанный частично функционал для большей привлекательности для клиентов",
     "technology": "В работе использовались: html5, css3, js(+jquery), Cross browser, Slick slider"
   },
   {
