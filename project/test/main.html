@@ -23,17 +23,20 @@
 
 	<meta name="viewport" content="width=device-width, instial-scale=1, shrink-to-fit=no">
 	<link media="all" rel="stylesheet" type="text/css" href="css/styles.min.css">
+	<link media="all" rel="stylesheet" type="text/css" href="css/media.min.css">
 
 </head>
 
 <body>
 	<header class="header">
-		<div class="header__bg">
-			<div class="header-img header-img--lapt">
-				<img 
-					src="./img/content/head-bg/laptop.png" 
-					alt=""
-					/>
+		<div class="header__bg-wrap">
+			<div class="header__bg">
+				<div class="header-img header-img--lapt">
+					<img 
+						src="./img/content/head-bg/laptop.png" 
+						alt=""
+						/>
+				</div>
 			</div>
 		</div>
 		<div class="header-wrap">
@@ -43,88 +46,99 @@
 					alt="Bitlook"
 					/>
 			</a>
-			<ul class="nav-bar">
-				<li class="nav-bar__item"><a href="#" class="nav-bar__btn active">Home</a></li>
-				<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Exchange</a></li>
-				<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Finance</a></li>
-				<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Markets</a></li>
-				<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Promotions</a></li>
-				<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Terms of service</a></li>
-			</ul>
-			<div class="option">
-				<div class="option__wrap-btn">
-					<button class="option__btn" id="langBtn">English</button>
-					<ul class="option__list" id="langList">
-						<li class="option__item">
-							<button class="option__opt-btn">English</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">Russia</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">UA</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">English</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">Russia</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">UA</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">English</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">Russia</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">UA</button>
-						</li>
+			<div class="header__right">
+				<div id="header__nav-bares" class="header__nav-bares">
+					<ul class="nav-bar" id="nav-bar">
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn active">Home</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Exchange</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Finance</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Markets</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Promotions</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Terms of service</a></li>
 					</ul>
+					<div class="option">
+						<div class="option__wrap-btn">
+							<button class="option__btn" id="langBtn">English</button>
+							<ul class="option__list" id="langList">
+								<li class="option__item">
+									<button class="option__opt-btn">English</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">Russia</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UA</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">English</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">Russia</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UA</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">English</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">Russia</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UA</button>
+								</li>
+							</ul>
+						</div>
+						<hr />
+						<div class="option__wrap-btn">
+							<button class="option__btn" id="valBtn">USD</button>
+							<ul class="option__list" id="valList">
+								<li class="option__item">
+									<button class="option__opt-btn">USD</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">EUR</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">RUB</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UAH</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">USD</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">EUR</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">RUB</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UAH</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="log-box">
+						<button 
+							class="btn-ro"
+							>
+							Join
+						</button>
+						<button 
+							class="btn-or"
+							>
+							Log In
+						</button>
+					</div>
 				</div>
-				<hr />
-				<div class="option__wrap-btn">
-					<button class="option__btn" id="valBtn">USD</button>
-					<ul class="option__list" id="valList">
-						<li class="option__item">
-							<button class="option__opt-btn">USD</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">EUR</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">RUB</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">UAH</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">USD</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">EUR</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">RUB</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn">UAH</button>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="log-box">
-				<button 
-					class="btn-ro"
-					>
-					Join
-				</button>
-				<button 
-					class="btn-or"
-					>
-					Log In
+				<button class="nav-btn" id="nav-btn">
+					<div class="nav-btn__lines">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</button>
 			</div>
 		</div>
