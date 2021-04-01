@@ -117,7 +117,7 @@
 					<div class="log-box">
 						<button 
 							class="btn-ro"
-							data-btnPop="resetBtn"
+							data-btnPop="joinBtn"
 							>
 							Join
 						</button>
@@ -634,10 +634,51 @@
 			</div>
 			<div class="block__row">
 				<a href="#" class="btn-link">Already registered?</a>
-				<a href="#" class="btn-link">Forgot password?</a>
+				<a href="#" class="btn-link" data-btnPop='resetBtn'>Forgot password?</a>
 			</div>
 			
 			
+		</div>
+		<div class="popUp__block" data-idBlock="resetPassPop">
+			<button class="popUp__exit"><i class="icon-sr icon-sr-exit"></i></button>
+			<p class="popUp__title">Change login password</p>
+			<p class="txt--red">24 ipsum is placeholder text commonly used in the graphic, print.</p>
+			<div class="mt30">
+				<form action="">
+					<div class="inputBox">
+						<input 
+							type="text"
+							placeholder="Old password"
+						/>
+					</div>
+					<div class="inputBox">
+						<input 
+							type="text"
+							placeholder="New password"
+						/>
+					</div>
+					<div class="inputBox">
+						<input 
+							type="text"
+							placeholder="Repeat new password"
+						/>
+					</div>
+					<div class="popUp__row">
+						<button 
+							class="btn-ro"
+							data-closepopup="true"
+						>
+							Chancel
+						</button>
+						<div class="inputSub">
+							<input 
+								type="submit" 
+								value="Submit"
+							/>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
