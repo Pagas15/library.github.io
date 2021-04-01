@@ -30,8 +30,6 @@
 <body>
 	<header class="header">
 		<div class="header__bg-wrap">
-			<div class="header__bg">
-			</div>
 		</div>
 		<div class="header-wrap">
 			<a href="#" class="logo">
@@ -117,11 +115,13 @@
 					<div class="log-box">
 						<button 
 							class="btn-ro"
+							data-btnPop="resetBtn"
 							>
 							Join
 						</button>
 						<button 
 							class="btn-or"
+							data-btnPop="logInBtn"
 							>
 							Log In
 						</button>
@@ -447,6 +447,295 @@
 			</div>
 		</div>
 	</footer>
+	<div class="popUp" id="popUp">
+		<div class="popUp__block" data-idBlock="joinPop">
+			<button class="popUp__exit"><i class="icon-sr icon-sr-exit"></i></button>
+			<p class="popUp__title">Registration</p>
+			<div class="popUp__tabs-wrap">
+				<div class="popUp__tabs-btns">
+					<button 
+						class="popUp__tab-btn active"
+						data-id="a1"
+					>
+						<i class="icon-sr icon-sr-mail"></i> По эл. почте
+					</button>
+					<button 
+						class="popUp__tab-btn"
+						data-id="a2"
+					>
+						<i class="icon-sr icon-sr-phone"></i> По номеру телефона
+					</button>
+				</div>
+				<div class="popUp__tabs">
+					<div class="popUp__tab active" data-idTab="a1">
+						<form action="">
+							<div class="inputBox">
+								<input 
+									type="email"
+									placeholder="Эл.почта"
+								/>
+							</div>
+							<div class="inputBox inputBox--row">
+								<div class="inputBox--row-i">
+									<input 
+										type="number" 
+										placeholder="Код из SMS" 
+									/>
+								</div>
+								<input type="button" value="Market" class="btn-rw">
+							</div>
+							<div class="inputBox inputBox--row">
+								<div class="inputBox--row-i">
+									<input 
+										type="password"
+										placeholder="Password" 
+										name="" 
+										id=""
+									/>
+									<span class="span-right"><i class="icon-sr icon-sr-eye"></i></span>
+								</div>
+							</div>
+							<div class="inputBox">
+								<input 
+									type="text"
+									placeholder="Реф. код (необязательно)"
+								/>
+							</div>
+							<label class="block__agree">
+								<input type="checkbox" name="">
+								<span class="checkbox"></span>
+								<p>Я прочитал и согласен с <a href="#" class="btn-link">Условиями Использования</a></p>
+							</label>
+							<div class="inputSub">
+								<input 
+									type="submit" 
+									value="Log in"
+								/>
+							</div>
+						</form>
+					</div>
+					<div class="popUp__tab" data-idTab="a2">
+						<form action="">
+							<div class="inputSelWrap">
+								<div class="select">
+									<a href="#" class="select__btns" data-value="usdt">
+										+380
+									</a>
+									<ul class="select__list">
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="usdt"
+											>
+												+7
+											</button>
+										</li>
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="btc"
+											>
+												+380
+											</button>
+										</li>
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="eth2"
+											>
+												+7
+											</button>
+										</li>
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="eth"
+											>
+												+380
+											</button>
+										</li>
+									</ul>
+								</div>
+								<input 
+									type="number" 
+									placeholder="00000000"
+								/>
+							</div>
+							<div class="inputBox inputBox--row">
+								<div class="inputBox--row-i">
+									<input 
+										type="number" 
+										placeholder="Код из SMS" 
+									/>
+								</div>
+								<input type="button" value="Market" class="btn-rw">
+							</div>
+							<div class="inputBox inputBox--row">
+								<div class="inputBox--row-i">
+									<input 
+										type="password"
+										placeholder="Password" 
+										name="" 
+										id=""
+									/>
+									<span class="span-right"><i class="icon-sr icon-sr-eye"></i></span>
+								</div>
+							</div>
+							<div class="inputBox">
+								<input 
+									type="text"
+									placeholder="Реф. код (необязательно)"
+								/>
+							</div>
+							<label class="block__agree">
+								<input type="checkbox" name="">
+								<span class="checkbox"></span>
+								<p>Я прочитал и согласен с <a href="#" class="btn-link">Условиями Использования</a></p>
+							</label>
+							<div class="inputSub">
+								<input 
+									type="submit" 
+									value="Log in"
+								/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="block__row-mid block__txt">
+				Already registered?&ensp; 
+				<button 
+					class="btn-link" 
+					data-btnPop='logInBtn'
+				> 
+					Login
+				</button>
+			</div>
+			
+			
+		</div>
+		<div class="popUp__block" data-idBlock="logInPop">
+			<button class="popUp__exit"><i class="icon-sr icon-sr-exit"></i></button>
+			<p class="popUp__title">Log in</p>
+			<div class="popUp__tabs-wrap">
+				<div class="popUp__tabs-btns">
+					<button 
+						class="popUp__tab-btn active"
+						data-id="a1"
+					>
+						<i class="icon-sr icon-sr-mail"></i> По эл. почте
+					</button>
+					<button 
+						class="popUp__tab-btn"
+						data-id="a2"
+					>
+						<i class="icon-sr icon-sr-phone"></i> По номеру телефона
+					</button>
+				</div>
+				<div class="popUp__tabs">
+					<div class="popUp__tab active" data-idTab="a1">
+						<form action="">
+							<div class="inputBox">
+								<input 
+									type="email"
+									placeholder="Эл.почта"
+								/>
+							</div>
+							<div class="inputBox inputBox--row">
+								<div class="inputBox--row-i">
+									<input 
+										type="password"
+										placeholder="Password" 
+										name="" 
+										id=""
+									/>
+									<span class="span-right"><i class="icon-sr icon-sr-eye"></i></span>
+								</div>
+							</div>
+							<div class="inputSub">
+								<input 
+									type="submit" 
+									value="Log in"
+								/>
+							</div>
+						</form>
+					</div>
+					<div class="popUp__tab" data-idTab="a2">
+						<form action="">
+							<div class="inputSelWrap">
+								<div class="select">
+									<a href="#" class="select__btns" data-value="usdt">
+										+380
+									</a>
+									<ul class="select__list">
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="usdt"
+											>
+												+7
+											</button>
+										</li>
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="btc"
+											>
+												+380
+											</button>
+										</li>
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="eth2"
+											>
+												+7
+											</button>
+										</li>
+										<li class="select__item">
+											<button 
+												class="select__btn" 
+												data-name="eth"
+											>
+												+380
+											</button>
+										</li>
+									</ul>
+								</div>
+								<input 
+									type="number" 
+									placeholder="00000000"
+								/>
+							</div>
+							<div class="inputBox inputBox--row">
+								<div class="inputBox--row-i">
+									<input 
+										type="password"
+										placeholder="Password" 
+										name="" 
+										id=""
+									/>
+									<span class="span-right"><i class="icon-sr icon-sr-eye"></i></span>
+								</div>
+							</div>
+							<div class="inputSub">
+								<input 
+									type="submit" 
+									value="Log in"
+								/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="block__row">
+				<a href="#" class="btn-link">Already registered?</a>
+				<a href="#" class="btn-link">Forgot password?</a>
+			</div>
+			
+			
+		</div>
+	</div>
 	<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
 	<script type="text/javascript" src="js/scripts.min.js"></script>
 </body>
