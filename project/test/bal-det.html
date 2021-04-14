@@ -30,8 +30,8 @@
 <body>
 	<header class="header">
 		<div class="header__bg-wrap">
-			<div class="header__bg">
-			</div>
+			<div class="header__bg"></div>
+		</div>
 		</div>
 		<div class="header-wrap">
 			<a href="#" class="logo">
@@ -51,12 +51,8 @@
 						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Terms of service</a></li>
 					</ul>
 					<div class="option">
-						<a href="#" class="btn-link">Assest</a>
-						<a href="#" class="btn-link">Orders</a>
-					</div>
-					<div class="option">
 						<div class="option__wrap-btn">
-							<button class="option__btn"	data-how="true" id="langBtn">English</button>
+							<button class="option__btn" id="langBtn">English</button>
 							<ul class="option__list" id="langList">
 								<li class="option__item">
 									<button class="option__opt-btn">English</button>
@@ -89,7 +85,7 @@
 						</div>
 						<hr />
 						<div class="option__wrap-btn">
-							<button class="option__btn"	data-how="true" id="valBtn">USD</button>
+							<button class="option__btn" id="valBtn">USD</button>
 							<ul class="option__list" id="valList">
 								<li class="option__item">
 									<button class="option__opt-btn">USD</button>
@@ -118,30 +114,18 @@
 							</ul>
 						</div>
 					</div>
-					<ul class="option__list" id="navAtc">
-						<li class="option__item">
-							<button class="option__opt-btn"><i class="icon-sr icon-sr-user"></i> Profile</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn"><i class="icon-sr icon-sr-def"></i> Security</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn"><i class="icon-sr icon-sr-indf"></i> Identification</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn"><i class="icon-sr icon-sr-ref"></i> Referral</button>
-						</li>
-						<li class="option__item">
-							<button class="option__opt-btn"><i class="icon-sr icon-sr-logout"></i> Log out</button>
-						</li>
-					</ul>
 					<div class="log-box">
-						<button
-							class="btn-link"
-							id="nav-btsaw"
-							data-how="true"
-						>
-						no***@gmail.com <i class="icon-sr icon-sr-arrDown"></i>
+						<button 
+							class="btn-ro"
+							data-btnPop="joinBtn"
+							>
+							Join
+						</button>
+						<button 
+							class="btn-or"
+							data-btnPop="logInBtn"
+							>
+							Log In
 						</button>
 					</div>
 				</div>
@@ -155,261 +139,258 @@
 			</div>
 		</div>
 	</header>
-	<section class="crypto">
+	<div class="header--img">
+		<div class="header__bg-wrap">
+			<div class="header-img header-img--defad">
+				<img 
+					src="./img/content/head-bg/defad.png" 
+					alt=""
+					/>
+			</div>
+		</div>
+	</div>
+	<section class="bal-det">
 		<div class="wrapper">
-			<div class="crypto__wrap block">
-				<div class="block__title-row">
-					<h3 class="block__title">Crypto Loans</h3>
-					<span class="block__dot">•</span>
-					<p class="block__sub-title">C2C Lending</p>
+			<div class="bal-det__block block">
+				<div class="bal-det__top-row">
+					<div class="bal-det__acc">
+						<div class="bal-det__image">
+							<!-- <img 
+								src="./img/content/head-slider/1.jpg" 
+								alt=""
+							/> -->
+						</div>
+						<div class="bal-det__info">
+							<div>
+								<p class="block__txt txt--yell">no***@gmail.com</p>
+								<p class="block__txt ">ID: 23032</p>
+							</div>
+							<div>
+								<p class="txt__min-text">Last login time 2021-02-23 14:50:53</p>
+								<p class="txt__min-text">IP: 2021-02-23</p>
+							</div>
+						</div>
+					</div>
+					<div class="bal-det__btns">
+						<button 
+							class="btn-or"
+						>
+							Deposit
+						</button>
+						<button 
+							class="btn-ro"
+						>
+							Withdraw
+						</button>
+					</div>
 				</div>
-				<div class="block__hr--top">
+				<div class="row-hr row-hr--mt">
+					<a href="#" class="btn-link">Switch to institutional account</a>
+				</div>
+				<div class="block__title-row mt15">
+					<h3 class="block__title">ETH 1 - ETH 2.0</h3>
+				</div>
+				<div class="vars__tabs vars__tabraw">
 					<div class="block__row">
-						<p class="title2">Loan Amount</p>
-						<a href="#" class="block__txt btn-link">All</a>
-					</div>
-					<div class="inputSelWrap">
-						<div class="select">
-							<a href="#" class="select__btns" data-value="usdt">
-								<img 
-									src="./img/icon/val/usdt.png" 
-									alt=""
-								/>
-								USDT
-							</a>
-							<ul class="select__list">
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="usdt"
-									>
-										<img 
-											src="./img/icon/val/usdt.png" 
-											alt=""
-										/>
-										USDT
-									</button>
-								</li>
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="btc"
-									>
-										<img 
-											src="./img/icon/val/btc.png" 
-											alt=""
-										/>
-										BTC
-									</button>
-								</li>
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="eth2"
-									>
-										<img 
-											src="./img/icon/val/eth2.png" 
-											alt=""
-										/>
-										ETH 2
-									</button>
-								</li>
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="eth"
-									>
-										<img 
-											src="./img/icon/val/eth.png" 
-											alt=""
-										/>
-										ETH
-									</button>
-								</li>
-							</ul>
-						</div>
-						<input 
-							type="number" 
-							placeholder="MIN Loan Amount 100 USDT"
-						/>
-					</div>
-					<div class="block__row">
-						<p class="title2">Collateral Amount</p>
-					</div>
-					<div class="inputSelWrap">
-						<div class="select">
-							<a href="#" class="select__btns" data-value="btc">
-								<img 
-									src="./img/icon/val/btc.png" 
-									alt=""
-								/>
-								BTC
-							</a>
-							<ul class="select__list">
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="usdt"
-									>
-										<img 
-											src="./img/icon/val/usdt.png" 
-											alt=""
-										/>
-										USDT
-									</button>
-								</li>
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="btc"
-									>
-										<img 
-											src="./img/icon/val/btc.png" 
-											alt=""
-										/>
-										BTC
-									</button>
-								</li>
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="eth2"
-									>
-										<img 
-											src="./img/icon/val/eth2.png" 
-											alt=""
-										/>
-										ETH 2
-									</button>
-								</li>
-								<li class="select__item">
-									<button 
-										class="select__btn" 
-										data-name="eth"
-									>
-										<img 
-											src="./img/icon/val/eth.png" 
-											alt=""
-										/>
-										ETH
-									</button>
-								</li>
-							</ul>
-						</div>
-						<input 
-							type="number" 
-							placeholder="Available 0 BTC"
-						/>
-					</div>
-					<div class="block__row">
-						<p class="title2">Loan Term</p>
-					</div>
-					<div class="select">
-						<a href="#" class="select__btns" data-value="30">30 days</a>
-						<ul class="select__list">
-							<li class="select__item"><button class="select__btn" data-name="90">90 days</button></li>
-							<li class="select__item"><button class="select__btn" data-name="60">60 days</button></li>
-							<li class="select__item"><button class="select__btn" data-name="30">30 days</button></li>
-							<li class="select__item"><button class="select__btn" data-name="14">14 days</button></li>
+						<ul class="vars__nav-tab">
+							<li class="vars__nav-item">
+								<button
+									class="vars__nav-btn"
+									data-id="a1"
+								>
+									Funding
+								</button>
+							</li>
+							<li class="vars__nav-item">
+								<button
+									class="vars__nav-btn"
+									data-id="a2"
+								>
+									Staking
+								</button>
+							</li>
+							<li class="vars__nav-item">
+								<button
+									class="vars__nav-btn"
+									data-id="a3"
+								>
+									Stocks
+								</button>
+							</li>
+							<li class="vars__nav-item">
+								<button
+									class="vars__nav-btn active"
+									data-id="a4"
+								>
+									Spot
+								</button>
+							</li>
 						</ul>
+						<a href="#" class="btn-link">More</a>
 					</div>
-					<ul class="crypto__info-list">
-						<li class="crypto__info-row">
-							<p class="crypto__txt">Daily Interest Rate</p>
-							<p class="crypto__txt">0.050000%</p>
+					<ul class="vars__block-tab">
+						<li class="vars__block-item" data-idtab="a1">
+							<table class="block__table">
+								<thead>
+									<tr>
+										<th>
+											Acoount balance:
+										</th>
+										<th>
+											Estimated Value:
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>0.002314131 BTC</td>
+										<td>0.00000000 BTC</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
 						</li>
-						<li class="crypto__info-row">
-							<p class="crypto__txt">Annual Interest Rate</p>
-							<p class="crypto__txt">18.25%</p>
+						<li class="vars__block-item" data-idtab="a2">
+							<table class="block__table">
+								<thead>
+									<tr>
+										<th>
+											Acoount balance:
+										</th>
+										<th>
+											Estimated Value:
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>0.002314131 BTC</td>
+										<td>0.00000000 BTC</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
 						</li>
-						<li class="crypto__info-row">
-							<p class="crypto__txt">Total Interest Rate</p>
-							<p class="crypto__txt">0.00000000 USDT</p>
+						<li class="vars__block-item" data-idtab="a3">
+							<table class="block__table">
+								<thead>
+									<tr>
+										<th>
+											Acoount balance:
+										</th>
+										<th>
+											Estimated Value:
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>0.002314131 BTC</td>
+										<td>0.00000000 BTC</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
 						</li>
-						<li class="crypto__info-row">
-							<p class="crypto__txt-pat">Repayment Amount</p>
-							<p class="crypto__txt-min">0.00000000 USDT</p>
+						<li class="vars__block-item active" data-idtab="a4">
+							<table class="block__table">
+								<thead>
+									<tr>
+										<th>
+											Acoount balance:
+										</th>
+										<th>
+											Estimated Value:
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>0.002314131 BTC</td>
+										<td>0.00000000 BTC</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
 						</li>
 					</ul>
-					<label id="agree" class="block__agree ">
-						<input type="checkbox" name="" id="agree">
-						<span class="checkbox"></span>
-						<p>I agree to the Loan <a href="#" class="btn-link">Service Agreement</a></p>
-					</label>
 				</div>
-				<button class="btn-or-big">Take a loan</button>
 			</div>
-		</div>
-	</section>
-	<section class="progress">
-		<div class="wrapper">
-			<div class="block">
-				<div class="block__title-row">
-					<h3 class="block__title">Maker in progress</h3>
-					<span class="block__dot">•</span>
-					<p class="block__sub-title">Collection in progress</p>
-					<span class="block__dot">•</span>
-					<p class="block__sub-title">Completed</p>
+			<div class="bal-det__block block mt30">
+				<div class="block__row">
+					<h3 class="block__title">Increase your account security</h3>
+					<a href="#" class="btn-link">More</a>
 				</div>
-				<div class="progress__table">
-					<table class="block__table">
-						<thead>
-							<tr>
-								<th>Time</th>
-								<th>Coin</th>
-								<th>Amount</th>
-								<th>Coin rate</th>
-								<th>Estimated benefit</th>
-								<th>Progress</th>
-								<th>Cycle</th>
-								<th>Executed Automatic maker</th>
-								<th>Status</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-					</table>
-					<div class="block__none-data">
-						<img 
-							src="./img/elem/no-data.png" 
-							alt=""
-						/>
+				<div class="bal-det__inc row-hr">
+					<div class="bal-det__inc-item">
+						<p>Enable 2FA <a href="#" class="btn-link">On</a></p>
+						<p>Identify Verification <a href="#" class="btn-link">Change</a></p>
+					</div>
+					<div class="bal-det__inc-item">
+						<p>Account password change <a href="#" class="btn-link">Change</a></p>
+						<p>Trading password <a href="#" class="btn-link">On</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	<footer class="footer">
-		<div class="footer__top">
-			<h3 class="footer__part">PARTNERS</h3>
-			<ul class="footer__part-list">
-				<li class="footer__part-item">
-					<img 
-						src="./img/content/partners/brave.png" 
-						alt=""
-					/>
-				</li>
-				<li class="footer__part-item">
-					<img 
-						src="./img/content/partners/TCC.png" 
-						alt=""
-					/>
-				</li>
-				<li class="footer__part-item">
-					<img 
-						src="./img/content/partners/kyber.png" 
-						alt=""
-					/>
-				</li>
-				<li class="footer__part-item">
-					<img 
-						src="./img/content/partners/poool.png" 
-						alt=""
-					/>
-				</li>
-			</ul>
-			<a href="#" class="btn-or" data-btnPop='joinBtn'>Register now</a>
+	<section class="acts mt30">
+		<div class="wrapper">
+			<div class="block">
+				<div class="block__row">
+					<h3 class="block__title">Activity</h3>
+					<a href="#" class="btn-link">Double account</a>
+				</div>
+				<ul class="acts__llist row-hr">
+					<li class="acts__litem">
+						<p class="title2">Web</p>
+						<div class="acts__text">
+							<p class="block__txt txt--gray">L’viv Ukraina</p>
+							<p class="block__txt txt--gray">2021-02-23 14:50:53</p>
+							<p class="block__txt txt--gray">IP: 2021-02-23</p>
+						</div>
+					</li>
+					<li class="acts__litem">
+						<p class="title2">Web</p>
+						<div class="acts__text">
+							<p class="block__txt txt--gray">L’viv Ukraina</p>
+							<p class="block__txt txt--gray">2021-02-23 14:50:53</p>
+							<p class="block__txt txt--gray">IP: 2021-02-23</p>
+						</div>
+					</li>
+					<li class="acts__litem">
+						<p class="title2">Web</p>
+						<div class="acts__text">
+							<p class="block__txt txt--gray">L’viv Ukraina</p>
+							<p class="block__txt txt--gray">2021-02-23 14:50:53</p>
+							<p class="block__txt txt--gray">IP: 2021-02-23</p>
+						</div>
+					</li>
+					<li class="acts__litem">
+						<p class="title2">Web</p>
+						<div class="acts__text">
+							<p class="block__txt txt--gray">L’viv Ukraina</p>
+							<p class="block__txt txt--gray">2021-02-23 14:50:53</p>
+							<p class="block__txt txt--gray">IP: 2021-02-23</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
+	</section>
+	<footer class="footer footer--nw">
 		<div class="footer__bot">
 			<div class="footer__line">
 				<div class="footer__row-links">

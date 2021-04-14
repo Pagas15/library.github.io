@@ -30,8 +30,8 @@
 <body>
 	<header class="header">
 		<div class="header__bg-wrap">
-			<div class="header__bg"></div>
-		</div>
+			<div class="header__bg">
+			</div>
 		</div>
 		<div class="header-wrap">
 			<a href="#" class="logo">
@@ -51,8 +51,12 @@
 						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Terms of service</a></li>
 					</ul>
 					<div class="option">
+						<a href="#" class="btn-link">Assest</a>
+						<a href="#" class="btn-link">Orders</a>
+					</div>
+					<div class="option">
 						<div class="option__wrap-btn">
-							<button class="option__btn" id="langBtn">English</button>
+							<button class="option__btn"	data-how="true" id="langBtn">English</button>
 							<ul class="option__list" id="langList">
 								<li class="option__item">
 									<button class="option__opt-btn">English</button>
@@ -85,7 +89,7 @@
 						</div>
 						<hr />
 						<div class="option__wrap-btn">
-							<button class="option__btn" id="valBtn">USD</button>
+							<button class="option__btn"	data-how="true" id="valBtn">USD</button>
 							<ul class="option__list" id="valList">
 								<li class="option__item">
 									<button class="option__opt-btn">USD</button>
@@ -114,18 +118,30 @@
 							</ul>
 						</div>
 					</div>
+					<ul class="option__list" id="navAtc">
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-user"></i> Profile</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-def"></i> Security</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-indf"></i> Identification</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-ref"></i> Referral</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-logout"></i> Log out</button>
+						</li>
+					</ul>
 					<div class="log-box">
-						<button 
-							class="btn-ro"
-							data-btnPop="joinBtn"
-							>
-							Join
-						</button>
-						<button 
-							class="btn-or"
-							data-btnPop="logInBtn"
-							>
-							Log In
+						<button
+							class="btn-link"
+							id="nav-btsaw"
+							data-how="true"
+						>
+						no***@gmail.com <i class="icon-sr icon-sr-arrDown"></i>
 						</button>
 					</div>
 				</div>

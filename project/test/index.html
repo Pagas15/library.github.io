@@ -639,6 +639,294 @@
 			</form>
 			<p class="txt__text">If you lose your password and security items, please contact our CS team.</p>
 		</div>
+		<div class="popUp__block" data-idBlock="transferPop">
+			<button class="popUp__exit"><i class="icon-sr icon-sr-exit"></i></button>
+			<p class="popUp__title">Transfer</p>
+			<form action="">
+				<div class="convert__convert">
+					<div class="convert__from">
+						<div class="convert__row">
+							<p class="txt__title">Direction</p>
+						</div>
+						<div class="inputBox">
+							<div class="select">
+								<a href="#" class="select__btns" data-value="Main Account">
+									Main Account
+								</a>
+								<ul class="select__list">
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="Stocks Account"
+										>
+										Stocks Account
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="Main Account"
+										>
+										Main Account
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="convert__mid"><i class="icon-sr icon-sr-arrDownLong"></i><i class="icon-sr icon-sr-arrDownLong"></i></div>
+					<div class="convert__to">
+						<div class="inputBox">
+							<div class="select">
+								<a href="#" class="select__btns" data-value="Stocks Account">
+									Stocks Account
+								</a>
+								<ul class="select__list">
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="Stocks Account"
+										>
+										Stocks Account
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="Main Account"
+										>
+										Main Account
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="convert__row">
+					<p class="txt__title">Amount</p>
+					<div class="txt__text txt--gray">Available: <span class="txt--yell">0</span></div>
+				</div>
+				<div class="inputBox inputBoxAm">
+					<div class="inputBoxAm__img"><img src="./img/icon/val/usdt.png" alt="usdt"></div>
+					<input 
+						type="number"
+						placeholder="USDT"
+					/>
+					<div class="inputBoxAm__btns">
+						<button class="inputBoxAm__btn inputBoxAm__btn-minus">-</button>
+						<button class="inputBoxAm__btn inputBoxAm__btn-plus">+</button>
+					</div>
+				</div>
+				<div class="inputSub">
+					<input 
+						type="submit" 
+						value="Confirm"
+					/>
+				</div>
+			</form>
+			<p class="txt__text"></p>
+		</div>
+		<div class="popUp__block" data-idBlock="depositPop">
+			<button class="popUp__exit"><i class="icon-sr icon-sr-exit"></i></button>
+			<p class="popUp__title">Deposit</p>
+			<form action="">
+				<div class="select">
+					<a href="#" class="select__btns" data-value="btc">
+						<img 
+							src="./img/icon/val/btc.png" 
+							alt=""
+						/>
+						BTC
+					</a>
+					<ul class="select__list">
+						<li class="select__item">
+							<button 
+								class="select__btn" 
+								data-name="bnb"
+							>
+								<img 
+									src="./img/icon/val/bnb.png" 
+									alt=""
+								/>
+								bnb
+							</button>
+						</li>
+						<li class="select__item">
+							<button 
+								class="select__btn" 
+								data-name="btc"
+							>
+								<img 
+									src="./img/icon/val/btc.png" 
+									alt=""
+								/>
+								btc
+							</button>
+						</li>
+						<li class="select__item">
+							<button 
+								class="select__btn" 
+								data-name="eth"
+							>
+								<img 
+									src="./img/icon/val/eth.png"
+									alt=""
+								/>
+								eth
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="convert__row">
+					<p class="txt__title">Wallet address:</p>
+				</div>
+				<div class="popUp__addredst">
+					<div class="popUp__addredst-row">
+						<div class="popUp__addredst-img">
+							<img 
+								src="./img/icon/val/btc.png"
+								alt=""
+							/>
+						</div>
+						<p class="popUp__addredst-name">BTC</p>
+						<p class="popUp__addredst-oll-name">Bitcoin Address</p>
+						<button 
+							class="popUp__addredst-copy"
+						>
+							<i class="icon-sr icon-sr-cop"></i>
+						</button>
+						<button class="popUp__addredst-qr">
+							<i class="icon-sr icon-sr-qa"></i>
+						</button>
+					</div>
+					<p class="popUp__addredst-addr">37unUVWHoLxyGaiBiMUgcSn33Jm@XSovwy</p>
+				</div>
+				
+				<p class="txt__title mt15">Tip:</p>
+				<ul class="txt__list ">
+					<li>
+						The address is not allowed to deposit other assets other than <span class="txt--yell">BTC</span>, and any other asset
+						deposit will not be recovered.
+					</li>
+					<li>
+						The deposit transaction will be automatic, and the <span class="txt--yell">BTC</span> transfer will need to be confirmed
+						by the entire <span class="txt--yell">BTC</span> network, and your <span class="txt--yell">BTC</span> will be automatically deposited to your account
+						after 2 confirmation.
+					</li>
+					<li>
+						This address is the only one you can use on your own, and you can do multiple recharging at
+						the same time.
+					</li>
+				</ul>
+				<div class="inputSub">
+					<input 
+						type="submit" 
+						value="Confirm"
+					/>
+				</div>
+			</form>
+			<p class="txt__text"></p>
+		</div>
+		<div class="popUp__block" data-idBlock="withdrawPop">
+			<button class="popUp__exit"><i class="icon-sr icon-sr-exit"></i></button>
+			<p class="popUp__title">Deposit</p>
+			<form action="">
+				<div class="select">
+					<a href="#" class="select__btns" data-value="btc">
+						<img 
+							src="./img/icon/val/btc.png" 
+							alt=""
+						/>
+						BTC
+					</a>
+					<ul class="select__list">
+						<li class="select__item">
+							<button 
+								class="select__btn" 
+								data-name="bnb"
+							>
+								<img 
+									src="./img/icon/val/bnb.png" 
+									alt=""
+								/>
+								bnb
+							</button>
+						</li>
+						<li class="select__item">
+							<button 
+								class="select__btn" 
+								data-name="btc"
+							>
+								<img 
+									src="./img/icon/val/btc.png" 
+									alt=""
+								/>
+								btc
+							</button>
+						</li>
+						<li class="select__item">
+							<button 
+								class="select__btn" 
+								data-name="eth"
+							>
+								<img 
+									src="./img/icon/val/eth.png"
+									alt=""
+								/>
+								eth
+							</button>
+						</li>
+					</ul>
+				</div>
+				<div class="convert__row">
+					<p class="txt__title">Amount</p>
+					<div class="txt__text txt--gray">Available: <span class="txt--yell">0</span></div>
+				</div>
+				<div class="inputBox inputBoxAm">
+					<input 
+						type="number"
+						placeholder="USDT"
+					/>
+					<div class="inputBoxAm__btns">
+						<button class="inputBoxAm__btn inputBoxAm__btn-minus">-</button>
+						<button class="inputBoxAm__btn inputBoxAm__btn-plus">+</button>
+					</div>
+				</div>
+				<div class="convert__row">
+					<p class="txt__title2 txt--gray">Free: 0.001 BTC</p>
+					<div class="txt__text txt--gray">Total amount: <span class="txt--yell">0 BTC</span></div>
+				</div>
+				<div class="convert__row">
+					<p class="txt__title">Wallet address:</p>
+				</div>
+				<div class="inputBox">
+					<input 
+						type="text"
+					/>
+				</div>
+				<p class="txt__title mt15">Kindly reminder:</p>
+				<ul class="txt__list ">
+					<li>
+						<span class="txt--red">Minimum withdrawal amount: 0.0007 BTC.</span> The maximum amount cannot exceed the amount available in your account.
+					</li>
+					<li>
+						Itis recommended that you complete KYC verification to improve account security. Users who have not competed KYC verification need to manually review to
+						protect your funds, which may result in long processing time.
+					</li>
+					<li>
+						Please make sure that your computer and browser are secure and your information is protected from being tampered or leaked.
+					</li>
+				</ul>
+				<div class="inputSub">
+					<input 
+						type="submit" 
+						value="Confirm"
+					/>
+				</div>
+			</form>
+			<p class="txt__text"></p>
+		</div>
 		<div class="popUp__block" data-idBlock="chanLogPop">
 			<button class="popUp__exit"><i class="icon-sr icon-sr-exit"></i></button>
 			<p class="popUp__title">Change login password</p>
