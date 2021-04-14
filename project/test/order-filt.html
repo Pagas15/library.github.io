@@ -33,6 +33,7 @@
 			<div class="header__bg">
 			</div>
 		</div>
+		<div class="header__bg-close"></div>
 		<div class="header-wrap">
 			<a href="#" class="logo">
 				<img 
@@ -157,63 +158,62 @@
 	</header>
 	<section class="progress mt40">
 		<div class="wrapper">
-			<h2 class="starking__title">Orders</h2>
+			<h2 class="block__title2">Orders</h2>
 			<div class="block">
 				<div class="block__title-row">
 					<h3 class="block__title">Order History</h3>
 					<span class="block__dot">•</span>
 					<p class="block__sub-title">Order history</p>
 				</div>
-				
-				<div class="progress__table">
-					<div class="filter">
-						<p class="title2">Filter</p>
-						<ul class="filter__list">
-							<li class="filter__item">
-								<p class="txt__min-text">Filter</p>
-								<div class="select select--date">
-									<a href="#" class="select__btns" data-value="All">
+				<div class="filter row-hr">
+					<p class="title2">Filter</p>
+					<ul class="filter__list">
+						<li class="filter__item">
+							<p class="txt__min-text">Filter</p>
+							<div class="select select--date">
+								<a href="#" class="select__btns" data-value="All">
+									All
+								</a>
+								<ul class="select__list">
+									<li class="select__item">
+										<button 
+											class="select__btn active" 
+											data-name="All"
+										>
 										All
-									</a>
-									<ul class="select__list">
-										<li class="select__item">
-											<button 
-												class="select__btn active" 
-												data-name="All"
-											>
-											All
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="limit"
-											>
-											Limit
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="market"
-											>
-											Market
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="stop"
-											>
-											Stop limit
-											</button>
-										</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-						<button class="btn-ro">Search</button>
-					</div>
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="limit"
+										>
+										Limit
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="market"
+										>
+										Market
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="stop"
+										>
+										Stop limit
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<button class="btn-ro">Search</button>
+				</div>
+				<div class="progress__table">
 					<table class="block__table">
 						<thead>
 							<tr>

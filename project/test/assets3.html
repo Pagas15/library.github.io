@@ -33,6 +33,7 @@
 			<div class="header__bg">
 			</div>
 		</div>
+		<div class="header__bg-close"></div>
 		<div class="header-wrap">
 			<a href="#" class="logo">
 				<img 
@@ -157,7 +158,7 @@
 	</header>
 	<section class="progress mt40">
 		<div class="wrapper">
-			<h2 class="starking__title">Assets</h2>
+			<h2 class="block__title2">Assets</h2>
 			<div class="block">
 				<div class="block__title-row">
 					<h3 class="block__title"></h3>
@@ -169,143 +170,142 @@
 					<span class="block__dot">•</span>
 					<p class="block__sub-title">Staking</p>
 				</div>
-				
-				<div class="progress__table">
-					<div class="balanceRw">
-						<div class="balanceRw__left">
-							<p class="txt__min-text">Acoount balance:</p>
-							<p class="balanceRw__text">0.002314131<span> BTC = $0</span></p>
-						</div>
-						<button class="btn-ro balanceRw__btn">Deposit & Withdrawal History</button>
+				<div class="balanceRw row-hr">
+					<div class="balanceRw__left">
+						<p class="txt__min-text">Acoount balance:</p>
+						<p class="balanceRw__text">0.002314131<span> BTC = $0</span></p>
 					</div>
-					<div class="filter row-bt mt15">
-						<ul class="filter__list">
-							<li class="filter__item">
-								<div class="select select--date">
-									<a href="#" class="select__btns" data-value="30">
+					<button class="btn-ro balanceRw__btn">Deposit & Withdrawal History</button>
+				</div>
+				<div class="filter row-bt mt15">
+					<ul class="filter__list">
+						<li class="filter__item">
+							<div class="select select--date">
+								<a href="#" class="select__btns" data-value="30">
+									1 Month
+								</a>
+								<ul class="select__list">
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="Today"
+										>
+										Today
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn  active" 
+											data-name="1m"
+										>
 										1 Month
-									</a>
-									<ul class="select__list">
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="Today"
-											>
-											Today
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn  active" 
-												data-name="1m"
-											>
-											1 Month
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="3m"
-											>
-											3 Months
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="1y"
-											>
-											1 Year
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="Customize"
-											>
-											Customize	
-											</button>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="filter__item">
-								<div class="select">
-									<a href="#" class="select__btns" data-value="all">
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="3m"
+										>
+										3 Months
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="1y"
+										>
+										1 Year
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="Customize"
+										>
+										Customize	
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="filter__item">
+							<div class="select">
+								<a href="#" class="select__btns" data-value="all">
+									All
+								</a>
+								<ul class="select__list">
+									<li class="select__item">
+										<button 
+											class="select__btn active" 
+											data-name="all"
+										>
 										All
-									</a>
-									<ul class="select__list">
-										<li class="select__item">
-											<button 
-												class="select__btn active" 
-												data-name="all"
-											>
-											All
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="1m"
-											>
-											1 Month
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="completed"
-											>
-											Completed
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="inProgress"
-											>
-											In progress
-											</button>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="filter__item">
-								<div class="select selNoAct">
-									<a href="#" class="select__btns" data-value="30">
-										Coin
-									</a>
-									<ul class="select__list">
-										<li class="select__item">
-											<button 
-												class="select__btn active" 
-												data-name="stocks"
-											>
-											Stocks
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="sPot"
-											>
-											SPot
-											</button>
-										</li>
-										<li class="select__item">
-											<button 
-												class="select__btn" 
-												data-name="stocks"
-											>
-											Stocks
-											</button>
-										</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-						<button class="btn-rw">Export to CVS</button>
-					</div>
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="1m"
+										>
+										1 Month
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="completed"
+										>
+										Completed
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="inProgress"
+										>
+										In progress
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="filter__item">
+							<div class="select selNoAct">
+								<a href="#" class="select__btns" data-value="30">
+									Coin
+								</a>
+								<ul class="select__list">
+									<li class="select__item">
+										<button 
+											class="select__btn active" 
+											data-name="stocks"
+										>
+										Stocks
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="sPot"
+										>
+										SPot
+										</button>
+									</li>
+									<li class="select__item">
+										<button 
+											class="select__btn" 
+											data-name="stocks"
+										>
+										Stocks
+										</button>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<button class="btn-rw">Export to CVS</button>
+				</div>
+				<div class="progress__table">
 					<table class="block__table">
 						<thead>
 							<tr>
