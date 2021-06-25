@@ -1,0 +1,3085 @@
+/* Minification failed. Returning unminified contents.
+(2952,37-38): run-time error JS1195: Expected expression: >
+(2964,10-11): run-time error JS1195: Expected expression: )
+(2965,5-6): run-time error JS1002: Syntax error: }
+(3072,1-2): run-time error JS1002: Syntax error: }
+(3071,5-15): run-time error JS1018: 'return' statement outside of function: return pag
+ */
+
+// create the root namespace and making sure we're not overwriting it
+var WEBS = WEBS || {};
+
+WEBS.FORM = (function ($) {
+    'use strict';
+    var _func = {}, pag = {};
+
+    _func.confirmOnPageExit = function (e) {
+        // If we haven't been passed the event get the window.event
+        e = e || window.event;
+
+        var message = "Any text will block the navigation and display a prompt";
+
+        // For IE6-8 and Firefox prior to version 4
+        if (e)
+            e.returnValue = message;
+
+        // For Chrome, Safari, IE8+ and Opera 12+
+        return message;
+    };
+
+    pag.ControlNavegar = function (bAviso) {
+        if (bAviso)
+            window.onbeforeunload = _func.confirmOnPageExit;
+        else
+            window.onbeforeunload = null;
+    };
+
+    pag.FeedbackEndEtiqueta = function (idBtn,etiqueta) {
+        $(idBtn).removeClass('loading')
+            .addClass('success')
+            .text(etiqueta);
+    };
+
+    pag.FeedbackError = function (idBtn) {
+        $(idBtn).removeAttr("disabled")
+            .removeClass("loading")
+            .removeClass("success");
+        if ($(idBtn).data("original"))
+            $(idBtn).text($(idBtn).data("original"));
+    };
+
+   
+    pag.DesactivarCambios = function (idBtn) {
+        this.ControlNavegar(false);
+    };
+
+    pag.ActivarCambios = function (idBtn) {
+        this.ControlNavegar(true);
+        $(idBtn).removeAttr("disabled")
+            .removeClass('success');
+        if ($(idBtn).data("original"))
+            $(idBtn).text($(idBtn).data("original"));
+    };
+
+    pag.StripHtml = function (value) {
+        var strippedText = $("<div/>").html(value).text();
+        return strippedText;
+    };
+
+    return pag;
+}(jQuery));
+;
+/* globals modules */
+var modules = window.modules || {};
+
+(function () {
+
+    'use strict';
+
+    modules.circularList = function (length) {
+        if (!length) {
+            throw new Error('A lenght must be provided in order to instantiate a circular list');
+        }
+        this.length = length;
+        this._innerList = [];
+    };
+
+    modules.circularList.prototype = {
+        flatToCircular: function (index) {
+            var modulus = index % this.length;
+            return modulus >= 0 ? modulus : this.length + modulus;
+        },
+        get: function (index) {
+            return this._innerList[this.flatToCircular(index)];
+        },
+        set: function (index, value) {
+            this._innerList[this.flatToCircular(index)] = value;
+            return this;
+        },
+        forEach: function (fn) {
+            for (var i = 0; i < this.length; i++) {
+                if (this._innerList[i]) {
+                    fn(i, this._innerList[i]);
+                }
+            }
+        }
+    };
+
+    modules.circularList.fromArray = function (array) {
+        var circularList = new modules.circularList(array.length);
+        circularList._innerList = array;
+        return circularList;
+    };
+
+})();
+;
+/*global $*/
+var listing = window.listing || {};
+(function () {
+    'use strict';
+
+    listing.customSlide = function (config) {
+        var PARENT_ELEMENT_SELECTOR = '.item-multimedia';
+        var SLIDE_LINK_SELECTOR = '.custom-slide-detail';
+        var SLIDE_BUTTON_SELECTOR = '.custom-slide-contact';
+        var PUSH_UP_SELECTOR = '.item-push-up';
+        var PICTURES_SELECTOR = '.item-multimedia-pictures';
+        var MULTIMEDIA_FEATURES_SELECTOR = '.item-multimedia-features';
+        var RIBBONS_SELECTOR = '.item-ribbon-container';
+        var BACK_PICTURE_SELECTOR = '.back-picture';
+        var ITEM_SELECTOR = '.item';
+        var ITEM_LINK_SELECTOR = '.item-link';
+        var JOIN_STRING = ', ';
+        var CSS_PROP = 'visibility';
+        var CSS_PROP_VALUES = {
+            visible: 'visible',
+            hidden: 'hidden'
+        };
+        var CLICK_EVENT = 'click';
+        var ATTRIBUTES = {
+            SRC: 'src',
+            HREF: 'href'
+        };
+
+        var elementsToHandleSelector = [
+			MULTIMEDIA_FEATURES_SELECTOR,
+			PICTURES_SELECTOR,
+			RIBBONS_SELECTOR,
+			PUSH_UP_SELECTOR
+        ].join(JOIN_STRING);
+
+        var self = {};
+
+        var getSlideDOMElements = function (imageGallery) {
+            var link = imageGallery.$mask.find(SLIDE_LINK_SELECTOR);
+            var button = imageGallery.$mask.find(SLIDE_BUTTON_SELECTOR);
+            return {
+                $button: button,
+                $link: link
+            };
+        };
+
+        var goToDetail = function (e) {
+            var $el = $(this);
+            e.preventDefault();
+            listing.xiti.markGalleryGoToDetailLink();
+            var $item = $el.parents(ITEM_SELECTOR);
+            window.location.href = $item.find(ITEM_LINK_SELECTOR).attr(ATTRIBUTES.HREF);
+        };
+
+        var bindSlideElements = function (imageGallery) {
+            var slide = getSlideDOMElements(imageGallery);
+            slide.$link.on(CLICK_EVENT, goToDetail);
+            slide.$button.on(CLICK_EVENT, listing.xiti.markGalleryContact);
+        };
+
+        var unBindSlideElements = function (imageGallery) {
+            var slide = getSlideDOMElements(imageGallery);
+            slide.$link.off(CLICK_EVENT, goToDetail);
+            slide.$button.off(CLICK_EVENT, listing.xiti.markGalleryContact);
+        };
+
+        var getElementsToHandle = function (imageGallery) {
+            return imageGallery.$mask.parents(PARENT_ELEMENT_SELECTOR)
+				.find(elementsToHandleSelector);
+        };
+
+        var hideGalleryElements = function (imageGallery) {
+            var elements = getElementsToHandle(imageGallery);
+            if (self.countMeIn) return;
+            elements.css(CSS_PROP, CSS_PROP_VALUES.hidden);
+        };
+
+        var showGalleryElements = function (imageGallery) {
+            var elements = getElementsToHandle(imageGallery);
+            if (self.countMeIn) return;
+            elements.css(CSS_PROP, CSS_PROP_VALUES.visible);
+        };
+
+        var outAction = function (imageGallery) {
+            showGalleryElements(imageGallery);
+            unBindSlideElements(imageGallery);
+            imageGallery.enableTapRecognition();
+        };
+
+        var inAction = function (imageGallery) {
+            hideGalleryElements(imageGallery, false);
+            bindSlideElements(imageGallery);
+            imageGallery.disableTapRecognition();
+        };
+
+        var creationAction = function (slide, index, slidesInfo) {
+            var background = $(slide).find(BACK_PICTURE_SELECTOR);
+            background.attr(ATTRIBUTES.SRC, slidesInfo.get(index + 1).src);
+        };
+
+        self = {
+            position: config.position,
+            countMeIn: config.countSlide,
+            innerHTML: config.innerHTML,
+            inAction: inAction,
+            outAction: outAction,
+            creationAction: creationAction
+        };
+        return self;
+    };
+
+    listing.customSlidesInfo = (function () {
+        var SLIDE_POSITION = 'end';
+        var SLIDE_TEMPLATE_SELECTOR = '#custom-slide-end';
+
+        return [
+			listing.customSlide({
+			    position: SLIDE_POSITION,
+			    countSlide: false,
+			    innerHTML: $(SLIDE_TEMPLATE_SELECTOR).html()
+			})
+        ];
+    })();
+})();;
+/* globals $, modules */
+var modules = window.modules || {};
+
+(function () {
+
+    'use strict';
+
+    var TAGS = {
+        IMG: 'img',
+        DIV: 'div'
+    };
+
+    var CLASESS = {
+        CUSTOM_CONTAINER: 'custom-container',
+        CUSTOM_SLIDE_BACKGROUND: 'background-slide',
+        CUSTOM_SLIDE_BACKGROUND_BLUR: 'background-slide-blur'
+    };
+
+    var BACKGROUND_ORIENTATION = {
+        HORIZONTAL: 'horizontal',
+        VERTICAL: 'vertical'
+    };
+
+    modules.galleryBuffer = function (config) {
+        this.config = config;
+        this.clonedInfo = [];
+        this.notAccountingIndexes = [];
+        this.cloneInfo();
+        this.mergeInfos();
+        this.slidesInfo = modules.circularList.fromArray(this.clonedInfo);
+        this.slides = new modules.circularList(this.clonedInfo.length);
+    };
+
+    modules.galleryBuffer.prototype = {
+
+        cloneInfo: function () {
+            var self = this;
+            self.config.imagesInfo.forEach(function (imageInfo) {
+                self.clonedInfo.push($.extend(true, {}, imageInfo));
+            });
+        },
+
+        getSlideInfo: function (position) {
+            return this.slidesInfo.get(position);
+        },
+
+        getSlideSemanticPosition: function (customInfo) {
+            var map = {
+                start: 0,
+                end: this.clonedInfo.length,
+                middle: Math.floor(this.clonedInfo.length / 2)
+            };
+            return map[customInfo.position];
+        },
+
+        getSlidePosition: function (customInfo) {
+            var position = this.getSlideSemanticPosition(customInfo);
+            if (position === undefined) {
+                position = customInfo.position;
+            }
+            return position;
+        },
+
+        addToNotAccountedIndexes: function (customInfo, position) {
+            if (customInfo.countMeIn) return;
+            this.notAccountingIndexes.push(position);
+        },
+
+        mergeCustomInfo: function (customInfo) {
+            var self = this;
+            var position = this.getSlidePosition(customInfo);
+            this.addToNotAccountedIndexes(customInfo, position);
+            self.clonedInfo.splice(position, 0, customInfo);
+        },
+
+        mergeInfos: function () {
+            var self = this;
+            if (!self.config.customSlides) return;
+            self.config.customSlides.forEach(function (customInfo) {
+                self.mergeCustomInfo(customInfo);
+            });
+        },
+
+        getPositionInSlides: function (position) {
+            var notCounted = 0;
+            var circularPos = this.slides.flatToCircular(position);
+            this.notAccountingIndexes.forEach(function (notAccountedIndex) {
+                if (circularPos <= notAccountedIndex) return;
+                notCounted++;
+            });
+            return circularPos - notCounted;
+        },
+
+        getLength: function () {
+            var self = this;
+            return self.config.customSlides ?
+			self.slides.length - self.notAccountingIndexes.length :
+			self.slides.length;
+        },
+
+        getSlidesLength: function () {
+            return this.slides.length;
+        },
+
+        get: function (index) {
+            var self = this;
+            self.loadImage(index);
+            return self.slides.get(index);
+        },
+
+        getInfo: function (index) {
+            return this.slidesInfo.get(index);
+        },
+
+        forEach: function (fn) {
+            return this.slides.forEach(fn);
+        },
+
+        loadLazy: function (index) {
+            var howMany = this.config.cacheSize ? this.config.cacheSize : 2;
+            var start = index <= 0 ? 0 : index - howMany;
+            var end = index + howMany;
+            for (var i = start; i <= end; i++) {
+                this.loadImage(i);
+            }
+        },
+
+        isNotOkToRetrieveSlideAt: function (index) {
+            return index < 0 || this.slides.get(index);
+        },
+
+        loadImage: function (index) {
+            if (this.isNotOkToRetrieveSlideAt(index)) return;
+
+            var info = this.slidesInfo.get(index);
+            this.createAndInsertImage(index, info);
+            this.createAndInsertBackgroundImage(index, info);
+            this.createAndInsertCustom(index, info);
+        },
+
+        createAndInsertBackgroundImage: function (index, info) {
+            if (!info.src || !this.config.imageOnBackground) return;
+
+            var orientation = BACKGROUND_ORIENTATION[info.aspectRatio];
+
+            if (orientation === 'vertical') {
+
+                var containerDiv = document.createElement(TAGS.DIV);
+
+                var verticalDiv = document.createElement(TAGS.DIV);
+                verticalDiv.className = CLASESS.CUSTOM_SLIDE_BACKGROUND + ' ' + orientation;
+                verticalDiv.style.backgroundImage = 'url(' + info.src + ')';
+
+                containerDiv.appendChild(verticalDiv);
+
+                var blurDiv = document.createElement(TAGS.DIV);
+                blurDiv.className = CLASESS.CUSTOM_SLIDE_BACKGROUND_BLUR;
+                blurDiv.style.backgroundImage = 'url(' + info.src + ')';
+
+                containerDiv.appendChild(blurDiv);
+
+                this.slides.set(index, containerDiv.innerHTML);
+            } else {
+                var horizontalDiv = document.createElement(TAGS.DIV);
+                horizontalDiv.className = CLASESS.CUSTOM_SLIDE_BACKGROUND + ' ' + orientation;
+                horizontalDiv.style.backgroundImage = 'url(' + info.src + ')';
+                this.slides.set(index, horizontalDiv);
+            }
+
+        },
+
+        createAndInsertImage: function (index, info) {
+            if (!info.src || this.config.imageOnBackground) return;
+
+            var img = document.createElement(TAGS.IMG);
+            this.configureImageHandlers(img);
+            img.src = info.src;
+            this.slides.set(index, img);
+        },
+
+        createAndInsertCustom: function (index, info) {
+            if (!info.innerHTML) return;
+
+            var customSlideContainer = document.createElement(TAGS.DIV);
+            customSlideContainer.className = CLASESS.CUSTOM_CONTAINER;
+            customSlideContainer.innerHTML = info.innerHTML;
+            customSlideContainer.customInfo = info;
+            customSlideContainer.ondragstart = function () {
+                return false;
+            };
+            info.creationAction(customSlideContainer, index, this.slidesInfo);
+            this.slides.set(index, customSlideContainer);
+        },
+
+        configureImageHandlers: function (img) {
+            if (this.config.imageOnBackground) return;
+            var self = this;
+            img.ondragstart = function () {
+                return false;
+            };
+            img.onload = function () {
+                self.config.imageOnLoadCallback(img);
+            };
+        }
+    };
+})();
+;
+/*global $, DocumentTouch, Hammer, modules*/
+
+var modules = window.modules || {};
+
+modules.imageGallery = (function () {
+    'use strict';
+
+    var DEFAULT_OPTIONS = {
+        allowKeypress: true,
+        customSlides: [],
+        showArrows: true,
+        imageOnBackground: false
+    };
+
+    var X_ORIGIN = 0;
+
+    var TAGS = {
+        DIV: 'div'
+    };
+
+    var DEFAULT_CLASSES = {
+        MASK: 'mask',
+        MASK_WRAPPER: 'mask-wrapper',
+        PLACEHOLDER: 'placeholder',
+        LEFT_ARROW: 'gallery-arrow left icon-arrow-left',
+        RIGHT_ARROW: 'gallery-arrow right icon-arrow-right',
+        VERTICAL: 'vertical',
+        HORIZONTAL: 'horizontal',
+        IS_CLICKABLE: 'is-clickable'
+    };
+
+    var VALUES = {
+        HIDDEN: 'hidden',
+        VISIBLE: 'visible'
+    };
+
+    var KEYS = {
+        LEFT: 37,
+        RIGHT: 39
+    };
+
+    var imageGallery = function (imagesInfo, options, classes) {
+        if (!imagesInfo) throw new Error('imageGallery needs a list of imageInfo objects');
+
+        this.checkAspectRatioFn = this.checkAspectRatio.bind(this);
+        this.resizeDebounceFn = modules.utils.debounce(this.resize, 500, this);
+        this.handleArrowsInputFn = this.handleArrowsInput.bind(this);
+        this.changeGalleryFn = this.changeGallery.bind(this);
+        this.panFn = this.pan.bind(this);
+        this.panEndFn = this.makeTheRightMoveBasedOnPan.bind(this);
+        this.tapFn = this.tap.bind(this);
+
+        this.active = false;
+        this.hasClickableArea = false;
+        this.currentPosition = 0;
+        this.completedRound = false;
+        this.options = $.extend({}, DEFAULT_OPTIONS, options, true);
+        this.classes = $.extend({}, DEFAULT_CLASSES, classes, true);
+        this.touchRatio = 0.05;
+        this.transitionTime = 400;
+
+        this.buffer = new modules.galleryBuffer({
+            imagesInfo: imagesInfo,
+            customSlides: options.customSlides,
+            cacheSize: options.cacheSize,
+            imageOnLoadCallback: this.checkAspectRatioFn,
+            imageOnBackground: this.options.imageOnBackground
+        });
+
+        modules.utils.makeObservable(this, [
+			'change',
+			'next',
+			'previous',
+			'resize',
+			'touchmove'
+        ]);
+    };
+
+    imageGallery.prototype = {
+
+        isTouchable: function () {
+            return !!(('ontouchstart' in window) ||
+			window.DocumentTouch && document instanceof DocumentTouch ||
+			navigator.msMaxTouchPoints);
+        },
+
+        createArrows: function (maskWrapper) {
+            if (this.isTouchable() || !this.options.showArrows) return;
+
+            this.leftArrow = document.createElement(TAGS.DIV);
+            this.rightArrow = document.createElement(TAGS.DIV);
+
+            this.leftArrow.className = this.classes.LEFT_ARROW;
+            this.rightArrow.className = this.classes.RIGHT_ARROW;
+            this.leftArrow.style.visibility = VALUES.HIDDEN;
+
+            maskWrapper.appendChild(this.rightArrow);
+            maskWrapper.insertBefore(this.leftArrow, maskWrapper.firstChild);
+        },
+
+        createPlaceHolders: function (mask) {
+            var placeholder;
+            var PLACEHOLDER_COUNT = 3;
+
+            for (var i = 0; i < PLACEHOLDER_COUNT; i++) {
+                placeholder = document.createElement(TAGS.DIV);
+                placeholder.className = this.classes.PLACEHOLDER;
+                mask.appendChild(placeholder);
+            }
+        },
+
+        createStructure: function () {
+            var maskWrapper = document.createElement(TAGS.DIV);
+            var mask = document.createElement(TAGS.DIV);
+
+            mask.className = this.classes.MASK;
+            maskWrapper.className = this.classes.MASK_WRAPPER;
+            this.createPlaceHolders(mask);
+            this.createArrows(maskWrapper);
+            maskWrapper.appendChild(mask);
+            this.$mask = $(mask);
+            return maskWrapper;
+        },
+
+        normallyInitializeInput: function () {
+            if (this.buffer.getSlidesLength() <= 1) return;
+            this.enableInputRecognition();
+        },
+
+        initializeInputForOneSlide: function () {
+            if (this.buffer.getSlidesLength() > 1) return;
+            this.enableTapRecognition();
+        },
+
+        initializeInput: function () {
+            this.normallyInitializeInput();
+            this.initializeInputForOneSlide();
+        },
+
+        render: function () {
+            var structure = this.createStructure();
+
+            this.initializeInput();
+            this.listenToKeys();
+            this.setEvents();
+            return structure;
+        },
+
+        moveToCurrentPosition: function () {
+            this.setTransition(-this.getImageXCoordinate(this.currentPosition), 0);
+        },
+
+        transientToCurrentPosition: function () {
+            this.setTransition(-this.getImageXCoordinate(this.currentPosition), this.transitionTime);
+        },
+
+        moveToArbitraryDelta: function (deltaX) {
+            this.setTransition(-this.getImageXCoordinate(this.currentPosition) + deltaX, 0);
+        },
+
+        isValidHorizontalMove: function (event) {
+            return Math.abs(event.deltaX) > Math.abs(event.deltaY);
+        },
+
+        panningIsEnoughToChangeSlide: function (event) {
+            return Math.abs(event.deltaX) > this.width * this.touchRatio;
+        },
+
+        isPanningForPrevious: function (event) {
+            return event.deltaX > X_ORIGIN;
+        },
+
+        isMandatoryToMove: function (event) {
+            return this.panningIsEnoughToChangeSlide(event) &&
+				this.isValidHorizontalMove(event);
+        },
+
+        stayInPlaceIsTheRightMove: function (event) {
+            if (this.isMandatoryToMove(event)) return;
+            return this.transientToCurrentPosition;
+        },
+
+        goNextIsTheRightMove: function (event) {
+            if (this.isPanningForPrevious(event)) return;
+            return this.next;
+        },
+
+        goPreviousIsTheRightMove: function () {
+            return this.previous;
+        },
+
+        decideTheRightMoveBasedOnPan: function (event) {
+            return this.stayInPlaceIsTheRightMove(event) ||
+			this.goNextIsTheRightMove(event) ||
+			this.goPreviousIsTheRightMove();
+        },
+
+        makeTheRightMoveBasedOnPan: function (event) {
+            var theRightMove = this.decideTheRightMoveBasedOnPan(event);
+            theRightMove.call(this);
+        },
+
+        pan: function (event) {
+            if (!this.isValidHorizontalMove(event)) return;
+            this.moveToArbitraryDelta(event.deltaX);
+            this.trigger('touchmove');
+        },
+
+        isNotSafeToTriggerTapHandler: function () {
+            var hasNoClickableArea = !this.hasClickableArea;
+            var hasNoFuctionToCall = !this.areaClickableFn;
+            var isNotAFunction = (typeof this.areaClickableFn !== 'function');
+            return hasNoClickableArea || hasNoFuctionToCall || isNotAFunction;
+        },
+
+        tap: function (event) {
+            if (this.isNotSafeToTriggerTapHandler()) return;
+            this.areaClickableFn(this.buffer.getSlideInfo(this.currentPosition), event);
+        },
+
+        enablePanRecognition: function () {
+            this.plugGesturesRecognition(this.$mask[0]);
+        },
+
+        disablePanRecognition: function () {
+            if (!this.gestureLayer) return;
+            this.gestureLayer.destroy();
+        },
+
+        enableTapRecognition: function () {
+            this.$mask.on('click', this.tapFn);
+        },
+
+        disableTapRecognition: function () {
+            this.$mask.off('click', this.tapFn);
+        },
+
+        enableListeningToKeys: function () {
+            this.listeningToKeys = true;
+        },
+
+        disableListeningToKeys: function () {
+            this.listeningToKeys = false;
+        },
+
+        enableInputRecognition: function () {
+            this.enableListeningToKeys();
+            this.enablePanRecognition();
+            this.enableTapRecognition();
+        },
+
+        disableInputRecognition: function () {
+            this.disableListeningToKeys();
+            this.disablePanRecognition();
+            this.disableTapRecognition();
+        },
+
+        plugGesturesRecognition: function (gestureTarget) {
+            var recognizers = [
+				[Hammer.Pan, {
+				    direction: Hammer.DIRECTION_HORIZONTAL
+				}]
+            ];
+            this.gestureLayer = new Hammer(gestureTarget, {
+                recognizers: recognizers
+            });
+
+            this.gestureLayer.on('panright panleft', this.panFn);
+            this.gestureLayer.on('panend', this.panEndFn);
+        },
+
+        leftArrowOrKeyUsed: function (event) {
+            var leftArrow = $(event.currentTarget).hasClass('left');
+            var isLeftKey = event.keyCode && event.keyCode === KEYS.LEFT;
+            if (isLeftKey || leftArrow) {
+                return this.previous;
+            }
+        },
+
+        rightArrowOrKeyUsed: function (event) {
+            var rightArrow = $(event.currentTarget).hasClass('right');
+            var isRightKey = event.keyCode && event.keyCode === KEYS.RIGHT;
+            if (isRightKey || rightArrow) {
+                return this.next;
+            }
+        },
+
+        decideMoveBasedonArrowsOrKeys: function (event) {
+            return this.leftArrowOrKeyUsed(event) || this.rightArrowOrKeyUsed(event);
+        },
+
+        handleArrowsInput: function (event) {
+            var action = this.decideMoveBasedonArrowsOrKeys(event);
+            if (!action) return;
+
+            action.call(this);
+        },
+
+        isNotSafeToResize: function (currentWidth) {
+            return this.width === currentWidth || currentWidth === 0;
+        },
+
+        resize: function () {
+            var self = this;
+            var maskNode = self.$mask[0];
+            var currentWidth = maskNode.parentNode.clientWidth;
+
+            if (this.isNotSafeToResize(currentWidth)) return;
+            self.updateSize();
+            maskNode.style.width = currentWidth + 'px';
+
+            self.buffer.forEach(function (flatIndex, element) {
+                self.checkAspectRatio(element);
+            });
+            self.goTo(self.currentPosition);
+
+        },
+
+        determineImageVisibility: function (position) {
+            if (this.buffer.getSlidesLength() === 1) {
+                return position !== 0 ? VALUES.HIDDEN : VALUES.VISIBLE;
+            } else {
+                return (this.completedRound || position !== -1) ? VALUES.VISIBLE : VALUES.HIDDEN;
+            }
+        },
+
+        displacePlaceholder: function (position, $placeholder) {
+            $placeholder.css('transform',
+				'translateX(' + this.getImageXCoordinate(position) + 'px)');
+        },
+
+        appendSlideToPlaceHolder: function (position, $placeholder) {
+            var slide = this.buffer.get(position);
+            if (!slide || (position !== 0 && this.buffer.getSlidesLength() === 1)) return;
+
+            if (!this.options.imageOnBackground) {
+                this.buffer.configureImageHandlers(slide);
+                slide.style.visibility = this.determineImageVisibility(position);
+            }
+            $placeholder.append(slide);
+        },
+
+        refreshPlaceholder: function (position, $placeholder) {
+            this.displacePlaceholder(position, $placeholder);
+            $placeholder.empty();
+            this.appendSlideToPlaceHolder(position, $placeholder);
+        },
+
+        getImageXCoordinate: function (position) {
+            return this.width * position;
+        },
+
+        refreshGalleryContent: function () {
+            var self = this;
+            self.$mask.children().each(function (index, element) {
+                self.refreshPlaceholder(self.currentPosition + (index - 1), $(element));
+            });
+        },
+
+        handleLeavingCustomSlide: function () {
+            var hasNoOutAction = !(this.previousSlide &&
+				this.previousSlide.customInfo &&
+				this.previousSlide.customInfo.outAction);
+            if (hasNoOutAction) return;
+
+            this.previousSlide.customInfo.outAction(this);
+        },
+
+        handleEnteringCustomSlide: function () {
+            var hasNoInAction = !(this.currentSlide.customInfo &&
+				this.currentSlide.customInfo.inAction);
+            if (hasNoInAction) return;
+
+            this.currentSlide.customInfo.inAction(this);
+        },
+
+        changeGallery: function () {
+            this.previousSlide = this.currentSlide;
+            this.currentSlide = this.buffer.get(this.currentPosition);
+            this.refreshGalleryContent();
+            this.trigger('change', this.getDataObject());
+            this.handleArrows();
+            this.handleLeavingCustomSlide();
+            this.handleEnteringCustomSlide();
+        },
+
+        checkForSlideShowEnd: function () {
+            var lastFlatPosition = this.buffer.getSlidesLength() - 1;
+            if (this.currentPosition !== lastFlatPosition) return;
+
+            this.completedRound = true;
+        },
+
+        updateSize: function () {
+            this.width = this.$mask[0].parentNode.clientWidth;
+            this.height = this.$mask[0].parentNode.clientHeight;
+        },
+
+        displaceViewPort: function (animate) {
+            if (animate) { this.transientToCurrentPosition(); return; }
+
+            this.moveToCurrentPosition();
+        },
+
+        goTo: function (position, animate) {
+            this.currentPosition = position;
+            this.checkForSlideShowEnd();
+            this.updateSize();
+            this.displaceViewPort(animate);
+            this.changeGallery();
+        },
+
+        next: function () {
+            this.goTo(this.currentPosition + 1, true);
+            this.trigger('next', this.getDataObject());
+        },
+
+        isNotSafeToDisplayPrevious: function () {
+            if (this.currentPosition !== 0 || this.completedRound) return false;
+            return true;
+        },
+
+        previous: function () {
+            if (this.isNotSafeToDisplayPrevious()) {
+                this.transientToCurrentPosition();
+                return;
+            }
+
+            this.goTo(this.currentPosition - 1, true);
+            this.trigger('previous', this.getDataObject());
+        },
+
+        checkAspectRatio: function (slide) {
+            if (this.options.imageOnBackground) return;
+
+            var $slide = $(slide);
+            var slideAspectRatio = $slide[0].naturalWidth / $slide[0].naturalHeight;
+            var isVertical = slideAspectRatio < 1;
+
+            $slide.removeClass(this.classes.VERTICAL)
+                .removeClass(this.classes.HORIZONTAL)
+                .addClass(isVertical ? this.classes.VERTICAL : this.classes.HORIZONTAL);
+        },
+
+        setTransition: function (distance, duration) {
+            var value = distance.toString();
+
+            this.$mask.css('transition-duration', (duration / 1000).toFixed(1) + 's');
+            this.$mask.css('transform', 'translate3d(' + value + 'px, 0,0)');
+        },
+
+        getDataObject: function () {
+            var currentImg = this.buffer.getSlideInfo(this.currentPosition);
+            var externalPos = this.getPosition();
+            var relativePos = this.getRelativePosition();
+            var countMeIn = typeof currentImg.countMeIn === 'undefined' || false;
+
+            return {
+                id: currentImg.multimediaId,
+                src: currentImg.fullPath,
+                position: externalPos,
+                relativePosition: relativePos,
+                total: this.buffer.getLength(),
+                orientation: currentImg.aspectRatioId === 1 ? this.classes.HORIZONTAL : this.classes.VERTICAL,
+                tag: currentImg.tag,
+                countMeIn: countMeIn
+            };
+        },
+
+        getPosition: function () {
+            return this.getRelativePosition() + 1;
+        },
+
+        getRelativePosition: function () {
+            return this.buffer.getPositionInSlides(this.currentPosition);
+        },
+
+        showArrows: function () {
+            if (this.isTouchable() || !this.options.showArrows) return;
+
+            this.leftArrow.style.visibility = VALUES.VISIBLE;
+            this.rightArrow.style.visibility = VALUES.VISIBLE;
+        },
+
+        hideArrows: function () {
+            if (this.isTouchable() || !this.options.showArrows) return;
+
+            this.leftArrow.style.visibility = VALUES.HIDDEN;
+            this.rightArrow.style.visibility = VALUES.HIDDEN;
+        },
+
+        handleArrows: function () {
+            if (this.isTouchable() || !this.options.showArrows) return;
+            if (this.buffer.getSlidesLength() === 1) { this.hideArrows(); return; }
+
+            this.leftArrow.style.visibility = this.isNotSafeToDisplayPrevious() ?
+				VALUES.HIDDEN : VALUES.VISIBLE;
+            this.rightArrow.style.visibility = VALUES.VISIBLE;
+        },
+
+        setEvents: function () {
+            this.manageEvents('addEventListener');
+        },
+
+        removeEvents: function () {
+            this.manageEvents('removeEventListener');
+        },
+
+        manageArrowClicks: function (action) {
+            var self = this;
+            modules.utils.pseudoToArray(self.$mask[0].parentNode.querySelectorAll('.gallery-arrow')).forEach(function ($arrow) {
+                $arrow[action]('click', self.handleArrowsInputFn, false);
+            }, false);
+        },
+
+        manageInputInDesktop: function (action) {
+            if (this.isTouchable() || !this.options.showArrows) return;
+            this.manageArrowClicks(action);
+        },
+
+        manageEvents: function (action) {
+            this.manageInputInDesktop(action);
+            window[action]('resize', this.resizeDebounceFn, false);
+        },
+
+        makeAreaClickable: function (callback) {
+            this.hasClickableArea = true;
+            this.areaClickableFn = callback;
+            this.$mask.parent().addClass(this.classes.IS_CLICKABLE);
+        },
+
+        listenToKeys: function () {
+            var self = this;
+            $(document).on('keydown', function (e) {
+                if (self.active && self.listeningToKeys) {
+                    self.handleArrowsInput(e);
+                }
+            });
+        }
+    };
+
+    return imageGallery;
+
+})();
+;
+var modules = window.modules || {};
+
+/**
+ * @class modules.lightbox
+ * @author Fernando Santamaria <fsantamaria@idealista.com>
+ *
+ * Provides a flexible lightbox layout
+ * Requires: modules.utils
+ */
+modules.lightbox = (function () {
+
+    'use strict';
+
+    /**
+	 * Contructor.
+	 * Set a module ID, apply config a set event manager interface.
+	 *
+	 * @constructor
+	 * @member modules.lightbox
+	 * @param {Object} config
+	 */
+    function lightbox(config) {
+        var self = this;
+
+        self.config = config || {};
+        self.id = modules.utils.generateUniqueId('lightbox');
+        self._onContentTouchstartFn = self._onContentTouchstart.bind(self);
+        self._onContentTouchMoveFn = self._onContentTouchmove.bind(self);
+
+        modules.utils.makeObservable(self, [
+			'openFirstTime',
+			'open',
+			'close'
+        ]);
+
+        /*
+        * Autosuscripción de eventos open y close para evitar el robo del evento click
+        * del ipad con los controles nativos del video.
+        */
+        self.on('open', function () {
+            $('video').prop('controls', false);
+            if (navigator.userAgent.match(/iPad;.*CPU.*OS 7_\d/i)) {
+                $('html').addClass('ipad ios7');
+            }
+        });
+
+        self.on('close', function () {
+            $('video').prop('controls', true);
+            $('html').removeClass('ipad ios7');
+        });
+    }
+
+
+    lightbox.prototype = {
+
+        /**
+		 * Lightbox DOM element
+		 *
+		 * @member modules.lightbox
+		 * @property {Object} $lightbox
+		 */
+        $lightbox: null,
+
+
+        /**
+		 * Close DOM element
+		 *
+		 * @member modules.lightbox
+		 * @property {Object} $close
+		 */
+        $close: null,
+
+
+        /**
+		 * Lightbox content wrapper DOM element
+		 *
+		 * @member modules.lightbox
+		 * @property {Object} $contentWrapper
+		 */
+        $contentWrapper: null,
+
+
+        /**
+		 * Lightbox header DOM element
+		 *
+		 * @member modules.lightbox
+		 * @property {Object} $header
+		 */
+        $header: null,
+
+
+        /**
+		 * Lightbox content DOM element
+		 *
+		 * @member modules.lightbox
+		 * @property {Object} $content
+		 */
+        $content: null,
+
+
+        /**
+		 * Lightbox ID
+		 *
+		 * @member modules.lightbox
+		 * @property {String} id
+		 */
+        id: null,
+
+
+
+        /**
+		 * Store scroll position on open event to restore it after close
+		 *
+		 * @member modules.lightbox
+		 * @property {Number} scroll
+		 */
+        scroll: 0,
+
+
+        /**
+		 * Flag to indicates if lightbox is visible or not
+		 *
+		 * @member modules.lightbox
+		 * @property {Boolean} isVisible
+		 */
+        isVisible: false,
+
+
+        /**
+		 * Flag to indicates if kightbox header is visible or not
+		 *
+		 * @member modules.lightbox
+		 * @property {Boolean} headerVisible
+		 */
+        headerVisible: true,
+
+
+        /**
+		 * Stored function (returned by bind method) to disable with removeEventListener
+		 *
+		 * @member modules.lightbox
+		 * @property {Function} wrapperManagerFn
+		 */
+        wrapperManagerFn: null,
+
+
+        /**
+		 * Stored function (returned by bind method) to disable with removeEventListener
+		 *
+		 * @member modules.lightbox
+		 * @property {Function} closeFromEventsFn
+		 */
+        closeFromEventsFn: null,
+
+
+        /**
+		 * Stored function (returned by bind method) to disable with removeEventListener
+		 *
+		 * @member modules.lightbox
+		 * @property {Function} closeFn
+		 */
+        closeFn: null,
+
+
+        /**
+		 * Stored function (returned by bind method) to manage lightbox header show/hide
+		 *
+		 * @member modules.lightbox
+		 * @property {Function} headerManagerFn
+		 */
+        headerManagerFn: null,
+
+
+        /**
+		 * Create lightbox layout. Also apply config if is necessary and set events
+		 *
+		 * @method createLayout
+		 * @member modules.lightbox
+		 */
+        createLayout: function () {
+            var self = this;
+
+            // Creates lightbox layer. It's the layer that marks the overlay and the container of all the information
+            self.$lightbox = document.createElement('div');
+            self.$lightbox.id = self.id;
+            self.$lightbox.className = 'lightbox d-none slide-in-bottom';
+
+            if (self.config.touchToolbar) {
+                self.$lightbox.className += ' toolbar-touchable';
+            }
+
+            if (self.config.role) {
+                self.$lightbox.setAttribute('data-role', self.config.role);
+            }
+
+            // Creates content wrapper layer. Wrapper header and content layers
+            self.$contentWrapper = document.createElement('div');
+            self.$contentWrapper.className = 'content-wrapper';
+
+            if (self.config.width && self.config.height) {
+                self.$contentWrapper.style.width = self.config.width;
+                self.$contentWrapper.style.height = self.config.height;
+            }
+
+            // Creates header (if exists) and content layers
+            if (self.config.header) {
+                self.$header = document.createElement('div');
+                self.$header.className = 'header';
+                self.$contentWrapper.appendChild(self.$header);
+            }
+
+            self.$content = document.createElement('div');
+            self.$content.className = 'content';
+
+            // Build layout and append it to body
+            self.$contentWrapper.appendChild(self.$content);
+            self.$lightbox.appendChild(self.$contentWrapper);
+
+            document.body.appendChild(self.$lightbox);
+        },
+
+
+        /**
+		 * Render all content build and asign to lightbox
+		 *
+		 * @method render
+		 * @member modules.lightbox
+		 */
+        render: function () {
+            var self = this;
+
+            // Store functions to add/remove listeners
+            self.closeFromEventsFn = self.closeFromEvents.bind(self);
+            self.closeFn = self.close.bind(self);
+            self.headerManagerFn = self.headerManager.bind(self);
+
+            // Append lightbox layout
+            self.createLayout();
+
+            // Set header, if exists
+            if (self.config.header) {
+                self.setHeader(self.config.header);
+                self.$close = self.$header.querySelector('.lightbox-close');
+            }
+
+            if (self.config.content) {
+                self.setContent(self.config.content);
+            }
+        },
+
+
+        /**
+		 * Set a lightbox header
+		 *
+		 * @method setHeader
+		 * @member modules.lightbox
+		 * @param {String} header
+		 */
+        setHeader: function (header) {
+            var self = this;
+
+            if (self.headerVisible) {
+                self.$header.className = 'header show';
+            } else {
+                self.$header.className = 'header hide';
+            }
+
+            self.$header.innerHTML = header;
+        },
+
+
+        /**
+		 * Set a lightbox content. It can be a String (from a template) or a NodeList (from DOM creation)
+		 *
+		 * @method setContent
+		 * @member modules.lightbox
+		 * @param {String|Nodelist} content
+		 */
+        setContent: function (content) {
+            var self = this;
+
+            if (Object.prototype.toString.call(content) === '[object String]') {
+                self.$content.innerHTML = content;
+
+            } else {
+                while (self.$content.firstChild) {
+                    self.$content.removeChild(self.$content.firstChild);
+                }
+
+                self.$content.appendChild(content);
+            }
+        },
+
+
+        /**
+		 * Open lightbox. If lightbox is not exists on DOM will be created.
+		 * Then perform other visual logic to show with a CSS3 animation (adding show class)
+		 *
+		 * @method open
+		 * @member modules.lightbox
+		 * @param {Function} callback
+		 */
+        open: function (callback) {
+            var self = this;
+
+            // Creates once at first time opened
+            if ($('#' + self.id).length === 0) {
+                self.render();
+                self.trigger('openFirstTime');
+            }
+
+            // Store scroll position to restore it on close. (Restore scroll position on mobile and tablet)
+            self.scroll = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
+
+            // Show lightbox
+            $(self.$lightbox).removeClass('d-none');
+            self.isVisible = true;
+
+            // Set timeout with animation time. !!Refactor with tansitionEnd
+            setTimeout(function () {
+                // Set class to body to manage hide/show layers
+                $(document.body).addClass('lightbox-opened');
+
+                $(self.$lightbox).addClass('show');
+
+                self.setEvents();
+                self.trigger('open');
+
+                if (callback && (callback instanceof Function)) {
+                    callback();
+                }
+            }, 250);
+        },
+
+
+        /**
+		 * Close lightbox
+		 * Then perform other visual logic to show with a CSS3 animation (removing show class)
+		 *
+		 * @method close
+		 * @member modules.lightbox
+		 * @param {Function} callback
+		 */
+        close: function (callback) {
+            var self = this;
+
+            // Hide lightbox and show elements in display: none
+            $(self.$lightbox).removeClass('show');
+            self.isVisible = false;
+
+            // Remove class to body to restore hidden layers
+            $(document.body).removeClass('lightbox-opened');
+
+            // Set scroll stored when lightbox was opened
+            window.scrollTo(0, self.scroll + 1);
+
+            // Set timeout witth animation time. !!Refactor with tansitionEnd
+            setTimeout(function () {
+                $(self.$lightbox).addClass('d-none');
+
+                if (callback && (callback instanceof Function)) {
+                    callback();
+                }
+
+                self.removeEvents();
+                self.trigger('close');
+            }, 250);
+        },
+
+
+        /**
+		 * Bind by keyup event or click to overlay. To close lightbox
+		 *
+		 * @method escKeyClose
+		 * @member modules.lightbox
+		 * @param {Object} e
+		 */
+        closeFromEvents: function (e) {
+            var self = this;
+
+            if ((e.keyCode && (e.keyCode === 27)) || (e.target === self.$lightbox)) {
+                self.close();
+            }
+        },
+
+
+        /**
+		 * Show/hide header
+		 *
+		 * @method headerManager
+		 * @member modules.lightbox
+		 */
+        headerManager: function () {
+            var self = this;
+
+            if (self.headerVisible) {
+                self.$header.className = 'header hide';
+                self.headerVisible = false;
+
+            } else {
+                self.$header.className = 'header show';
+                self.headerVisible = true;
+            }
+
+            self.$lightbox.removeEventListener('touchend', self.headerManagerFn);
+        },
+
+        showHeader: function () {
+
+            var self = this;
+            self.$header.className = 'header show';
+            self.headerVisible = true;
+
+        },
+
+        /**
+		 * Set a events to resize control and close de lightbox (by click or keyup)
+		 *
+		 * @method setEvents
+		 * @member modules.lightbox
+		 */
+        setEvents: function () {
+            var self = this;
+
+            // Resize event to manage show/hide elements under lightbox
+            window.addEventListener('resize', self.wrapperManagerFn, false);
+
+            // Close events (esc key and overlay)
+            document.addEventListener('keyup', self.closeFromEventsFn, false);
+            self.$lightbox.addEventListener('click', self.closeFromEventsFn, false);
+
+            // Close event on header close button
+            if (self.$header) {
+                self.$close.addEventListener('click', self.closeFn, false);
+            }
+
+            this.enableTouchableToolbarEvents();
+
+        },
+
+
+        /**
+		 * Set a events to resize control and close de lightbox (by click or keyup)
+		 *
+		 * @method removeEvents
+		 * @member modules.lightbox
+		 */
+        removeEvents: function () {
+            var self = this;
+
+            window.removeEventListener('resize', self.wrapperManagerFn, false);
+            document.removeEventListener('keyup', self.closeFromEventsFn, false);
+            self.$lightbox.removeEventListener('click', self.closeFromEventsFn, false);
+
+            if (self.$header) {
+                self.$close.removeEventListener('click', self.closeFn, false);
+                self.$lightbox.removeEventListener('touchend', self.headerManagerFn, false);
+            }
+        },
+
+        _headerManagerTimer: null,
+
+        _onContentTouchstart: function () {
+            var self = this;
+            self._headerManagerTimer = new Date().getTime();
+            self.$lightbox.addEventListener('touchend', self.headerManagerFn, false);
+        },
+
+        _onContentTouchmove: function () {
+            var self = this;
+
+            if (new Date().getTime() - self._headerManagerTimer > 60) {
+                self.$lightbox.removeEventListener('touchend', self.headerManagerFn);
+            }
+        },
+
+        enableTouchableToolbarEvents: function () {
+
+            var self = this;
+
+            if (self.$header && self.config.touchToolbar) {
+                self.$content.addEventListener('touchstart', self._onContentTouchstartFn, true);
+                self.$content.addEventListener('touchmove', self._onContentTouchMoveFn, false);
+            }
+
+        },
+
+        disableTouchableToolbarEvents: function () {
+            var self = this;
+            if (self.$header && self.config.touchToolbar) {
+                self.$content.removeEventListener('touchstart', self._onContentTouchstartFn, true);
+                self.$content.removeEventListener('touchmove', self._onContentTouchMoveFn, true);
+            }
+        }
+
+    };
+
+
+    return lightbox;
+
+})();
+;
+/*globals $*/
+var HABJS = HABJS || {};
+HABJS.FICHAPRO = HABJS.FICHAPRO || {};
+
+HABJS.FICHAPRO.COMMON = (function ($) {
+    'use strict';
+
+    var pag = {};
+    var _func = {};
+    var SELECTORS = {};
+
+    pag.setSelectors = function (selectors) {
+        SELECTORS = selectors;
+    };
+
+    pag.showMap = function (_map, opt) {
+
+        $(SELECTORS.SHOW_GALLERY_BTN).show();        
+        $(SELECTORS.SHOW_LIGHTBOX_BTN).hide();
+        $(SELECTORS.SHOW_MAP_BTN).hide();
+
+        $(SELECTORS.MODAL_MAP_CONTAINER).addClass('actived');
+        $(SELECTORS.MODAL_GALLERY_CONTAINER).removeClass('actived').empty();
+        $(SELECTORS.MODAL_GALLERY_INFO).hide();
+
+        if (!$(SELECTORS.MODAL_MAP_CONTAINER).find('img').length) {
+            setTimeout(function () {
+                HABJS.FICHAPRO.MAP.instantiateMap('modal-map', { map: _map, width: (opt.width || ''), height: (opt.height || '') });
+            }, 100);
+        }
+
+    };
+
+    pag.showGallery = function (_listingMultimediaGallery) {
+        $(SELECTORS.NO_PICTURES).remove();
+        $(SELECTORS.SHOW_GALLERY_BTN).hide();
+        $(SELECTORS.SHOW_LIGHTBOX_BTN).show();
+        $(SELECTORS.SHOW_MAP_BTN).show();
+
+        $(SELECTORS.MODAL_MAP_CONTAINER).removeClass('actived');
+        $(SELECTORS.MODAL_GALLERY_CONTAINER).addClass('actived');
+        $(SELECTORS.MODAL_GALLERY_INFO).show();
+
+        //HABJS.FICHAPRO.GALLERY.instantiateGallery($('.modal-gallery'), _listingMultimediaGallery);
+
+        
+    };
+    pag.showAllDescriptionText = function () {
+        $(SELECTORS.DES_SHOW_ALL).show();
+        $(SELECTORS.ELLIPSIS).remove();
+        $(this).remove();
+    };
+
+
+    return pag;
+}(jQuery));
+
+;
+/*globals $*/
+var HABJS = HABJS || {};
+HABJS.FICHAPRO = HABJS.FICHAPRO || {};
+
+HABJS.FICHAPRO.GALLERY = (function ($) {
+    'use strict';
+
+    var pag = {};
+    var positionModalGalleryPhoto = 0;
+    var $el = null;
+    var gallery = null;
+
+    pag.instantiateGallery = function (element, imagesInfo, callback) {
+        $(element).addClass('actived');
+
+        if (imagesInfo && imagesInfo.length > 0) {
+            $el = $(element);
+            gallery = new modules.imageGallery(imagesInfo, {
+                allowKeypress: true,
+                cacheSize: 1
+            }, {
+                'MOBILE': 'M',
+                'TABLET': 'M',
+                'DESKTOP': 'M'
+            });
+            
+            var initialData = gallery.getDataObject();                   
+          
+            $el.html(gallery.render());
+            $el.parent('.modal-gallery-container').find('[data-total]').html(initialData.total);
+
+            $el.parents('article.item').on('mouseenter', function () {
+                gallery.active = true;
+            }).on('mouseleave', function () {
+                gallery.active = false;
+            });
+
+            gallery.goTo(0, false, 'thumb');
+
+            var updatePositionMarker = function (data) {
+                positionModalGalleryPhoto = data.position - 1;
+                $el.parent('.modal-gallery-container').find('[data-count]').html(data.position + '/');
+            };
+
+            var gallerySlide = function (data) {
+                updatePositionMarker(data);
+                $(window).trigger('galleryUsed');
+            };
+
+            gallery.on('next previous', gallerySlide);
+            updatePositionMarker(initialData);
+
+            if (callback && typeof callback === 'function') {
+                callback();
+            }
+
+            return gallery;
+        }
+    };
+
+
+    pag.instantiateLightbox = function (imagesInfoLightbox, conf) {
+        
+        if (!imagesInfoLightbox || !imagesInfoLightbox.length) {
+            return;
+        }
+
+        imagesInfoLightbox.forEach(function (multimedia, item) {
+
+            //console.log(multimedia)
+
+            /*var params = multimedia.imageDataService.split(',');
+            
+            var sizeConfig = {
+                'MOBILE': 'L',
+                'TABLET': 'XL',
+                'DESKTOP': 'XXL'
+            };
+            var imageSizesConfiguration = {
+                'L': '600',
+                'M': '300',
+                'XL': '850',
+                'XXL': '1500'
+            };
+            var size = imageSizesConfiguration[sizeConfig[modules.utils.getMedia()]];
+
+            var url;
+
+            if (multimedia.aspectRatioId === 1) {
+                url = modules.Thumb.url(params[0], size, 0, params[3], params[4]);
+            } else {
+                url = modules.Thumb.url(params[0], 0, size, params[3], params[4]);
+            }
+
+            imagesInfoLightbox[item].src = url;*/
+
+
+
+        });
+
+        var galleryLightbox = null;
+        var lightbox = null;
+        var title = conf.title;
+        var titleLightbox = $('.modal[data-role="modal-scrollable"] .modal-header h2').text() || title;
+
+        if (galleryLightbox == null) {
+            galleryLightbox = new modules.imageGallery(imagesInfoLightbox, {
+                allowKeypress: true,
+                cacheSize: 1
+                //customSlides: detail.customSlides
+            }, {
+                LEFT_ARROW: 'gallery-arrow left icon-arrow-photo-left',
+                RIGHT_ARROW: 'gallery-arrow right icon-arrow-photo-right'
+            });
+        }
+
+        if (lightbox == null) {
+            lightbox = new modules.lightbox({
+                role: 'image-gallery',
+                header: '<span id="image-gallery-tag" class="main-title">' + titleLightbox + '</span><span id="image-gallery-pager" class="image-gallery-pager"></span><span class="lightbox-close icon-close" data-xiti-page=""></span>',
+                content: galleryLightbox.render(),
+                touchToolbar: true
+            });
+        }
+
+        galleryLightbox.on('next previous', function (data) {
+            positionModalGalleryPhoto = data.position - 1;
+        });
+
+        lightbox.open(function () {
+            galleryLightbox.goTo(positionModalGalleryPhoto, false, 'thumb');
+        });
+
+        galleryLightbox.on('change', function (data) {
+            $('.image-gallery-pager').text(data.position + ' / ' + data.total);
+        });
+
+        lightbox.on('open', function () {
+            $('.modal[data-role="modal-scrollable"], .modal-fader').hide();
+            galleryLightbox.goTo(positionModalGalleryPhoto, false, 'thumb');
+        });
+
+        lightbox.on('close', function () {
+            $('.modal[data-role="modal-scrollable"], .modal-fader').show();
+            $el.parent('.modal-gallery-container').find('[data-count]').html((positionModalGalleryPhoto + 1) + '/');
+            gallery.goTo(positionModalGalleryPhoto, true, 'thumb');
+        });
+        
+    }
+
+
+    pag.galleryBoost = function (gallery) {
+        if (gallery && gallery.length > 0) {
+            var mask = gallery.find('.mask');
+            if (mask) {
+                mask.addClass('galleryBoost');
+            }
+        }
+    };
+
+    return pag;
+}(jQuery));
+
+;
+/*globals $*/
+var HABJS = HABJS || {};
+HABJS.FICHAPRO = HABJS.FICHAPRO || {};
+
+HABJS.FICHAPRO.MAP = (function ($) {
+    'use strict';
+
+    var map;
+    var pag = {};
+    var _func = {};
+    var _apicommon = '/habitania/api/Common/';
+
+    pag.instantiateMap = function (element, opt) {
+
+        if (config == null) {
+            throw Error('config is not defined');
+        }
+
+        var googlekey = config.googleKey;
+        var X = opt.map.coordX;
+        var Y = opt.map.coordY;
+        var zoom = opt.zoom || 17;        
+        var width = opt.width || $('.modal .modal-content').width();
+        var height = opt.height || $('#' + element).height();
+        var mapUrl = "/maps/api/staticmap?" + googlekey + "center=";
+
+        mapUrl = mapUrl + encodeURIComponent(X + ',' + Y);
+        mapUrl = mapUrl + '&zoom=' + zoom + '&size=' + width + 'x' + height + '&maptype=roadmap&sensor=true';
+        if (opt.map.addressVisible == 1) {
+            mapUrl = mapUrl + '&markers=' + encodeURIComponent('color:red|' + X + ',' + Y);
+        }
+        mapUrl = mapUrl + '&channel=ficha_static_tools';
+       
+        _func.assignSign(element, mapUrl);
+    }
+
+    _func.assignSign = function (elementID, mapUrl) {
+        var sURL = _apicommon + 'PostFirma';
+        var objeto = { "sUrl": mapUrl };
+
+        $.ajax({
+            url: sURL,
+            cache: false,
+            type: 'POST',
+            contentType: 'application/json; charset=utf-8',
+            data: JSON.stringify(objeto),
+            beforeSend: $.fn.OpenBusyDialog,
+            complete: $.fn.fnOcultarBusy,
+            statusCode: {
+                200: function (data) {
+                    var srcUrl = "//maps.googleapis.com" + mapUrl + "&signature=" + data;
+
+                   
+                    $("#" + elementID).html('<img src="' + srcUrl + '" />');
+                },
+                203: function (data) {
+                    HABJS.MASTER.FeedbackSinPermisos("#divcaracteristicas");
+                },
+                204: function (data) {
+                    HABJS.MASTER.FeedbackSinCoockie();
+                },
+                302: function (data) {
+                    HABJS.MASTER.FeedbackSinCoockie();
+                },
+                401: function (data) {
+                    HABJS.MASTER.FeedbackSinCoockie();
+                }
+            }
+        })
+        .fail(function (jqXHR, textStatus, errorThrownorThrown) {
+            HABJS.MASTER.ErrorMsg("#divcaracteristicas");
+            $.fn.functionError(jqXHR, textStatus, errorThrownorThrown, sURL);
+        });
+    }
+
+    return pag;
+}(jQuery));;
+/**
+ * Copyright 2010 Tim Down.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * jshashtable
+ *
+ * jshashtable is a JavaScript implementation of a hash table. It creates a single constructor function called Hashtable
+ * in the global scope.
+ *
+ * Author: Tim Down <tim@timdown.co.uk>
+ * Version: 2.1
+ * Build date: 21 March 2010
+ * Website: http://www.timdown.co.uk/jshashtable
+ */
+
+var Hashtable = (function() {
+	var FUNCTION = "function";
+
+	var arrayRemoveAt = (typeof Array.prototype.splice == FUNCTION) ?
+		function(arr, idx) {
+			arr.splice(idx, 1);
+		} :
+
+		function(arr, idx) {
+			var itemsAfterDeleted, i, len;
+			if (idx === arr.length - 1) {
+				arr.length = idx;
+			} else {
+				itemsAfterDeleted = arr.slice(idx + 1);
+				arr.length = idx;
+				for (i = 0, len = itemsAfterDeleted.length; i < len; ++i) {
+					arr[idx + i] = itemsAfterDeleted[i];
+				}
+			}
+		};
+
+	function hashObject(obj) {
+		var hashCode;
+		if (typeof obj == "string") {
+			return obj;
+		} else if (typeof obj.hashCode == FUNCTION) {
+			// Check the hashCode method really has returned a string
+			hashCode = obj.hashCode();
+			return (typeof hashCode == "string") ? hashCode : hashObject(hashCode);
+		} else if (typeof obj.toString == FUNCTION) {
+			return obj.toString();
+		} else {
+			try {
+				return String(obj);
+			} catch (ex) {
+				// For host objects (such as ActiveObjects in IE) that have no toString() method and throw an error when
+				// passed to String()
+				return Object.prototype.toString.call(obj);
+			}
+		}
+	}
+
+	function equals_fixedValueHasEquals(fixedValue, variableValue) {
+		return fixedValue.equals(variableValue);
+	}
+
+	function equals_fixedValueNoEquals(fixedValue, variableValue) {
+		return (typeof variableValue.equals == FUNCTION) ?
+			   variableValue.equals(fixedValue) : (fixedValue === variableValue);
+	}
+
+	function createKeyValCheck(kvStr) {
+		return function(kv) {
+			if (kv === null) {
+				throw new Error("null is not a valid " + kvStr);
+			} else if (typeof kv == "undefined") {
+				throw new Error(kvStr + " must not be undefined");
+			}
+		};
+	}
+
+	var checkKey = createKeyValCheck("key"), checkValue = createKeyValCheck("value");
+
+	/*----------------------------------------------------------------------------------------------------------------*/
+
+	function Bucket(hash, firstKey, firstValue, equalityFunction) {
+        this[0] = hash;
+		this.entries = [];
+		this.addEntry(firstKey, firstValue);
+
+		if (equalityFunction !== null) {
+			this.getEqualityFunction = function() {
+				return equalityFunction;
+			};
+		}
+	}
+
+	var EXISTENCE = 0, ENTRY = 1, ENTRY_INDEX_AND_VALUE = 2;
+
+	function createBucketSearcher(mode) {
+		return function(key) {
+			var i = this.entries.length, entry, equals = this.getEqualityFunction(key);
+			while (i--) {
+				entry = this.entries[i];
+				if ( equals(key, entry[0]) ) {
+					switch (mode) {
+						case EXISTENCE:
+							return true;
+						case ENTRY:
+							return entry;
+						case ENTRY_INDEX_AND_VALUE:
+							return [ i, entry[1] ];
+					}
+				}
+			}
+			return false;
+		};
+	}
+
+	function createBucketLister(entryProperty) {
+		return function(aggregatedArr) {
+			var startIndex = aggregatedArr.length;
+			for (var i = 0, len = this.entries.length; i < len; ++i) {
+				aggregatedArr[startIndex + i] = this.entries[i][entryProperty];
+			}
+		};
+	}
+
+	Bucket.prototype = {
+		getEqualityFunction: function(searchValue) {
+			return (typeof searchValue.equals == FUNCTION) ? equals_fixedValueHasEquals : equals_fixedValueNoEquals;
+		},
+
+		getEntryForKey: createBucketSearcher(ENTRY),
+
+		getEntryAndIndexForKey: createBucketSearcher(ENTRY_INDEX_AND_VALUE),
+
+		removeEntryForKey: function(key) {
+			var result = this.getEntryAndIndexForKey(key);
+			if (result) {
+				arrayRemoveAt(this.entries, result[0]);
+				return result[1];
+			}
+			return null;
+		},
+
+		addEntry: function(key, value) {
+			this.entries[this.entries.length] = [key, value];
+		},
+
+		keys: createBucketLister(0),
+
+		values: createBucketLister(1),
+
+		getEntries: function(entries) {
+			var startIndex = entries.length;
+			for (var i = 0, len = this.entries.length; i < len; ++i) {
+				// Clone the entry stored in the bucket before adding to array
+				entries[startIndex + i] = this.entries[i].slice(0);
+			}
+		},
+
+		containsKey: createBucketSearcher(EXISTENCE),
+
+		containsValue: function(value) {
+			var i = this.entries.length;
+			while (i--) {
+				if ( value === this.entries[i][1] ) {
+					return true;
+				}
+			}
+			return false;
+		}
+	};
+
+	/*----------------------------------------------------------------------------------------------------------------*/
+
+	// Supporting functions for searching hashtable buckets
+
+	function searchBuckets(buckets, hash) {
+		var i = buckets.length, bucket;
+		while (i--) {
+			bucket = buckets[i];
+			if (hash === bucket[0]) {
+				return i;
+			}
+		}
+		return null;
+	}
+
+	function getBucketForHash(bucketsByHash, hash) {
+		var bucket = bucketsByHash[hash];
+
+		// Check that this is a genuine bucket and not something inherited from the bucketsByHash's prototype
+		return ( bucket && (bucket instanceof Bucket) ) ? bucket : null;
+	}
+
+	/*----------------------------------------------------------------------------------------------------------------*/
+
+	function Hashtable(hashingFunctionParam, equalityFunctionParam) {
+		var that = this;
+		var buckets = [];
+		var bucketsByHash = {};
+
+		var hashingFunction = (typeof hashingFunctionParam == FUNCTION) ? hashingFunctionParam : hashObject;
+		var equalityFunction = (typeof equalityFunctionParam == FUNCTION) ? equalityFunctionParam : null;
+
+		this.put = function(key, value) {
+			checkKey(key);
+			checkValue(value);
+			var hash = hashingFunction(key), bucket, bucketEntry, oldValue = null;
+
+			// Check if a bucket exists for the bucket key
+			bucket = getBucketForHash(bucketsByHash, hash);
+			if (bucket) {
+				// Check this bucket to see if it already contains this key
+				bucketEntry = bucket.getEntryForKey(key);
+				if (bucketEntry) {
+					// This bucket entry is the current mapping of key to value, so replace old value and we're done.
+					oldValue = bucketEntry[1];
+					bucketEntry[1] = value;
+				} else {
+					// The bucket does not contain an entry for this key, so add one
+					bucket.addEntry(key, value);
+				}
+			} else {
+				// No bucket exists for the key, so create one and put our key/value mapping in
+				bucket = new Bucket(hash, key, value, equalityFunction);
+				buckets[buckets.length] = bucket;
+				bucketsByHash[hash] = bucket;
+			}
+			return oldValue;
+		};
+
+		this.get = function(key) {
+			checkKey(key);
+
+			var hash = hashingFunction(key);
+
+			// Check if a bucket exists for the bucket key
+			var bucket = getBucketForHash(bucketsByHash, hash);
+			if (bucket) {
+				// Check this bucket to see if it contains this key
+				var bucketEntry = bucket.getEntryForKey(key);
+				if (bucketEntry) {
+					// This bucket entry is the current mapping of key to value, so return the value.
+					return bucketEntry[1];
+				}
+			}
+			return null;
+		};
+
+		this.containsKey = function(key) {
+			checkKey(key);
+			var bucketKey = hashingFunction(key);
+
+			// Check if a bucket exists for the bucket key
+			var bucket = getBucketForHash(bucketsByHash, bucketKey);
+
+			return bucket ? bucket.containsKey(key) : false;
+		};
+
+		this.containsValue = function(value) {
+			checkValue(value);
+			var i = buckets.length;
+			while (i--) {
+				if (buckets[i].containsValue(value)) {
+					return true;
+				}
+			}
+			return false;
+		};
+
+		this.clear = function() {
+			buckets.length = 0;
+			bucketsByHash = {};
+		};
+
+		this.isEmpty = function() {
+			return !buckets.length;
+		};
+
+		var createBucketAggregator = function(bucketFuncName) {
+			return function() {
+				var aggregated = [], i = buckets.length;
+				while (i--) {
+					buckets[i][bucketFuncName](aggregated);
+				}
+				return aggregated;
+			};
+		};
+
+		this.keys = createBucketAggregator("keys");
+		this.values = createBucketAggregator("values");
+		this.entries = createBucketAggregator("getEntries");
+
+		this.remove = function(key) {
+			checkKey(key);
+
+			var hash = hashingFunction(key), bucketIndex, oldValue = null;
+
+			// Check if a bucket exists for the bucket key
+			var bucket = getBucketForHash(bucketsByHash, hash);
+
+			if (bucket) {
+				// Remove entry from this bucket for this key
+				oldValue = bucket.removeEntryForKey(key);
+				if (oldValue !== null) {
+					// Entry was removed, so check if bucket is empty
+					if (!bucket.entries.length) {
+						// Bucket is empty, so remove it from the bucket collections
+						bucketIndex = searchBuckets(buckets, hash);
+						arrayRemoveAt(buckets, bucketIndex);
+						delete bucketsByHash[hash];
+					}
+				}
+			}
+			return oldValue;
+		};
+
+		this.size = function() {
+			var total = 0, i = buckets.length;
+			while (i--) {
+				total += buckets[i].entries.length;
+			}
+			return total;
+		};
+
+		this.each = function(callback) {
+			var entries = that.entries(), i = entries.length, entry;
+			while (i--) {
+				entry = entries[i];
+				callback(entry[0], entry[1]);
+			}
+		};
+
+		this.putAll = function(hashtable, conflictCallback) {
+			var entries = hashtable.entries();
+			var entry, key, value, thisValue, i = entries.length;
+			var hasConflictCallback = (typeof conflictCallback == FUNCTION);
+			while (i--) {
+				entry = entries[i];
+				key = entry[0];
+				value = entry[1];
+
+				// Check for a conflict. The default behaviour is to overwrite the value for an existing key
+				if ( hasConflictCallback && (thisValue = that.get(key)) ) {
+					value = conflictCallback(key, thisValue, value);
+				}
+				that.put(key, value);
+			}
+		};
+
+		this.clone = function() {
+			var clone = new Hashtable(hashingFunctionParam, equalityFunctionParam);
+			clone.putAll(that);
+			return clone;
+		};
+	}
+
+	return Hashtable;
+})();;
+
+/*! jQuery number 2.1.3 (c) github.com/teamdf/jquery-number | opensource.teamdf.com/license */
+(function (h) {
+    function r(f, a) { if (this.createTextRange) { var c = this.createTextRange(); c.collapse(true); c.moveStart("character", f); c.moveEnd("character", a - f); c.select() } else if (this.setSelectionRange) { this.focus(); this.setSelectionRange(f, a) } } function s(f) {
+        var a = this.value.length; f = f.toLowerCase() == "start" ? "Start" : "End"; if (document.selection) {
+            a = document.selection.createRange(); var c; c = a.duplicate(); c.expand("textedit"); c.setEndPoint("EndToEnd", a); c = c.text.length - a.text.length; a = c + a.text.length; return f ==
+            "Start" ? c : a
+        } else if (typeof this["selection" + f] != "undefined") a = this["selection" + f]; return a
+    } var q = { codes: { 188: 44, 109: 45, 190: 46, 191: 47, 192: 96, 220: 92, 222: 39, 221: 93, 219: 91, 173: 45, 187: 61, 186: 59, 189: 45, 110: 46 }, shifts: { 96: "~", 49: "!", 50: "@", 51: "#", 52: "$", 53: "%", 54: "^", 55: "&", 56: "*", 57: "(", 48: ")", 45: "_", 61: "+", 91: "{", 93: "}", 92: "|", 59: ":", 39: '"', 44: "<", 46: ">", 47: "?" } }; h.fn.number = function (f, a, c, k) {
+        k = typeof k === "undefined" ? "," : k; c = typeof c === "undefined" ? "." : c; a = typeof a === "undefined" ? 0 : a; var j = "\\u" + ("0000" +
+        c.charCodeAt(0).toString(16)).slice(-4), o = RegExp("[^" + j + "0-9]", "g"), p = RegExp(j, "g"); if (f === true) return this.is("input:text") ? this.on({
+            "keydown.format": function (b) {
+                var d = h(this), e = d.data("numFormat"), g = b.keyCode ? b.keyCode : b.which, m = "", i = s.apply(this, ["start"]), n = s.apply(this, ["end"]), l = ""; l = false; if (q.codes.hasOwnProperty(g)) g = q.codes[g]; if (!b.shiftKey && g >= 65 && g <= 90) g += 32; else if (!b.shiftKey && g >= 69 && g <= 105) g -= 48; else if (b.shiftKey && q.shifts.hasOwnProperty(g)) m = q.shifts[g]; if (m == "") m = String.fromCharCode(g);
+                if (g !== 8 && m != c && !m.match(/[0-9]/)) { d = b.keyCode ? b.keyCode : b.which; if (d == 46 || d == 8 || d == 9 || d == 27 || d == 13 || (d == 65 || d == 82) && (b.ctrlKey || b.metaKey) === true || (d == 86 || d == 67) && (b.ctrlKey || b.metaKey) === true || d >= 35 && d <= 39) return; b.preventDefault(); return false } if (i == 0 && n == this.value.length || d.val() == 0) if (g === 8) { i = n = 1; this.value = ""; e.init = a > 0 ? -1 : 0; e.c = a > 0 ? -(a + 1) : 0; r.apply(this, [0, 0]) } else if (m === c) { i = n = 1; this.value = "0" + c + Array(a + 1).join("0"); e.init = a > 0 ? 1 : 0; e.c = a > 0 ? -(a + 1) : 0 } else {
+                    if (this.value.length === 0) {
+                        e.init =
+                        a > 0 ? -1 : 0; e.c = a > 0 ? -a : 0
+                    }
+                } else e.c = n - this.value.length; if (a > 0 && m == c && i == this.value.length - a - 1) { e.c++; e.init = Math.max(0, e.init); b.preventDefault(); l = this.value.length + e.c } else if (m == c) { e.init = Math.max(0, e.init); b.preventDefault() } else if (a > 0 && g == 8 && i == this.value.length - a) { b.preventDefault(); e.c--; l = this.value.length + e.c } else if (a > 0 && g == 8 && i > this.value.length - a) {
+                    if (this.value === "") return; if (this.value.slice(i - 1, i) != "0") {
+                        l = this.value.slice(0, i - 1) + "0" + this.value.slice(i); d.val(l.replace(o, "").replace(p,
+                        c))
+                    } b.preventDefault(); e.c--; l = this.value.length + e.c
+                } else if (g == 8 && this.value.slice(i - 1, i) == k) { b.preventDefault(); e.c--; l = this.value.length + e.c } else if (a > 0 && i == n && this.value.length > a + 1 && i > this.value.length - a - 1 && isFinite(+m) && !b.metaKey && !b.ctrlKey && !b.altKey && m.length === 1) { this.value = l = n === this.value.length ? this.value.slice(0, i - 1) : this.value.slice(0, i) + this.value.slice(i + 1); l = i } l !== false && r.apply(this, [l, l]); d.data("numFormat", e)
+            }, "keyup.format": function (b) {
+                var d = h(this), e = d.data("numFormat"); b = b.keyCode ?
+                b.keyCode : b.which; var g = s.apply(this, ["start"]); if (!(this.value === "" || (b < 48 || b > 57) && (b < 96 || b > 105) && b !== 8)) { d.val(d.val()); if (a > 0) if (e.init < 1) { g = this.value.length - a - (e.init < 0 ? 1 : 0); e.c = g - this.value.length; e.init = 1; d.data("numFormat", e) } else if (g > this.value.length - a && b != 8) { e.c++; d.data("numFormat", e) } d = this.value.length + e.c; r.apply(this, [d, d]) }
+            }, "paste.format": function (b) {
+                var d = h(this), e = b.originalEvent, g = null; if (window.clipboardData && window.clipboardData.getData) g = window.clipboardData.getData("Text");
+                else if (e.clipboardData && e.clipboardData.getData) g = e.clipboardData.getData("text/plain"); d.val(g); b.preventDefault(); return false
+            }
+        }).each(function () { var b = h(this).data("numFormat", { c: -(a + 1), decimals: a, thousands_sep: k, dec_point: c, regex_dec_num: o, regex_dec: p, init: false }); this.value !== "" && b.val(b.val()) }) : this.each(function () { var b = h(this), d = +b.text().replace(o, "").replace(p, "."); b.number(!isFinite(d) ? 0 : +d, a, c, k) }); return this.text(h.number.apply(window, arguments))
+    }; var t = null, u = null; if (h.isPlainObject(h.valHooks.text)) {
+        if (h.isFunction(h.valHooks.text.get)) t =
+        h.valHooks.text.get; if (h.isFunction(h.valHooks.text.set)) u = h.valHooks.text.set
+    } else h.valHooks.text = {}; h.valHooks.text.get = function (f) { var a = h(f).data("numFormat"); if (a) { if (f.value === "") return ""; f = +f.value.replace(a.regex_dec_num, "").replace(a.regex_dec, "."); return "" + (isFinite(f) ? f : 0) } else if (h.isFunction(t)) return t(f) }; h.valHooks.text.set = function (f, a) { var c = h(f).data("numFormat"); if (c) return f.value = h.number(a, c.decimals, c.dec_point, c.thousands_sep); else if (h.isFunction(u)) return u(f, a) }; h.number =
+    function (f, a, c, k) {
+        k = typeof k === "undefined" ? "," : k; c = typeof c === "undefined" ? "." : c; a = !isFinite(+a) ? 0 : Math.abs(a); var j = "\\u" + ("0000" + c.charCodeAt(0).toString(16)).slice(-4), o = "\\u" + ("0000" + k.charCodeAt(0).toString(16)).slice(-4); f = (f + "").replace(".", c).replace(RegExp(o, "g"), "").replace(RegExp(j, "g"), ".").replace(RegExp("[^0-9+-Ee.]", "g"), ""); f = !isFinite(+f) ? 0 : +f; j = ""; j = function (p, b) { var d = Math.pow(10, b); return "" + Math.round(p * d) / d }; j = (a ? j(f, a) : "" + Math.round(f)).split("."); if (j[0].length > 3) j[0] = j[0].replace(/\B(?=(?:\d{3})+(?!\d))/g,
+        k); if ((j[1] || "").length < a) { j[1] = j[1] || ""; j[1] += Array(a - j[1].length + 1).join("0") } return j.join(c)
+    }
+})(jQuery);
+;
+/**
+ * jquery.numberformatter - Formatting/Parsing Numbers in jQuery
+ * 
+ * Written by
+ * Michael Abernethy (mike@abernethysoft.com),
+ * Andrew Parry (aparry0@gmail.com)
+ *
+ * Dual licensed under the MIT (MIT-LICENSE.txt)
+ * and GPL (GPL-LICENSE.txt) licenses.
+ *
+ * @author Michael Abernethy, Andrew Parry
+ * @version 1.2.3-SNAPSHOT ($Id$)
+ * 
+ * Dependencies
+ * 
+ * jQuery (http://jquery.com)
+ * jshashtable (http://www.timdown.co.uk/jshashtable)
+ * 
+ * Notes & Thanks
+ * 
+ * many thanks to advweb.nanasi.jp for his bug fixes
+ * jsHashtable is now used also, so thanks to the author for that excellent little class.
+ *
+ * This plugin can be used to format numbers as text and parse text as Numbers
+ * Because we live in an international world, we cannot assume that everyone
+ * uses "," to divide thousands, and "." as a decimal point.
+ *
+ * As of 1.2 the way this plugin works has changed slightly, parsing text to a number
+ * has 1 set of functions, formatting a number to text has it's own. Before things
+ * were a little confusing, so I wanted to separate the 2 out more.
+ *
+ *
+ * jQuery extension functions:
+ *
+ * formatNumber(options, writeBack, giveReturnValue) - Reads the value from the subject, parses to
+ * a Javascript Number object, then formats back to text using the passed options and write back to
+ * the subject.
+ * 
+ * parseNumber(options) - Parses the value in the subject to a Number object using the passed options
+ * to decipher the actual number from the text, then writes the value as text back to the subject.
+ * 
+ * 
+ * Generic functions:
+ * 
+ * formatNumber(numberString, options) - Takes a plain number as a string (e.g. '1002.0123') and returns
+ * a string of the given format options.
+ * 
+ * parseNumber(numberString, options) - Takes a number as text that is formatted the same as the given
+ * options then and returns it as a plain Number object.
+ * 
+ * To achieve the old way of combining parsing and formatting to keep say a input field always formatted
+ * to a given format after it has lost focus you'd simply use a combination of the functions.
+ * 
+ * e.g.
+ * $("#salary").blur(function(){
+ * 		$(this).parseNumber({format:"#,###.00", locale:"us"});
+ * 		$(this).formatNumber({format:"#,###.00", locale:"us"});
+ * });
+ *
+ * The syntax for the formatting is:
+ * 0 = Digit
+ * # = Digit, zero shows as absent
+ * . = Decimal separator
+ * - = Negative sign
+ * , = Grouping Separator
+ * % = Percent (multiplies the number by 100)
+ * 
+ * For example, a format of "#,###.00" and text of 4500.20 will
+ * display as "4.500,20" with a locale of "de", and "4,500.20" with a locale of "us"
+ *
+ *
+ * As of now, the only acceptable locales are 
+ * Arab Emirates -> "ae"
+ * Australia -> "au"
+ * Austria -> "at"
+ * Brazil -> "br"
+ * Canada -> "ca"
+ * China -> "cn"
+ * Czech -> "cz"
+ * Denmark -> "dk"
+ * Egypt -> "eg"
+ * Finland -> "fi"
+ * France  -> "fr"
+ * Germany -> "de"
+ * Greece -> "gr"
+ * Great Britain -> "gb"
+ * Hong Kong -> "hk"
+ * India -> "in"
+ * Israel -> "il"
+ * Japan -> "jp"
+ * Russia -> "ru"
+ * South Korea -> "kr"
+ * Spain -> "es"
+ * Sweden -> "se"
+ * Switzerland -> "ch"
+ * Taiwan -> "tw"
+ * Thailand -> "th"
+ * United States -> "us"
+ * Vietnam -> "vn"
+ **/
+
+(function(jQuery) {
+
+	var nfLocales = new Hashtable();
+	
+	var nfLocalesLikeUS = [ 'ae','au','ca','cn','eg','gb','hk','il','in','jp','sk','th','tw','us' ];
+	var nfLocalesLikeDE = [ 'at','br','de','dk','es','gr','it','nl','pt','tr','vn' ];
+	var nfLocalesLikeFR = [ 'cz','fi','fr','ru','se','pl' ];
+	var nfLocalesLikeCH = [ 'ch' ];
+	
+	var nfLocaleFormatting = [ [".", ","], [",", "."], [",", " "], [".", "'"] ]; 
+	var nfAllLocales = [ nfLocalesLikeUS, nfLocalesLikeDE, nfLocalesLikeFR, nfLocalesLikeCH ]
+
+	function FormatData(dec, group, neg) {
+		this.dec = dec;
+		this.group = group;
+		this.neg = neg;
+	};
+
+	function init() {
+		// write the arrays into the hashtable
+		for (var localeGroupIdx = 0; localeGroupIdx < nfAllLocales.length; localeGroupIdx++) {
+			localeGroup = nfAllLocales[localeGroupIdx];
+			for (var i = 0; i < localeGroup.length; i++) {
+				nfLocales.put(localeGroup[i], localeGroupIdx);
+			}
+		}
+	};
+
+	function formatCodes(locale, isFullLocale) {
+		if (nfLocales.size() == 0)
+			init();
+
+         // default values
+         var dec = ".";
+         var group = ",";
+         var neg = "-";
+         
+         if (isFullLocale == false) {
+	         // Extract and convert to lower-case any language code from a real 'locale' formatted string, if not use as-is
+	         // (To prevent locale format like : "fr_FR", "en_US", "de_DE", "fr_FR", "en-US", "de-DE")
+	         if (locale.indexOf('_') != -1)
+				locale = locale.split('_')[1].toLowerCase();
+			 else if (locale.indexOf('-') != -1)
+				locale = locale.split('-')[1].toLowerCase();
+		}
+
+		 // hashtable lookup to match locale with codes
+		 var codesIndex = nfLocales.get(locale);
+		 if (codesIndex) {
+		 	var codes = nfLocaleFormatting[codesIndex];
+			if (codes) {
+				dec = codes[0];
+				group = codes[1];
+			}
+		 }
+		 return new FormatData(dec, group, neg);
+    };
+	
+	
+	/*	Formatting Methods	*/
+	
+	
+	/**
+	 * Formats anything containing a number in standard js number notation.
+	 * 
+	 * @param {Object}	options			The formatting options to use
+	 * @param {Boolean}	writeBack		(true) If the output value should be written back to the subject
+	 * @param {Boolean} giveReturnValue	(true) If the function should return the output string
+	 */
+	jQuery.fn.formatNumber = function(options, writeBack, giveReturnValue) {
+	
+		return this.each(function() {
+			// enforce defaults
+			if (writeBack == null)
+				writeBack = true;
+			if (giveReturnValue == null)
+				giveReturnValue = true;
+			
+			// get text
+			var text;
+			if (jQuery(this).is(":input"))
+				text = new String(jQuery(this).val());
+			else
+				text = new String(jQuery(this).text());
+
+			// format
+			var returnString = jQuery.formatNumber(text, options);
+		
+			// set formatted string back, only if a success
+//			if (returnString) {
+				if (writeBack) {
+					if (jQuery(this).is(":input"))
+						jQuery(this).val(returnString);
+					else
+						jQuery(this).text(returnString);
+				}
+				if (giveReturnValue)
+					return returnString;
+//			}
+//			return '';
+		});
+	};
+	
+	/**
+	 * First parses a string and reformats it with the given options.
+	 * 
+	 * @param {Object} numberString
+	 * @param {Object} options
+	 */
+	jQuery.formatNumber = function(numberString, options){
+		var options = jQuery.extend({}, jQuery.fn.formatNumber.defaults, options);
+		var formatData = formatCodes(options.locale.toLowerCase(), options.isFullLocale);
+		
+		var dec = formatData.dec;
+		var group = formatData.group;
+		var neg = formatData.neg;
+		
+		var validFormat = "0#-,.";
+		
+		// strip all the invalid characters at the beginning and the end
+		// of the format, and we'll stick them back on at the end
+		// make a special case for the negative sign "-" though, so 
+		// we can have formats like -$23.32
+		var prefix = "";
+		var negativeInFront = false;
+		for (var i = 0; i < options.format.length; i++) {
+			if (validFormat.indexOf(options.format.charAt(i)) == -1) 
+				prefix = prefix + options.format.charAt(i);
+			else 
+				if (i == 0 && options.format.charAt(i) == '-') {
+					negativeInFront = true;
+					continue;
+				}
+				else 
+					break;
+		}
+		var suffix = "";
+		for (var i = options.format.length - 1; i >= 0; i--) {
+			if (validFormat.indexOf(options.format.charAt(i)) == -1) 
+				suffix = options.format.charAt(i) + suffix;
+			else 
+				break;
+		}
+		
+		options.format = options.format.substring(prefix.length);
+		options.format = options.format.substring(0, options.format.length - suffix.length);
+		
+		// now we need to convert it into a number
+		//while (numberString.indexOf(group) > -1) 
+		//	numberString = numberString.replace(group, '');
+		//var number = new Number(numberString.replace(dec, ".").replace(neg, "-"));
+		var number = new Number(numberString);
+		
+		return jQuery._formatNumber(number, options, suffix, prefix, negativeInFront);
+	};
+	
+	/**
+	 * Formats a Number object into a string, using the given formatting options
+	 * 
+	 * @param {Object} numberString
+	 * @param {Object} options
+	 */
+	jQuery._formatNumber = function(number, options, suffix, prefix, negativeInFront) {
+		var options = jQuery.extend({}, jQuery.fn.formatNumber.defaults, options);
+		var formatData = formatCodes(options.locale.toLowerCase(), options.isFullLocale);
+		
+		var dec = formatData.dec;
+		var group = formatData.group;
+		var neg = formatData.neg;
+		
+		var forcedToZero = false;
+		if (isNaN(number)) {
+			if (options.nanForceZero == true) {
+				number = 0;
+				forcedToZero = true;
+			} else 
+				return null;
+		}
+
+		// special case for percentages
+        if (suffix == "%")
+        	number = number * 100;
+
+		var returnString = "";
+		if (options.format.indexOf(".") > -1) {
+			var decimalPortion = dec;
+			var decimalFormat = options.format.substring(options.format.lastIndexOf(".") + 1);
+			
+			// round or truncate number as needed
+			if (options.round == true)
+				number = new Number(number.toFixed(decimalFormat.length));
+			else {
+				var numStr = number.toString();
+				numStr = numStr.substring(0, numStr.lastIndexOf('.') + decimalFormat.length + 1);
+				number = new Number(numStr);
+			}
+			
+			var decimalValue = number % 1;
+			var decimalString = new String(decimalValue.toFixed(decimalFormat.length));
+			decimalString = decimalString.substring(decimalString.lastIndexOf(".") + 1);
+			
+			for (var i = 0; i < decimalFormat.length; i++) {
+				if (decimalFormat.charAt(i) == '#' && decimalString.charAt(i) != '0') {
+                	decimalPortion += decimalString.charAt(i);
+					continue;
+				} else if (decimalFormat.charAt(i) == '#' && decimalString.charAt(i) == '0') {
+					var notParsed = decimalString.substring(i);
+					if (notParsed.match('[1-9]')) {
+						decimalPortion += decimalString.charAt(i);
+						continue;
+					} else
+						break;
+				} else if (decimalFormat.charAt(i) == "0")
+					decimalPortion += decimalString.charAt(i);
+			}
+			returnString += decimalPortion
+         } else
+			number = Math.round(number);
+
+		var ones = Math.floor(number);
+		if (number < 0)
+			ones = Math.ceil(number);
+
+		var onesFormat = "";
+		if (options.format.indexOf(".") == -1)
+			onesFormat = options.format;
+		else
+			onesFormat = options.format.substring(0, options.format.indexOf("."));
+
+		var onePortion = "";
+		if (!(ones == 0 && onesFormat.substr(onesFormat.length - 1) == '#') || forcedToZero) {
+			// find how many digits are in the group
+			var oneText = new String(Math.abs(ones));
+			var groupLength = 9999;
+			if (onesFormat.lastIndexOf(",") != -1)
+				groupLength = onesFormat.length - onesFormat.lastIndexOf(",") - 1;
+			var groupCount = 0;
+			for (var i = oneText.length - 1; i > -1; i--) {
+				onePortion = oneText.charAt(i) + onePortion;
+				groupCount++;
+				if (groupCount == groupLength && i != 0) {
+					onePortion = group + onePortion;
+					groupCount = 0;
+				}
+			}
+			
+			// account for any pre-data padding
+			if (onesFormat.length > onePortion.length) {
+				var padStart = onesFormat.indexOf('0');
+				if (padStart != -1) {
+					var padLen = onesFormat.length - padStart;
+					
+					// pad to left with 0's or group char
+					var pos = onesFormat.length - onePortion.length - 1;
+					while (onePortion.length < padLen) {
+						var padChar = onesFormat.charAt(pos);
+						// replace with real group char if needed
+						if (padChar == ',')
+							padChar = group;
+						onePortion = padChar + onePortion;
+						pos--;
+					}
+				}
+			}
+		}
+		
+		if (!onePortion && onesFormat.indexOf('0', onesFormat.length - 1) !== -1)
+   			onePortion = '0';
+
+		returnString = onePortion + returnString;
+
+		// handle special case where negative is in front of the invalid characters
+		if (number < 0 && negativeInFront && prefix.length > 0)
+			prefix = neg + prefix;
+		else if (number < 0)
+			returnString = neg + returnString;
+		
+		if (!options.decimalSeparatorAlwaysShown) {
+			if (returnString.lastIndexOf(dec) == returnString.length - 1) {
+				returnString = returnString.substring(0, returnString.length - 1);
+			}
+		}
+		returnString = prefix + returnString + suffix;
+		return returnString;
+	};
+
+
+	/*	Parsing Methods	*/
+
+
+	/**
+	 * Parses a number of given format from the element and returns a Number object.
+	 * @param {Object} options
+	 */
+	jQuery.fn.parseNumber = function(options, writeBack, giveReturnValue) {
+		// enforce defaults
+		if (writeBack == null)
+			writeBack = true;
+		if (giveReturnValue == null)
+			giveReturnValue = true;
+		
+		// get text
+		var text;
+		if (jQuery(this).is(":input"))
+			text = new String(jQuery(this).val());
+		else
+			text = new String(jQuery(this).text());
+	
+		// parse text
+		var number = jQuery.parseNumber(text, options);
+		
+		if (number) {
+			if (writeBack) {
+				if (jQuery(this).is(":input"))
+					jQuery(this).val(number.toString());
+				else
+					jQuery(this).text(number.toString());
+			}
+			if (giveReturnValue)
+				return number;
+		}
+	};
+	
+	/**
+	 * Parses a string of given format into a Number object.
+	 * 
+	 * @param {Object} string
+	 * @param {Object} options
+	 */
+	jQuery.parseNumber = function(numberString, options) {
+		var options = jQuery.extend({}, jQuery.fn.parseNumber.defaults, options);
+		var formatData = formatCodes(options.locale.toLowerCase(), options.isFullLocale);
+
+		var dec = formatData.dec;
+		var group = formatData.group;
+		var neg = formatData.neg;
+
+		var valid = "1234567890.-";
+		
+		// now we need to convert it into a number
+		while (numberString.indexOf(group)>-1)
+			numberString = numberString.replace(group,'');
+		numberString = numberString.replace(dec,".").replace(neg,"-");
+		var validText = "";
+		var hasPercent = false;
+		if (numberString.charAt(numberString.length - 1) == "%" || options.isPercentage == true)
+			hasPercent = true;
+		for (var i=0; i<numberString.length; i++) {
+			if (valid.indexOf(numberString.charAt(i))>-1)
+				validText = validText + numberString.charAt(i);
+		}
+		var number = new Number(validText);
+		if (hasPercent) {
+			number = number / 100;
+			var decimalPos = validText.indexOf('.');
+			if (decimalPos != -1) {
+				var decimalPoints = validText.length - decimalPos - 1;
+				number = number.toFixed(decimalPoints + 2);
+			} else {
+				number = number.toFixed(validText.length - 1);
+			}
+		}
+
+		return number;
+	};
+
+	jQuery.fn.parseNumber.defaults = {
+		locale: "us",
+		decimalSeparatorAlwaysShown: false,
+		isPercentage: false,
+		isFullLocale: false
+	};
+
+	jQuery.fn.formatNumber.defaults = {
+		format: "#,###.00",
+		locale: "us",
+		decimalSeparatorAlwaysShown: false,
+		nanForceZero: true,
+		round: true,
+		isFullLocale: false
+	};
+	
+	Number.prototype.toFixed = function(precision) {
+    	return jQuery._roundNumber(this, precision);
+	};
+	
+	jQuery._roundNumber = function(number, decimalPlaces) {
+		var power = Math.pow(10, decimalPlaces || 0);
+    	var value = String(Math.round(number * power) / power);
+    	
+    	// ensure the decimal places are there
+    	if (decimalPlaces > 0) {
+    		var dp = value.indexOf(".");
+    		if (dp == -1) {
+    			value += '.';
+    			dp = 0;
+    		} else {
+    			dp = value.length - (dp + 1);
+    		}
+    		
+    		while (dp < decimalPlaces) {
+    			value += '0';
+    			dp++;
+    		}
+    	}
+    	return value;
+	};
+
+ })(jQuery);;
+var WEBS = WEBS || {};
+
+WEBS.FICHA = (function ($) {
+    'use strict';
+
+    var Strings = MI_SCRIPTS;
+
+    var _sEmailTo;
+    var _sTitle = '';
+    var _id;
+    var _sReferencia = "";
+    var _keywords_descripcion = "";
+    var _iregistro = 0;
+    var _iTransaccion = 0;
+    var _idPublishService = "";
+    var _adId = 0;
+    var _idEntidadClienteWeb = "";
+    var _idPropiedad = 0;
+    var _externalReference = "";
+
+    var _idIdioma = 1;
+    
+    var COOKIE_SELECTED = "selected_buscador_pro";
+    var _idsPagination = [];
+    var fichPrev = 0;
+    var fichNext = 0;
+    var currentGallery;
+    var _queryString = "";
+    var _googleMapsUrl;
+    var _receiver;
+    var _func = {};
+
+
+    
+  
+    function validarEmail(valor) {
+        if (valor === "") {
+            return false;
+        }
+        else {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(valor)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    };
+
+    function validarcampos(varCapital, varInteres, varPlazo) {
+        var returnValidar = ""
+        if (varCapital == 0)
+            returnValidar = Strings.capital;
+        if (varInteres == 0) {
+            if (returnValidar == "")
+                returnValidar += Strings.interes;
+            else
+                returnValidar += ", " + Strings.interes;
+        }
+        if (varPlazo == 0) {
+            if (returnValidar == "")
+                returnValidar = Strings.plazoAnyos;
+            else
+                returnValidar += ", " + Strings.plazoAnyos;
+        }
+        return returnValidar;
+    };
+
+    function redondear_dos_decimal(valor) {
+        var float_redondeado = Math.round(valor * 100) / 100;
+        return float_redondeado;
+    };
+
+    function validacion() {
+        $.metadata.setType("attr", "validate");
+
+        $.validator.setDefaults({
+            submitHandler: function () { },
+            highlight: function (input) {
+                $(input).addClass("ui-state-highlight");
+            },
+            unhighlight: function (input) {
+                $(input).removeClass("ui-state-highlight");
+            },
+            errorPlacement: function(label, element) {
+                if (element.is(':checkbox')) {
+                    element.parent().append(label);
+                } else {
+                    label.insertAfter(element);
+                }
+            }
+
+        });
+        $("#contactooficina").validate();
+    }
+    
+    var isloaded = false;
+    _func.loadframe = function (event) {
+        event.preventDefault();
+        if (!isloaded) {
+            frmiframe.submit();
+            $("#map").show();
+            isloaded = true;
+        }
+        $("html, body").animate({ scrollTop: $('#map').offset().top }, 500);
+    };
+
+    _func.showimagen = function () {
+        $("#item-map, .des_gallery").hide();
+        $(".modal-gallery, .des_map").show();
+        
+    };
+
+    _func.fnCallbackSendMailOffice = function (response) {
+        if (response)
+            WEBS.FORM.FeedbackEndEtiqueta("#buttonenviooficina", Strings.emailEnviado);
+        else
+            WEBS.FORM.FeedbackError("#buttonenviooficina");
+        setTimeout(function () {
+            WEBS.FORM.ActivarCambios("#buttonenviooficina");
+            WEBS.FORM.DesactivarCambios();
+        }, 2000);
+    }
+    
+
+    var SELECTORS = {        
+        SHOW_LIGHTBOX_BTN: '.show-lightbox-action',
+        SHOW_HIDDEN_TEXT_BTN: '.btn-show-hidden-text',
+        MODAL: '.modal',
+        MODAL_BOX: '.modal-box',
+        MODAL_GALLERY_INFO: '.modal-gallery-container > .item-multimedia-pictures',
+        MODAL_GALLERY_CONTAINER: '.modal-gallery',
+        SEND_FICHA_BTN: '.send-action',
+        CHANGE_TYPOLOGY_BTN: '.change-typology-btn',
+        BACK_DATA_BTN: '.back-data-action',
+        FRONT_DATA_BTN: '.front-data-action',
+        DES_SHOW_ALL_BTN: '.des-show-all-btn',
+        DES_SHOW_ALL: '.des-show-all',
+        ELLIPSIS: '.ellipsis',
+        NO_PICTURES: '.no-pictures'
+    };    
+
+    _func.events = function () {
+        $(SELECTORS.DES_SHOW_ALL_BTN).on('click', HABJS.FICHAPRO.COMMON.showAllDescriptionText);
+    };
+
+    _func.asignarEventos = function (isMap) {
+        _func.events();
+
+        $(".vermas").off().on("click", function (event) {
+            $(".minifotos").removeClass("collapse");
+            $(".vermas").hide();
+        });
+        $("#des-listado").off().on("click", function (event) {
+            var url;
+            event.preventDefault();
+            if ($.cookie(COOKIE_SELECTED) != null && $.cookie(COOKIE_SELECTED) != "") {
+                var URLListadoFriendly = $.cookie(WEBS.PAGINA.COOKIE_URLListadoFriendly);
+                if (URLListadoFriendly != "")
+                    document.location.href = "{0}{1}".format(URLListadoFriendly.split("?n=0").join(""), "?n=0");
+                else {
+                    if (_queryString != "")
+                        url = "/listadoads.aspx{0}{1}".format(_queryString, "&n=0");
+                    else
+                        url = "/listadoads.aspx{0}".format("?n=0");
+                    document.location.href = url;
+                }
+            }
+            else {
+                url = "/default.aspx{0}".format(_queryString);
+                document.location.href = url;
+            }
+        });
+
+        $("#div_ficha_anterior").off().on("click", function (event) {
+            $(location).attr('href', "/ad/{0}{1}".format(fichPrev, _queryString));
+        });
+        $("#div_ficha_siguiente").off().on("click", function (event) {
+            $(location).attr('href', "/ad/{0}{1}".format(fichNext, _queryString));
+        });
+        $("#buttonenviooficina").off().on("click", function (event) {
+            if ($("#contactooficina").valid() == true) {
+                var parametros = {
+                    "EmailTo": _sEmailTo,
+                    "idPublishService": _idPublishService,
+                    "adId": _adId,
+                    "externalReference": _externalReference,
+                    "Nombre": WEBS.FORM.StripHtml($("#nameoficina").val()),
+                    "Email": $("#mailoficina").val(),
+                    "Telefono": WEBS.FORM.StripHtml($("#telefonocontacto").val()),
+                    "Comments": WEBS.FORM.StripHtml($("#mensajeoficina").val())
+                };                
+                WEBS.PAGINA.llamadaPOST("/api/FichaDetails/PostSendMailOffice", parametros, _func.fnCallbackSendMailOffice, null);
+            }
+        });
+    };
+
+    _func.returnMsg = function (event) {
+        //avoid adsthis to fire event:
+        if (event.origin.indexOf(_googleMapsUrl) < 0)
+            return;
+
+        var metodo = "/api/Maps/GetAdControl?id=" + _id;
+        WEBS.PAGINA.llamadaGet(metodo, null,
+            function (content) {
+                _receiver.postMessage(_id + "||" + content, _googleMapsUrl);
+            }
+        );
+    }    
+
+    Number.prototype.toMoney = function (decimals, decimal_sep, thousands_sep) {
+
+
+        var n = this,
+           c = isNaN(decimals) ? 2 : Math.abs(decimals), //if decimal is zero we must take it, it means user does not want to show any decimal
+           d = decimal_sep || ',', //if no decimal separator is passed we use the dot as default decimal separator (we MUST use a decimal separator)
+
+        /*
+        according to [http://stackoverflow.com/questions/411352/how-best-to-determine-if-an-argument-is-not-sent-to-the-javascript-function]
+        the fastest way to check for not defined parameter is to use typeof value === 'undefined' 
+        rather than doing value === undefined.
+        */
+       t = (typeof thousands_sep === 'undefined') ? '.' : thousands_sep, //if you don't want to use a thousands separator you can pass empty string as thousands_sep value
+
+       sign = (n < 0) ? '-' : '',
+
+        //extracting the absolute value of the integer part of the number and converting to string
+       i = parseInt(n = Math.abs(n).toFixed(c)) + '',
+
+       j = ((j = i.length) > 3) ? j % 3 : 0;
+        return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '');
+    };
+
+    _func.scrollToShowForm = function(){
+        var $showFormBtn = $('#show-form');
+        var $buttonEnvioOficina = $('#buttonenviooficina');
+        var buttonHeight = $buttonEnvioOficina.innerHeight();
+
+        $showFormBtn.click(function() {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $buttonEnvioOficina.offset().top - window.innerHeight/2
+            }, 500);
+        });
+
+        $(window).on('scroll', (e) => {
+            if(window.matchMedia('(max-width:768px)').matches){
+                if(window.scrollY > $buttonEnvioOficina.offset().top + buttonHeight - window.innerHeight && window.scrollY < $buttonEnvioOficina.offset().top + buttonHeight){
+                    $showFormBtn.hide();
+                }else{
+                    $showFormBtn.show();
+                }
+            }else{
+                if($showFormBtn.is(':visible')){
+                    $showFormBtn.hide();
+                }
+            }
+        });
+    };
+
+    var pag = {
+        Propiedad: {
+            set: function (valor) {
+                _idPropiedad = valor;
+            }
+        },
+        _listingMultimediaGallery:null,
+        Transaccion: {
+            set: function (valor) {
+                _iTransaccion = valor;
+            }
+        },
+        Registro: {
+            set: function (valor) {
+                _iregistro = valor;
+            }
+        },
+        Referencia: {
+            set: function (valor) {
+                _sReferencia = valor;
+            }
+        },
+        idEntidadCliente: {
+            set: function (valor) {
+                _idEntidadCliente = valor;
+            }
+        },
+        idEntidadClienteWeb: {
+            set: function (valor) {
+                _idEntidadClienteWeb = valor;
+            }
+        },
+        Title: {
+            set: function (valor) {
+                _sTitle = valor;
+            }
+        },
+        Keywords: {
+            set: function (valor) {
+                _keywords_descripcion = valor;
+            }
+        },
+        
+        init: function (idFicha, isMap, _MultimediaGallery, googleMapsUrl) {
+            _id = idFicha;
+            if ($("body").data("queryString") != null && $("body").data("queryString") != "")
+                _queryString = "{0}".format($("body").data("queryString"));
+
+            $("#divcalculadora").dialog({
+                autoOpen: false, closeOnEscape: true, resizable: true, modal: true,
+                dialogClass: "zindexdialog",
+                Width: "768px"
+            });
+
+            this._listingMultimediaGallery = $.parseJSON(_MultimediaGallery);
+            _sEmailTo = $("#idIdealista").data("mailto");
+            _idPublishService = $("#idIdealista").data("idpublishservice");
+            _adId = $("#idIdealista").data("adid");
+            _externalReference = $("#idIdealista").data("externalreference");
+            //leemos la coookie para la paginacion de las fichas
+            if ($.cookie(COOKIE_SELECTED) != null && $.cookie(COOKIE_SELECTED) != "") {
+                _idsPagination = $.cookie(COOKIE_SELECTED).split(",");
+                $("#des-listado").show();
+                $("#des-home").hide();
+            } else {
+                $("#des-listado").hide();
+                $("#des-home").show();
+            }
+            var indexId = jQuery.inArray(idFicha.toString(), _idsPagination);
+            if (indexId > 0) {
+                fichPrev = _idsPagination[indexId - 1];
+                $("#div_ficha_anterior").show();
+            }
+            if (indexId < _idsPagination.length - 1) {
+                fichNext = _idsPagination[indexId + 1];
+                $("#div_ficha_siguiente").show();
+            }
+            _func.showimagen();
+            _func.asignarEventos(isMap);
+            _func.scrollToShowForm();
+            validacion();            
+            
+            HABJS.FICHAPRO.COMMON.setSelectors(SELECTORS);
+            if (this._listingMultimediaGallery.length > 0) {
+                currentGallery = HABJS.FICHAPRO.GALLERY.instantiateGallery($('.modal-gallery'), this._listingMultimediaGallery, function () {
+                    $('.show-lightbox-action').off().on('click', function (e) {
+                        HABJS.FICHAPRO.GALLERY.instantiateLightbox(pag._listingMultimediaGallery, { title: $("#titulo").html() });
+                        e.preventDefault();
+                    });
+                });
+
+                HABJS.FICHAPRO.COMMON.showGallery(this._listingMultimediaGallery);
+            }            
+
+            _googleMapsUrl = googleMapsUrl;
+
+            _receiver = document.getElementById('iframe').contentWindow;
+            window.addEventListener("message", _func.returnMsg);
+            $(".averpama").off("click", _func.loadframe).on("click", _func.loadframe);
+            
+
+        }
+    };
+
+    return pag;
+}(jQuery));
+
+
+
+
+
+;
