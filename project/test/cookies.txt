@@ -1,4 +1,4 @@
 # HTTrack Website Copier Cookie File
 # This file format is compatible with Netscape cookies
-hometarget.es	TRUE	/	FALSE	1999999999	selected_buscador_pro	90524137%2c90524312%2c89321878%2c93599367%2c89321808%2c89321762%2c89321726
+.dimdoma.ru	TRUE	/	FALSE	1999999999	__ddg1	byWlLSFNiq40qbt8Muge
 

@@ -1,28 +1,15 @@
-HTTrack3.49-2+htsswf+htsjava launched on Thu, 24 Jun 2021 16:13:06 at https://hometarget.es/ +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv
-(winhttrack -qwC2%P%s%u%I0H0%kf2A25000%f#f -F msie6 -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "ru, en, *" https://hometarget.es/ -O1 "C:\Users\pagas\Desktop\site\qq12" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv )
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 25 Jun 2021 15:42:20 at https://dimdoma.ru +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv
+(winhttrack -qwC2%P%h%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "ru, en, *" https://dimdoma.ru -O1 "C:\Users\pagas\Desktop\site\qq13" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.jpeg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv )
 
 Information, Warnings and Errors reported for this mirror:
 note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
 	such as username/password authentication for websites mirrored in this project
 	do not share these files/folders if you want these information to remain private
 
-16:13:06	Warning: 	Cache: damaged cache, trying to repair
-16:13:06	Warning: 	Cache: 0 bytes successfully recovered in 0 entries
-16:13:06	Warning: 	Cache: error trying to open the cache
-16:13:06	Warning: 	File not parsed, looks like binary: https://hometarget.es/robots.txt
-16:13:35	Warning: 	Moved Permanently for hometarget.es/robots.txt
-16:13:35	Warning: 	Redirected link is identical because of 'URL Hack' option: hometarget.es/robots.txt and https://hometarget.es/robots.txt
-16:13:35	Warning: 	Warning moved treated for hometarget.es/robots.txt (real one is https://hometarget.es/robots.txt)
-16:13:35	Warning: 	Moved Permanently for hometarget.es/files/target/
-16:13:35	Warning: 	Redirected link is identical because of 'URL Hack' option: hometarget.es/files/target/ and https://hometarget.es/files/target/
-16:13:35	Warning: 	File has moved from hometarget.es/files/target/ to https://hometarget.es/files/target/
-16:15:22	Warning: 	Link https://hometarget.es/cdn-cgi/l/email-protection not scanned (follow robots meta tag)
-16:33:12	Warning: 	Found for https://hometarget.es/ad/Firefox/
-16:33:12	Warning: 	File has moved from https://hometarget.es/ad/Firefox/ to /error.aspx
-16:33:13	Warning: 	Found for https://hometarget.es/ad/AppleWebKit/
-16:33:13	Warning: 	File has moved from https://hometarget.es/ad/AppleWebKit/ to /error.aspx
-16:33:13	Warning: 	Found for https://hometarget.es/ad/Opera/
-16:33:13	Warning: 	File has moved from https://hometarget.es/ad/Opera/ to /error.aspx
+15:42:21	Warning: 	Note: due to https://dimdoma.ru remote robots.txt rules, links beginning with these path will be forbidden: /page16547093.html, /rent, /page16833550.html, /cateringcopy, /page17136322.html, /error, /tilda/form*, /tilda/rec*, /tilda/click*, /tilda/scroll*, /tilda/popup*, /tilda/cart*, /tilda/product*, /tilda/event*, /*_escaped_fragment_* (see in the options to disable this)
+15:42:37	Warning: 	Retry after error -4 (Connect Error) at link https://mc.yandex.ru/metrika/tag.js (from https://dimdoma.ru/)
+15:42:40	Warning: 	Retry after error -4 (Connect Error) at link https://mc.yandex.ru/metrika/tag.js (from https://dimdoma.ru/)
+15:42:42	Error: 	"Connect Error" (-4) after 2 retries at link https://mc.yandex.ru/metrika/tag.js (from https://dimdoma.ru/)
 
-HTTrack Website Copier/3.49-2 mirror complete in 20 minutes 7 seconds : 5018 links scanned, 5012 files written (778641574 bytes overall) [767021803 bytes received at 635477 bytes/sec], 19629357 bytes transferred using HTTP compression in 321 files, ratio 28%, 43.3 requests per connection
-(No errors, 17 warnings, 0 messages)
+HTTrack Website Copier/3.49-2 mirror complete in 22 seconds : 57 links scanned, 53 files written (3800399 bytes overall) [3820283 bytes received at 173649 bytes/sec]
+(1 errors, 3 warnings, 0 messages)
