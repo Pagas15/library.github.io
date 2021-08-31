@@ -1,11 +1,19 @@
 [
   {
     "dispate": "y",
-    "image": "img/content/listImg/portfolio-photograf.png",
-    "link": "https://pagas15.github.io/project/photograf-portfolio/",
-    "name": "Photograf-portfolio",
-    "description": "Сделал сайт, для фотографа с минималистическим стилем для простого и быстрого ознакомления",
-    "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
+    "image": "img/content/listImg/hels.png",
+    "link": "https://pagas15.github.io/project/heal/",
+    "name": "Клиника лечения",
+    "description": "Многосраничный сайт для клиники которая помогает с зависимостями.",
+    "technology": "В работе использовались: HTML5, CSS3(Scss), js(jquery), Slick slider, Cross browser"
+  },
+  {
+    "dispate": "y",
+    "image": "img/content/listImg/bitlook.png",
+    "link": "https://pagas15.github.io/project/bitlook/",
+    "name": "BitLook",
+    "description": "Многосраничный сайт связан с крипто-торговлей",
+    "technology": "В работе использовались: HTML5, CSS3(Scss), js, Swiper slide, Cross browser"
   },
   {
     "dispate": "y",
@@ -14,6 +22,14 @@
     "name": "Alexey Krotov",
     "description": "Сайт для фотографа, для ознакомления с ним и его работ в разных стилях",
     "technology": "В работе использовались: html5, css3, js, Cross browser, Slick slider"
+  },
+  {
+    "dispate": "y",
+    "image": "img/content/listImg/portfolio-photograf.png",
+    "link": "https://pagas15.github.io/project/photograf-portfolio/",
+    "name": "Photograf-portfolio",
+    "description": "Сделал сайт, для фотографа с минималистическим стилем для простого и быстрого ознакомления",
+    "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, Slick slider, GoogleMapsApi"
   },
   {
     "dispate": "y",
@@ -54,13 +70,5 @@
     "name": "Form",
     "description": "Сверстал рабочую форму отправки, которая появляется через определённый интервал времени (10 секунд) и отправляет данные на email",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, php"
-  },
-  {
-    "dispate": "y",
-    "image": "img/content/listImg/hels.png",
-    "link": "https://pagas15.github.io/project/heal/",
-    "name": "Клиника лечения",
-    "description": "Многосраничный сайт для клиники которая помогает с зависимостями.",
-    "technology": "В работе использовались: HTML5, CSS3(Scss), js(jquery), Slick slider, Cross browser"
   }
 ]
