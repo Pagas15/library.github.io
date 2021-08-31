@@ -40,7 +40,7 @@
     "technology": "В работе использовались: html5, css3, js(+jquery), Cross browser, Slick slider"
   },
   {
-    "dispate": "y",
+    "dispate": "n",
     "image": "img/content/listImg/test-slider.png",
     "link": "https://test.lantos.monster/test-slider/",
     "name": "Test-slider",
@@ -54,5 +54,13 @@
     "name": "Form",
     "description": "Сверстал рабочую форму отправки, которая появляется через определённый интервал времени (10 секунд) и отправляет данные на email",
     "technology": "В работе использовались: html5, css3, js(jquery), Cross browser, php"
+  },
+  {
+    "dispate": "y",
+    "image": "img/content/listImg/form.png",
+    "link": "https://pagas15.github.io/project/heal/",
+    "name": "Лечение от зависимости",
+    "description": "Многосраничный сайт для клиники которая помогает с зависимостями.",
+    "technology": "В работе использовались: HTML5, CSS3(Scss), js(jquery), Slick slider, Cross browser"
   }
 ]
