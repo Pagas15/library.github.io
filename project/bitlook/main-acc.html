@@ -1,0 +1,769 @@
+<!-- 
+  Was made by Pagas15
+  My site - https://pagas15.github.io
+-->
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<title>Bitlook</title>
+
+	<!-- Иконка для сайта -->
+	<link rel="icon" type="image/png" sizes="48x48" href="./img/favicon/icon-48.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="./img/favicon/icon-144.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./img/favicon/icon-256.png">
+
+	<meta name="description" content="Выводимое описании при выводе в поисковике вашего сайта"> 
+	<!-- ключевые слова для поисковиков (за частую поисковики начали пропускать этот прометр) -->
+  <!-- <meta name="Keywords" content="HTML, META, метатег, тег, поисковая система">  -->
+
+	<meta name="viewport" content="width=device-width, instial-scale=1, shrink-to-fit=no">
+	<link media="all" rel="stylesheet" type="text/css" href="css/styles.min.css">
+	<link media="all" rel="stylesheet" type="text/css" href="css/media.min.css">
+
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__bg-wrap">
+			<div class="header__bg">
+			</div>
+		</div>
+		<div class="header__bg-close"></div>
+		<div class="header-wrap">
+			<a href="#" class="logo">
+				<img 
+					src="./img/icon/logo1.png"
+					alt="Bitlook"
+					/>
+			</a>
+			<div class="header__right">
+				<div id="header__nav-bares" class="header__nav-bares">
+					<ul class="nav-bar" id="nav-bar">
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn active">Home</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Exchange</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Finance</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Markets</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Promotions</a></li>
+						<li class="nav-bar__item"><a href="#" class="nav-bar__btn">Terms of service</a></li>
+					</ul>
+					<div class="option">
+						<a href="#" class="btn-link">Assest</a>
+						<a href="#" class="btn-link">Orders</a>
+					</div>
+					<div class="option">
+						<div class="option__wrap-btn">
+							<button class="option__btn"	data-how="true" id="langBtn">English</button>
+							<ul class="option__list" id="langList">
+								<li class="option__item">
+									<button class="option__opt-btn">English</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">Russia</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UA</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">English</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">Russia</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UA</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">English</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">Russia</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UA</button>
+								</li>
+							</ul>
+						</div>
+						<hr />
+						<div class="option__wrap-btn">
+							<button class="option__btn"	data-how="true" id="valBtn">USD</button>
+							<ul class="option__list" id="valList">
+								<li class="option__item">
+									<button class="option__opt-btn">USD</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">EUR</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">RUB</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UAH</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">USD</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">EUR</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">RUB</button>
+								</li>
+								<li class="option__item">
+									<button class="option__opt-btn">UAH</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="option__list" id="navAtc">
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-user"></i> Profile</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-def"></i> Security</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-indf"></i> Identification</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-ref"></i> Referral</button>
+						</li>
+						<li class="option__item">
+							<button class="option__opt-btn"><i class="icon-sr icon-sr-logout"></i> Log out</button>
+						</li>
+					</ul>
+					<div class="log-box">
+						<button
+							class="btn-link"
+							id="nav-btsaw"
+							data-how="true"
+						>
+						no***@gmail.com <i class="icon-sr icon-sr-arrDown"></i>
+						</button>
+					</div>
+				</div>
+				<button class="nav-btn" id="nav-btn">
+					<div class="nav-btn__lines">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	</header>
+	<div class="header--img">
+		<div class="header__bg-wrap">
+			<div class="header-img header-img--lapt">
+				<img 
+					src="./img/content/head-bg/laptop.png" 
+					alt=""
+					/>
+			</div>
+		</div>
+	</div>
+	<section class="head">
+		<div class="block__tit-box">
+			<h2 class="block__title-big">
+				Find the next precious <br>
+				stone among cryptocurrencies <br>
+				on bit<span>look</span>
+			</h2>
+			<p class="block__sun-title  mt30">
+				1 out of 4 Cryptocurrency Holders in the World with mybit.exchange
+			</p>
+			<button class="btn-or" data-btnpop="joinBtn">
+				Join us now
+			</button>
+		</div>
+		<div class="advantages-slider__wrap">
+			<div class="swiper-button-prev"><i class="icon-sr icon-sr-arrLeft"></i></div>
+			<div class="advantages-slider swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="advantages-slider__item">
+							<img 
+								src="./img/content/head-slider/1.jpg" 
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="advantages-slider__item">
+							<img 
+								src="./img/content/head-slider/2.jpg" 
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="advantages-slider__item">
+							<img 
+								src="./img/content/head-slider/3.jpg" 
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="advantages-slider__item">
+							<img 
+								src="./img/content/head-slider/4.jpg" 
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="advantages-slider__item">
+							<img 
+								src="./img/content/head-slider/5.jpg" 
+								alt=""
+							/>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="advantages-slider__item">
+							<img 
+								src="./img/content/head-slider/6.jpg" 
+								alt=""
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="slider-navigation">
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+			<div class="swiper-button-next"><i class="icon-sr icon-sr-arrRig"></i></div>
+		</div>
+	</section>
+	<section class="slider-static">
+		<div class="slider-static__slider swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slider-static__item">
+						<div class="slider-static__img">
+							<img 
+								src="./img/content/grafic/1.jpg" 
+								alt=""
+							>
+						</div>
+						<div class="slider-static__currency">
+							<div class="slider-static__icon">
+								<img 
+									src="./img/content/val/btc.png" 
+									alt="btc"
+								>
+							</div>
+							<div class="slider-static__name">
+								<p class="slider-static__short-name">BTC</p>
+								<p class="slider-static__full-name">Bitcoin</p>
+							</div>
+						</div>
+						<p class="slider-static__change">Change in 24h <span>6.83%<i class="icon-sr icon-sr-arrRigTop"></i></span></p>
+						<p class="slider-static__cust">$40218.73</p>
+						<p class="slider-static__precent">-5%</p>
+						<p class="slider-static__more">Trade <i class="icon-sr icon-sr-arrRig"></i></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="conviction">
+		<div class="conviction__bg">
+
+		</div>
+		<div class="conviction__wrap">
+			<div class="conviction__iphone">
+				<div class="conviction__top">
+					<a href="#" class="logo">
+						<img 
+							src="./img/icon/logo1.png"
+							alt="Bitlook"
+						/>
+					</a>
+					<div class="conviction__nav-btn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<p class="conviction__title">
+					Create an acoount <br />
+					in just 5 seconds
+				</p>
+				<form class="registration">
+					<p class="registration__title">
+						Registration
+					</p>
+					<div class="inputBox">
+						<input 
+							type="email" 
+							placeholder="Email"
+						/>
+					</div>
+					<div class="inputBox">
+						<input 
+							type="text" 
+							placeholder="SMS code"
+						/>
+					</div>
+					<div class="inputBox">
+						<input 
+							type="password" 
+							placeholder="Password"
+						/>
+					</div>
+					<div class="inputBox">
+						<input 
+							type="text" 
+							placeholder="Ref. code (optional)"
+						/>
+					</div>
+					<input 
+						type="button" 
+						value="Log In"
+						class="btn-or"
+					/>
+				</form>
+			</div>
+			<ul class="conviction__list">
+				<li class="conviction__item">
+					<div class="conviction__icon">
+						<i class="icon-sr-graf"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span></i>
+					</div>
+					<div class="conviction__info">
+						<div class="conviction__tit-desc">
+							Multiple Order Types for All Kinds <br/>
+							of Risk of Appetite
+						</div>
+						<div class="conviction__nav">
+							<a href="#" class="conviction__try">Try demo</a>
+							<hr/>
+							<a href="#" class="conviction__try">Trade now</a>
+						</div>
+					</div>
+				</li>
+				<li class="conviction__item">
+					<div class="conviction__icon">
+						<i class="icon-sr-ok"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+					</div>
+					<div class="conviction__info">
+						<div class="conviction__tit-desc">
+							Numerous Income Methods That Help Maintain and Increase Your Wealth
+						</div>
+						<div class="conviction__nav">
+							<a href="#" class="conviction__try">Register now</a>
+						</div>
+					</div>
+				</li>
+				<li class="conviction__item">
+					<div class="conviction__icon">
+						<i class="icon-sr-saving"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span><span class="path41"></span><span class="path42"></span><span class="path43"></span><span class="path44"></span><span class="path45"></span><span class="path46"></span><span class="path47"></span></i>
+					</div>
+					<div class="conviction__info">
+						<div class="conviction__tit-desc">
+							Buying Bitcoin Safe and Fast
+						</div>
+						<div class="conviction__nav">
+							<a href="#" class="conviction__try">Buy now</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="features">
+		<ul class="features__wrap">
+			<li class="features__item">
+				<div class="features__img">
+					<img 
+						src="./img/content/features/a1.png" 
+						alt=""
+					/>
+				</div>
+				<h4 class="features__title">
+					Customer Service
+					Available 24/7
+				</h4>
+				<p class="features__desc">
+					Don't know what Bitcoin is? Not sure how to trade or how to monitor the markets? You can ask any questions to mybit.exchange support.
+				</p>
+			</li>
+			<li class="features__item">
+				<div class="features__img">
+					<img 
+						src="./img/content/features/a2.png" 
+						alt=""
+					/>
+				</div>
+				<h4 class="features__title">
+					Community bitlook
+				</h4>
+				<p class="features__desc">
+					Global mybit.exchange Communities span 205 countries and 13 languages to help millions of users around the world.
+				</p>
+				<a href="#" class="features__btn btn-ro">More details</a>
+			</li>
+			<li class="features__item">
+				<div class="features__img">
+					<img 
+						src="./img/content/features/a3.png" 
+						alt=""
+					/>
+				</div>
+				<h4 class="features__title">
+					News bitlook
+				</h4>
+				<p class="features__desc">
+					mybit.exchange news will keep you updated with the latest cryptocurrency market news.
+				</p>
+				<a href="#" class="features__btn btn-ro">More details</a>
+			</li>
+		</ul>
+	</section>
+	<footer class="footer footer--nw">
+		<div class="footer__bot">
+			<div class="footer__line">
+				<div class="footer__row-links">
+					<div class="footer__col">
+						<h4 class="footer__title">Service</h4>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">Spot trade</a>
+								<a href="#" class="footer__link">Staking</a>
+								<a href="#" class="footer__link">Trading Fee</a>
+								<a href="#" class="footer__link">Crypto lending</a>
+								<a href="#" class="footer__link">Referral Program</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<h4 class="footer__title">Legal</h4>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">AML&CFT</a>
+								<a href="#" class="footer__link">Institutional</a>
+								<a href="#" class="footer__link">Privacy police</a>
+								<a href="#" class="footer__link">User Agreement</a>
+								<a href="#" class="footer__link">Terms of service</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<h4 class="footer__title">Support</h4>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="#" class="footer__link">Help Center</a>
+								<a href="#" class="footer__link">Sumbit a request</a>
+								<a href="#" class="footer__link">API Documentation</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__col">
+						<h4 class="footer__title">Contact Us</h4>
+						<ul class="footer__list">
+							<li class="footer__item">
+								<a href="mailto:mybitex@support.com" class="footer__link footer__link--sad"><i class="icon-sr-mesg"></i><span> mybitex@support.com</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__girl">
+					<div class="footer__girl-avs">
+						
+					</div>
+				</div>
+				<div class="footer__right">
+					<h4 class="footer__title">Community</h4>
+					<ul class="footer__icons">
+						<li class="footer__icon">
+							<a href="#" class="footer__sec"><i class="icon-sr-gt"></i></a>
+						</li>
+						<li class="footer__icon">
+							<a href="#" class="footer__sec"><i class="icon-sr-tel"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i></a>
+						</li>
+						<li class="footer__icon">
+							<a href="#" class="footer__sec"><i class="icon-sr-sat"></i></a>
+						</li>
+						<li class="footer__icon">
+							<a href="#" class="footer__sec"><i class="icon-sr-twit"><span class="path1"></span><span class="path2"></span></i></a>
+						</li>
+						<li class="footer__icon">
+							<a href="#" class="footer__sec"><i class="icon-sr-face"><span class="path1"></span><span class="path2"></span></i></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__info">
+				<p>CopyRight © 2017 - 2021 KuCoin.com. All Rights Reserved.</p>
+				<p>24H Volume <span> &nbsp; 1,475,909</span> USDT</p>
+				<p>2021-02-08 02:04:19  (UTC+8)</p>
+			</div>
+		</div>
+	</footer>
+	<div class="ollPagas">
+		<p class="ollPagas__text">Список страниц<br><span>Для просмотри верски</span></p>
+		<ul class="ollPagas__list">
+			<li class="ollPagas__item"><a href="./assets.html" class="ollPagas__link">assets</a></li>
+			<li class="ollPagas__item"><a href="./assets2.html" class="ollPagas__link">assets2</a></li>
+			<li class="ollPagas__item"><a href="./assets3.html" class="ollPagas__link">assets3</a></li>
+			<li class="ollPagas__item"><a href="./bal-det.html" class="ollPagas__link">bal-det</a></li>
+			<li class="ollPagas__item"><a href="./building.html" class="ollPagas__link">building</a></li>
+			<li class="ollPagas__item"><a href="./crypto.html" class="ollPagas__link">crypto</a></li>
+			<li class="ollPagas__item"><a href="./crypto-acc.html" class="ollPagas__link">crypto-acc</a></li>
+			<li class="ollPagas__item"><a href="./crypto-loans.html" class="ollPagas__link">crypto-loans</a></li>
+			<li class="ollPagas__item"><a href="./index.html" class="ollPagas__link">Head</a></li>
+			<li class="ollPagas__item"><a href="./main.html" class="ollPagas__link">main</a></li>
+			<li class="ollPagas__item"><a href="./main-acc.html" class="ollPagas__link">main-acc</a></li>
+			<li class="ollPagas__item"><a href="./navigation.html" class="ollPagas__link">navigation</a></li>
+			<li class="ollPagas__item"><a href="./openOrdersNoData.html" class="ollPagas__link">openOrdersNoData</a></li>
+			<li class="ollPagas__item"><a href="./order.html" class="ollPagas__link">order</a></li>
+			<li class="ollPagas__item"><a href="./order-filt.html" class="ollPagas__link">order-filt</a></li>
+			<li class="ollPagas__item"><a href="./staking.html" class="ollPagas__link">staking</a></li>
+			<li class="ollPagas__item"><a href="./table-staking.html" class="ollPagas__link">table-staking</a></li>
+			<li class="ollPagas__item"><a href="./terms.html" class="ollPagas__link">assets</a></li>
+			<li class="ollPagas__item"><a href="./transform.html" class="ollPagas__link">transform</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+	<script type="text/javascript" src="js/scripts.min.js"></script>
+</body>
+</html>
