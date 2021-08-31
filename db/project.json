@@ -59,7 +59,7 @@
     "dispate": "y",
     "image": "img/content/listImg/hels.png",
     "link": "https://pagas15.github.io/project/heal/",
-    "name": "Лечение от зависимости",
+    "name": "Клиника лечения",
     "description": "Многосраничный сайт для клиники которая помогает с зависимостями.",
     "technology": "В работе использовались: HTML5, CSS3(Scss), js(jquery), Slick slider, Cross browser"
   }
