@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.dimdoma.ru	TRUE	/	FALSE	1999999999	__ddg1	byWlLSFNiq40qbt8Muge
-
