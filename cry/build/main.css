@@ -1,0 +1,23 @@
+body{
+
+}
+
+.btnUpdata{
+  border: 1px solid rgb(0, 160, 27);
+  /* background: #000; */
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: rgb(0, 202, 34);
+  color: #fff;
+  opacity: .8;
+  transition: all .2s ease-in-out;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  cursor: pointer;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=main.css.map*/
