@@ -1,0 +1,1262 @@
+<!-- 
+  Was made by Pagas15
+  My site - https://pagas15.github.io
+-->
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Title</title>
+
+    <!-- Иконка для сайта
+	<link rel="icon" type="image/png" sizes="48x48" href="./img/favicon/icon-48.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="./img/favicon/icon-144.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./img/favicon/icon-256.png">  -->
+
+    <meta name="description" content="Выводимое описании при выводе в поисковике вашего сайта" />
+    <!-- ключевые слова для поисковиков (за частую поисковики начали пропускать этот прометр) -->
+    <!-- <meta name="Keywords" content="HTML, META, метатег, тег, поисковая система">  -->
+
+    <meta name="viewport" content="width=device-width, instial-scale=1, shrink-to-fit=no" />
+    <link media="all" rel="stylesheet" type="text/css" href="css/styles.min.css" />
+  </head>
+
+  <body>
+		
+		<header class="header" id="header">
+			<div class="header__main">
+				<div class="header__wrap wrapper">
+					<a href="./head.html" class="logo"><img src="./img/logo.png" alt="BASSEYN"></a>
+					<div class="header__content" id="headerContent">
+						<div></div>
+						<a href="./cataloge.html" class="header__catag btn btnGrBd" id="btnCategory">
+							<i class="icon-cataloge"></i>
+							Catalog
+						</a>
+						<ul class="navbar" id="navbar">
+							<li class="navbar__item">
+								<a href="./delivery.html" class="navbar__link txt16x24">Delivery</a>
+							</li>
+							<li class="navbar__item">
+								<a href="./repeyment.html" class="navbar__link txt16x24">Repeyment</a>
+							</li>
+							<li class="navbar__item">
+								<a href="./about.html" class="navbar__link txt16x24">About our</a>
+							</li>
+							<li class="navbar__item">
+								<a href="./contacts.html" class="navbar__link txt16x24">Сontacts</a>
+							</li>
+						</ul>
+						<div class="phones" id="phones">
+							<a href="tel:99999999999" class="btnLin btnLinGr txt16x24">9 (999) 999-99-99</a>
+							<a href="tel:99999999999" class="btnLin btnLinGr txt16x24">9 (999) 999-99-99</a>
+						</div>
+						<ul class="navTwo" id="searchWrap">
+							<li class="navTwo__item search" >
+								<button class="navTwo__link search__btn" id="search"><i class="icon-search"></i></button>
+								<div class="search__input">
+									<input 
+										type="text"
+										placeholder="Place for the name of the desired product..."
+									>
+								</div>
+								<button class="btnClose"><i class="icon-close"></i></button>
+							</li>
+							<li class="navTwo__item">
+								<a href="./favorites.html" class="navTwo__link" id="btnFavorites"><i class="icon-heart"></i><span>4</span></a>
+							</li>
+							<li class="navTwo__item">
+								<a href="./cart.html" class="navTwo__link" id="btnCart"><i class="icon-cart"></i><span>2</span></a>
+							</li>
+						</ul>
+					</div>
+					<button class="menuBtn" id="menuBtn">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+			<div class="header__hover" id="hoverHeader">
+				<div class="header__hovers">
+					<div class="header__item header__inf" id="hoverCart">
+						<div class="wrapper wrapper--tp">
+							<div class="topRow">
+								<h4 class="topRow__title title">Cart</h4>
+								<p class="numCl">2</p>
+							</div>
+							<ul class="cartList podTp">
+								<li class="cartList__item cart">
+									<a href="#" class="cart__info cart__bd">
+										<div class="cart__img"><img src="img/content/cart/1.jpg" alt=""></div>
+										<div class="cart__txt">
+											<p class="price">120 usd</p>
+											<p class="txt14x22">Frame pool 305x107cm, 6300l, filter pump 2270l</p>
+										</div>
+									</a>
+									<button class="cart__remove btnClose">
+										<i class="icon-close"></i>
+									</button>
+									<div class="cart__counter cart__bd counter">
+										<button class="btnCircleIcon btnCircleIcon--minus btnCircleIcon--red">
+											<i class="icon-minus"></i>
+										</button>
+										<p class="counter__pieces">
+											<span class="counter__num">1</span> pc.
+										</p>
+										<button class="btnCircleIcon">
+											<i class="icon-plus"></i>
+										</button>
+									</div>
+									<div class="cart__bd">
+										<button class="btnCircleIcon">
+											<i class="icon-heart"></i>
+										</button>
+									</div>
+								</li>
+								<li class="cartList__item cart">
+									<a href="#" class="cart__info cart__bd">
+										<div class="cart__img"><img src="img/content/cart/2.jpg" alt=""></div>
+										<div class="cart__txt">
+											<p class="price">350 usd.</p>
+											<p class="txt14x22">Frame pool Steel Pro Max 427x122cm, 15232l, filter pump 3028l/h, ladder, awning, Bestway, 5612X BW</p>
+										</div>
+									</a>
+									<button class="cart__remove btnClose">
+										<i class="icon-close"></i>
+									</button>
+									<div class="cart__counter cart__bd counter">
+										<button class="btnCircleIcon btnCircleIcon--minus btnCircleIcon--red">
+											<i class="icon-minus"></i>
+										</button>
+										<p class="counter__pieces">
+											<span class="counter__num">1</span> pc.
+										</p>
+										<button class="btnCircleIcon">
+											<i class="icon-plus"></i>
+										</button>
+									</div>
+									<div class="cart__bd">
+										<button class="btnCircleIcon">
+											<i class="icon-heart"></i>
+										</button>
+									</div>
+								</li>
+							</ul>
+							<div class="podTp btnWraper">
+								<a href="./cart.html" class="btn btnGr">Quick order</a>
+								<a href="./cart.html" class="btn btnGy">Go to cart</a>
+							</div>
+						</div>
+					</div>
+					<div class="header__item header__inf" id="hoverFavorites">
+						<div class="wrapper wrapper--tp">
+							<div class="topRow">
+								<h4 class="topRow__title title">Favorites</h4>
+								<p class="numCl">4</p>
+							</div>
+							<ul class="cardList podTp">
+								<li class="cardList__item card--wrap">
+									<div class="card">
+										<button class="card__btnFn btnBin"><i class="icon-bin"></i></button>
+										<div class="card__img"><img src="./img/content/card/1.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__availability availability">
+												<div class="availability__icon"><i class="icon-check"></i></div>
+												<p class="availability__txt">In available</p>
+											</div>
+											<p class="card__price price price--discount">
+												<span class="price__act">120 usd.</span>
+												<span class="price__old">140 usd.</span>
+											</p>
+											<p class="card__desc txt14x22">Sand filter pump 3028l/h, sand tank 8.5kg, fraction 0.45-0.85mm</p>
+											<div class="card__btns">
+												<button class="btn btnGrBd"><i class="icon-cart"></i> Add to cart</button>
+												<button class="btn btnGy">More details</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="cardList__item card--wrap">
+									<div class="card">
+										<div class="card__presentation">
+											<p class="presen presen--yellow">Promotion</p>
+										</div>
+										<button class="card__btnFn btnBin"><i class="icon-bin"></i></button>
+										<div class="card__img"><img src="./img/content/card/1.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__availability availability">
+												<div class="availability__icon"><i class="icon-check"></i></div>
+												<p class="availability__txt">In available/p>
+											</div>
+											<p class="card__price price price--discount">
+												<span class="price__act">120 usd.</span>
+												<span class="price__old">140 usd.</span>
+											</p>
+											<p class="card__desc txt14x22">Sand filter pump 3028l/h, sand tank 8.5kg, fraction 0.45-0.85mm</p>
+											<div class="card__btns">
+												<button class="btn btnGrBd"><i class="icon-cart"></i> Add to cart</button>
+												<button class="btn btnGy">More details</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="cardList__item card--wrap">
+									<div class="card">
+										<div class="card__presentation">
+											<p class="presen presen--green">Hit</p>
+											<p class="presen presen--yellow">Promotion</p>
+										</div>
+										<button class="card__btnFn btnBin"><i class="icon-bin"></i></button>
+										<div class="card__img"><img src="./img/content/card/2.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__availability availability availability--none">
+												<div class="availability__icon"><i class="icon-none"></i></div>
+												<p class="availability__txt">Not in available</p>
+											</div>
+											<p class="card__price price">120 usd.</p>
+											<p class="card__desc txt14x22">
+												Frame pool Steel Pro Max 427x122cm, 15232l, filter pump 3028l/h, ladder, awning, Bestway, 5612X BW
+											</p>
+											<div class="card__btns">
+												<button class="btn btnGy">More details</button>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="cardList__item card--wrap">
+									<div class="card">
+										<div class="card__presentation">
+											<p class="presen presen--green">Hit</p>
+										</div>
+										<button class="card__btnFn btnBin"><i class="icon-bin"></i></button>
+										<div class="card__img"><img src="./img/content/card/3.jpg" alt=""></div>
+										<div class="card__info">
+											<div class="card__availability availability">
+												<div class="availability__icon"><i class="icon-check"></i></div>
+												<p class="availability__txt">In available</p>
+											</div>
+											<p class="card__price price price--discount">
+												<span class="price__act">120 usd.</span>
+												<span class="price__old">140 usd.</span>
+											</p>
+											<p class="card__desc txt14x22">
+												Electric heater for water in the pool up to 4000l, 0.99 kW, 150x53cm
+											</p>
+											<div class="card__btns">
+												<button class="btn btnGrBd"><i class="icon-cart"></i> Add to cart</button>
+												<button class="btn btnGy">More details</button>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header__item header__category" id="category">
+						<div class="wrapper category">
+							<ul class="category__list">
+								<li class="category__item">
+									<button class="category__btn active" data-tab-btn="tab1">
+										<span class="category__icon" style="font-size: 14px;"><i class="icon-1"></i></span>
+										<span class="category__txt txt16x24">Pools</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab2">
+										<span class="category__icon" style="font-size: 16px;"><i class="icon-2"></i></span>
+										<span class="category__txt txt16x24">Trampolines</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab3">
+										<span class="category__icon"><i class="icon-3"></i></span>
+										<span class="category__txt txt16x24">Accessories and equipment</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab4">
+										<span class="category__icon"><i class="icon-4"></i></span>
+										<span class="category__txt txt16x24">Basic equipment</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab5">
+										<span class="category__icon"><i class="icon-5"></i></span>
+										<span class="category__txt txt16x24">Optional equipment</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab6">
+										<span class="category__icon" style="font-size: 17px;"><i class="icon-6"></i></span>
+										<span class="category__txt txt16x24">SPA pools, saunas, hot tubs</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab7">
+										<span class="category__icon"><i class="icon-7"></i></span>
+										<span class="category__txt txt16x24">Swimming accessories</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab8">
+										<span class="category__icon"><i class="icon-8"></i></span>
+										<span class="category__txt txt16x24">Chemistry for swimming pools</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab9">
+										<span class="category__icon"><i class="icon-9"></i></span>
+										<span class="category__txt txt16x24">Everything for the construction of swimming pools</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+								<li class="category__item">
+									<button class="category__btn" data-tab-btn="tab10">
+										<span class="category__icon" style="font-size: 18px;"><i class="icon-10"></i></span>
+										<span class="category__txt txt16x24">Vacuum cleaners for swimming pools</span>
+										<span class="category__arrow"><i class="icon-arrRight"></i></span>
+									</button>
+								</li>
+							</ul>
+							<ul class="category__tabs">
+								<li class="category__tab active" data-tab-item="tab1">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab2">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab3">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab4">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab5">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab6">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab7">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab8">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab9">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="category__tab" data-tab-item="tab10">
+									<ul class="category__subList">
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frame pools
+												<span class="category__num">11</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Swimming pools with inflatable top
+												<span class="category__num">25</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Dug-in pools
+												<span class="category__num">4</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Wooden pools
+												<span class="category__num">20</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link active">
+												Children's pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pools for summer cottages
+												<span class="category__num">10</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Composite pools
+												<span class="category__num">24</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Bowls, spare parts for swimming pools
+												<span class="category__num">18</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Frost-resistant pools
+												<span class="category__num">17</span>
+											</a>
+										</li>
+										<li class="category__subItem">
+											<a href="#" class="category__link">
+												Pool repair kits
+												<span class="category__num">16</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header__bg">
+
+				</div>
+			</div>
+		</header>
+
+    <section class="content">
+      <div class="wrapper wrapper--tp">
+        <div class="topRow topRow--step">
+          <a href="./head.thml" class="topRow__item">Head</a>
+          <a href="./repeyment.html" class="topRow__item">Delivery</a>
+        </div>
+        <div class="content__wrap">
+          <div class="content__text">
+            <h2 class="headTitle">Delivery</h2>
+            <div class="content__chapter">
+              <h4 class="title">Conditions for City:</h4>
+              <p class="txt16x24">
+                Delivery within the City Ring Road and up to 50 km from the City Ring Road is carried out by the forwarding agent-consultant of the store. Payment is accepted only in cash and in ruble equivalent.
+              </p>
+              <ul class="txtList">
+                <li class="txt16x24">
+                  Orders within the City Ring Road are delivered for 6 usd. when ordering up to 10 kg. When ordering over 10 kg - 5 usd.
+                </li>
+                <li class="txt16x24">
+                  Delivery is made daily from 10.00 to 18.00;
+                </li>
+                <li class="txt16x24">
+                  If by the time the order is formed, the required products are not in stock, then the next delivery day is postponed by the number of days required to complete the order.
+                </li>
+              </ul>
+            </div>
+            <div class="content__chapter">
+              <h4 class="title">Pickup from the point of issue of orders in Moscow:</h4>
+              <p class="txt16x24">
+                Receiving orders at the point of issue of orders is carried out from Monday to Friday from 9:00 to 18:00.
+                <br><br>
+                Pickup point address: Moscow, Leninsky Prospekt 39/1, entrance under the Intex sign.
+              </p>
+            </div>
+            <div class="content__chapter">
+              <h4 class="title">Pickup from the point of issue of orders in City:</h4>
+              <p class="txt16x24">
+                Delivery within the City Ring Road and up to 50 km from the City Ring Road is carried out by the forwarding agent-consultant of the store. Payment is accepted only in cash and in ruble equivalent.
+              </p>
+              <ul class="txtList">
+                <li class="txt16x24">
+                  Delivery to a distance of more than 100 km from the City Ring Road is carried out by agreement;
+                </li>
+                <li class="txt16x24">
+                  Up to 20 km from the City - 10 usd;
+                </li>
+                <li class="txt16x24">
+                  From 20 to 50 km - 12 usd;
+                </li>
+                <li class="txt16x24">
+                  From 50 to 70 km - 14 usd;
+                </li>
+                <li class="txt16x24">
+                  From 70 to 100 km - 20 usd;
+                </li>
+                <li class="txt16x24">
+                  Delivery across the territory of the region is carried out daily from 12.00 to 18.00.
+                </li>
+              </ul>
+            </div>
+            <div class="content__chapter">
+              <h4 class="title">Terms of delivery to the regions</h4>
+              <p class="txt16x24">
+                Delivery of orders to the regions is carried out through transport companies, as well as through the courier service SDEK.
+                <br><br>
+                For orders up to 15 kg. courier delivery by the company CDEK is possible, as well as receipt at the pickup points of this company.
+                <br><br>
+                <span class="colGry">Payment in this case is possible upon receipt of the order.</span>
+                <br><br>
+                Delivery to the transport company PEK, ZhelDorExpedition or Business Lines is free. For these transport companies, the dispatch of the order is carried out from 1 to 3 working days from the date of receipt of payment for the order.
+                <br><br>
+                By agreement, another transport company is possible, the cost of order delivery to another shopping mall will be 6 usd. For these transport companies, sending the order is carried out within 5 working days from the date of receipt of payment for the order.
+                <br><br>
+                The client pays for the services of the transport company upon receipt of the goods.
+                <br><br>
+                The approximate cost of delivery can be calculated on the company's websites <span class="colGre">PEC , DELOVIE LINES and ZhDE</span> , for this you need to know the weight and volume of the cargo.
+                <br><br>
+                In the cold season, shipment of goods across Russia is carried out only by transport companies that have a warm delivery service. List of such companies:
+              </p>
+              <ul class="txtList">
+                <li class="txt16x24">
+                  ZhelDorExpedition
+                </li>
+                <li class="txt16x24">
+                  ZhelDorAlliance
+                </li>
+                <li class="txt16x24">
+                  Azimuth
+                </li>
+                <li class="txt16x24">
+                  magictrans
+                </li>
+                <li class="txt16x24">
+                  Delivery across the territory of the region is carried out daily from 12.00 to 18.00.
+                </li>
+              </ul>
+              <p class="txt16x24">
+                If you refuse transportation in heated / insulated wagons and kungs during the cold season, please send us a letter of guarantee “On refusal to send the order in heat” by e-mail.
+                <br><br>
+                In this case, the risk of freezing and damage to the product during transportation is borne by the buyer.
+                <br>The letter can be written in free form.
+              </p>
+            </div>
+            <div class="content__chapter">
+              <h4 class="title">Attention</h4>
+              <p class="txt16x24">The goods are handed over to the person who was indicated as the recipient when ordering. To avoid fraud, the person making the delivery has the right to require the identity document of the recipient.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<section class="viewed">
+	<div class="wrapper wrapper--tp viewed__wrap">
+		<div class="topRow">
+			<h4 class="topRow__title title">Previously viewed</h4>
+		</div>
+		<ul class="cardList podTp">
+			<li class="cardList__item card--wrap">
+				<div class="card">
+					<div class="card__presentation">
+						<p class="presen presen--green">Hit</p>
+						<p class="presen presen--yellow">Promotion</p>
+					</div>
+					<button class="card__btnFn btnFavorites" data-btn-favorites>
+						<span class="btnFavorites__icon1"><i class="icon-heart"></i></span>
+						<span class="btnFavorites__icon2"><i class="icon-heartGreen"></i></span>
+					</button>
+					<div class="card__img"><img src="./img/content/card/1.jpg" alt=""></div>
+					<div class="card__info">
+						<div class="card__availability availability">
+							<div class="availability__icon"><i class="icon-check"></i></div>
+							<p class="availability__txt">In available</p>
+						</div>
+						<p class="card__price price price--discount">
+							<span class="price__act">120 usd.</span>
+							<span class="price__old">140 usd.</span>
+						</p>
+						<p class="card__desc txt14x22">Sand filter pump 3028l/h, sand tank 8.5kg, fraction 0.45-0.85mm</p>
+						<div class="card__btns">
+							<button class="btn btnGrBd"><i class="icon-cart"></i> Add to cart</button>
+							<button class="btn btnGy">More details</button>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cardList__item card--wrap">
+				<div class="card">
+					<div class="card__presentation">
+						<p class="presen presen--green">Hit</p>
+					</div>
+					<button class="card__btnFn btnFavorites" data-btn-favorites>
+						<span class="btnFavorites__icon1"><i class="icon-heart"></i></span>
+						<span class="btnFavorites__icon2"><i class="icon-heartGreen"></i></span>
+					</button>
+					<div class="card__img"><img src="./img/content/card/2.jpg" alt=""></div>
+					<div class="card__info">
+						<div class="card__availability availability availability--none">
+							<div class="availability__icon"><i class="icon-none"></i></div>
+							<p class="availability__txt">Not in available</p>
+						</div>
+						<p class="card__price price">120 usd.</p>
+						<p class="card__desc txt14x22">
+							Frame pool Steel Pro Max 427x122cm, 15232l, filter pump 3028l/h, ladder, awning, Bestway, 5612X BW
+						</p>
+						<div class="card__btns">
+							<button class="btn btnGy">More details</button>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cardList__item card--wrap">
+				<div class="card">
+					<div class="card__presentation">
+						<p class="presen presen--yellow">Promotion</p>
+					</div>
+					<button class="card__btnFn btnCart"><i class="icon-cart"></i></button>
+					<div class="card__img"><img src="./img/content/card/3.jpg" alt=""></div>
+					<div class="card__info">
+						<div class="card__availability availability">
+							<div class="availability__icon"><i class="icon-check"></i></div>
+							<p class="availability__txt">In available</p>
+						</div>
+						<p class="card__price price price--discount">
+							<span class="price__act">120 usd.</span>
+							<span class="price__old">140 usd.</span>
+						</p>
+						<p class="card__desc txt14x22">
+							Electric heater for water in the pool up to 4000l, 0.99 kW, 150x53cm
+						</p>
+						<div class="card__btns">
+							<button class="btn btnGrBd"><i class="icon-cart"></i> Add to cart</button>
+							<button class="btn btnGy">More details</button>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cardList__item card--wrap">
+				<div class="card">
+					<button class="card__btnFn btnFavorites" data-btn-favorites>
+						<span class="btnFavorites__icon1"><i class="icon-heart"></i></span>
+						<span class="btnFavorites__icon2"><i class="icon-heartGreen"></i></span>
+					</button>
+					<div class="card__img"><img src="./img/content/card/1.jpg" alt=""></div>
+					<div class="card__info">
+						<div class="card__availability availability">
+							<div class="availability__icon"><i class="icon-check"></i></div>
+							<p class="availability__txt">In available</p>
+						</div>
+						<p class="card__price price price--discount">
+							<span class="price__act">120 usd.</span>
+							<span class="price__old">140 usd.</span>
+						</p>
+						<p class="card__desc txt14x22">Sand filter pump 3028l/h, sand tank 8.5kg, fraction 0.45-0.85mm</p>
+						<div class="card__btns">
+							<button class="btn btnGrBd"><i class="icon-cart"></i> Add to cart</button>
+							<button class="btn btnGy">More details</button>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="cardList__item card--wrap">
+				<div class="card">
+					<div class="card__presentation">
+						<p class="presen presen--green">Hit</p>
+						<p class="presen presen--yellow">Promotion</p>
+					</div>
+					<button class="card__btnFn btnFavorites" data-btn-favorites>
+						<span class="btnFavorites__icon1"><i class="icon-heart"></i></span>
+						<span class="btnFavorites__icon2"><i class="icon-heartGreen"></i></span>
+					</button>
+					<div class="card__img"><img src="./img/content/card/1.jpg" alt=""></div>
+					<div class="card__info">
+						<div class="card__availability availability">
+							<div class="availability__icon"><i class="icon-check"></i></div>
+							<p class="availability__txt">In available</p>
+						</div>
+						<p class="card__price price price--discount">
+							<span class="price__act">120 usd.</span>
+							<span class="price__old">140 usd.</span>
+						</p>
+						<p class="card__desc txt14x22">Sand filter pump 3028l/h, sand tank 8.5kg, fraction 0.45-0.85mm</p>
+						<div class="card__btns">
+							<button class="btn btnGrBd"><i class="icon-cart"></i> Add to cart</button>
+							<button class="btn btnGy">More details</button>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+		
+<footer class="footer">
+	<div class="wrapper footer__wrap">
+		<div class="footer__map"><img src="./img/content/map/foot.jpg" alt=""></div>
+		<div class="footer__inf">
+			<div class="footer__col">
+				<p class="title">Company</p>
+				<ul class="footer___list">
+					<li class="footer__item">
+						<a href="#" class="footer__link">About company</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link">Privacy Policy</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link">Warranty and service</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link">Contacts</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__col">
+				<p class="title">Information</p>
+				<ul class="footer___list">
+					<li class="footer__item">
+						<a href="#" class="footer__link">Terms of payment</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link">Delivery and pickup</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link">Assembly and installation of pools</a>
+					</li>
+					<li class="footer__item">
+						<a href="#" class="footer__link">Return</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__col">
+				<ul class="socialList">
+					<li class="socialList__item"><a href="#" class="socialList__link"><img src="./img/icon/social/facebook.png" alt="facebook"></a></li>
+					<li class="socialList__item"><a href="#" class="socialList__link"><img src="./img/icon/social/vk.png" alt="vk"></a></li>
+					<li class="socialList__item"><a href="#" class="socialList__link"><img src="./img/icon/social/inst.png" alt="instagram"></a></li>
+				</ul>
+				<p class="txt14x22 colGry">
+					The information provided on the site is for reference only and is not a public offer, determined by the provisions of Article 437 of the Civil Code of the Russian Federation.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer__bottom">2022 © Bassey.com - Shop of pools and equipment</div>
+</footer>
+
+
+<div class="ollPagas">
+	<p class="ollPagas__text">List of pages<br><span>To view oll pages</span></p>
+	<ul class="ollPagas__list">
+		<li class="ollPagas__item"><a href="./head.html" class="ollPagas__link">Main</a></li>
+		<li class="ollPagas__item"><a href="./cataloge.html" class="ollPagas__link">Cataloge</a></li>
+		<li class="ollPagas__item"><a href="./product.html" class="ollPagas__link">Product item</a></li>
+		<li class="ollPagas__item"><a href="./cart.html" class="ollPagas__link">Cart</a></li>
+		<li class="ollPagas__item"><a href="./favorites.html" class="ollPagas__link">Favorites</a></li>
+		<li class="ollPagas__item"><a href="./cartNone.html" class="ollPagas__link">Empty cart</a></li>
+		<li class="ollPagas__item"><a href="./favoritesNone.html" class="ollPagas__link">Empty favorites</a></li>
+		<li class="ollPagas__item"><a href="./contacts.html" class="ollPagas__link">Contacts</a></li>
+		<li class="ollPagas__item"><a href="./about.html" class="ollPagas__link">About</a></li>
+		<li class="ollPagas__item"><a href="./delivery.html" class="ollPagas__link">Delivery</a></li>
+		<li class="ollPagas__item"><a href="./repeyment.html" class="ollPagas__link">Payment</a></li>
+		<li class="ollPagas__item"><a href="./hoverUndefine" class="ollPagas__link">Header empty cart and favorites</a></li>
+	</ul>
+</div>
+    <script type="text/javascript" src="js/scripts.min.js"></script>
+  </body>
+</html>
