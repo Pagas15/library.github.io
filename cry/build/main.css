@@ -1,0 +1,294 @@
+/* NORMALIZE */
+/* ================================================ */
+html,
+body,
+div,
+span,
+applet,
+main,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+main,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Tahoma, sans-serif;
+  line-height: 1;
+  background-color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-width: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  min-height: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+input,
+textarea {
+  color: #333;
+  outline: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+td,
+form {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000100;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.btnUpdata {
+  border: 1px solid rgb(0, 160, 27);
+  /* background: #000; */
+  padding: 10px 20px;
+  border-radius: 6px;
+  background: rgb(0, 202, 34);
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.2s ease-in-out;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  cursor: pointer;
+}
+
+.coinLiss {
+  max-width: 1280px;
+  padding: 10vh 40px 6vh;
+  margin: auto;
+}
+
+.coinLiss__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  flex-wrap: wrap;
+}
+.coinLiss__item {
+  padding: 0;
+  margin: 20px auto;
+  border: 1px solid #eee;
+  width: 402px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.coinLiss__item p {
+  border: 1px solid #eee;
+  width: 50%;
+  padding: 3% 5%;
+  text-align: center;
+}
+.coinLiss__name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.coinLiss__have {
+  font-size: 18px;
+  font-weight: 500;
+}
+.coinLiss__priceUC {
+}
+.coinLiss__averageBy {
+}
+.coinLiss__act {
+}
+.coinLiss__actPrice {
+}
+.coinLiss__cost {
+}
+.coinLiss__profit {
+}
+.cRed {
+  background: rgba(255, 0, 0, 0.5);
+}
+.cBlue {
+  background: rgb(6, 0, 255, 50%);
+}
+.cGreen {
+  background: rgba(0, 255, 64, 0.5);
+}
+.coinLiss__outcome {
+  margin: auto;
+}
+
+
+/*# sourceMappingURL=main.css.map*/
