@@ -1,5 +1,35 @@
 [
   {
+    "Date(UTC)":"2022-04-01 07:11:14",
+    "Market":"TWTUSDT",
+    "Type":"BUY",
+    "Price":"1.1639",
+    "Amount":"49",
+    "Total":"57.0311",
+    "Fee": "0.00010169",
+    "Fee Coin":"BNB"
+  },
+  {
+    "Date(UTC)":"2022-04-01 07:11:14",
+    "Market":"TWTUSDT",
+    "Type":"BUY",
+    "Price":"1.1639",
+    "Amount":"8",
+    "Total":"9.31120000",
+    "Fee": "0.00001659",
+    "Fee Coin":"BNB"
+  },
+  {
+    "Date(UTC)":"2022-03-31 19:54:11",
+    "Market":"TWTUSDT",
+    "Type":"BUY",
+    "Price":"1.1668",
+    "Amount":"20",
+    "Total":"23.336",
+    "Fee": "0.00004155",
+    "Fee Coin":"BNB"
+  },
+  {
     "Date(UTC)":"2022-03-31 10:20:16",
     "Market":"AUDIOUSDT",
     "Type":"BUY",
