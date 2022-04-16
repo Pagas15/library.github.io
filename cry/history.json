@@ -1,5 +1,15 @@
 [
   {
+    "Date(UTC)":"2022-04-05 14:28:11",
+    "Market":"TWTUSDT",
+    "Type":"SELL",
+    "Price":"1.2812",
+    "Amount":"88",
+    "Total":"112.7495",
+    "Fee": "0.00018514",
+    "Fee Coin":"BNB"
+  },
+  {
     "Date(UTC)":"2022-04-01 07:11:14",
     "Market":"TWTUSDT",
     "Type":"BUY",
