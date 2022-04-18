@@ -1,5 +1,15 @@
 [
   {
+    "Date(UTC)":"2022-04-18 22:01:51",
+    "Market":"AUDIOUSDT",
+    "Type":"BUY",
+    "Price":"1.347",
+    "Amount":"82.4",
+    "Total":"110.993",
+    "Fee": "0.00019896",
+    "Fee Coin":"BNB"
+  },
+  {
     "Date(UTC)":"2022-04-05 14:28:11",
     "Market":"TWTUSDT",
     "Type":"SELL",
