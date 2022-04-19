@@ -1,5 +1,15 @@
 [
   {
+    "Date(UTC)":"2022-04-19 13:06:50",
+    "Market":"FRONTUSDT",
+    "Type":"BUY",
+    "Price":"0.5152",
+    "Amount":"107",
+    "Total":"55.1264",
+    "Fee": "0.00009828",
+    "Fee Coin":"BNB"
+  },
+{
     "Date(UTC)":"2022-04-18 22:01:51",
     "Market":"AUDIOUSDT",
     "Type":"BUY",
