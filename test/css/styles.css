@@ -186,7 +186,7 @@ ol {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  z-index: 10;
+  z-index: 1000;
 }
 
 .louder:not(.active) {
@@ -1604,7 +1604,7 @@ hr.block__bdBottom {
 
 @media screen and (max-width: 1400px) {
   .blockMainGame {
-    bottom: 108px;
+    bottom: -20px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -1819,5 +1819,35 @@ hr.block__bdBottom {
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  .blockMainNav__btn {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  .blockMainDecor__sigarBox {
+    bottom: -13px;
+    right: 130px;
+    width: 136px;
+    height: 228px;
+  }
+
+  .blockMainDecor__cognac {
+    bottom: 0px;
+    left: 125px;
+    width: 156px;
+    height: 188px;
+  }
+
+  .blockMainNav {
+    bottom: -18px;
+  }
+
+  .blockMainNav__item {
+    margin-right: -12px;
   }
 }
