@@ -186,6 +186,7 @@ ol {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  z-index: 10;
 }
 
 .louder:not(.active) {
@@ -250,6 +251,20 @@ ol {
   -webkit-transform: translate(18px, 0px);
   -ms-transform: translate(18px, 0px);
   transform: translate(18px, 0px);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #5d5d5d;
+}
+
+*::-webkit-scrollbar {
+  border-radius: 6px;
+  width: 6px;
+  background-color: #454545;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1c1b1b;
 }
 
 @-webkit-keyframes circle {
@@ -1484,17 +1499,11 @@ hr.block__bdBottom {
     top: 0;
     width: 314px;
     height: 164px;
-    background: url("../img/main/btnStatic.png") center top/cover no-repeat;
+    background: url("../img/main/btnStatic.png") center right/cover no-repeat;
   }
 
   .blockMainNav__btn:hover .blockMainNav__icon {
     opacity: 1;
-  }
-
-  .blockMainNav__btn:active {
-    -webkit-transform: translateY(4px);
-    -ms-transform: translateY(4px);
-    transform: translateY(4px);
   }
 
   .blockMainNav__btn:active:before {
@@ -1786,5 +1795,28 @@ hr.block__bdBottom {
     width: 71px;
     height: 66px;
     background: url("../img/mainMobi/vip.png") center/contain no-repeat;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1600px) {
+  .blockMainNav__item {
+    margin-right: 2%;
+  }
+
+  .blockMainNav__item:last-child {
+    margin-right: 0;
+  }
+
+  .blockMainNav__btn:before {
+    width: 273px;
+    height: 134px;
+    left: -102px;
+    top: 4px;
+  }
+
+  .blockMainNav__icon {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }

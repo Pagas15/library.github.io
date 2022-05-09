@@ -187,11 +187,18 @@ const clickToSlide = () => {
 	}
 }
 
+const loader = () => {
+	setTimeout(() => {
+		document.querySelector('#louder').classList.remove('active');
+	}, 1000);
+}
+
 const init = () => {
 	passwordInput();
 	selectInp();
 	slider();
 	clickToSlide();
+	loader();
 	if(window.innerWidth > 998){
 		modal()
 	}
