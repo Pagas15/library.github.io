@@ -1,5 +1,35 @@
 [
   {
+    "Date(UTC)":"2022-05-12 12:54:19",
+    "Market":"1INCHUSDT",
+    "Type":"BUY",
+    "Price":"0.778",
+    "Amount":"25.3",
+    "Total":"19.68",
+    "Fee": "0.00005804",
+    "Fee Coin":"BNB"
+  },
+  {
+    "Date(UTC)":"2022-05-12 12:52:37",
+    "Market":"AUDIOUSDT",
+    "Type":"BUY",
+    "Price":"0.344",
+    "Amount":"29",
+    "Total":"9.976",
+    "Fee": "0.00002945",
+    "Fee Coin":"BNB"
+  },
+  {
+    "Date(UTC)":"2022-05-12 12:51:33",
+    "Market":"TWTUSDT",
+    "Type":"BUY",
+    "Price":"0.5307",
+    "Amount":"56",
+    "Total":"29.7192",
+    "Fee": "0.00008779",
+    "Fee Coin":"BNB"
+  },
+  {
     "Date(UTC)":"2022-04-23 05:42:38",
     "Market":"AUDIOUSDT",
     "Type":"BUY",
