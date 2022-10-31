@@ -1,0 +1,585 @@
+.main-container.second.kids{
+    border-top: 6px solid #ff6d00;
+}
+.main-container.second.kids .home-sec{
+    background-image: url("../images/kids/landing-page.png");
+    height: 821px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.main-container.second.kids .classic-btn{
+    font-size: 16px;
+    padding: 13px 37px;
+    line-height: 1.5;
+    display: inline-block;
+    background-color: #FF6D00;
+}
+.main-container.second.kids .classic-btn:hover{
+    background-color: #65a0fb;
+    color: #fff;
+}
+.main-container.second.kids .classic-btn.added-width{
+    max-width: 300px;
+    width: 100%;
+}
+.main-container.kids .home-sec .content-home{
+    position: relative;
+}
+.main-container.second.kids .home-sec .sub-header .logo{
+    height: 44px;
+    width: 44px;
+}
+.main-container.second.kids .home-sec .content-home .tv-title{
+    font-family: Mulish;
+    font-size: 45px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: -0.5px;
+    color: #fff;
+    margin-bottom: 18px;
+    max-width: 540px;
+    margin-left: 36px;
+}
+.main-container.second.kids .home-sec .content-home .tv-title::after{
+    content: unset;
+}
+.main-container .home-sec .content-home .classic-btn{
+    margin-top: 0;
+    margin-left: 36px;
+}
+.main-container.second.kids .home-sec .content-home .tv-sub{
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #fff;
+    margin-left: 36px;
+    max-width: 249px;
+    margin-bottom: 36px;
+}
+.main-container.second.kids .home-sec .content-home .right-kids{
+    position: absolute;
+    top: -40px;
+    right: 0;
+    width: 652px;
+    height: 652px;
+}
+.main-container.second.kids .cat-sec{
+    margin-top: 45px;
+    margin-bottom: 55px;
+}
+.main-container.second.kids .cat-sec .left-cat{
+    max-width: 353px;
+    margin-right: 50px;
+    height: auto;
+}
+.main-container.second.kids .kids-main-p{
+    font-family: Mulish;
+    font-size: 38px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.26;
+    letter-spacing: -0.42px;
+    color: rgba(26, 21, 26, 0.8);
+}
+.main-container.second.kids .kids-sub-p{
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: rgba(26, 21, 26, 0.8);
+}
+.main-container.second.kids .kids-sub-p strong{
+    font-weight: 800;
+}
+.main-container.second.kids .cat-sec .kids-main-p{
+    margin-bottom: 17px;
+    max-width: 378px;
+    margin-top: 20px;
+}
+.main-container.second.kids .cat-sec .kids-sub-p{
+    margin-bottom: 36px;
+    max-width: 378px;
+}
+.main-container.second.kids .watching-tv{
+    padding: 110px 0 70px 0;
+    background: #f8edc8 url("../images/kids/patterns-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+.main-container.second.kids .watching-tv .kids-main-p{
+    max-width: 599px;
+    text-align: center;
+    margin: 0 auto 43px auto;
+}
+.main-container.second.kids .watching-tv .two-parts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.main-container.second.kids .watching-tv .two-parts .sub-sec{
+    width: calc(100% / 2 - 50px);
+}
+.main-container.second.kids .tv-work{
+    background-color: #fff;
+    padding: 110px 0 70px 0;
+}
+.main-container.second.kids .tv-work .kids-main-p{
+    max-width: 449px;
+    text-align: center;
+    margin: 0 auto 43px auto;
+}
+.main-container.second.kids .tv-work .catalog{
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+}
+.main-container.second.kids .tv-work .catalog .round-img{
+    width: 129px;
+    height: 132px;
+    margin: 0 5px;
+}
+.main-container.second.kids .tv-work .catalog .last-content{
+    margin-left: 50px;
+    max-width: 300px;
+}
+.main-container.second.kids .dual-subtitles{
+   background-color:#f0f0f0;
+   padding: 41px 0;
+}
+.main-container.second.kids .dual-subtitles .dual-p{
+    max-width: 357px;
+    margin-right: 42px;
+}
+.main-container.second.kids .dual-subtitles .lapy{
+    max-width: 379px;
+    max-height: 217px;
+}
+.main-container.second.kids .click-subtitles{
+    padding: 41px 0 121px 0;
+}
+.main-container.second.kids .click-subtitles .lapy{
+    max-width: 428px;
+    max-height: 290px;
+}
+.main-container.second.kids .click-subtitles .dual-p{
+    max-width: 329px;
+    margin-left: 49px;
+}
+.main-container.second.kids .handpicked{
+    margin-bottom: 96px;
+}
+.main-container.second.kids .handpicked .kids-main-p{
+    max-width: 597px;
+    margin: 18px auto;
+}
+.main-container.second.kids .handpicked .kids-sub-p{
+    max-width: 530px;
+    margin: 18px auto;
+}
+.main-container.second.kids .handpicked .team-experts{
+    width: 100%;
+    margin-top: 18px;
+    margin-bottom: 73px;
+}
+.main-container.second.kids .handpicked .two-parts{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.main-container.second.kids .handpicked  .two-parts .sub-sec{
+    width: calc(100% / 2 - 50px);
+    margin: 0 50px;
+    max-width: 390px;
+}
+.main-container.second.kids .handpicked  .two-parts .sub-sec .kids-sub-p{
+    position: relative;
+}
+.main-container.second.kids .handpicked  .two-parts .sub-sec .kids-sub-p::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -26px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/kids/checkmark.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.main-container.second.kids .risk-free{
+    background-color: #f8edc8;
+    padding: 110px 0 78px 0;
+    text-align: center;
+}
+.main-container.second.kids .risk-free .kids-main-p{
+    margin-bottom: 13px;
+}
+.main-container.second.kids .risk-free .kids-sub-p{
+    max-width: 746px;
+    margin: 18px auto;
+}
+.main-container.second.kids .risk-free .classic-btn{
+    margin-top: 34px;
+}
+.main-container.second.kids .parents-saying{
+    padding: 106px 0 95px 0;
+}
+.main-container.second.kids .parents-saying .kids-main-p{
+    margin-bottom: 55px;
+    text-align: center;
+}
+.main-container.second.kids .parents-saying .cards-parents{
+    display: flex;
+    justify-content: center;
+}
+.main-container.second.kids .parents-saying .cards-parents .cream-card{
+    background-color: #f8edc8;
+    border-radius: 10px;
+    padding: 24px 21px 35px 21px;
+    max-width: 265px;
+    position: relative;
+    margin: 0 25px;
+}
+.main-container.second.kids .parents-saying .cards-parents .cream-card .stars-parent img{
+    width: 19px;
+    height: 23px;
+    margin-right: 3px;
+    margin-bottom: 10px;
+}
+.main-container.second.kids .parents-saying .cards-parents .cream-card .profile-card{
+    position: absolute;
+    left: calc(50% - 40px);
+    border: 5px solid #fff;
+    border-radius: 50%;
+    width: 81px;
+    bottom: -40px;
+    height: 81px;
+}
+.main-container.second.kids .tryal-access{
+    padding: 101px 0;
+}
+.main-container.second.kids .tryal-access .kids-sub-p{
+    color: #fff;
+    max-width: 319px;
+    margin: 18px auto;
+}
+.main-container.second.kids .tryal-access .kids-main-p{
+    color: #fff;
+    margin: 18px auto 0 auto;
+}
+.main-container.second.kids .tryal-access .kids-main-p{
+    color: #fff;
+    margin: 18px auto 0 auto;
+}
+.main-container.second.kids .tryal-access .checks{
+    justify-content: center;
+}
+.main-container.second.kids .tryal-access .checks .kids-sub-p{
+    margin: 38px 28px 0 28px;
+}
+.main-container.second.kids .tryal-access .checks .kids-sub-p{
+    position: relative;
+}
+.main-container.second.kids .tryal-access .checks .kids-sub-p::before{
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -26px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../images/kids/checkmark-white.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.main-container.second.kids .faq-sec .inner-sec .main-p{
+    font-size: 38px;
+    font-family: 'Mulish';
+}
+.main-container.second.kids .faq-sec .inner-sec .main-p::after{
+    content: unset;
+}
+.main-container.second.kids .faq-sec .top-acc-h{
+    font-family: Mulish;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.38;
+    letter-spacing: normal;
+    color: rgba(26, 21, 26, 0.8);
+}
+.main-container.second.kids .faq-sec .top-acc-h.collapsed{
+    border-color: rgba(26, 21, 26, 0.8);
+}
+.main-container.second.kids .faq-sec .inner-card > p{
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    color: rgba(26, 21, 26, 0.8);
+}
+.main-container.second.kids .faq-sec .main-accordion .classic-btn{
+    margin-top: 50px;
+}
+.main-container.second.kids .tv-work .show-mobile-three{
+   display: none;
+}
+.main-container.second.kids .click-subtitles .lapy-mobile,  .main-container.second.kids .handpicked .mobile-card{
+    display: none;
+}
+
+@media only screen and (max-width: 1600px) {
+}
+@media only screen and (max-width: 1366px) {
+}
+@media only screen and (max-width: 1200px) {
+    
+}
+@media only screen and (max-width: 1100px) {
+    .main-container.second.kids .home-sec {
+        background-image: url(../images/kids/landing-page.png);
+        height: 821px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+}
+@media only screen and (max-width: 1024px) {
+    .main-container.second.kids .parents-saying{
+        padding: 43px 0 93px 0;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .main-container.second.kids .home-sec{
+        overflow: hidden;
+    }
+    .main-container.second.kids .home-sec .content-home .right-kids {
+        right: -180px;
+    }
+    .slick-slide{
+        text-align: center;
+    }
+    button.slick-prev.slick-arrow, button.slick-next.slick-arrow{
+        display: none !important;
+    }
+    .main-container.second.kids .parents-saying .cards-parents{
+        height: 400px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .main-container.second.kids .home-sec .content-home .tv-title {
+        font-size: 32px;
+        width: 300px;
+    }
+    .main-container.second.kids .home-sec .content-home .right-kids {
+        width: 320px;
+        height: 411px;
+        top: 110px;
+        right: -90px;
+    }
+    .main-container.second.kids .home-sec{
+        height: 655px;
+    }
+    .main-container.second.kids .home-sec .content-home .tv-title,
+    .main-container.second.kids .home-sec .content-home .tv-sub,
+    .main-container .home-sec .content-home .classic-btn{
+        margin-left: 0;
+    }
+    .main-container.second.kids .content-home .classic-btn{
+        width: 100%;
+        position: absolute;
+        box-shadow: 0 2px 10px 0 rgb(0 0 0 / 25%);
+        z-index: 1;
+    }
+    .main-container.second.kids .cat-sec .left-cat{
+        display: none;
+    }
+    .main-container.second.kids .cat-sec .kids-main-p,
+    .main-container.second.kids .cat-sec .kids-sub-p,
+    .main-container.second.kids .cat-sec .classic-btn{
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .main-container.second.kids .kids-main-p{
+        font-size: 23px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.3;
+    }
+    .main-container.second.kids .kids-sub-p{
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+    }
+    .main-container.second.kids .classic-btn{
+        width: 100%;
+    }
+    .main-container.second.kids .watching-tv .two-parts{
+        flex-direction: column;
+    }
+    .main-container.second.kids .watching-tv .kids-main-p{
+        text-align: left;
+    }
+    .main-container.second.kids .watching-tv .two-parts .sub-sec{
+        width: 100%;
+    }
+    .main-container.second.kids .watching-tv {
+        padding: 43px 0 43px 0px;
+    }
+    .main-container.second.kids .tv-work{
+        padding: 44px 0;
+    }
+    .main-container.second.kids .tv-work .catalog{
+        margin-top: 22px;
+    }
+    .main-container.second.kids .tv-work .catalog .last-content{
+        margin: auto;
+    }
+    .main-container.second.kids .tv-work .catalog .round-img{
+        display: none;
+    }
+    .main-container.second.kids .tv-work .show-mobile-three{
+        display: block;
+        width: 100%;
+    }
+    .main-container.second.kids .dual-subtitles .set-row{
+        flex-direction: column;
+    }
+    .main-container.second.kids .dual-subtitles .dual-p{
+        width: 100%;
+        margin: 0;
+    }
+    .main-container.second.kids .dual-subtitles .kids-sub-p{
+        text-align: center;
+    }
+    .main-container.second.kids .dual-subtitles .kids-sub-p:last-of-type{
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .main-container.second.kids .dual-subtitles .lapy{
+        width: 100%;
+    }
+    .main-container.second.kids .click-subtitles .set-row{
+        flex-direction: column;
+    }
+    .main-container.second.kids .click-subtitles .lapy{
+        display: none;
+    }
+    .main-container.second.kids .click-subtitles .lapy-mobile{
+        display: block;
+        width: 100%;
+    }
+    .main-container.second.kids .click-subtitles{
+        padding: 41px 0 0 0;
+    }
+    .main-container.second.kids .click-subtitles .set-row > .text-left{
+        order: 2;
+    }
+    .main-container.second.kids .click-subtitles .dual-p{
+        text-align: center;
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+    .main-container.second.kids .handpicked{
+        padding-top: 41px;
+    }
+    .main-container.second.kids .handpicked .team-experts,
+    .main-container.second.kids .handpicked .two-parts{
+        display: none;
+    }
+    .main-container.second.kids .handpicked .inner-sec > .kids-sub-p{
+        margin-bottom: 31px;
+    }
+    .main-container.second.kids .handpicked .mobile-card{
+        padding: 20px 16px 19px 30px;
+        background: #65a0fb;
+        display: flex;
+        align-items: center;
+        min-height: 195px;
+    }
+    .main-container.second.kids .handpicked .mobile-card .sub-cards{
+        width: 50%;
+        text-align: center;
+    }
+    .main-container.second.kids .handpicked .mobile-card.active .sub-cards{
+        padding-right: 20px;
+    }
+    .main-container.second.kids .handpicked .mobile-card .kids-sub-p{
+        padding-right: 20px;
+    }
+    .main-container.second.kids .handpicked .mobile-card.active .kids-sub-p{
+        padding-right: 0px;
+    }
+    .main-container.second.kids .handpicked .mobile-card  .kids-sub-p.white{
+        width: 50%;
+        max-width: 100%;
+        font-weight: 600;
+        color: #fff;
+    }
+    .main-container.second.kids .handpicked .mobile-card  .kids-sub-p.black{
+        width: 50%;
+        max-width: 100%;
+        font-weight: 600;
+        color: rgba(26, 21, 26, 0.8);
+    }
+    .main-container.second.kids .handpicked .mobile-card.blue{
+        background: #65a0fb;
+    }
+    .main-container.second.kids .handpicked .mobile-card.yellow{
+        background: #f7da4b;
+    }
+    .main-container.second.kids .handpicked .mobile-card.torquoise{
+        background: #00979d;
+    }
+    .main-container.second.kids .handpicked .mobile-card.pig{
+        background: #f5bbff;
+    }
+    .main-container.second.kids .handpicked .mobile-card.dark-purple{
+        background: #5a5ba2;
+    }
+    .main-container.second.kids .handpicked .mobile-card.green{
+        background: #8bf29b;
+    }
+    .main-container.second.kids .handpicked{
+        margin-bottom: 0;
+    }
+    .main-container.second.kids .risk-free{
+        padding: 43px 0;
+    }
+    .main-container.second.kids .parents-saying .cards-parents{
+        height: 390px;
+    }
+    .main-container.second.kids .tryal-access{
+        padding: 41px 0 77px 0;
+    }
+    .main-container .tryal-access .logo-white,
+    .main-container.second.kids .tryal-access .checks{
+        display: none !important;
+    }
+    .main-container.second.kids .faq-sec .inner-sec .main-p{
+        font-size: 23px;
+        margin-bottom: 40px;
+        padding-top: 30px
+    }
+}
+@media only screen and (max-width: 576px){
+    
+}
