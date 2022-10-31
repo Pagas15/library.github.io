@@ -1086,9 +1086,12 @@ a:hover {
   align-items: center;
   justify-content: space-between;
 }
+
+.main-container .faq-sec .top-acc-h:not(.collapsed) > img {
+  transform: rotate(180deg);
+}
 .main-container .faq-sec .top-acc-h > img {
   margin-top: 5px;
-  transform: rotate(180deg);
   transition: 0.6s;
   width: 17px;
   height: 12px;
