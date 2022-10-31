@@ -55,22 +55,10 @@
     <title>Learn a New Language with Great TV</title>
 
     <!-- global css -->
-    <link type="text/css" rel="stylesheet" href="./assets/css/fonst.css" />
     <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <link type="text/css" rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-T626HVD"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div class="main-container">
       <header>
         <p>Halloween Sale - <strong>Save 50%</strong></p>
@@ -1623,79 +1611,89 @@
         </div>
       </footer>
     </div>
-  </body>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"
-  ></script>
-  <script>
-    $('.media-controls').on('click', function () {
-      var vid = document.getElementById('headvideo');
-      if ($(this).hasClass('active')) {
-        vid.muted = true;
-        $(this).removeClass('active');
-      } else {
-        vid.muted = false;
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T626HVD"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $('.media-controls').on('click', function () {
+        var vid = document.getElementById('headvideo');
+        if ($(this).hasClass('active')) {
+          vid.muted = true;
+          $(this).removeClass('active');
+        } else {
+          vid.muted = false;
+          $(this).addClass('active');
+        }
+      });
+      $('#steps_1_c').on('click', function () {
+        $('#steps_2_c').removeClass('active');
+        $('#steps_3_c').removeClass('active');
+        $('#steps_2_c').next('p').text('');
+        $('#steps_3_c').next('p').text('');
         $(this).addClass('active');
-      }
-    });
-    $('#steps_1_c').on('click', function () {
-      $('#steps_2_c').removeClass('active');
-      $('#steps_3_c').removeClass('active');
-      $('#steps_2_c').next('p').text('');
-      $('#steps_3_c').next('p').text('');
-      $(this).addClass('active');
-      $(this)
-        .next('p')
-        .text(
-          '1000s of hours of great TV shows, telenovelas, comedies, travel, and more. New shows added monthly.',
-        );
-      $('#mac_iphone2').fadeOut();
-      $('#mac_iphone3').fadeOut();
-      setTimeout(() => {
-        $('#mac_iphone').fadeIn();
-      }, 400);
-    });
-    $('#steps_2_c').on('click', function () {
-      $('#steps_1_c').removeClass('active');
-      $('#steps_3_c').removeClass('active');
-      $('#steps_1_c').next('p').text('');
-      $('#steps_3_c').next('p').text('');
-      $(this).addClass('active');
-      $(this)
-        .next('p')
-        .text(
-          'All shows come with 2 sets of subtitles. Click any word to get an instant translation. The more you watch, the more you learn.',
-        );
-      $('#mac_iphone').fadeOut();
-      $('#mac_iphone3').fadeOut();
-      setTimeout(() => {
-        $('#mac_iphone2').fadeIn();
-      }, 400);
-    });
-    $('#steps_3_c').on('click', function () {
-      $('#steps_1_c').removeClass('active');
-      $('#steps_2_c').removeClass('active');
-      $('#steps_1_c').next('p').text('');
-      $('#steps_2_c').next('p').text('');
-      $(this).addClass('active');
-      $(this)
-        .next('p')
-        .text(
-          'Review what you learned with contextual & video based flashcards. Track your progress as you watch and see your confidence grow.',
-        );
-      $('#mac_iphone').fadeOut();
-      $('#mac_iphone2').fadeOut();
-      setTimeout(() => {
-        $('#mac_iphone3').fadeIn();
-      }, 400);
-    });
-  </script>
+        $(this)
+          .next('p')
+          .text(
+            '1000s of hours of great TV shows, telenovelas, comedies, travel, and more. New shows added monthly.',
+          );
+        $('#mac_iphone2').fadeOut();
+        $('#mac_iphone3').fadeOut();
+        setTimeout(() => {
+          $('#mac_iphone').fadeIn();
+        }, 400);
+      });
+      $('#steps_2_c').on('click', function () {
+        $('#steps_1_c').removeClass('active');
+        $('#steps_3_c').removeClass('active');
+        $('#steps_1_c').next('p').text('');
+        $('#steps_3_c').next('p').text('');
+        $(this).addClass('active');
+        $(this)
+          .next('p')
+          .text(
+            'All shows come with 2 sets of subtitles. Click any word to get an instant translation. The more you watch, the more you learn.',
+          );
+        $('#mac_iphone').fadeOut();
+        $('#mac_iphone3').fadeOut();
+        setTimeout(() => {
+          $('#mac_iphone2').fadeIn();
+        }, 400);
+      });
+      $('#steps_3_c').on('click', function () {
+        $('#steps_1_c').removeClass('active');
+        $('#steps_2_c').removeClass('active');
+        $('#steps_1_c').next('p').text('');
+        $('#steps_2_c').next('p').text('');
+        $(this).addClass('active');
+        $(this)
+          .next('p')
+          .text(
+            'Review what you learned with contextual & video based flashcards. Track your progress as you watch and see your confidence grow.',
+          );
+        $('#mac_iphone').fadeOut();
+        $('#mac_iphone2').fadeOut();
+        setTimeout(() => {
+          $('#mac_iphone3').fadeIn();
+        }, 400);
+      });
+    </script>
+  </body>
 </html>
