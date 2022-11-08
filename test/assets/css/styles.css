@@ -603,7 +603,7 @@ ol {
   right: 0;
   height: 676px;
   z-index: -1;
-  background: url("../assets/img/background/worthy-lang-bg.jpg") bottom center/cover no-repeat;
+  background: url("../img/background/worthy-lang-bg.jpg") bottom center/cover no-repeat;
 }
 
 .worthyLang .jstTitle {
@@ -781,7 +781,7 @@ ol {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../assets/img/background/new2.png") bottom center/cover no-repeat;
+  background: url("../img/background/new2.png") bottom center/cover no-repeat;
 }
 
 .thousandHours__wrapper {
@@ -818,7 +818,7 @@ ol {
   position: absolute;
   top: 33px;
   right: 0;
-  background-image: url("../assets/img/elements/right-levels.png");
+  background-image: url("../img/elements/right-levels.png");
   width: 211px;
   height: 346px;
   background-size: 100%;
@@ -829,7 +829,7 @@ ol {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: url("../assets/img/elements/left-levels.png");
+  background-image: url("../img/elements/left-levels.png");
   width: 259px;
   height: 259px;
   background-size: 100%;
@@ -880,7 +880,7 @@ ol {
   width: 30px;
   height: 30px;
   display: block;
-  background: url("../assets/img/elements/star-white.png") center/contain no-repeat;
+  background: url("../img/elements/star-white.png") center/contain no-repeat;
 }
 
 .bestTV {
@@ -938,7 +938,7 @@ ol {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background: #3a1f86 url("../assets/img/background/vocab-bg.jpg") center top/cover no-repeat;
+  background: #3a1f86 url("../img/background/vocab-bg.jpg") center top/cover no-repeat;
 }
 
 .vocabSec__graf {
@@ -1039,7 +1039,7 @@ ol {
 .tryalAccess__bg:after {
   content: "";
   display: block;
-  background: url("../assets/img/elements/tryal-bg.png") center/cover no-repeat;
+  background: url("../img/elements/tryal-bg.png") center/cover no-repeat;
   width: 518px;
   height: 404px;
   bottom: 0;
@@ -1102,7 +1102,7 @@ ol {
   width: 45px;
   height: 45px;
   margin-right: 24px;
-  background: url("../assets/img/elements/checked.png") center/contain no-repeat;
+  background: url("../img/elements/checked.png") center/contain no-repeat;
 }
 
 .accordion__item:not(.active) .accordion__content {
@@ -1138,7 +1138,7 @@ ol {
   transition: all 0.12s ease-in-out;
   content: "";
   display: block;
-  background: url("../assets/img/elements/faq_dropdown.png") center/contain no-repeat;
+  background: url("../img/elements/faq_dropdown.png") center/contain no-repeat;
   width: 17px;
   height: 12px;
 }
