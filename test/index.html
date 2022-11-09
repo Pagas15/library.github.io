@@ -3,732 +3,286 @@
   <head>
     <meta charset="UTF-8" />
 
-    <title>Learn a New Language with Great TV</title>
+    <title>Title</title>
 
-    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <!-- Иконка для сайта
+	<link rel="icon" type="image/png" sizes="48x48" href="./img/favicon/icon-48.png">
+	<link rel="icon" type="image/png" sizes="144x144" href="./img/favicon/icon-144.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="./img/favicon/icon-256.png">  -->
+
     <meta name="description" content="Выводимое описании при выводе в поисковике вашего сайта" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, instial-scale=1, shrink-to-fit=no" />
 
-    <link media="all" rel="stylesheet" type="text/css" href="./assets/css/styles.min.css" />
-    <!-- Google Tag Manager -->
-    <script>
-      const googleManager = (w, d, s, l, i) => {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      };
-
-      document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(() => {
-          googleManager(window, document, 'script', 'dataLayer', 'GTM-T626HVD');
-        }, 1000);
-      });
-    </script>
-    <!-- End Google Tag Manager -->
+    <link media="all" rel="stylesheet" type="text/css" href="./css/styles.min.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header__promotion">Autumn SALE - <span class="w800">50% OFF</span></div>
-      <div class="header__wrapper">
-        <ul class="header__iconList">
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 1.png" alt=""
-            /></a>
-          </li>
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 2.png" alt=""
-            /></a>
-          </li>
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 3.png" alt=""
-            /></a>
-          </li>
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 4.png" alt=""
-            /></a>
-          </li>
-        </ul>
-
-        <div class="header__logo">
-          <a href="#" class="header__link"
-            ><img src="./assets/img/elements/logo-main.png" alt=""
-          /></a>
-        </div>
-        <ul class="header__iconList">
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 5.png" alt=""
-            /></a>
-          </li>
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 6.png" alt=""
-            /></a>
-          </li>
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 7.png" alt=""
-            /></a>
-          </li>
-          <li class="header__iconItem">
-            <a href="#" class="header__link"
-              ><img src="./assets/img/elements/flags/flag 8.png" alt=""
-            /></a>
-          </li>
-        </ul>
-      </div>
-    </header>
-
     <section class="head">
       <div class="head__wrapper wrapper">
-        <h1 class="mainTitle">Learn a New Language by Watching Great TV</h1>
-        <div class="head__cnt">
-          <div class="head__left">
-            <p class="jstTitle">
-              Become fluent naturally by watching and listening to native speakers on TV.
-            </p>
-            <p class="txt18x22">
-              Pick a language, choose from thousands of shows, sit back and binge watch your way to
-              fluency.
-            </p>
-            <a href="https://lingopie.com/registration" class="button">
-              Try for <span class="free">Free</span>
-              <svg class="triangle-container" width="30" height="30" viewBox="-50 -50 300 300">
-                <polygon
-                  class="triangle"
-                  stroke-linejoin="round"
-                  points="100,0 0,200 200,200"
-                ></polygon>
-              </svg>
-            </a>
-          </div>
-          <div class="head__video videoContainer">
-            <div class="videoContainer__topImg">
-              <img src="./assets/img/elements/home-window.png" alt="" />
-            </div>
-            <div class="videoContainer__video">
-              <video
-                class="video-home"
-                autoplay="autoplay"
-                muted=""
-                loop=""
-                playsinline=""
-                data-video="0"
-              >
-                <source
-                  src="https://lingo-market.s3.eu-central-1.amazonaws.com/NewFlowAdv1-compressed.mp4"
-                  class="videoContainer__responsive"
-                />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="videoContainer__placeHolder"></div>
-            <div class="videoContainer__sound">
-              <svg
-                class="volume-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"
-                width="18"
-              >
-                <path
-                  fill="white"
-                  d="M333.2 34.84c-4.201-1.895-8.727-2.841-13.16-2.841c-7.697 0-15.29 2.784-21.27 8.1L163.8 160H80c-26.51 0-48 21.49-48 47.1v95.1c0 26.51 21.49 47.1 48 47.1h83.84l134.9 119.9C304.7 477.2 312.3 480 320 480c4.438 0 8.959-.9312 13.16-2.837C344.7 472 352 460.6 352 448V64C352 51.41 344.7 39.1 333.2 34.84zM319.1 447.1L175.1 319.1H80c-8.822 0-16-7.16-16-15.96v-96c0-8.801 7.178-15.96 16-15.96h95.1l143.1-127.1c.0078-.0078-.0039 .0039 0 0L319.1 447.1zM491.4 98.7c-7.344-4.922-17.28-2.953-22.2 4.391s-2.953 17.28 4.391 22.2C517.7 154.8 544 203.7 544 256s-26.33 101.2-70.44 130.7c-7.344 4.922-9.312 14.86-4.391 22.2C472.3 413.5 477.3 416 482.5 416c3.062 0 6.156-.875 8.891-2.703C544.4 377.8 576 319 576 256S544.4 134.2 491.4 98.7zM438.4 178.7c-7.328-4.922-17.28-2.953-22.2 4.391s-2.953 17.28 4.391 22.2C437.8 216.8 448 235.7 448 256s-10.23 39.23-27.38 50.7c-7.344 4.922-9.312 14.86-4.391 22.2C419.3 333.5 424.4 336 429.5 336c3.062 0 6.156-.875 8.891-2.703C464.5 315.9 480 286.1 480 256S464.5 196.1 438.4 178.7z"
-                ></path>
-              </svg>
-              <svg
-                class="volume-mute"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"
-                width="18"
-              >
-                <path
-                  fill="white"
-                  d="M502.6 256l52.69-52.69c6.25-6.25 6.25-16.38 0-22.62s-16.38-6.25-22.62 0L480 233.4l-52.69-52.69c-6.25-6.25-16.38-6.25-22.62 0s-6.25 16.38 0 22.62L457.4 256l-52.69 52.69c-6.25 6.25-6.25 16.38 0 22.62c6.246 6.246 16.37 6.254 22.62 0L480 278.6l52.69 52.69c6.246 6.246 16.37 6.254 22.62 0c6.25-6.25 6.25-16.38 0-22.62L502.6 256zM288 31.1c-7.697 0-15.29 2.784-21.27 8.1L131.8 160H48c-26.51 0-48 21.49-48 47.1v95.1c0 26.51 21.49 47.1 48 47.1h83.84l134.9 119.9c5.984 5.312 13.58 8.094 21.26 8.094c21.04 0 31.1-17.87 31.1-31.1V64C319.1 50.14 309.1 31.1 288 31.1zM287.1 447.1L143.1 319.1H48c-8.822 0-16-7.16-16-15.96v-96c0-8.801 7.178-15.96 16-15.96h95.1l143.1-127.1c.0078-.0078-.0039 .0039 0 0L287.1 447.1z"
-                ></path>
-              </svg>
-            </div>
-          </div>
+        <div class="head__bg">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
-      </div>
-    </section>
-    <section class="worthyLang">
-      <div class="worthyLang__wrapper wrapper">
-        <h2 class="mainTitle">Learning a new language is finally binge worthy!</h2>
-        <h5 class="jstTitle">
-          The best shows from around the world plus countless hours of complete series to binge on.
-        </h5>
-        <div class="worthyLang__cnt worthyLangTabs">
-          <ul class="worthyLangTabs__listBtns">
-            <li class="worthyLangTabs__itemBtb">
-              <button class="worthyLangTabs__btn active" data-tabs-btn="tab1">
-                <span class="worthyLangTabs__title txt36x43"
-                  >Choose<span class="worthyLangTabs__num">1</span></span
-                >
-                <span class="worthyLangTabs__description txt18x22">
-                  <span class="txt">
-                    1000s of hours of great TV shows, telenovelas, comedies, travel, and more. New
-                    shows added monthly.
-                  </span>
-                </span>
-              </button>
-            </li>
-            <li class="worthyLangTabs__itemBtb">
-              <button class="worthyLangTabs__btn" data-tabs-btn="tab2">
-                <span class="worthyLangTabs__title txt36x43"
-                  >Watch & Click
-                  <span class="worthyLangTabs__num">2</span>
-                </span>
-                <span class="worthyLangTabs__description txt18x22">
-                  <span class="txt">
-                    All shows come with 2 sets of subtitles. Click any word to get an instant
-                    translation. The more you watch, the more you learn.
-                  </span>
-                </span>
-              </button>
-            </li>
-            <li class="worthyLangTabs__itemBtb">
-              <button class="worthyLangTabs__btn" data-tabs-btn="tab3">
-                <span class="worthyLangTabs__title txt36x43">
-                  Learn
-                  <span class="worthyLangTabs__num">3</span>
-                </span>
-                <span class="worthyLangTabs__description txt18x22">
-                  <span class="txt">
-                    Review what you learned with contextual & video based flashcards. Track your
-                    progress as you watch and see your confidence grow.
-                  </span>
-                </span>
-              </button>
-            </li>
-          </ul>
-          <ul class="worthyLangTabs__listBlocks">
-            <li class="worthyLangTabs__itemBlock active" data-tabs-block="tab1">
-              <img src="./assets/img/worthyLang/mac-show.png" alt="" />
-            </li>
-            <li class="worthyLangTabs__itemBlock" data-tabs-block="tab2" style="display: none">
-              <img src="./assets/img/worthyLang/mac-show2.png" alt="" />
-            </li>
-            <li class="worthyLangTabs__itemBlock" data-tabs-block="tab3" style="display: none">
-              <img src="./assets/img/worthyLang/mac-show3.png" alt="" />
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="asSeen">
-      <div class="wrapper asSeen__wrapper">
-        <p class="jstTitle">As seen in...</p>
-        <ul class="asSeen__list">
-          <li class="asSeen__item">
-            <img src="./assets/img/asSeen/variety.png" alt="" />
-          </li>
-          <li class="asSeen__item">
-            <img src="./assets/img/asSeen/forbs.png" alt="" />
-          </li>
-          <li class="asSeen__item">
-            <img src="./assets/img/asSeen/inc.png" alt="" />
-          </li>
-          <li class="asSeen__item">
-            <img src="./assets/img/asSeen/yahoo.png" alt="" />
-          </li>
-          <li class="asSeen__item">
-            <img src="./assets/img/asSeen/frommers.png" alt="" />
-          </li>
-          <li class="asSeen__item">
-            <img src="./assets/img/asSeen/benzinga.png" alt="" />
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="thousandHours">
-      <div class="thousandHours__bg"></div>
-      <div class="thousandHours__wrapper wrapper">
-        <h2 class="mainTitle">1000s of Hours of Great international TV</h2>
-        <p class="jstTitle">
-          Get access to daily news, telenovelas, comedies, travel shows & much more. New shows are
-          added every month so there’s always something new to learn with.
-        </p>
-        <a href="https://lingopie.com/registration" class="button">
-          Try for <span class="free">Free</span>
-          <svg class="triangle-container" width="30" height="30" viewBox="-50 -50 300 300">
-            <polygon
-              class="triangle"
-              stroke-linejoin="round"
-              points="100,0 0,200 200,200"
-            ></polygon>
-          </svg>
-        </a>
-      </div>
-    </section>
-    <section class="designerLevels">
-      <div class="designerLevels__wrapper wrapper">
-        <h2 class="mainTitle">Designed For All Levels</h2>
-        <p class="jstTitle">
-          TV Shows & tools to make learning effective and fun, no matter what level you are from
-          beginner to advanced.
-        </p>
-        <div class="designerLevels__row">
-          <div class="designerLevels__item">
-            <ul class="designerLevels__stars">
-              <li class="designerLevels__star"></li>
-            </ul>
-            <p class="jstTitle">Beginner</p>
-          </div>
-          <div class="designerLevels__item">
-            <ul class="designerLevels__stars">
-              <li class="designerLevels__star"></li>
-              <li class="designerLevels__star"></li>
-            </ul>
-            <p class="jstTitle">Intermediate</p>
-          </div>
-          <div class="designerLevels__item">
-            <ul class="designerLevels__stars">
-              <li class="designerLevels__star"></li>
-              <li class="designerLevels__star"></li>
-              <li class="designerLevels__star"></li>
-            </ul>
-            <p class="jstTitle">Advanced</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bestTV">
-      <div class="bestTV__wrapper wrapper">
-        <h2 class="mainTitle">The Best TV from around the world</h2>
-        <ul class="bestTV__list">
-          <li class="bestTV__item"><img src="./assets/img/bestTV/azteca.jpg" alt="" /></li>
-          <li class="bestTV__item"><img src="./assets/img/bestTV/caracol.png" alt="" /></li>
-          <li class="bestTV__item"><img src="./assets/img/bestTV/newen.png" alt="" /></li>
-          <li class="bestTV__item"><img src="./assets/img/bestTV/nick.png" alt="" /></li>
-          <li class="bestTV__item"><img src="./assets/img/bestTV/rtve.png" alt="" /></li>
-          <li class="bestTV__item"><img src="./assets/img/bestTV/tfi.jpg" alt="" /></li>
-        </ul>
-      </div>
-    </section>
-    <section class="vocabSec">
-      <div class="vocabSec__bg"></div>
-      <div class="vocabSec__wrapper wrapper">
-        <h2 class="mainTitle">Dramatically increase your vocabulary</h2>
-        <p class="jstTitle">
-          Learning with TV means learning from context rather than just drilling words. No other
-          language learning system helps you learn as quickly.
-        </p>
-        <div class="vocabSec__graf">
-          <img src="./assets/img/elements/vocab-graph.png" alt="" />
-        </div>
-        <h2 class="mainTitle">Users love us</h2>
-        <ul class="vocabSec__chat">
-          <li class="vocabSec__chatItem">
-            <p class="vocabSec__chatMessage txt18x22">
-              “I love that I can learn Spanish just by watching Spanish TV shows and telenovelas!” -
-              Edward L.
-            </p>
-            <div class="vocabSec__chatAvatar">
-              <img src="./assets/img/avatars/chat-1.png" alt="" />
-            </div>
-          </li>
-          <li class="vocabSec__chatItem">
-            <p class="vocabSec__chatMessage txt18x22">
-              “I’ve never had so much fun learning Spanish. I can binge-watch a Spanish TV series
-              and learn at the same time.” - Jennifer P.
-            </p>
-            <div class="vocabSec__chatAvatar">
-              <img src="./assets/img/avatars/chat-2.png" alt="" />
-            </div>
-          </li>
-          <li class="vocabSec__chatItem">
-            <p class="vocabSec__chatMessage txt18x22">
-              “Learning Spanish with TV is one of the most effective and fun ways to absorb the
-              language. My students love it.” - Spanish Language Professor
-            </p>
-            <div class="vocabSec__chatAvatar">
-              <img src="./assets/img/avatars/chat-3.png" alt="" />
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="tryalAccess">
-      <div class="tryalAccess__bg"></div>
-      <div class="tryalAccess__wrapper wrapper">
-        <div class="tryalAccess__left">
-          <h2 class="mainTitle">Join 100,000+ students who use Lingopie to learn a new language</h2>
-          <img src="./assets/img/elements/logo-white.png" alt="" />
-        </div>
-        <div class="tryalAccess__right">
-          <ul class="tryalAccess__acc">
-            <li class="tryalAccess__accItem txt36x43">7-day free trial</li>
-            <li class="tryalAccess__accItem txt36x43">Cancel anytime</li>
-            <li class="tryalAccess__accItem txt36x43">Unlimited access</li>
-          </ul>
-          <a href="https://lingopie.com/registration" class="button button--blue">
-            Try for <span class="free">Free</span>
-            <svg class="triangle-container" width="30" height="30" viewBox="-50 -50 300 300">
-              <polygon
-                class="triangle"
-                stroke-linejoin="round"
-                points="100,0 0,200 200,200"
-              ></polygon>
+        <div class="logo">
+          <div class="logo__img">
+            <svg
+              width="52"
+              height="60"
+              viewBox="0 0 52 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M51.8741 16.4272L51.8142 15.1544L26 0L0.185809 15.1544L0.125902 16.4272C-0.386565 27.3159 0.588008 35.446 4.4846 42.2352C8.37893 49.0205 14.9842 54.1044 24.8637 59.3919L26 60L27.1363 59.3919C37.0158 54.1044 43.6211 49.0205 47.5154 42.2352C51.412 35.446 52.3866 27.3159 51.8741 16.4272ZM8.63857 39.9004C11.7353 45.296 17.0611 49.7144 26 54.6179C30.0774 52.3812 33.4031 50.2454 36.1083 48.0718C37.5808 46.8887 38.8695 45.6943 39.9956 44.4664C41.3361 43.0046 42.4461 41.4952 43.3614 39.9004C44.152 38.523 44.8097 37.0601 45.345 35.4802L21.054 21.8046L26.092 18.847L46.5885 30.3864C47.1667 26.8498 47.3316 22.7673 47.1551 17.9161L26 5.49685L4.84491 17.9161C4.75621 20.3548 4.75375 22.5993 4.84671 24.6779L30.0444 38.864C28.9329 40.1015 27.6585 41.3038 26.1998 42.4935L5.48712 30.8323C6.09911 34.3155 7.12573 37.2645 8.63857 39.9004Z"
+                fill="white"
+              />
             </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="faq">
-      <div class="faq__wrapper wrapper">
-        <h2 class="mainTitle">Frequently Asked Questions</h2>
-        <div class="faq__accordion accordion" data-accardioun-wrapper="acar">
-          <div class="accordion__item" data-accardioun-window="acar">
-            <button class="accordion__btn txt18x22" data-accardioun-btn="acar">
-              What is Lingopie?
-            </button>
-            <div class="accordion__content txt18x22">
-              Lingopie is the world's only language learning application that uses real TV shows and
-              movies to help you learn a new language. The idea is to make language learning as
-              simple as watching your favorite TV show. <br /><br />
-              We use real TV shows & movies from the language you want to learn. Each show comes
-              with subtitles in the original language (ex. Spanish TV Show + Spanish Subtitles).
-              Every word, phrase or slang is clickable to give you an instant translation in
-              real-time to help you learn.
-              <br /><br />
-              After you watch an episode you can easily review all your new vocabulary & grammar
-              rules with our built-in flashcards and word lists.
-              <br /><br />
-              Lingopie is great for all levels, from beginner to advanced, with great content and
-              language learning tools appropriate for everyone.
-            </div>
           </div>
-          <div class="accordion__item" data-accardioun-window="acar">
-            <button class="accordion__btn txt18x22" data-accardioun-btn="acar">
-              What’s included in the Lingopie subscription?
-            </button>
-            <div class="accordion__content txt18x22">
-              With Lingopie you get access to thousands of hours of great TV shows in the language
-              you want to learn. Every show comes with subtitles in the language you want to learn,
-              as well as English subtitles. You can click on any word or phrase to get an instant
-              translation to help you follow along and learn while you watch. <br /><br />
-              You also get tons of other great language learning features and tools to help you
-              learn alongside your TV shows.
-            </div>
-          </div>
-          <div class="accordion__item" data-accardioun-window="acar">
-            <button class="accordion__btn txt18x22" data-accardioun-btn="acar">
-              Where can I watch?
-            </button>
-            <div class="accordion__content txt18x22">
-              You can watch Lingopie on your phone, computer or tablet. About 50% of our community
-              use Lingopie daily on their phones and it works great!
-            </div>
-          </div>
-          <div class="accordion__item" data-accardioun-window="acar">
-            <button class="accordion__btn txt18x22" data-accardioun-btn="acar">
-              I'm a beginner. Is Lingopie right for me?
-            </button>
-            <div class="accordion__content txt18x22">
-              Don't worry! Even if you are a beginner, getting started is easy. You'll find
-              interesting TV shows for any level. Plus you can slow down the video playback speed to
-              make it easier to hear the words. You also get the corresponding English subtitles so
-              that you can easily follow along if you want a more casual binge watching experience.
-              <br /><br />
-              After just a couple of episodes you'll notice that your comprehension has increased
-              drastically and you can follow along with much of the conversation and dialogue.
-            </div>
-          </div>
-          <div class="accordion__item" data-accardioun-window="acar">
-            <button class="accordion__btn txt18x22" data-accardioun-btn="acar">
-              How quickly will I learn with Lingopie?
-            </button>
-            <div class="accordion__content txt18x22">
-              After only 3 or 4 episodes, you'll notice a serious improvement in your listening
-              comprehension and vocabulary. The most important thing is to select a TV series that
-              you'll enjoy. <br /><br />
-              After a full season of at least 8 episodes your confidence and comprehension will
-              skyrocket. As you watch your brain will be rewired to quickly acquire new words,
-              phrases, slang and grammar from the natural context of the TV shows and movies and
-              you'll see your confidence go through the roof. The more you watch, the more you
-              learn.
-            </div>
-          </div>
-          <div class="accordion__item" data-accardioun-window="acar">
-            <button class="accordion__btn txt18x22" data-accardioun-btn="acar">
-              What languages can I learn with Lingopie?
-            </button>
-            <div class="accordion__content txt18x22">
-              Lingopie currently offers you the option to learn the following languages:
-              <br /><br />
-              - Spanish<br />
-              - French<br />
-              - Russian<br />
-              - Portuguese<br />
-              - German<br />
-              - Italian<br />
-              - Korean<br />
-              - Japanese
-            </div>
-          </div>
-          <div class="accordion__item" data-accardioun-window="acar">
-            <button class="accordion__btn txt18x22" data-accardioun-btn="acar">
-              What if Lingopie is not right for me?
-            </button>
-            <div class="accordion__content txt18x22">
-              Don't worry! Signing up with Lingopie is totally risk-free. You can cancel your
-              subscripton at any time directly from your profile page from within your Lingopie
-              account.
-            </div>
+          <div class="logo__info">
+            <p class="logo__title">Safe VPN</p>
+            <p class="logo__desc">Your best choise</p>
           </div>
         </div>
-      </div>
-    </section>
+        <h1 class="head__title">Получи VPN за 1 рубль!</h1>
+        <h4 class="head__subTitle">
+          Сними все блокировки и наслаждайся интернетом без ограничений!
+        </h4>
+        <p class="head__minTitle">Активируй анонимный, безопасный онлайн VPN</p>
+        <div class="head__form">
+          <form>
+            <div class="head__inputs">
+              <label class="inputBox"
+                ><input type="text" placeholder="Ваше имя" />
+                <div class="inputBox__iconLeft">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.9997 2.16663C11.5631 2.16663 10.1853 2.73731 9.16951 3.75313C8.15369 4.76895 7.58301 6.1467 7.58301 7.58329C7.58301 9.01988 8.15369 10.3976 9.16951 11.4135C10.1853 12.4293 11.5631 13 12.9997 13C14.4363 13 15.814 12.4293 16.8298 11.4135C17.8457 10.3976 18.4163 9.01988 18.4163 7.58329C18.4163 6.1467 17.8457 4.76895 16.8298 3.75313C15.814 2.73731 14.4363 2.16663 12.9997 2.16663ZM19.5111 15.1666H6.4883C5.29988 15.1666 4.33301 16.1335 4.33301 17.3219V18.1458C4.33301 19.9398 5.35405 21.4911 7.20763 22.5132C8.74976 23.3647 10.807 23.8333 12.9997 23.8333C17.1738 23.8333 21.6663 22.0534 21.6663 18.1458V17.3219C21.6663 16.1335 20.6995 15.1666 19.5111 15.1666Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </label>
+              <label class="inputBox"
+                ><input type="text" placeholder="Email" />
+                <div class="inputBox__iconLeft">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.41699 4.33337C3.71616 4.33337 2.31841 5.64421 2.17757 7.31254L13.0003 13.1566L23.8231 7.31254C23.6822 5.64421 22.2845 4.33337 20.5837 4.33337H5.41699ZM2.16699 9.14913V18.4167C2.16699 20.2096 3.62408 21.6667 5.41699 21.6667H20.5837C22.3766 21.6667 23.8337 20.2096 23.8337 18.4167V9.14913L13.3854 14.7985C13.2662 14.8635 13.1357 14.8959 13.0003 14.8959C12.8649 14.8959 12.7344 14.8635 12.6152 14.7985L2.16699 9.14913Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </label>
+              <label class="inputBox" data-password-input
+                ><div class="inputBox__iconLeft">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.9997 2.16669C10.616 2.16669 8.66634 4.11637 8.66634 6.50002V8.66669H6.77051C5.42663 8.66669 4.33301 9.76031 4.33301 11.1042V21.3959C4.33301 22.7397 5.42663 23.8334 6.77051 23.8334H19.2288C20.5727 23.8334 21.6663 22.7397 21.6663 21.3959V11.1042C21.6663 9.76031 20.5727 8.66669 19.2288 8.66669H17.333V6.50002C17.333 4.11637 15.3833 2.16669 12.9997 2.16669ZM12.9997 3.79169C14.5052 3.79169 15.708 4.9945 15.708 6.50002V8.66669H10.2913V6.50002C10.2913 4.9945 11.4942 3.79169 12.9997 3.79169ZM9.20801 15.1667C9.80655 15.1667 10.2913 15.6515 10.2913 16.25C10.2913 16.8486 9.80655 17.3334 9.20801 17.3334C8.60947 17.3334 8.12467 16.8486 8.12467 16.25C8.12467 15.6515 8.60947 15.1667 9.20801 15.1667ZM12.9997 15.1667C13.5982 15.1667 14.083 15.6515 14.083 16.25C14.083 16.8486 13.5982 17.3334 12.9997 17.3334C12.4011 17.3334 11.9163 16.8486 11.9163 16.25C11.9163 15.6515 12.4011 15.1667 12.9997 15.1667ZM16.7913 15.1667C17.3899 15.1667 17.8747 15.6515 17.8747 16.25C17.8747 16.8486 17.3899 17.3334 16.7913 17.3334C16.1928 17.3334 15.708 16.8486 15.708 16.25C15.708 15.6515 16.1928 15.1667 16.7913 15.1667Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <input type="password" placeholder="Пароль" />
 
+                <div class="inputBox__iconPassword">
+                  <svg
+                    class="iconEye"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.9938 4.125C5.80569 4.125 1.23435 7.72105 0.0215988 12.4332C-0.0237479 12.6098 0.00293203 12.7972 0.0957692 12.9542C0.188606 13.1112 0.339996 13.2248 0.516634 13.2702C0.693273 13.3155 0.88069 13.2888 1.03766 13.196C1.19462 13.1032 1.30828 12.9518 1.35363 12.7751C2.39863 8.71479 6.44701 5.5 10.9938 5.5C15.5407 5.5 19.6019 8.71592 20.6466 12.7751C20.6919 12.9518 20.8056 13.1032 20.9626 13.196C21.1195 13.2888 21.307 13.3155 21.4836 13.2702C21.6602 13.2248 21.8116 13.1112 21.9045 12.9542C21.9973 12.7972 22.024 12.6098 21.9786 12.4332C20.7656 7.71992 16.182 4.125 10.9938 4.125ZM11.001 7.79167C8.56264 7.79167 6.57165 9.78267 6.57165 12.221C6.57165 14.6594 8.56264 16.6513 11.001 16.6513C13.4394 16.6513 15.4313 14.6594 15.4313 12.221C15.4313 9.78267 13.4394 7.79167 11.001 7.79167Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <svg
+                    class="iconInvis"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g opacity="0.4">
+                      <path
+                        d="M19.466 1.82707C19.2875 1.83227 19.118 1.90675 18.9934 2.03475L2.03504 18.9931C1.96906 19.0564 1.91638 19.1323 1.88009 19.2163C1.8438 19.3002 1.82463 19.3906 1.8237 19.4821C1.82277 19.5735 1.8401 19.6643 1.87468 19.7489C1.90925 19.8336 1.96037 19.9106 2.02505 19.9752C2.08973 20.0399 2.16666 20.091 2.25135 20.1256C2.33603 20.1602 2.42676 20.1775 2.51823 20.1766C2.60969 20.1757 2.70005 20.1565 2.78401 20.1202C2.86798 20.0839 2.94386 20.0312 3.00721 19.9653L7.75346 15.219C8.56411 16.0963 9.71711 16.6513 11.0003 16.6513C13.4432 16.6513 15.4323 14.662 15.4323 12.2237C15.4323 10.9405 14.8774 9.78411 14 8.97241L16.0661 6.90633C18.2898 8.20835 20.0152 10.3111 20.6486 12.7734C20.7265 13.085 21.0057 13.2917 21.3128 13.2917C21.3678 13.2917 21.427 13.2867 21.482 13.2684C21.8532 13.1767 22.0733 12.8016 21.977 12.435C21.2713 9.68378 19.4617 7.36683 17.0857 5.88672L19.9655 3.00692C20.0647 2.91032 20.1324 2.78603 20.1598 2.65032C20.1872 2.5146 20.173 2.37378 20.119 2.24629C20.065 2.1188 19.9738 2.01057 19.8573 1.93577C19.7408 1.86097 19.6044 1.82308 19.466 1.82707ZM10.9958 4.125C5.87623 4.125 1.26106 7.61789 0.0235633 12.435C-0.0726867 12.8016 0.147349 13.1767 0.518599 13.2684C0.885266 13.3646 1.26035 13.1446 1.35201 12.7734C2.41993 8.62544 6.56831 5.5 10.9958 5.5C11.7796 5.5 12.5538 5.59586 13.3009 5.78377L14.4288 4.65674C13.3334 4.30841 12.1783 4.125 10.9958 4.125ZM11.0003 7.79167C8.55737 7.79167 6.57272 9.7808 6.57272 12.2237C6.57272 12.3154 6.57709 12.4113 6.58167 12.503L11.2841 7.80062C11.1878 7.79604 11.0965 7.79167 11.0003 7.79167Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </label>
+              <label class="inputBox" data-password-input
+                ><div class="inputBox__iconLeft">
+                  <svg
+                    width="26"
+                    height="26"
+                    viewBox="0 0 26 26"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.9997 2.16669C10.616 2.16669 8.66634 4.11637 8.66634 6.50002V8.66669H6.77051C5.42663 8.66669 4.33301 9.76031 4.33301 11.1042V21.3959C4.33301 22.7397 5.42663 23.8334 6.77051 23.8334H19.2288C20.5727 23.8334 21.6663 22.7397 21.6663 21.3959V11.1042C21.6663 9.76031 20.5727 8.66669 19.2288 8.66669H17.333V6.50002C17.333 4.11637 15.3833 2.16669 12.9997 2.16669ZM12.9997 3.79169C14.5052 3.79169 15.708 4.9945 15.708 6.50002V8.66669H10.2913V6.50002C10.2913 4.9945 11.4942 3.79169 12.9997 3.79169ZM9.20801 15.1667C9.80655 15.1667 10.2913 15.6515 10.2913 16.25C10.2913 16.8486 9.80655 17.3334 9.20801 17.3334C8.60947 17.3334 8.12467 16.8486 8.12467 16.25C8.12467 15.6515 8.60947 15.1667 9.20801 15.1667ZM12.9997 15.1667C13.5982 15.1667 14.083 15.6515 14.083 16.25C14.083 16.8486 13.5982 17.3334 12.9997 17.3334C12.4011 17.3334 11.9163 16.8486 11.9163 16.25C11.9163 15.6515 12.4011 15.1667 12.9997 15.1667ZM16.7913 15.1667C17.3899 15.1667 17.8747 15.6515 17.8747 16.25C17.8747 16.8486 17.3899 17.3334 16.7913 17.3334C16.1928 17.3334 15.708 16.8486 15.708 16.25C15.708 15.6515 16.1928 15.1667 16.7913 15.1667Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <input type="password" placeholder="Еще раз пожалуйста" />
+
+                <div class="inputBox__iconPassword">
+                  <svg
+                    class="iconEye"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.9938 4.125C5.80569 4.125 1.23435 7.72105 0.0215988 12.4332C-0.0237479 12.6098 0.00293203 12.7972 0.0957692 12.9542C0.188606 13.1112 0.339996 13.2248 0.516634 13.2702C0.693273 13.3155 0.88069 13.2888 1.03766 13.196C1.19462 13.1032 1.30828 12.9518 1.35363 12.7751C2.39863 8.71479 6.44701 5.5 10.9938 5.5C15.5407 5.5 19.6019 8.71592 20.6466 12.7751C20.6919 12.9518 20.8056 13.1032 20.9626 13.196C21.1195 13.2888 21.307 13.3155 21.4836 13.2702C21.6602 13.2248 21.8116 13.1112 21.9045 12.9542C21.9973 12.7972 22.024 12.6098 21.9786 12.4332C20.7656 7.71992 16.182 4.125 10.9938 4.125ZM11.001 7.79167C8.56264 7.79167 6.57165 9.78267 6.57165 12.221C6.57165 14.6594 8.56264 16.6513 11.001 16.6513C13.4394 16.6513 15.4313 14.6594 15.4313 12.221C15.4313 9.78267 13.4394 7.79167 11.001 7.79167Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <svg
+                    class="iconInvis"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g opacity="0.4">
+                      <path
+                        d="M19.466 1.82707C19.2875 1.83227 19.118 1.90675 18.9934 2.03475L2.03504 18.9931C1.96906 19.0564 1.91638 19.1323 1.88009 19.2163C1.8438 19.3002 1.82463 19.3906 1.8237 19.4821C1.82277 19.5735 1.8401 19.6643 1.87468 19.7489C1.90925 19.8336 1.96037 19.9106 2.02505 19.9752C2.08973 20.0399 2.16666 20.091 2.25135 20.1256C2.33603 20.1602 2.42676 20.1775 2.51823 20.1766C2.60969 20.1757 2.70005 20.1565 2.78401 20.1202C2.86798 20.0839 2.94386 20.0312 3.00721 19.9653L7.75346 15.219C8.56411 16.0963 9.71711 16.6513 11.0003 16.6513C13.4432 16.6513 15.4323 14.662 15.4323 12.2237C15.4323 10.9405 14.8774 9.78411 14 8.97241L16.0661 6.90633C18.2898 8.20835 20.0152 10.3111 20.6486 12.7734C20.7265 13.085 21.0057 13.2917 21.3128 13.2917C21.3678 13.2917 21.427 13.2867 21.482 13.2684C21.8532 13.1767 22.0733 12.8016 21.977 12.435C21.2713 9.68378 19.4617 7.36683 17.0857 5.88672L19.9655 3.00692C20.0647 2.91032 20.1324 2.78603 20.1598 2.65032C20.1872 2.5146 20.173 2.37378 20.119 2.24629C20.065 2.1188 19.9738 2.01057 19.8573 1.93577C19.7408 1.86097 19.6044 1.82308 19.466 1.82707ZM10.9958 4.125C5.87623 4.125 1.26106 7.61789 0.0235633 12.435C-0.0726867 12.8016 0.147349 13.1767 0.518599 13.2684C0.885266 13.3646 1.26035 13.1446 1.35201 12.7734C2.41993 8.62544 6.56831 5.5 10.9958 5.5C11.7796 5.5 12.5538 5.59586 13.3009 5.78377L14.4288 4.65674C13.3334 4.30841 12.1783 4.125 10.9958 4.125ZM11.0003 7.79167C8.55737 7.79167 6.57272 9.7808 6.57272 12.2237C6.57272 12.3154 6.57709 12.4113 6.58167 12.503L11.2841 7.80062C11.1878 7.79604 11.0965 7.79167 11.0003 7.79167Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                </div>
+              </label>
+            </div>
+            <div class="head__buttom">
+              <div class="head__text">
+                Нажимая кнопку “Продолжить” вы подтверждаете ваше согласие с
+                <span>Политикой конфиденциальности</span>
+              </div>
+              <button class="head__btn">Продолжить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="list">
+      <div class="wrapper list__list">
+        <div class="list__item">
+          <h5 class="list__title">Как я могу выиграть?</h5>
+          <div class="list__text">
+            Dank Ihrer Mitgliedschaft nehmen Sie auch an unserem Gewinnspiel teil, um die €10.000 zu
+            gewinnen. Unter 600 Teilnehmern wählen wir einen Gewinner aus. Der nächste Gewinner wird
+            am 07.08.2021 ermittelt und direkt per E-Mail benachrichtigt. Wenn die Belohnung nicht
+            vorrätig ist, erhält der Gewinner stattdessen ein ähnliches Produkt mit gleichem oder
+            höherem Wert..
+          </div>
+        </div>
+        <div class="list__item">
+          <h5 class="list__title">Есть какие-то скрытые комисии?</h5>
+          <div class="list__text">
+            Мы гарантируем, что нашим участникам предоставляется подробная история транзакций, и
+            благодря этому они знают, за что они платят. <br /><br />
+            Информация о кредитной карте требуется только для облегчения будущих покупок. В выписке
+            по кредитной карте не будет никаких сборов, если вы отмение подписку на веб-сайте в
+            личном кабинете.
+          </div>
+        </div>
+        <div class="list__item">
+          <h5 class="list__title">Зачем мне нужна платежная информация?</h5>
+          <div class="list__text">
+            Оставив свои контактные данные, ты получишь 3-дневную пробную версию программы нашего
+            партнера. Если ты продолжишь подписку после 3-дневного пробного периода, с твоей
+            кредитной карты будет сниматься 950 рублей каждые 14 дней. <br /><br />
+            Когда сумма будет списана с карты, ты получишь доступ к услугам, которые предназначены
+            исключительно для участников веб-сайта на 14 дней.
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer">
       <div class="footer__wrapper wrapper">
-        <div class="footer__top">
-          <div class="footer__logo"><img src="./assets/img/elements/footer-logo.png" alt="" /></div>
-          <ul class="footer__social social">
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg
-                  class="footer-social-icon"
-                  height="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 320 512"
-                >
-                  <!-- Font Awesome Pro 5.15.4 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                  <path
-                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg
-                  class="footer-social-icon"
-                  height="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <!-- Font Awesome Pro 5.15.4 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                  <path
-                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                  ></path></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg
-                  class="footer-social-icon"
-                  height="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <!-- Font Awesome Pro 5.15.4 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                  <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link">
-                <svg
-                  class="footer-social-icon"
-                  height="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <!-- Font Awesome Pro 5.15.4 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                  <path
-                    d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"
-                  ></path></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link"
-                ><svg
-                  class="footer-social-icon"
-                  height="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 576 512"
-                >
-                  <!-- Font Awesome Pro 5.15.4 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                  <path
-                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-                  ></path></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link"
-                ><svg
-                  class="footer-social-icon"
-                  height="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <!-- Font Awesome Pro 5.15.4 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                  <path
-                    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                  ></path></svg
-              ></a>
-            </li>
-            <li class="social__item">
-              <a href="#" class="social__link"
-                ><svg
-                  class="footer-social-icon"
-                  height="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <!-- Font Awesome Pro 5.15.4 by @fontawesome  - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                  <path
-                    d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
-                  ></path></svg
-              ></a>
-            </li>
-          </ul>
+        <div class="footer__left">
+          <div class="logo">
+            <div class="logo__img">
+              <svg
+                width="52"
+                height="60"
+                viewBox="0 0 52 60"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M51.8741 16.4272L51.8142 15.1544L26 0L0.185809 15.1544L0.125902 16.4272C-0.386565 27.3159 0.588008 35.446 4.4846 42.2352C8.37893 49.0205 14.9842 54.1044 24.8637 59.3919L26 60L27.1363 59.3919C37.0158 54.1044 43.6211 49.0205 47.5154 42.2352C51.412 35.446 52.3866 27.3159 51.8741 16.4272ZM8.63857 39.9004C11.7353 45.296 17.0611 49.7144 26 54.6179C30.0774 52.3812 33.4031 50.2454 36.1083 48.0718C37.5808 46.8887 38.8695 45.6943 39.9956 44.4664C41.3361 43.0046 42.4461 41.4952 43.3614 39.9004C44.152 38.523 44.8097 37.0601 45.345 35.4802L21.054 21.8046L26.092 18.847L46.5885 30.3864C47.1667 26.8498 47.3316 22.7673 47.1551 17.9161L26 5.49685L4.84491 17.9161C4.75621 20.3548 4.75375 22.5993 4.84671 24.6779L30.0444 38.864C28.9329 40.1015 27.6585 41.3038 26.1998 42.4935L5.48712 30.8323C6.09911 34.3155 7.12573 37.2645 8.63857 39.9004Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="logo__info">
+              <p class="logo__title">Safe VPN</p>
+              <p class="logo__desc">Your best choise</p>
+            </div>
+          </div>
+          <p class="footer__txt">© 2022 Safe VPN. Все права защищены</p>
+          <div class="footer__links">
+            <a href="#" class="footer__txt"> Политика конфиденциальности </a>
+            <a href="#" class="footer__txt"> Условия обслуживания </a>
+          </div>
         </div>
-        <ul class="footer__nav">
-          <li class="footer__navCol">
-            <ul class="footer__navList">
-              <li class="footer__navTitle">Lingopie</li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/our-team" class="footer__navLink">Our team</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/reviews" class="footer__navLink">Customer Reviews</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/blog/" class="footer__navLink">Lingopie Blog</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/get/community/" class="footer__navLink">Community</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/pricing/" class="footer__navLink"
-                  >Subscription Plans</a
-                >
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/contact-us" class="footer__navLink">Contact us</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/affiliate" class="footer__navLink"
-                  >Affiliate Program</a
-                >
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/w/press" class="footer__navLink">From The Press</a>
-              </li>
-              <li class="footer__navItem"><a href="#" class="footer__navLink"></a></li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/privacy-policy" class="footer__navLink"
-                  >Privacy policy</a
-                >
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/terms-of-service" class="footer__navLink"
-                  >Terms of service</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="footer__navCol">
-            <ul class="footer__navList">
-              <li class="footer__navTitle">Language</li>
-              <li class="footer__navItem">
-                <a href="spanish.html" class="footer__navLink">Learn Spanish</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="italian.html" class="footer__navLink">Learn Italian</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="portuguese.html" class="footer__navLink">Learn Portuguese</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="french.html" class="footer__navLink">Learn French</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="german.html" class="footer__navLink">Learn German</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="russian.html" class="footer__navLink">Learn Russian</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="japanese.html" class="footer__navLink">Learn Japanese</a>
-              </li>
-              <li class="footer__navItem">
-                <a href="korean.html" class="footer__navLink">Learn Korean</a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer__navCol">
-            <ul class="footer__navList">
-              <li class="footer__navTitle">TV Show Guides</li>
-              <li class="footer__navItem">
-                <a
-                  href="https://lingopie.com/learn-spanish-with-casa-de-papel/"
-                  class="footer__navLink"
-                  >Learn Spanish with Casa de Papel</a
-                >
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/learn/narcos" class="footer__navLink"
-                  >Learn Spanish with Narcos</a
-                >
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/learn/vis-a-vis-locked-up#" class="footer__navLink"
-                  >Learn Spanish with Vis a Vis</a
-                >
-              </li>
-              <li class="footer__navItem">
-                <a
-                  href="https://lingopie.com/learn/club-de-cuervos-club-of-crows"
-                  class="footer__navLink"
-                  >Learn Spanish with Club de<br />
-                  Cuervos</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="footer__navCol">
-            <ul class="footer__navList">
-              <li class="footer__navTitle">Lingopie Tools</li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/dictionary" class="footer__navLink">
-                  TV Phrasebook
-                </a>
-              </li>
-            </ul>
-            <ul class="footer__navList">
-              <li class="footer__navTitle">Lingopie Teacher</li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/teacher-directory" class="footer__navLink">
-                  Find a Tutor
-                </a>
-              </li>
-              <li class="footer__navItem">
-                <a href="https://lingopie.com/teacher-directory/apply" class="footer__navLink">
-                  Become a Tutor
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="footer__payment">
+          <div class="footer__paymentTitle">
+            Способы оплаты
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.35421 4.58334C2.97014 4.58334 1.83337 5.72011 1.83337 7.10418V13.9792C1.83337 15.3632 2.97014 16.5 4.35421 16.5H16.2709C17.6549 16.5 18.7917 15.3632 18.7917 13.9792V7.10418C18.7917 5.72011 17.6549 4.58334 16.2709 4.58334H4.35421ZM4.35421 5.95834H16.2709C16.9117 5.95834 17.4167 6.46332 17.4167 7.10418V7.79168H3.20837V7.10418C3.20837 6.46332 3.71335 5.95834 4.35421 5.95834ZM19.7084 6.88844V13.9792C19.7084 15.8767 18.1684 17.4167 16.2709 17.4167H4.5968C5.12847 18.2417 6.05462 18.7917 7.10421 18.7917H16.2709C18.9246 18.7917 21.0834 16.6329 21.0834 13.9792V9.39584C21.0834 8.34626 20.5334 7.4201 19.7084 6.88844ZM3.20837 9.16668H17.4167V13.9792C17.4167 14.62 16.9117 15.125 16.2709 15.125H4.35421C3.71335 15.125 3.20837 14.62 3.20837 13.9792V9.16668ZM13.0625 12.375C12.9714 12.3737 12.881 12.3906 12.7964 12.4245C12.7119 12.4585 12.635 12.5089 12.5701 12.5729C12.5052 12.6369 12.4537 12.7131 12.4185 12.7971C12.3834 12.8812 12.3652 12.9714 12.3652 13.0625C12.3652 13.1536 12.3834 13.2438 12.4185 13.3279C12.4537 13.4119 12.5052 13.4882 12.5701 13.5521C12.635 13.6161 12.7119 13.6665 12.7964 13.7005C12.881 13.7345 12.9714 13.7513 13.0625 13.75H15.3542C15.4453 13.7513 15.5358 13.7345 15.6203 13.7005C15.7048 13.6665 15.7818 13.6161 15.8467 13.5521C15.9115 13.4882 15.9631 13.4119 15.9982 13.3279C16.0334 13.2438 16.0515 13.1536 16.0515 13.0625C16.0515 12.9714 16.0334 12.8812 15.9982 12.7971C15.9631 12.7131 15.9115 12.6369 15.8467 12.5729C15.7818 12.5089 15.7048 12.4585 15.6203 12.4245C15.5358 12.3906 15.4453 12.3737 15.3542 12.375H13.0625Z"
+                fill="#50597C"
+              />
+            </svg>
+          </div>
+          <div class="footer__paymentImages">
+            <img src="./img/payment1.jpg" alt="" /><img src="./img/payment2.jpg" alt="" />
+          </div>
+        </div>
       </div>
     </footer>
 
-    <script type="text/javascript" src="./assets/js/scripts.min.js"></script>
+    <script type="text/javascript" src="./js/scripts.min.js"></script>
   </body>
 </html>
