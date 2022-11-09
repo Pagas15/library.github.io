@@ -762,8 +762,8 @@ ol {
   margin-bottom: 14px;
 }
 
-.popUp__form .inputBox:nth-child(3),
-.popUp__form .inputBox:nth-child(4) {
+.popUp__form .inputBox:nth-child(4),
+.popUp__form .inputBox:nth-child(5) {
   width: 48%;
   width: calc(50% - 7px);
 }
