@@ -1035,7 +1035,7 @@ body::before {
 }
 
 .bgElemLight2 {
-  background: url("../img/background/line1.png") center/100% 100% no-repeat;
+  background: #272727 url("../img/background/line1.png") center/100% 100% no-repeat;
 }
 
 .bgElemDark {
@@ -1043,7 +1043,7 @@ body::before {
 }
 
 .bgElemDark2 {
-  background: url("../img/background/line2.png") center/100% 100% no-repeat;
+  background: #161616 url("../img/background/line2.png") center/100% 100% no-repeat;
 }
 
 .head {
