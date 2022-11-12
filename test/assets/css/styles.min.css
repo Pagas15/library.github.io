@@ -2125,39 +2125,31 @@ body::before {
   .body__bgGrads span:nth-child(1) {
     width: 272px;
     height: 272px;
-    background: rgb(238, 238, 238); /* Old browsers */
+    background: rgba(255, 199, 0, 0.91); /* Old browsers */
     background: -moz-linear-gradient(
       -45deg,
-      rgba(238, 238, 238, 1) 0%,
-      rgba(238, 238, 238, 1) 100%
+      rgba(255, 199, 0, 0.91) 0%,
+      #ff5c00 17.57%
     ); /* FF3.6+ */
     background: -webkit-gradient(
       linear,
       left top,
       right bottom,
-      color-stop(0%, rgba(238, 238, 238, 1)),
-      color-stop(100%, rgba(238, 238, 238, 1))
+      color-stop(0%, rgba(255, 199, 0, 0.91)),
+      color-stop(17.57%, #ff5c00)
     ); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(
       -45deg,
-      rgba(238, 238, 238, 1) 0%,
-      rgba(238, 238, 238, 1) 100%
+      rgba(255, 199, 0, 0.91) 0%,
+      #ff5c00 17.57%
     ); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(
       -45deg,
-      rgba(238, 238, 238, 1) 0%,
-      rgba(238, 238, 238, 1) 100%
+      rgba(255, 199, 0, 0.91) 0%,
+      #ff5c00 17.57%
     ); /* Opera 11.10+ */
-    background: -ms-linear-gradient(
-      -45deg,
-      rgba(238, 238, 238, 1) 0%,
-      rgba(238, 238, 238, 1) 100%
-    ); /* IE10+ */
-    background: linear-gradient(
-      -45deg,
-      rgba(238, 238, 238, 1) 0%,
-      rgba(238, 238, 238, 1) 100%
-    ); /* W3C */
+    background: -ms-linear-gradient(-45deg, rgba(255, 199, 0, 0.91) 0%, #ff5c00 17.57%); /* IE10+ */
+    background: linear-gradient(-45deg, rgba(255, 199, 0, 0.91) 0%, #ff5c00 17.57%); /* W3C */
     opacity: 0.6;
     -webkit-filter: blur(119px);
     filter: blur(119px);
