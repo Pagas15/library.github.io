@@ -657,9 +657,9 @@ body::before {
 }
 
 .header:not(.active) .header__nav {
-  -webkit-transform: translateY(-100vh);
-  -ms-transform: translateY(-100vh);
-  transform: translateY(-100vh);
+  -webkit-transform: translateY(-160vh);
+  -ms-transform: translateY(-160vh);
+  transform: translateY(-160vh);
 }
 
 .header__wrapper {
@@ -717,7 +717,7 @@ body::before {
 }
 
 .header__nav {
-  z-index: 100;
+  z-index: 1000;
   padding-top: 20%;
   background: #fff;
   position: fixed;
@@ -2154,6 +2154,152 @@ body::before {
     display: none;
   }
 
+  .head__wrapper {
+    position: relative;
+    padding-left: 260px;
+  }
+
+  .head__img {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    z-index: -1;
+    opacity: 0.7;
+  }
+
+  .partnership__img {
+    width: 48%;
+    margin-top: -88px;
+    margin-left: -80px;
+    margin-right: -80px;
+  }
+
+  .autor__img {
+    z-index: -5;
+    opacity: 0.7;
+  }
+
+  .typeTop {
+    padding-left: 30px;
+    padding-right: 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .typeTop__num {
+    font-size: 264px;
+    line-height: 209px;
+    margin-right: 25px;
+  }
+
+  .typeTop__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .typeTop__subTitle {
+    font-size: 23px;
+    line-height: 26px;
+  }
+
+  .income .typeTop__title {
+    max-width: 538px;
+  }
+
+  .income__slider .swiperSlide {
+    margin-bottom: 30px;
+    width: calc(50% - 15px);
+  }
+
+  .card__inside {
+    padding-right: 20px;
+  }
+
+  .card__icon {
+    width: 110px;
+    height: 110px;
+    padding: 12px;
+    margin-right: 16px;
+  }
+
+  .card__text {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 21px;
+    line-height: 23px;
+  }
+
+  .head__name {
+    font-size: 160px;
+  }
+
+  .head .txt60x75 {
+    font-size: 48px;
+    line-height: 1em;
+  }
+
+  .head .txt30x35 {
+    max-width: 690px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .head .head__name + p {
+    margin-top: -22px;
+    margin-bottom: 34px;
+  }
+
+  .head__reg {
+    margin-bottom: 28px;
+    margin-top: 36px;
+    font-size: 32px;
+    line-height: 38px;
+    max-width: 690px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .head__img {
+    opacity: 0.5;
+  }
+
+  .autor__img {
+    opacity: 0.5;
+  }
+
+  .head__wrapper {
+    padding-left: 160px;
+  }
+
+  .payments__item {
+    padding-top: 12px;
+    padding-bottom: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .payments__name {
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .payments__wrapper {
+    margin-top: 42px;
+    padding-bottom: 54px;
+  }
+
+  .payments__icon {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+
+  .swiper-wrapper {
+    z-index: 0;
+  }
+
   .income__slider .swiperWrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2352,9 +2498,9 @@ body::before {
     opacity: 0.6;
     -webkit-filter: blur(119px);
     filter: blur(119px);
-    -webkit-transform: rotate(60.5deg);
-    -ms-transform: rotate(60.5deg);
-    transform: rotate(60.5deg);
+    -webkit-transform: rotate(60.5deg) scale(0.7);
+    -ms-transform: rotate(60.5deg) scale(0.7);
+    transform: rotate(60.5deg) scale(0.7);
     top: -84px;
     left: auto;
     right: calc(50% - 316px);
@@ -2368,9 +2514,9 @@ body::before {
     opacity: 0.6;
     -webkit-filter: blur(119px);
     filter: blur(119px);
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg) scale(0.7);
+    -ms-transform: rotate(90deg) scale(0.7);
+    transform: rotate(90deg) scale(0.7);
     left: calc(50% - 344px);
     top: 692px;
   }
@@ -2379,15 +2525,15 @@ body::before {
     width: 258px;
     height: 258px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) scale(0.8);
+    -ms-transform: translateX(-50%) scale(0.8);
+    transform: translateX(-50%) scale(0.8);
     background: -o-linear-gradient(47.26deg, rgba(255, 199, 0, 0.91) -14.43%, #ff5c00 57.22%);
     background: linear-gradient(42.74deg, rgba(255, 199, 0, 0.91) -14.43%, #ff5c00 57.22%);
     opacity: 0.6;
     -webkit-filter: blur(119px);
     filter: blur(119px);
-    top: 1485px;
+    top: 1647px;
   }
 
   .body__bgGrads span:nth-child(4) {
@@ -2400,9 +2546,10 @@ body::before {
     opacity: 0.6;
     -webkit-filter: blur(119px);
     filter: blur(119px);
-    -webkit-transform: rotate(60.5deg);
-    -ms-transform: rotate(60.5deg);
-    transform: rotate(60.5deg);
+    -webkit-transform: rotate(60.5deg) scale(0.8);
+    -ms-transform: rotate(60.5deg) scale(0.8);
+    transform: rotate(60.5deg) scale(0.8);
+    top: 2907px;
   }
 
   .body__bgGrads span:nth-child(5) {
@@ -2414,9 +2561,10 @@ body::before {
     opacity: 0.6;
     -webkit-filter: blur(119px);
     filter: blur(119px);
-    -webkit-transform: rotate(-27.36deg);
-    -ms-transform: rotate(-27.36deg);
-    transform: rotate(-27.36deg);
+    -webkit-transform: rotate(-27.36deg) scale(0.7);
+    -ms-transform: rotate(-27.36deg) scale(0.7);
+    transform: rotate(-27.36deg) scale(0.7);
+    top: 3611px;
   }
 
   .body__bgGrads span:nth-child(6) {
@@ -2474,8 +2622,8 @@ body::before {
   .body__bgCoins span:nth-child(5) {
     width: 96px;
     height: 96px;
-    top: 3399px;
-    left: calc(50% - 220px);
+    top: 3045px;
+    left: calc(50% - 210px);
     -webkit-transform: rotate(8.25deg);
     -ms-transform: rotate(8.25deg);
     transform: rotate(8.25deg);
@@ -2521,18 +2669,123 @@ body::before {
     -ms-transform: rotate(59.74deg);
     transform: rotate(59.74deg);
     left: calc(50% + 60px);
-    top: 3116px;
+    top: 2821px;
+  }
+
+  .payments .typeTop__num {
+    max-width: 33vw;
+  }
+
+  .payments .typeTop__title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .payments__wrapper {
+    margin-right: 23px;
+  }
+
+  .payments__icon {
+    max-width: 98px;
   }
 
   .typeTop__num {
     margin: auto;
-    max-width: 35vw;
+    max-width: 29vw;
+  }
+
+  .payments__item {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .income .typeTop {
+    margin-bottom: 4px;
+  }
+
+  .autor {
+    padding-bottom: 76px;
+  }
+
+  .income .typeTop__title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .income .typeTop__subTitle {
+    font-size: 16px;
+    line-height: 19px;
   }
 
   .partnership__img {
     -webkit-transform: translateY(-26.666vw);
     -ms-transform: translateY(-26.666vw);
     transform: translateY(-26.666vw);
+  }
+
+  .modelPay {
+    -webkit-transform: translateY(-172px);
+    -ms-transform: translateY(-172px);
+    transform: translateY(-172px);
+    margin-bottom: -172px;
+  }
+
+  .partnership .typeTop__subTitle {
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 278px;
+  }
+
+  .partnership .typeTop__subTitle span:last-child {
+    display: block;
+  }
+
+  .body__bgCoins span:nth-child(3) {
+    top: 2048px;
+  }
+
+  .body__bgCoins span:nth-child(4) {
+    top: 2121px;
+  }
+
+  .autor .typeTop__num {
+    max-width: 31vw;
+  }
+
+  .autor .typeTop__title {
+    font-size: 20px;
+    line-height: 25px;
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+
+  .autor .typeTop__title br {
+    display: none;
+  }
+
+  .autor .typeTop__subTitle {
+    font-size: 16px;
+    line-height: 19px;
+    color: #ff5c00;
+    padding-left: 14.5px;
+    padding-right: 14.5px;
+  }
+
+  .autor .typeTop__subTitle br {
+    display: none;
+  }
+
+  .autor .typeTop {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .autor__slider {
+    margin-top: 6px;
+  }
+
+  .autor__img {
+    margin-right: 22px;
   }
 
   .profite__wrapper {
@@ -2563,7 +2816,21 @@ body::before {
   }
 
   .profite {
-    padding-top: 40px;
+    padding-top: 24px;
+  }
+
+  .profite .typeTop__num {
+    max-width: 33vw;
+  }
+
+  .profite .typeTop__title {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 25px;
+  }
+
+  .profite__profit {
+    margin-top: 40px;
   }
 
   .swiper-pagination {
@@ -2765,6 +3032,7 @@ body::before {
     font-size: 25px;
     line-height: 30px;
     padding: 7px 20px;
+    border-radius: 8px;
   }
 
   .partnership {
