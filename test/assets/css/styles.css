@@ -2576,6 +2576,11 @@ body::before {
     display: none;
   }
 
+  .body__bgCoins span {
+    -webkit-filter: blur(0) !important;
+    filter: blur(0) !important;
+  }
+
   .body__bgCoins span:nth-child(1) {
     width: 74px;
     height: 74px;
@@ -3062,6 +3067,8 @@ body::before {
     height: 116px;
     right: -38px;
     bottom: -46px;
+    -webkit-filter: blur(0) !important;
+    filter: blur(0) !important;
     -webkit-transform: rotate(89.48deg);
     -ms-transform: rotate(89.48deg);
     transform: rotate(89.48deg);
