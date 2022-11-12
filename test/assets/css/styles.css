@@ -1729,6 +1729,18 @@ body::before {
     transform: rotate(80.71deg);
   }
 
+  .body__bgCoins span:nth-child(10) {
+    width: 6.7676vw;
+    height: 6.7676vw;
+    top: 101.2626vw;
+    left: calc(50% - 35.555vw);
+    -webkit-filter: blur(0.2222vw);
+    filter: blur(0.2222vw);
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
   .head__name {
     font-size: 10.101vw;
   }
@@ -2496,7 +2508,8 @@ body::before {
     filter: blur(0px);
   }
 
-  .body__bgCoins span:nth-child(8) {
+  .body__bgCoins span:nth-child(8),
+  .body__bgCoins span:nth-child(10) {
     display: none;
   }
 
