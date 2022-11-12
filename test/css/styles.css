@@ -1235,6 +1235,7 @@ body::before {
 
 .income__wrapper {
   max-width: 1400px;
+  overflow: hidden;
 }
 
 .income__slider .swiperWrapper {
@@ -1360,6 +1361,7 @@ body::before {
 .autor__wrapper {
   position: relative;
   max-width: 1600px;
+  overflow: hidden;
 }
 
 .autor__slider {
@@ -1396,6 +1398,7 @@ body::before {
 
 .profite__wrapper {
   max-width: 1160px;
+  overflow: hidden;
 }
 
 .profite .swiperWrapper {
