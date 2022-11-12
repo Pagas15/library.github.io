@@ -1557,8 +1557,14 @@ body::before {
 }
 
 .textSect {
+  position: relative;
   min-height: 100vh;
   padding-top: 120px;
+}
+
+.textSect .bgElemDark,
+.textSect .bgElemLight {
+  bottom: 0 !important;
 }
 
 .textSect h1,
