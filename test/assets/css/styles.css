@@ -424,7 +424,7 @@ body::before {
   right: 0;
   bottom: 0;
   z-index: -10000;
-  background: url("../img/background/Noise-Animation.png") repeat;
+  background: #000000 url("../img/background/Noise-Animation.png") repeat;
 }
 
 .body__bg {
