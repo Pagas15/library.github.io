@@ -440,17 +440,6 @@ body::before {
 .body__bgGrads span {
   display: block;
   position: absolute;
-  background: #eeeeee;
-  /* Old browsers */
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #eeeeee 0%, #eeeeee 100%);
-  /* Opera 11.10+ */
-  /* IE10+ */
-  background: -o-linear-gradient(135deg, #eeeeee 0%, #eeeeee 100%);
-  background: linear-gradient(-45deg, #eeeeee 0%, #eeeeee 100%);
-  /* W3C */
 }
 
 .body__bgGrads span:nth-child(1) {
