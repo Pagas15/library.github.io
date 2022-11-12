@@ -1796,10 +1796,13 @@ body::before {
 
   .button {
     font-size: 1.6161vw;
+    border-radius: 1.5656vw;
+    padding: 0.101vw;
   }
 
   .button span {
     padding: 0.6565vw 2.9292vw;
+    border-radius: 1.5656vw;
   }
 
   .wrapper {
@@ -1818,15 +1821,31 @@ body::before {
   }
 
   .logo {
-    max-width: 14.2424vw;
+    width: 14.2424vw;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .income .typeTop__num {
+    margin-top: -1.0101vw;
+    width: 14.1414vw;
   }
 
   .header__wrapper {
+    padding-top: 1.3131vw;
+    padding-bottom: 1.3131vw;
     max-width: 90.909vw;
+  }
+
+  .payments .typeTop__title {
+    max-width: 34.9494vw;
   }
 
   .socialBtn {
     padding: 0.2525vw;
+    border-radius: 1.5151vw;
   }
 
   .socialBtn__icon {
@@ -1846,7 +1865,7 @@ body::before {
   }
 
   .typeTop__num {
-    max-width: 16.1616vw;
+    width: 16.1616vw;
     margin-right: 3.0304vw;
     font-size: 16.1616vw;
     line-height: 12.7272vw;
@@ -1895,15 +1914,22 @@ body::before {
   .card__inside {
     max-width: 37.3737vw;
     padding-right: 2.2727vw;
+    border-radius: 4.0404vw;
+  }
+
+  .typeTop__num img {
+    width: 100%;
   }
 
   .card__icon {
     width: 7.6262vw;
     height: 7.6262vw;
     margin-right: 1.6161vw;
+    border-radius: 4.0404vw;
   }
 
   .card__icon img {
+    width: 100%;
     max-width: 80%;
   }
 
@@ -1959,7 +1985,7 @@ body::before {
   }
 
   .partnership__img .desctop {
-    max-width: 34.8989vw;
+    width: 34.8989vw;
   }
 
   .partnership .button {
@@ -1994,7 +2020,7 @@ body::before {
   }
 
   .autor__img .desctop {
-    max-width: 22.7777vw;
+    width: 22.7777vw;
   }
 
   .txt50x60 {
@@ -2023,7 +2049,7 @@ body::before {
   }
 
   .profite__profit img {
-    max-width: 36.9696vw;
+    width: 36.9696vw;
   }
 
   .profite .swiperSlide {
@@ -2080,6 +2106,7 @@ body::before {
 
   .payments__icon img {
     max-width: 100%;
+    width: 100%;
   }
 
   .payments__name {
