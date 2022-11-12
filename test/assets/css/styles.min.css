@@ -2125,8 +2125,39 @@ body::before {
   .body__bgGrads span:nth-child(1) {
     width: 272px;
     height: 272px;
-    background: -o-linear-gradient(47.26deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
-    background: linear-gradient(42.74deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    background: rgb(238, 238, 238); /* Old browsers */
+    background: -moz-linear-gradient(
+      -45deg,
+      rgba(238, 238, 238, 1) 0%,
+      rgba(238, 238, 238, 1) 100%
+    ); /* FF3.6+ */
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      color-stop(0%, rgba(238, 238, 238, 1)),
+      color-stop(100%, rgba(238, 238, 238, 1))
+    ); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(
+      -45deg,
+      rgba(238, 238, 238, 1) 0%,
+      rgba(238, 238, 238, 1) 100%
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+      -45deg,
+      rgba(238, 238, 238, 1) 0%,
+      rgba(238, 238, 238, 1) 100%
+    ); /* Opera 11.10+ */
+    background: -ms-linear-gradient(
+      -45deg,
+      rgba(238, 238, 238, 1) 0%,
+      rgba(238, 238, 238, 1) 100%
+    ); /* IE10+ */
+    background: linear-gradient(
+      -45deg,
+      rgba(238, 238, 238, 1) 0%,
+      rgba(238, 238, 238, 1) 100%
+    ); /* W3C */
     opacity: 0.6;
     -webkit-filter: blur(119px);
     filter: blur(119px);
