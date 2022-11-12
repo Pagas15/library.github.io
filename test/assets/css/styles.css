@@ -2512,6 +2512,21 @@ body::before {
     top: 3116px;
   }
 
+  .typeTop__num {
+    margin: auto;
+    max-width: 35vw;
+  }
+
+  .partnership__img {
+    -webkit-transform: translateY(-26.666vw);
+    -ms-transform: translateY(-26.666vw);
+    transform: translateY(-26.666vw);
+  }
+
+  .profite__wrapper {
+    overflow: hidden;
+  }
+
   .bgElemDark {
     bottom: 20px;
   }
@@ -2699,6 +2714,7 @@ body::before {
     margin: 0;
     margin-bottom: 15px;
     min-width: 300px;
+    width: 51%;
     text-align: center;
   }
 
@@ -2754,12 +2770,6 @@ body::before {
   .partnership .typeTop__title {
     font-size: 20px;
     line-height: 25px;
-  }
-
-  .partnership__img {
-    -webkit-transform: translateY(-103px);
-    -ms-transform: translateY(-103px);
-    transform: translateY(-103px);
   }
 
   .partnership .button {
@@ -2832,5 +2842,11 @@ body::before {
   .head__btns .button span {
     font-size: 30px;
     line-height: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .income__slider .swiperWrapper {
+    margin-bottom: 0;
   }
 }
