@@ -1989,6 +1989,85 @@ body::before {
     padding-right: 15px;
   }
 
+  .body__bgGrads span:nth-child(1) {
+    width: 272px;
+    height: 272px;
+    background: -o-linear-gradient(47.26deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    background: linear-gradient(42.74deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    opacity: 0.6;
+    -webkit-filter: blur(119px);
+    filter: blur(119px);
+    -webkit-transform: rotate(60.5deg);
+    -ms-transform: rotate(60.5deg);
+    transform: rotate(60.5deg);
+    top: -84px;
+    left: auto;
+    right: calc(50% - 316px);
+  }
+
+  .body__bgGrads span:nth-child(2) {
+    width: 272px;
+    height: 272px;
+    background: -o-linear-gradient(47.26deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    background: linear-gradient(42.74deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    opacity: 0.6;
+    -webkit-filter: blur(119px);
+    filter: blur(119px);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: calc(50% - 344px);
+    top: 692px;
+  }
+
+  .body__bgGrads span:nth-child(3) {
+    width: 258px;
+    height: 258px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: -o-linear-gradient(47.26deg, rgba(255, 199, 0, 0.91) -14.43%, #ff5c00 57.22%);
+    background: linear-gradient(42.74deg, rgba(255, 199, 0, 0.91) -14.43%, #ff5c00 57.22%);
+    opacity: 0.6;
+    -webkit-filter: blur(119px);
+    filter: blur(119px);
+    top: 1485px;
+  }
+
+  .body__bgGrads span:nth-child(4) {
+    width: 272px;
+    height: 272px;
+    right: calc(50% - 337px);
+    left: auto;
+    background: -o-linear-gradient(47.26deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    background: linear-gradient(42.74deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    opacity: 0.6;
+    -webkit-filter: blur(119px);
+    filter: blur(119px);
+    -webkit-transform: rotate(60.5deg);
+    -ms-transform: rotate(60.5deg);
+    transform: rotate(60.5deg);
+  }
+
+  .body__bgGrads span:nth-child(5) {
+    width: 272px;
+    height: 272px;
+    left: calc(50% - 346px);
+    background: -o-linear-gradient(47.26deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    background: linear-gradient(42.74deg, rgba(255, 199, 0, 0.91) -54.08%, #ff5c00 17.57%);
+    opacity: 0.6;
+    -webkit-filter: blur(119px);
+    filter: blur(119px);
+    -webkit-transform: rotate(-27.36deg);
+    -ms-transform: rotate(-27.36deg);
+    transform: rotate(-27.36deg);
+  }
+
+  .body__bgGrads span:nth-child(6) {
+    display: none;
+  }
+
   .body__bgCoins span:nth-child(1) {
     width: 74px;
     height: 74px;
@@ -2404,5 +2483,10 @@ body::before {
   .profite__profit {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .head__btns .button span {
+    font-size: 30px;
+    line-height: 1em;
   }
 }
