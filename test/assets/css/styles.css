@@ -423,8 +423,8 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -10000;
-  background: #000000 url("../img/background/Noise-Animation.png") repeat;
+  z-index: -1000;
+  background: url("../img/background/Noise-Animation2.png") repeat;
 }
 
 .body__bg {
@@ -1003,47 +1003,46 @@ body::before {
   color: #ffffff;
 }
 
-.bgElemLight {
-  opacity: 0.3;
+.bgElemLight,
+.bgElemDark {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 71px;
-  z-index: -1000;
-  background: #252525;
+  bottom: 70px;
+  z-index: -10000;
+}
+
+.bgElemLight2,
+.bgElemDark2 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  z-index: -9999;
+  height: 73px;
+}
+
+.bgElemLight,
+.bgElemLight2,
+.bgElemDark,
+.bgElemDark2 {
+  opacity: 1;
+}
+
+.bgElemLight {
+  background: #272727;
 }
 
 .bgElemLight2 {
-  opacity: 0.3;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -999;
-  height: 71px;
   background: url("../img/background/line1.png") center/100% 100% no-repeat;
 }
 
 .bgElemDark {
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 71px;
-  z-index: -1000;
   background: #161616;
 }
 
 .bgElemDark2 {
-  opacity: 0.3;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -999;
-  height: 71px;
   background: url("../img/background/line2.png") center/100% 100% no-repeat;
 }
 
@@ -1917,12 +1916,12 @@ body::before {
 
   .bgElemLight,
   .bgElemDark {
-    bottom: 3.5858vw;
+    bottom: 3.5353vw;
   }
 
   .bgElemLight2,
   .bgElemDark2 {
-    height: 3.5858vw;
+    height: 3.6363vw;
   }
 
   .modelPay {
@@ -2541,7 +2540,7 @@ body::before {
   }
 
   .bgElemDark {
-    bottom: 20px;
+    bottom: 18px;
   }
 
   .bgElemDark2 {
@@ -2706,7 +2705,7 @@ body::before {
   }
 
   .bgElemLight {
-    bottom: 42px;
+    bottom: 41px;
   }
 
   .head__btns {
