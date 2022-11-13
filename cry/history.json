@@ -1,12 +1,22 @@
 [
   {
     "Date(UTC)": "2022-11-13 16:59:09",
+    "Market": "BNBUSDT",
+    "Type": "BUY",
+    "Price": "278.3",
+    "Amount": "0.249",
+    "Total": "69.3",
+    "Fee": "0.00012217",
+    "Fee Coin": "BNB"
+  },
+  {
+    "Date(UTC)": "2022-11-13 16:59:09",
     "Market": "RVNUSDT",
     "Type": "BUY",
     "Price": "0.02169",
     "Amount": "552.2",
     "Total": "11.99891",
-    "Fee": "0.00005382",
+    "Fee": "0.00003217",
     "Fee Coin": "BNB"
   },
   {
