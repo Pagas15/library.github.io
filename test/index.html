@@ -119,8 +119,8 @@
           </p>
           <p class="head__reg">Зарегистрироваться как</p>
           <div class="head__btns">
-            <button class="button button--grad"><span>Арбитражник</span></button
-            ><button class="button button--whiteBorder"><span>Автор оффера</span></button>
+            <button class="button button--grad" data-modal-btn-open="arbi"><span>Арбитражник</span></button
+            ><button class="button button--whiteBorder" data-modal-btn-open="autor1"><span>Автор оффера</span></button>
           </div>
         </div>
       </div>
@@ -455,6 +455,186 @@
         </ul>
       </div>
     </footer>
+
+    
+    <!-- Pop Up -->
+    <div class="popup" data-modal-wrapper>
+      <div class="popup__bg" data-modal-btn-close></div>
+      <div class="popup__block popup__block--inf" data-modal-window="arbi">
+        <button class="popup__close" data-modal-btn-close>
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12.0752" y="39.5794" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-45 12.0752 39.5794)" fill="#D9D9D9"/>
+            <rect x="39.5791" y="42.9336" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-135 39.5791 42.9336)" fill="#D9D9D9"/>
+            </svg>
+            
+        </button>
+        <p class="popup__title ">Арбитражник</p>
+        <div class="popup__form formBox">
+          <form action="">
+
+            <label class="inputBox">
+              <span class="inputBox__title">Имя или название команды</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/avatar-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="text" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Email</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/mail-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="email" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Пароль</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/password-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="password" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Подтверждение пароля</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/password-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="password" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Telegram (username в Telegram)</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/telegram-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="text" />
+              </span>
+            </label>
+          </form>
+        </div>
+        <div class="buttonCenter"><button class="button button--grad" data-modal-btn-open="successfully"><span>Продолжить</span></button></div>
+        
+      </div>
+      <div class="popup__block popup__block--inf" data-modal-window="autor1">
+        <button class="popup__close" data-modal-btn-close>
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12.0752" y="39.5794" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-45 12.0752 39.5794)" fill="#D9D9D9"/>
+            <rect x="39.5791" y="42.9336" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-135 39.5791 42.9336)" fill="#D9D9D9"/>
+            </svg>
+            
+        </button>
+        <p class="popup__title ">Автора оффера </p>
+        <div class="popup__step"><span class="active"></span><span data-modal-btn-open="autor2"></span></div>
+        <div class="popup__form formBox">
+          <form action="">
+
+            <label class="inputBox">
+              <span class="inputBox__title">Имя или название команды</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/avatar-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="text" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Email</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/mail-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="email" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Пароль</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/password-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="password" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Подтверждение пароля</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/password-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="password" />
+              </span>
+            </label>
+            <label class="inputBox">
+              <span class="inputBox__title">Telegram (username в Telegram)</span>
+              <span class="inputBox__row">
+                <div class="inputBox__icon">
+                  <img src="./assets/img/icon/telegram-svgrepo-com 1.svg" alt="">
+                </div>
+                <input type="text" />
+              </span>
+            </label>
+          </form>
+        </div>
+        <div class="buttonCenter"><button class="button button--grad" data-modal-btn-open="autor2"><span>Продолжить</span></button></div>
+      </div>
+      <div class="popup__block popup__block--inf" data-modal-window="autor2">
+        <button class="popup__close" data-modal-btn-close>
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12.0752" y="39.5794" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-45 12.0752 39.5794)" fill="#D9D9D9"/>
+            <rect x="39.5791" y="42.9336" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-135 39.5791 42.9336)" fill="#D9D9D9"/>
+            </svg>
+            
+        </button>
+        <p class="popup__title ">Автора оффера </p>
+        <div class="popup__step"><span data-modal-btn-open="autor1"></span><span class="active"></span></div>
+        <div class="popup__form formBox">
+          <form action="">
+            <label class="textareaBox">
+              <span class="textareaBox__title"></span>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </label>
+          </form>
+        </div>
+        
+        <div class="buttonCenter"><button class="button button--grad" data-modal-btn-open="error"><span>Продолжить</span></button></div>
+      </div>
+      <div class="popup__block popup__block--result" data-modal-window="successfully">
+        <button class="popup__close" data-modal-btn-close>
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12.0752" y="39.5794" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-45 12.0752 39.5794)" fill="#D9D9D9"/>
+            <rect x="39.5791" y="42.9336" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-135 39.5791 42.9336)" fill="#D9D9D9"/>
+          </svg>
+        </button>
+        <p class="popup__resTitle">Благодарим 
+          зарегистрацию</p>
+        <div class="iconBig iconBig--green"><svg width="62" height="46" viewBox="0 0 62 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M59.616 11.2677L27.5445 43.3369C25.1696 45.7123 21.3171 45.7123 18.9399 43.3369L2.38441 26.7802C0.00858158 24.4049 0.00858158 20.5519 2.38441 18.1761C4.76069 15.7998 8.6129 15.7998 10.9881 18.1752L23.2435 30.4307L51.0109 2.66313C53.3872 0.286847 57.2397 0.288647 59.6151 2.66313C61.9905 5.03896 61.9905 8.89057 59.616 11.2677Z" fill="white"/>
+          </svg>
+          </div>
+        <div class="buttonCenter"><button class="button button--black" data-modal-btn-close><span>Продолжить</span></button></div>
+      </div>
+      <div class="popup__block popup__block--result" data-modal-window="error">
+        <button class="popup__close" data-modal-btn-close>
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12.0752" y="39.5794" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-45 12.0752 39.5794)" fill="#D9D9D9"/>
+            <rect x="39.5791" y="42.9336" width="38.897" height="4.74354" rx="2.37177" transform="rotate(-135 39.5791 42.9336)" fill="#D9D9D9"/>
+          </svg>
+        </button>
+        <p class="popup__resTitle">Что-то пошло не так :(</p>
+        <div class="iconBig iconBig--err"><svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 45.574L17.5741 27.9999L0 10.426L10.426 0L28.0001 17.5741L45.574 0L56 10.426L38.4259 28.0001L56 45.574L45.574 56L27.9999 38.4259L10.4257 56L0 45.574Z" fill="white"/>
+          </svg>
+          </div>
+        <div class="buttonCenter"><button class="button button--red" data-modal-btn-close><span>Продолжить</span></button></div>
+      </div>
+    </div>
 
     <script type="text/javascript" src="./assets/js/swiper.min.js"></script>
     <script type="text/javascript" src="./assets/js/scripts.min.js"></script>
