@@ -50,6 +50,16 @@
     "Fee Coin": "BNB"
   },
   {
+    "Date(UTC)": "2022-11-13 05:09:18",
+    "Market": "TWTUSDT",
+    "Type": "SELL",
+    "Price": "0.953",
+    "Amount": "117",
+    "Total": "111.501",
+    "Fee": "0.00049366",
+    "Fee Coin": "BNB"
+  },
+  {
     "Date(UTC)": "2022-05-12 12:54:19",
     "Market": "1INCHUSDT",
     "Type": "BUY",
