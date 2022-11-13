@@ -1,5 +1,25 @@
 [
   {
+    "Date(UTC)": "2022-11-13 16:59:09",
+    "Market": "RVNUSDT",
+    "Type": "BUY",
+    "Price": "0.02169",
+    "Amount": "552.2",
+    "Total": "11.99891",
+    "Fee": "0.00005382",
+    "Fee Coin": "BNB"
+  },
+  {
+    "Date(UTC)": "2022-11-13 16:55:09",
+    "Market": "AUDIOUSDT",
+    "Type": "BUY",
+    "Price": "0.1493",
+    "Amount": "167.4",
+    "Total": "24.99",
+    "Fee": "0.00005382",
+    "Fee Coin": "BNB"
+  },
+  {
     "Date(UTC)": "2022-11-13 16:39:42",
     "Market": "RVNUSDT",
     "Type": "BUY",
