@@ -1,7 +1,7 @@
 const CONSTS = {
   api: {
     arbi: 'https://home.scaletrk.com/signup/affiliate',
-    autor: 'https://affiliates.cashswag.pro/signup/advertiser',
+    autor: 'https://home.scaletrk.com/signup/advertiser',
   },
 };
 
@@ -156,10 +156,8 @@ const request = async ({ url, method = 'GET', data = null, callBack }) => {
   try {
     const headers = {};
     let body;
-
     if (data) {
       headers['Content-Type'] = 'application/json';
-      headers['Access-Control-Allow-Origin'] = '*';
       body = JSON.stringify(data);
     }
     const response = await fetch(url, {
@@ -385,7 +383,6 @@ const init = () => {
   header();
   sliders();
   const modelMethod = modal();
-  modelMethod.openModal('autor1');
   inputsOll();
   inputsForms(modelMethod);
 };
