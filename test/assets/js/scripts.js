@@ -159,6 +159,7 @@ const request = async ({ url, method = 'GET', data = null, callBack }) => {
 
     if (data) {
       headers['Content-Type'] = 'application/json';
+      headers['Access-Control-Allow-Origin'] = '*';
       body = JSON.stringify(data);
     }
     const response = await fetch(url, {
@@ -324,7 +325,7 @@ const inputsForms = (methodPopups) => {
     const btn = document.querySelector('[data-form-btn="autor1"]');
     const btnPre = document.querySelector('[data-form-btn-pre="autor1"]');
     const ollFields = document.querySelectorAll(`[data-form-input="autor1"]`);
-    const baseClick = (callBack, elseCallBack) => {
+    const baseClick = (callBack, elseCallBack = () => {}) => {
       let isNormal = [];
       ollFields.forEach((input) => {
         isNormal.push({
