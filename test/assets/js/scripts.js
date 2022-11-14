@@ -177,175 +177,128 @@ const request = async ({ url, method = 'GET', data = null, callBack }) => {
   }
 };
 
-const inputMasks2 = {
-  email: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/,
-  password: /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/,
-  telegram: /^@[A-Za-z0-9_-]{3,16}$/,
-};
-
-const createError = (text = 'Please Enter Valid') => {
-  let errorMassage = document.createElement('p');
-  errorMassage.className = 'txt25x29 cRed textError';
-  errorMassage.innerHTML = text;
-  return errorMassage;
-};
-
-const checkOut = (wrapper, condition, massage) => {
-  const havesError = !!wrapper.lastChild?.classList?.contains('textError');
-  if (condition) {
-    if (havesError) {
-      wrapper.removeChild(wrapper.lastChild);
-    }
-  } else {
-    if (!havesError) {
-      wrapper.appendChild(massage);
-    }
-  }
-};
-
-const checkInput = {
-  name: (input, subr = false) => {
-    const wrapper = input.closest('.inputBox');
-    const errorMassage = createError('Как минимум 2 символов');
-    const check = () => checkOut(wrapper, input.value.length >= 2, errorMassage);
-    if (subr) {
-      input.addEventListener('input', check);
-    } else {
-      check();
-      return input.value.length >= 2;
-    }
-  },
-  email: (input, subr = false) => {
-    const wrapper = input.closest('.inputBox');
-    const errorMassage = createError('Укажите валидную электронную почту');
-
-    const check = () => checkOut(wrapper, !!input.value.match(inputMasks2.email), errorMassage);
-    if (subr) {
-      input.addEventListener('input', check);
-    } else {
-      check();
-      return !!input.value.match(inputMasks2.email);
-    }
-  },
-  telegram: (input, subr = false) => {
-    const wrapper = input.closest('.inputBox');
-    const errorMassage = createError('Пожалуйста укажите правильный логин');
-
-    const check = () => checkOut(wrapper, !!input.value.match(inputMasks2.telegram), errorMassage);
-
-    if (subr) {
-      input.addEventListener('input', check);
-    } else {
-      check();
-      return !!input.value.match(inputMasks2.telegram);
-    }
-  },
-  password: (input, subr = false) => {
-    const wrapper = input.closest('.inputBox');
-    const errorMassage = createError(
-      'Минимум 8 символов, заглавные, маленькие, цифры и спецсимволы',
-    );
-    const check = () => checkOut(wrapper, !!input.value.match(inputMasks2.password), errorMassage);
-
-    if (subr) {
-      input.addEventListener('input', check);
-    } else {
-      check();
-      return !!input.value.match(inputMasks2.password);
-    }
-  },
-  passwordRepeat: (input, subr = false) => {
-    const wrapper = input.closest('.inputBox');
-    const errorMassage = createError('Пароли должны совпадать');
-    const mainPass = document.querySelector(`[data-main-pass="${input.dataset.repeatPass}"]`);
-
-    const check = () => checkOut(wrapper, mainPass.value === input.value, errorMassage);
-    if (subr) {
-      input.addEventListener('input', check);
-    } else {
-      check();
-      return mainPass.value === input.value;
-    }
-  },
-  text: () => true,
-};
-
-const inputsOll = () => {
-  document.querySelectorAll('input').forEach((inputItem) => {
-    const type = inputItem.name;
-    checkInput[type](inputItem, true);
-  });
-};
-
-const inputsForms = (methodPopups) => {
-  const successfully = (result) => {
-    if (result?.status === 'success') {
-      methodPopups.openModal('successfully');
-    } else {
-      methodPopups.openModal('error');
-    }
+const inputsAndForms = (modelMethod) => {
+  const inputMasks2 = {
+    email: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/,
+    password: /^[A-Za-z0-9_-].{8,}$/,
+    telegram: /^@[A-Za-z0-9_-]{3,16}$/,
   };
-  const form1 = () => {
-    const btn = document.querySelector('[data-form-btn="arbit1"]');
-    const ollFields = document.querySelectorAll(`[data-form-input="arbit1"]`);
-    const btnClick = () => {
-      let isNormal = [];
-      ollFields.forEach((input) => {
-        isNormal.push({
-          key: input.name,
-          value: input.value,
-          isValid: checkInput[input.name](input),
-        });
-      });
-      if (isNormal.every((item) => true === item.isValid)) {
-        const data = {
-          email: isNormal.find((item) => item.key === 'email').value,
-          firstname: isNormal.find((item) => item.key === 'name').value,
-          password: isNormal.find((item) => item.key === 'password').value,
-          password_repeat: isNormal.find((item) => item.key === 'passwordRepeat').value,
-          contacts: `[{"type":5,"account":${
-            isNormal.find((item) => item.key === 'telegram').value
-          },"title":"Telegram"}]`,
-        };
-        request({
-          url: CONSTS.api.arbi,
-          method: 'POST',
-          data,
-          callBack: (result) => {
-            successfully(result);
-          },
-        });
+
+  const createError = (text = 'Please Enter Valid') => {
+    let errorMassage = document.createElement('p');
+    errorMassage.className = 'txt25x29 cRed textError';
+    errorMassage.innerHTML = text;
+    return errorMassage;
+  };
+
+  const checkOut = (wrapper, condition, massage) => {
+    const havesError = !!wrapper.lastChild?.classList?.contains('textError');
+    if (condition) {
+      if (havesError) {
+        wrapper.removeChild(wrapper.lastChild);
       }
-    };
-    btn.addEventListener('click', btnClick);
+    } else {
+      if (!havesError) {
+        wrapper.appendChild(massage);
+      }
+    }
   };
-  const form2 = () => {
-    const btn = document.querySelector('[data-form-btn="autor1"]');
-    const btnPre = document.querySelector('[data-form-btn-pre="autor1"]');
-    const ollFields = document.querySelectorAll(`[data-form-input="autor1"]`);
-    const baseClick = (callBack, elseCallBack = () => {}) => {
-      let isNormal = [];
-      ollFields.forEach((input) => {
-        isNormal.push({
-          key: input.name,
-          value: input.value,
-          isValid: checkInput[input.name](input),
-        });
-      });
-      if (isNormal.every((item) => true === item.isValid)) {
-        callBack(isNormal);
+
+  const checkInput = {
+    name: (input, subr = false) => {
+      const wrapper = input.closest('.inputBox');
+      const errorMassage = createError('Как минимум 2 символов');
+      const check = () => checkOut(wrapper, input.value.length >= 2, errorMassage);
+      if (subr) {
+        input.addEventListener('input', check);
       } else {
-        elseCallBack();
+        check();
+        return input.value.length >= 2;
+      }
+    },
+    email: (input, subr = false) => {
+      const wrapper = input.closest('.inputBox');
+      const errorMassage = createError('Укажите валидную электронную почту');
+
+      const check = () => checkOut(wrapper, !!input.value.match(inputMasks2.email), errorMassage);
+      if (subr) {
+        input.addEventListener('input', check);
+      } else {
+        check();
+        return !!input.value.match(inputMasks2.email);
+      }
+    },
+    telegram: (input, subr = false) => {
+      const wrapper = input.closest('.inputBox');
+      const errorMassage = createError('Пожалуйста укажите правильный логин');
+
+      const check = () =>
+        checkOut(wrapper, !!input.value.match(inputMasks2.telegram), errorMassage);
+
+      if (subr) {
+        input.addEventListener('input', check);
+      } else {
+        check();
+        return !!input.value.match(inputMasks2.telegram);
+      }
+    },
+    password: (input, subr = false) => {
+      const wrapper = input.closest('.inputBox');
+      const errorMassage = createError('Минимум 8 символов, латиницей');
+      const check = () =>
+        checkOut(wrapper, !!input.value.match(inputMasks2.password), errorMassage);
+
+      if (subr) {
+        input.addEventListener('input', check);
+      } else {
+        check();
+        return !!input.value.match(inputMasks2.password);
+      }
+    },
+    passwordRepeat: (input, subr = false) => {
+      const wrapper = input.closest('.inputBox');
+      const errorMassage = createError('Пароли должны совпадать');
+      const mainPass = document.querySelector(`[data-main-pass="${input.dataset.repeatPass}"]`);
+
+      const check = () => checkOut(wrapper, mainPass.value === input.value, errorMassage);
+      if (subr) {
+        input.addEventListener('input', check);
+      } else {
+        check();
+        return mainPass.value === input.value;
+      }
+    },
+    text: () => true,
+  };
+
+  const inputsOll = () => {
+    document.querySelectorAll('input').forEach((inputItem) => {
+      const type = inputItem.name;
+      checkInput[type](inputItem, true);
+    });
+  };
+
+  const inputsForms = (methodPopups) => {
+    const successfully = (result) => {
+      if (result?.status === 'success') {
+        methodPopups.openModal('successfully');
+      } else {
+        methodPopups.openModal('error');
       }
     };
-    const btnClickPre = () => {
-      baseClick(() => {
-        methodPopups.openModal('autor2');
-      });
-    };
-    const btnClick = () => {
-      baseClick(
-        (isNormal) => {
+    const form1 = () => {
+      const btn = document.querySelector('[data-form-btn="arbit1"]');
+      const ollFields = document.querySelectorAll(`[data-form-input="arbit1"]`);
+      const btnClick = () => {
+        let isNormal = [];
+        ollFields.forEach((input) => {
+          isNormal.push({
+            key: input.name,
+            value: input.value,
+            isValid: checkInput[input.name](input),
+          });
+        });
+        if (isNormal.every((item) => true === item.isValid)) {
           const data = {
             email: isNormal.find((item) => item.key === 'email').value,
             firstname: isNormal.find((item) => item.key === 'name').value,
@@ -354,37 +307,88 @@ const inputsForms = (methodPopups) => {
             contacts: `[{"type":5,"account":${
               isNormal.find((item) => item.key === 'telegram').value
             },"title":"Telegram"}]`,
-            notes: isNormal.find((item) => item.key === 'text').value,
           };
-          console.log(data);
           request({
-            url: CONSTS.api.autor,
+            url: CONSTS.api.arbi,
             method: 'POST',
             data,
             callBack: (result) => {
               successfully(result);
             },
           });
-        },
-        () => {
-          methodPopups.openModal('autor1');
-        },
-      );
+        }
+      };
+      btn.addEventListener('click', btnClick);
     };
-    btnPre.addEventListener('click', btnClickPre);
-    btn.addEventListener('click', btnClick);
+    const form2 = () => {
+      const btn = document.querySelector('[data-form-btn="autor1"]');
+      const btnPre = document.querySelector('[data-form-btn-pre="autor1"]');
+      const ollFields = document.querySelectorAll(`[data-form-input="autor1"]`);
+      const baseClick = (callBack, elseCallBack = () => {}) => {
+        let isNormal = [];
+        ollFields.forEach((input) => {
+          isNormal.push({
+            key: input.name,
+            value: input.value,
+            isValid: checkInput[input.name](input),
+          });
+        });
+        if (isNormal.every((item) => true === item.isValid)) {
+          callBack(isNormal);
+        } else {
+          elseCallBack();
+        }
+      };
+      const btnClickPre = () => {
+        baseClick(() => {
+          methodPopups.openModal('autor2');
+        });
+      };
+      const btnClick = () => {
+        baseClick(
+          (isNormal) => {
+            const data = {
+              email: isNormal.find((item) => item.key === 'email').value,
+              firstname: isNormal.find((item) => item.key === 'name').value,
+              password: isNormal.find((item) => item.key === 'password').value,
+              password_repeat: isNormal.find((item) => item.key === 'passwordRepeat').value,
+              contacts: `[{"type":5,"account":${
+                isNormal.find((item) => item.key === 'telegram').value
+              },"title":"Telegram"}]`,
+              notes: isNormal.find((item) => item.key === 'text').value,
+            };
+            console.log(data);
+            request({
+              url: CONSTS.api.autor,
+              method: 'POST',
+              data,
+              callBack: (result) => {
+                successfully(result);
+              },
+            });
+          },
+          () => {
+            methodPopups.openModal('autor1');
+          },
+        );
+      };
+      btnPre.addEventListener('click', btnClickPre);
+      btn.addEventListener('click', btnClick);
+    };
+
+    form1();
+    form2();
   };
 
-  form1();
-  form2();
+  inputsOll();
+  inputsForms(modelMethod);
 };
 
 const init = () => {
+  const modelMethod = modal();
   header();
   sliders();
-  const modelMethod = modal();
-  inputsOll();
-  inputsForms(modelMethod);
+  inputsAndForms(modelMethod);
 };
 
 window.addEventListener('DOMContentLoaded', init);
