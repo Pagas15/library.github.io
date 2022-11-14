@@ -977,6 +977,10 @@ body::before {
   color: #ff5c00;
 }
 
+.cRed {
+  color: #cf2323;
+}
+
 .footer {
   background: #090909;
 }
