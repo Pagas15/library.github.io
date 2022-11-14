@@ -280,6 +280,7 @@ const inputsAndForms = (modelMethod) => {
 
   const inputsForms = (methodPopups) => {
     const successfully = (result) => {
+      console.log(result);
       if (result?.status === 'success') {
         methodPopups.openModal('successfully');
       } else {
