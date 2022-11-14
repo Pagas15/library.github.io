@@ -181,7 +181,7 @@ const inputsAndForms = (modelMethod) => {
   const inputMasks2 = {
     email: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/,
     password: /^[A-Za-z0-9_-].{8,}$/,
-    telegram: /^@[A-Za-z0-9_-]{3,16}$/,
+    telegram: /^[A-Za-z0-9_-]{3,16}$/,
   };
 
   const createError = (text = 'Please Enter Valid') => {
@@ -280,7 +280,6 @@ const inputsAndForms = (modelMethod) => {
 
   const inputsForms = (methodPopups) => {
     const successfully = (result) => {
-      console.log(result);
       if (result?.status === 'success') {
         methodPopups.openModal('successfully');
       } else {
@@ -305,9 +304,13 @@ const inputsAndForms = (modelMethod) => {
             firstname: isNormal.find((item) => item.key === 'name').value,
             password: isNormal.find((item) => item.key === 'password').value,
             password_repeat: isNormal.find((item) => item.key === 'passwordRepeat').value,
-            contacts: `[{"type":5,"account":${
-              isNormal.find((item) => item.key === 'telegram').value
-            },"title":"Telegram"}]`,
+            contacts: [
+              {
+                type: 5,
+                account: isNormal.find((item) => item.key === 'telegram').value,
+                title: 'Telegram',
+              },
+            ],
           };
           request({
             url: CONSTS.api.arbi,
@@ -353,12 +356,15 @@ const inputsAndForms = (modelMethod) => {
               firstname: isNormal.find((item) => item.key === 'name').value,
               password: isNormal.find((item) => item.key === 'password').value,
               password_repeat: isNormal.find((item) => item.key === 'passwordRepeat').value,
-              contacts: `[{"type":5,"account":${
-                isNormal.find((item) => item.key === 'telegram').value
-              },"title":"Telegram"}]`,
+              contacts: [
+                {
+                  type: 5,
+                  account: isNormal.find((item) => item.key === 'telegram').value,
+                  title: 'Telegram',
+                },
+              ],
               notes: isNormal.find((item) => item.key === 'text').value,
             };
-            console.log(data);
             request({
               url: CONSTS.api.autor,
               method: 'POST',
