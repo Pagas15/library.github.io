@@ -166,6 +166,12 @@ const request = async ({ url, method = 'GET', data = null, callBack }) => {
       body,
     });
 
+    console.log(url, {
+      method,
+      headers,
+      body,
+    });
+
     const result = await response.json();
     if (callBack) {
       callBack(result);
@@ -317,6 +323,7 @@ const inputsAndForms = (modelMethod) => {
             method: 'POST',
             data,
             callBack: (result) => {
+              console.log(result);
               successfully(result);
             },
           });
