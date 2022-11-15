@@ -187,7 +187,7 @@ const inputsAndForms = (modelMethod) => {
   const inputMasks2 = {
     email: /^[^ ]+@[^ ]+\.[a-z]{2,3}$/,
     password: /^[A-Za-z0-9_-].{8,}$/,
-    telegram: /^[A-Za-z0-9_-]{3,16}$/,
+    telegram: /^@[A-Za-z0-9_-]{3,16}$/,
   };
 
   const createError = (text = 'Please Enter Valid') => {
@@ -310,13 +310,9 @@ const inputsAndForms = (modelMethod) => {
             firstname: isNormal.find((item) => item.key === 'name').value,
             password: isNormal.find((item) => item.key === 'password').value,
             password_repeat: isNormal.find((item) => item.key === 'passwordRepeat').value,
-            contacts: [
-              {
-                type: 5,
-                account: isNormal.find((item) => item.key === 'telegram').value,
-                title: 'Telegram',
-              },
-            ],
+            custom_fields: JSON.stringify({
+              custom_field_9627: isNormal.find((item) => item.key === 'telegram').value,
+            }),
           };
           request({
             url: CONSTS.api.arbi,
@@ -363,14 +359,10 @@ const inputsAndForms = (modelMethod) => {
               firstname: isNormal.find((item) => item.key === 'name').value,
               password: isNormal.find((item) => item.key === 'password').value,
               password_repeat: isNormal.find((item) => item.key === 'passwordRepeat').value,
-              contacts: [
-                {
-                  type: 5,
-                  account: isNormal.find((item) => item.key === 'telegram').value,
-                  title: 'Telegram',
-                },
-              ],
-              notes: isNormal.find((item) => item.key === 'text').value,
+              custom_fields: JSON.stringify({
+                custom_field_7069: isNormal.find((item) => item.key === 'telegram').value,
+                custom_field_3938: isNormal.find((item) => item.key === 'text').value,
+              }),
             };
             request({
               url: CONSTS.api.autor,
