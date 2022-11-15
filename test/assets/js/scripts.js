@@ -399,7 +399,7 @@ const init = () => {
   header();
   sliders();
   inputsAndForms(modelMethod);
-  hideLoader();
 };
 
 window.addEventListener('DOMContentLoaded', init);
+window.addEventListener('load', hideLoader);

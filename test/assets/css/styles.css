@@ -1961,9 +1961,9 @@ body::before {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: all 0.12s ease-in-out;
-  -o-transition: all 0.12s ease-in-out;
-  transition: all 0.12s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background: -o-radial-gradient(#222, #101010);
   background: radial-gradient(#222, #101010);
 }
