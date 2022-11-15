@@ -981,6 +981,10 @@ body::before {
   color: #cf2323;
 }
 
+.cGry {
+  color: #656565;
+}
+
 .footer {
   background: #090909;
 }
@@ -1687,9 +1691,53 @@ body::before {
   margin: 0;
 }
 
-.popup__block .buttonCenter {
+.popup__block .buttonCenter,
+.popup__block .socialBtn {
   text-align: center;
   margin-top: 41px;
+}
+
+.popup__block .txt25x29,
+.popup__block .textareaBox textarea,
+.textareaBox .popup__block textarea,
+.popup__block .textareaBox__title,
+.popup__block .inputBox__row input,
+.inputBox__row .popup__block input,
+.popup__block .inputBox__title {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.popup__block .txt25x29:first-child,
+.popup__block .textareaBox textarea:first-child,
+.textareaBox .popup__block textarea:first-child,
+.popup__block .textareaBox__title:first-child,
+.popup__block .inputBox__row input:first-child,
+.inputBox__row .popup__block input:first-child,
+.popup__block .inputBox__title:first-child {
+  margin-top: 0;
+}
+
+.popup__block .txt25x29:last-child,
+.popup__block .textareaBox textarea:last-child,
+.textareaBox .popup__block textarea:last-child,
+.popup__block .textareaBox__title:last-child,
+.popup__block .inputBox__row input:last-child,
+.inputBox__row .popup__block input:last-child,
+.popup__block .inputBox__title:last-child {
+  margin-bottom: 0;
+}
+
+.popup__block .iconBig + .txt25x29,
+.popup__block .textareaBox .iconBig + textarea,
+.textareaBox .popup__block .iconBig + textarea,
+.popup__block .iconBig + .textareaBox__title,
+.popup__block .inputBox__row .iconBig + input,
+.inputBox__row .popup__block .iconBig + input,
+.popup__block .iconBig + .inputBox__title {
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 .popup__block--inf {
@@ -1922,6 +1970,28 @@ body::before {
 
   .autor__img .mobile {
     display: none;
+  }
+
+  .popup__block .txt25x29,
+  .popup__block .inputBox__title,
+  .popup__block .inputBox__row input,
+  .inputBox__row .popup__block input,
+  .popup__block .textareaBox__title,
+  .popup__block .textareaBox textarea,
+  .textareaBox .popup__block textarea {
+    margin-top: -0.505vw;
+    margin-bottom: 1.0101vw;
+  }
+
+  .popup__block .iconBig + .txt25x29,
+  .popup__block .iconBig + .inputBox__title,
+  .popup__block .inputBox__row .iconBig + input,
+  .inputBox__row .popup__block .iconBig + input,
+  .popup__block .iconBig + .textareaBox__title,
+  .popup__block .textareaBox .iconBig + textarea,
+  .textareaBox .popup__block .iconBig + textarea {
+    margin-top: 1.0101vw;
+    margin-bottom: 0;
   }
 
   .body__bgGrads span {
@@ -2483,7 +2553,8 @@ body::before {
     left: 0.505vw;
   }
 
-  .popup__block .buttonCenter {
+  .popup__block .buttonCenter,
+  .popup__block .socialBtn {
     margin-top: 2.0707vw;
   }
 
