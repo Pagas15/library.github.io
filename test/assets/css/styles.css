@@ -1969,9 +1969,9 @@ body::before {
 }
 
 .loader:not(.active) {
-  -webkit-transform: translateY(-160vw);
-  -ms-transform: translateY(-160vw);
-  transform: translateY(-160vw);
+  -webkit-transform: translateY(-160vh);
+  -ms-transform: translateY(-160vh);
+  transform: translateY(-160vh);
 }
 
 .loader span {
