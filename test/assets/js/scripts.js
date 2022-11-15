@@ -390,11 +390,16 @@ const inputsAndForms = (modelMethod) => {
   inputsForms(modelMethod);
 };
 
+const hideLoader = () => {
+  document.querySelector('.loader').classList.remove('active');
+};
+
 const init = () => {
   const modelMethod = modal();
   header();
   sliders();
   inputsAndForms(modelMethod);
+  hideLoader();
 };
 
 window.addEventListener('DOMContentLoaded', init);
