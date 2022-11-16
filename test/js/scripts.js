@@ -126,9 +126,12 @@ const slider = () => {
         setTimeout(() => {
           toSlide('slide11');
         }, 3000);
+        break;
+      case 'slide12':
+        toSlide('slide12');
         setTimeout(() => {
-          toSlide('slide12');
-        }, 6000);
+          toSlide('slide13');
+        }, 3000);
         break;
       case 'slide14':
         setTimeout(() => {
@@ -160,8 +163,22 @@ const slider = () => {
   return { toSlide };
 };
 
+const dateToday = () => {
+  const dateTod = document.querySelectorAll('.dateToday');
+  let currentTime = new Date();
+  let dd = String(currentTime.getDate()).padStart(2, '0');
+  let mm = String(currentTime.getMonth() + 1).padStart(2, '0'); //January is 0!
+  let yyyy = currentTime.getFullYear();
+
+  let formatDate = `${dd}.${mm}.${yyyy}`;
+  dateTod.forEach((item) => {
+    item.innerHTML = formatDate;
+  });
+};
+
 const init = () => {
   selectInp();
+  dateToday();
   const sliderMet = slider();
   sliderMet.toSlide('slide1');
   setTimeout(() => {

@@ -168,7 +168,7 @@ ol {
 
 body {
   width: 100vw;
-  overflow: hidden;
+  overflow-x: hidden;
   padding-top: 74px;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -313,6 +313,8 @@ body.red .select:not(.active) .select__cnt {
   position: relative;
   padding-left: 4px;
   padding-right: 4px;
+  max-width: 560px;
+  margin: auto;
 }
 
 .header__logo {
@@ -359,15 +361,20 @@ body.red .select:not(.active) .select__cnt {
 }
 
 .pageWrapper {
-  max-width: 100vw;
+  margin: auto;
+  max-width: 560px;
+  width: 100vw;
   overflow-x: hidden;
   position: relative;
 }
 
+.main-content {
+  max-width: 560px;
+  margin: auto;
+}
+
 .page {
-  padding-bottom: 69px;
-  min-height: 100vh;
-  width: 100vw;
+  padding-bottom: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,6 +395,15 @@ body.red .select:not(.active) .select__cnt {
 
 .page > .button {
   margin-top: auto;
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  width: calc(100% - 40px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  max-width: 560px;
 }
 
 .page.leftNone {
@@ -408,7 +424,6 @@ body.red .select:not(.active) .select__cnt {
 
 .page1 {
   min-height: 100vh;
-  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -635,6 +650,10 @@ body.red .select:not(.active) .select__cnt {
   color: #000;
 }
 
+.dateToday {
+  color: #d64447;
+}
+
 .button {
   font-family: "Montserrat";
   font-style: normal;
@@ -681,5 +700,50 @@ body.red .select:not(.active) .select__cnt {
     -ms-transform: scale(3);
     transform: scale(3);
     background-image: url("../img/emptyGift.png");
+  }
+}
+
+@media screen and (max-height: 640px) {
+  .buttonSelects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .buttonSelects .button {
+    margin-right: 12px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .buttonSelects .button:last-child {
+    margin-right: 0;
+  }
+
+  .pageQuest__img {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pageQuest__img {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .pageQuest__img img {
+    max-height: 160px;
+  }
+
+  .page11 .pageQuest__img:nth-child(3) {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+
+  .mb40 {
+    margin-bottom: 20px;
   }
 }
