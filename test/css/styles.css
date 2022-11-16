@@ -170,6 +170,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
   padding-top: 74px;
+  padding-bottom: 86px;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
