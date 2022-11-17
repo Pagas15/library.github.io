@@ -18,429 +18,208 @@
     <link media="all" rel="stylesheet" type="text/css" href="./css/styles.min.css" />
   </head>
   <body>
-    <header class="header">
+    <div class="header">
       <div class="header__wrapper">
-        <div class="header__select select" data-select-wrapper>
-          <button class="select__mainBtn" data-select-btn>
-            <input type="text" class="select__input" data-select-input />
-            <div class="select__cnt" data-select-cnt>
-              <img src="./img/icons/usa_flags.png" alt="" /> AN
-            </div>
-            <div class="select__cntRight">
-              <svg
-                width="10"
-                height="5"
-                viewBox="0 0 10 5"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M8.75 0.5L5 4.25L1.25 0.5"
-                  stroke="black"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
-          </button>
-          <ul class="select__list" data-select-list>
-            <li class="select__item">
-              <button class="select__itemBtn" data-select-variant="variant1">
-                <span data-select-cont>AN</span>
-              </button>
-            </li>
-            <li class="select__item">
-              <button class="select__itemBtn" data-select-variant="variant2">
-                <span data-select-cont><img src="./img/icons/usa_flags.png" alt="" /> AN</span>
-              </button>
-            </li>
-            <li class="select__item">
-              <button class="select__itemBtn" data-select-variant="variant3">
-                <span data-select-cont><img src="./img/icons/france_flags.png" alt="" /> AN</span>
-              </button>
-            </li>
-          </ul>
-        </div>
-        <div class="header__logo">
-          <div class="header__logoBg">
-            <div class="var" data-select-icon="variant1"></div>
-            <div class="var active" data-select-icon="variant2">
-              <div class="var__red"><img src="./img/icons/usa_red.png" alt="" /></div>
-              <div class="var__dark"><img src="./img/icons/usa_black.png" alt="" /></div>
-            </div>
-            <div class="var" data-select-icon="variant3">
-              <div class="var__red"><img src="./img/icons/france_red.png" alt="" /></div>
-              <div class="var__dark"><img src="./img/icons/france_black.png" alt="" /></div>
-            </div>
-          </div>
-          <div class="header__logoIcon">
-            <svg
-              width="94"
-              height="20"
-              viewBox="0 0 94 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.225 19.325C4.20833 19.325 2.30833 18.5667 0.525 17.05L2.225 14.675C3.50833 15.6917 4.775 16.2 6.025 16.2C6.40833 16.2 6.81667 16.125 7.25 15.975C7.7 15.8083 8.075 15.525 8.375 15.125C8.69167 14.7083 8.85 14.2583 8.85 13.775C8.85 13.575 8.81667 13.3667 8.75 13.15C8.68333 12.9167 8.55833 12.6917 8.375 12.475C8.19167 12.2417 7.975 12.0333 7.725 11.85C7.475 11.6667 7.2 11.5 6.9 11.35C6.61667 11.2 6.28333 11.0333 5.9 10.85C5.51667 10.6667 5.26667 10.5417 5.15 10.475C3.68333 9.725 2.7 8.96667 2.2 8.2C1.7 7.41667 1.45 6.55 1.45 5.6C1.45 4.88333 1.59167 4.2 1.875 3.55C2.175 2.9 2.58333 2.33333 3.1 1.85C3.63333 1.36667 4.25833 0.991666 4.975 0.725C5.70833 0.458333 6.49167 0.324999 7.325 0.324999C8.14167 0.324999 8.98333 0.474999 9.85 0.774999C10.7167 1.05833 11.5 1.46667 12.2 2L10.675 4.425C10.225 4.10833 9.73333 3.85 9.2 3.65C8.66667 3.45 8.14167 3.35 7.625 3.35C6.85833 3.35 6.23333 3.55833 5.75 3.975C5.26667 4.39167 5.025 4.89167 5.025 5.475C5.025 5.75833 5.1 6.05833 5.25 6.375C5.4 6.675 5.68333 6.975 6.1 7.275C6.53333 7.575 7.28333 7.99167 8.35 8.525C9.41667 9.04167 10.2083 9.51667 10.725 9.95C11.2417 10.3833 11.6167 10.7917 11.85 11.175C12.0833 11.5583 12.2583 11.9667 12.375 12.4C12.5083 12.8333 12.575 13.3 12.575 13.8C12.575 14.5333 12.425 15.2333 12.125 15.9C11.8417 16.5667 11.425 17.1583 10.875 17.675C10.325 18.1917 9.65 18.6 8.85 18.9C8.05 19.1833 7.175 19.325 6.225 19.325ZM31.2313 0.674999H34.6563V19H31.2313V11.25H24.8813V19H21.4563V0.674999H24.8813V8.1H31.2313V0.674999ZM56.085 3.8H48.435V8.15H55.31V11.225H48.435V15.85H56.085V19H46.66H45.01V0.674999H48.435H56.085V3.8ZM65.3107 19V0.674999H68.7357V19H65.3107ZM93.1111 0.674999V19.375L82.2611 8.475V19H78.8361V0.299999L89.7111 11.375V0.674999H93.1111Z"
-                fill="black"
-              />
-              <path
-                d="M0.525 17.05L0.281054 16.8754L0.120446 17.0998L0.330644 17.2785L0.525 17.05ZM2.225 14.675L2.41129 14.4398L2.16439 14.2443L1.98105 14.5004L2.225 14.675ZM7.25 15.975L7.34816 16.2586L7.3542 16.2563L7.25 15.975ZM8.375 15.125L8.13615 14.9435L8.135 14.945L8.375 15.125ZM8.75 13.15L8.46148 13.2324L8.46327 13.2382L8.75 13.15ZM8.375 12.475L8.13895 12.6605L8.14598 12.6688L8.375 12.475ZM7.725 11.85L7.90241 11.6081L7.725 11.85ZM6.9 11.35L6.7596 11.6152L6.76584 11.6183L6.9 11.35ZM5.9 10.85L5.77056 11.1206H5.77056L5.9 10.85ZM5.15 10.475L5.299 10.2142L5.28659 10.2079L5.15 10.475ZM2.2 8.2L1.94711 8.36142L1.94872 8.36388L2.2 8.2ZM1.875 3.55L1.60255 3.42425L1.59999 3.43012L1.875 3.55ZM3.1 1.85L2.89852 1.62767L2.89505 1.63092L3.1 1.85ZM4.975 0.725L4.87247 0.443054L4.87038 0.443833L4.975 0.725ZM9.85 0.774999L9.75185 1.05854L9.75678 1.06015L9.85 0.774999ZM12.2 2L12.454 2.15971L12.5999 1.92756L12.3818 1.76137L12.2 2ZM10.675 4.425L10.5024 4.67034L10.7608 4.85218L10.929 4.5847L10.675 4.425ZM9.2 3.65L9.09466 3.9309L9.2 3.65ZM5.75 3.975L5.94588 4.20222L5.94588 4.20222L5.75 3.975ZM5.25 6.375L4.97882 6.50346L4.98167 6.50916L5.25 6.375ZM6.1 7.275L5.92468 7.5185L5.92924 7.52166L6.1 7.275ZM8.35 8.525L8.21583 8.79335L8.21922 8.79499L8.35 8.525ZM11.85 11.175L12.1063 11.019L11.85 11.175ZM12.375 12.4L12.0851 12.478L12.0883 12.4882L12.375 12.4ZM12.125 15.9L11.8514 15.7769L11.8489 15.7827L12.125 15.9ZM10.875 17.675L11.0804 17.8937L10.875 17.675ZM8.85 18.9L8.95017 19.1828L8.95534 19.1809L8.85 18.9ZM6.225 19.025C4.29078 19.025 2.45766 18.2998 0.719357 16.8215L0.330644 17.2785C2.15901 18.8335 4.12589 19.625 6.225 19.625V19.025ZM0.768946 17.2246L2.46895 14.8496L1.98105 14.5004L0.281054 16.8754L0.768946 17.2246ZM2.03871 14.9102C3.35854 15.9557 4.68894 16.5 6.025 16.5V15.9C4.86106 15.9 3.65813 15.4276 2.41129 14.4398L2.03871 14.9102ZM6.025 16.5C6.44756 16.5 6.88925 16.4173 7.34813 16.2585L7.15187 15.6915C6.74408 15.8327 6.36911 15.9 6.025 15.9V16.5ZM7.3542 16.2563C7.8606 16.0688 8.28194 15.7491 8.615 15.305L8.135 14.945C7.86806 15.3009 7.5394 15.5479 7.14581 15.6937L7.3542 16.2563ZM8.61385 15.3065C8.9667 14.8422 9.15 14.3294 9.15 13.775H8.55C8.55 14.1872 8.41663 14.5744 8.13615 14.9435L8.61385 15.3065ZM9.15 13.775C9.15 13.5414 9.11104 13.3033 9.03673 13.0618L8.46327 13.2382C8.52229 13.4301 8.55 13.6086 8.55 13.775H9.15ZM9.03846 13.0676C8.95828 12.787 8.81022 12.5249 8.60402 12.2812L8.14598 12.6688C8.30645 12.8584 8.40838 13.0464 8.46154 13.2324L9.03846 13.0676ZM8.6109 12.2897C8.40999 12.034 8.1734 11.8068 7.90241 11.6081L7.54759 12.0919C7.7766 12.2599 7.97335 12.4494 8.1391 12.6603L8.6109 12.2897ZM7.90241 11.6081C7.63771 11.414 7.34808 11.2386 7.03416 11.0817L6.76584 11.6183C7.05192 11.7614 7.31229 11.9194 7.54759 12.0919L7.90241 11.6081ZM7.04037 11.0849C6.75249 10.9325 6.41535 10.7639 6.02944 10.5794L5.77056 11.1206C6.15132 11.3027 6.48084 11.4675 6.75963 11.6151L7.04037 11.0849ZM6.02944 10.5794C5.64406 10.395 5.40428 10.2748 5.29884 10.2145L5.00116 10.7355C5.12905 10.8086 5.38927 10.9383 5.77056 11.1206L6.02944 10.5794ZM5.28659 10.2079C3.83458 9.46539 2.90801 8.73643 2.45128 8.03612L1.94872 8.36388C2.49199 9.1969 3.53209 9.98461 5.01341 10.7421L5.28659 10.2079ZM2.45288 8.03859C1.98437 7.30459 1.75 6.49415 1.75 5.6H1.15C1.15 6.60585 1.41563 7.52874 1.94712 8.36141L2.45288 8.03859ZM1.75 5.6C1.75 4.92413 1.88334 4.28164 2.15001 3.66988L1.59999 3.43012C1.29999 4.11835 1.15 4.84254 1.15 5.6H1.75ZM2.14739 3.67572C2.43135 3.06047 2.81692 2.52562 3.30495 2.06908L2.89505 1.63092C2.34974 2.14105 1.91865 2.73953 1.60261 3.42428L2.14739 3.67572ZM3.30146 2.07229C3.80481 1.61613 4.39642 1.26038 5.07962 1.00617L4.87038 0.443833C4.12024 0.722954 3.46185 1.1172 2.89854 1.6277L3.30146 2.07229ZM5.07752 1.00694C5.77582 0.75301 6.52424 0.624999 7.325 0.624999V0.0249991C6.45909 0.0249991 5.64084 0.163655 4.87248 0.443062L5.07752 1.00694ZM7.325 0.624999C8.10443 0.624999 8.91292 0.768091 9.75187 1.0585L9.94813 0.491503C9.05375 0.181907 8.17891 0.0249991 7.325 0.0249991V0.624999ZM9.75678 1.06015C10.5927 1.33343 11.3459 1.72638 12.0182 2.23863L12.3818 1.76137C11.6541 1.20695 10.8406 0.78324 9.94322 0.489851L9.75678 1.06015ZM11.946 1.84029L10.421 4.26529L10.929 4.5847L12.454 2.15971L11.946 1.84029ZM10.8476 4.17966C10.3761 3.84782 9.86168 3.57773 9.30534 3.3691L9.09466 3.9309C9.60498 4.12227 10.0739 4.36884 10.5024 4.67034L10.8476 4.17966ZM9.30534 3.3691C8.74177 3.15776 8.18115 3.05 7.625 3.05V3.65C8.10219 3.65 8.59157 3.74224 9.09466 3.9309L9.30534 3.3691ZM7.625 3.05C6.80159 3.05 6.10239 3.27513 5.55412 3.74778L5.94588 4.20222C6.36428 3.84154 6.91508 3.65 7.625 3.65V3.05ZM5.55412 3.74778C5.01168 4.21539 4.725 4.79554 4.725 5.475H5.325C5.325 4.98779 5.52165 4.56794 5.94588 4.20222L5.55412 3.74778ZM4.725 5.475C4.725 5.81199 4.81426 6.1559 4.97888 6.50343L5.52112 6.24657C5.38574 5.96077 5.325 5.70468 5.325 5.475H4.725ZM4.98167 6.50916C5.16189 6.86961 5.4877 7.20382 5.92471 7.51846L6.27529 7.03154C5.87896 6.74618 5.63811 6.48039 5.51833 6.24084L4.98167 6.50916ZM5.92924 7.52166C6.38155 7.8348 7.14824 8.25953 8.21584 8.79333L8.48416 8.25667C7.41843 7.7238 6.68511 7.3152 6.27076 7.02834L5.92924 7.52166ZM8.21922 8.79499C9.2777 9.30769 10.0436 9.77002 10.5322 10.1799L10.9178 9.72014C10.3731 9.26332 9.55564 8.77564 8.48078 8.255L8.21922 8.79499ZM10.5322 10.1799C11.0351 10.6017 11.3837 10.9859 11.5937 11.331L12.1063 11.019C11.8497 10.5975 11.4482 10.165 10.9178 9.72014L10.5322 10.1799ZM11.5937 11.331C11.8123 11.69 11.976 12.0721 12.0853 12.478L12.6647 12.322C12.5406 11.8612 12.3544 11.4266 12.1063 11.019L11.5937 11.331ZM12.0883 12.4882C12.212 12.8902 12.275 13.3269 12.275 13.8H12.875C12.875 13.2731 12.8047 12.7765 12.6617 12.3118L12.0883 12.4882ZM12.275 13.8C12.275 14.491 12.134 15.1491 11.8514 15.7769L12.3986 16.0231C12.7161 15.3176 12.875 14.5756 12.875 13.8H12.275ZM11.8489 15.7827C11.5825 16.4094 11.1906 16.967 10.6696 17.4563L11.0804 17.8937C11.6594 17.3497 12.1008 16.7239 12.4011 16.0173L11.8489 15.7827ZM10.6696 17.4563C10.1521 17.9425 9.51241 18.3312 8.74466 18.6191L8.95534 19.1809C9.78759 18.8688 10.4979 18.4408 11.0804 17.8937L10.6696 17.4563ZM8.74985 18.6172C7.98561 18.8879 7.14492 19.025 6.225 19.025V19.625C7.20508 19.625 8.11439 19.4788 8.95015 19.1828L8.74985 18.6172ZM31.2313 0.674999V0.374999H30.9312V0.674999H31.2313ZM34.6562 0.674999H34.9562V0.374999H34.6562V0.674999ZM34.6562 19V19.3H34.9562V19H34.6562ZM31.2313 19H30.9312V19.3H31.2313V19ZM31.2313 11.25H31.5312V10.95H31.2313V11.25ZM24.8813 11.25V10.95H24.5812V11.25H24.8813ZM24.8813 19V19.3H25.1812V19H24.8813ZM21.4562 19H21.1562V19.3H21.4562V19ZM21.4562 0.674999V0.374999H21.1562V0.674999H21.4562ZM24.8813 0.674999H25.1812V0.374999H24.8813V0.674999ZM24.8813 8.1H24.5812V8.4H24.8813V8.1ZM31.2313 8.1V8.4H31.5312V8.1H31.2313ZM31.2313 0.974999H34.6562V0.374999H31.2313V0.974999ZM34.3563 0.674999V19H34.9562V0.674999H34.3563ZM34.6562 18.7H31.2313V19.3H34.6562V18.7ZM31.5312 19V11.25H30.9312V19H31.5312ZM31.2313 10.95H24.8813V11.55H31.2313V10.95ZM24.5812 11.25V19H25.1812V11.25H24.5812ZM24.8813 18.7H21.4562V19.3H24.8813V18.7ZM21.7563 19V0.674999H21.1562V19H21.7563ZM21.4562 0.974999H24.8813V0.374999H21.4562V0.974999ZM24.5812 0.674999V8.1H25.1812V0.674999H24.5812ZM24.8813 8.4H31.2313V7.8H24.8813V8.4ZM31.5312 8.1V0.674999H30.9312V8.1H31.5312ZM56.085 3.8V4.1H56.385V3.8H56.085ZM48.435 3.8V3.5H48.135V3.8H48.435ZM48.435 8.15H48.135V8.45H48.435V8.15ZM55.31 8.15H55.61V7.85H55.31V8.15ZM55.31 11.225V11.525H55.61V11.225H55.31ZM48.435 11.225V10.925H48.135V11.225H48.435ZM48.435 15.85H48.135V16.15H48.435V15.85ZM56.085 15.85H56.385V15.55H56.085V15.85ZM56.085 19V19.3H56.385V19H56.085ZM45.01 19H44.71V19.3H45.01V19ZM45.01 0.674999V0.374999H44.71V0.674999H45.01ZM56.085 0.674999H56.385V0.374999H56.085V0.674999ZM56.085 3.5H48.435V4.1H56.085V3.5ZM48.135 3.8V8.15H48.735V3.8H48.135ZM48.435 8.45H55.31V7.85H48.435V8.45ZM55.01 8.15V11.225H55.61V8.15H55.01ZM55.31 10.925H48.435V11.525H55.31V10.925ZM48.135 11.225V15.85H48.735V11.225H48.135ZM48.435 16.15H56.085V15.55H48.435V16.15ZM55.785 15.85V19H56.385V15.85H55.785ZM56.085 18.7H46.66V19.3H56.085V18.7ZM46.66 18.7H45.01V19.3H46.66V18.7ZM45.31 19V0.674999H44.71V19H45.31ZM45.01 0.974999H48.435V0.374999H45.01V0.974999ZM48.435 0.974999H56.085V0.374999H48.435V0.974999ZM55.785 0.674999V3.8H56.385V0.674999H55.785ZM65.3107 19H65.0107V19.3H65.3107V19ZM65.3107 0.674999V0.374999H65.0107V0.674999H65.3107ZM68.7357 0.674999H69.0357V0.374999H68.7357V0.674999ZM68.7357 19V19.3H69.0357V19H68.7357ZM65.6107 19V0.674999H65.0107V19H65.6107ZM65.3107 0.974999H68.7357V0.374999H65.3107V0.974999ZM68.4357 0.674999V19H69.0357V0.674999H68.4357ZM68.7357 18.7H65.3107V19.3H68.7357V18.7ZM93.1111 0.674999H93.4111V0.374999H93.1111V0.674999ZM93.1111 19.375L92.8985 19.5866L93.4111 20.1016V19.375H93.1111ZM82.2611 8.475L82.4738 8.26336L81.9611 7.74837V8.475H82.2611ZM82.2611 19V19.3H82.5611V19H82.2611ZM78.8361 19H78.5361V19.3H78.8361V19ZM78.8361 0.299999L79.0502 0.0898089L78.5361 -0.433701V0.299999H78.8361ZM89.7111 11.375L89.4971 11.5852L90.0111 12.1087V11.375H89.7111ZM89.7111 0.674999V0.374999H89.4111V0.674999H89.7111ZM92.8111 0.674999V19.375H93.4111V0.674999H92.8111ZM93.3238 19.1634L82.4738 8.26336L82.0485 8.68664L92.8985 19.5866L93.3238 19.1634ZM81.9611 8.475V19H82.5611V8.475H81.9611ZM82.2611 18.7H78.8361V19.3H82.2611V18.7ZM79.1361 19V0.299999H78.5361V19H79.1361ZM78.6221 0.51019L89.4971 11.5852L89.9252 11.1648L79.0502 0.0898089L78.6221 0.51019ZM90.0111 11.375V0.674999H89.4111V11.375H90.0111ZM89.7111 0.974999H93.1111V0.374999H89.7111V0.974999Z"
-                fill="black"
-              />
-            </svg>
-          </div>
-        </div>
+        <div class="logo"><img src="./img/logo.png" alt="SHEIN" /></div>
+        <div class="flags"><img src="./img/flag.png" alt="" /></div>
       </div>
-    </header>
+    </div>
+
+    <!-- Main -->
     <main class="pageWrapper" data-slider>
       <section class="page page1" data-slider-item="slide1">
-        <p class="page1__title">Welcome</p>
-        <div class="page1__img"><img src="./img/1.png" alt="" /></div>
-      </section>
-      <section class="page page2" data-slider-item="slide2">
-        <p class="title">Promotion for real fans of the online store SHEIN</p>
-        <p class="text">Answer 7 questions correctly and get a gift card of up to 1000 EURO</p>
-        <div class="page2__img">
-          <img src="./img/2.png" alt="" />
+        <p class="title">Get ready to shop with the Shein Gift Card!</p>
+        <p class="text">
+          SHEIN is promoting and presenting valuable gifts to the first 100 lucky participants!
+        </p>
+        <div class="page1__img">
+          <img src="./img/1.jpg" alt="" />
         </div>
         <p class="text">
-          To attract new users from France, we have launched our annual promotion! Only the first
-          4,000 lucky people will be able to receive valuable gifts from the online store Shein
+          To reach more new customers, we are running a new promotion this season! Only the first
+          100 lucky participants receive valuable gift cards to the shoping at Shein.
+          <br /><br />
+          Today the 14 November 2022, you have been drawn to participate in this contest.
+          <br /><br />
+          Here's what you need to do: answer the survey to improve our customer service and get a
+          chance to win a gift card from $25 to $1500!
+          <br /><br />
+          <span class="w700 cWh">
+            You will only have 2 minutes to answer this quiz!
+            <br />
+            Hurry up, the number of prizes is limited!
+          </span>
         </p>
-        <p class="text">
-          Today, <span class="dateToday">November 9, 2022</span>, you were invited to participate in
-          this contest.
-        </p>
-        <p class="text">
-          Here’s what you need to do: answer 7 simple questions truthfully and get a chance to pick
-          up a gift card worth 25 to 1000 euros
-        </p>
-        <p class="text w700">You will only have 2 minutes to answer this quiz!</p>
-        <p class="text w700">Hurry up, there are only 74 prizes left out of the 4,000 available</p>
-        <button class="button" data-slider-btn="slide3">Start</button>
+        <button class="button" data-slider-btn="slide2">START</button>
       </section>
-      <section class="page pageQuest" data-slider-item="slide3">
-        <p class="mainTitle">Question 1 of the 7</p>
-        <div class="pageQuest__img"><img src="./img/3.png" alt="" /></div>
-        <p class="subTitle">Do you live in Spain?</p>
-        <div class="buttonSelects">
-          <button class="button" data-slider-btn="slide4">Yes</button>
-          <button class="button" data-slider-btn="slide4">No</button>
+      <section class="page pageQuiz" data-slider-item="slide2">
+        <div class="pageQuiz__quiz">
+          <div class="pageQuiz__top">
+            <p class="pageQuiz__title text w700">Question 1 of 7</p>
+            <p class="pageQuiz__answer text">Do you live in Canada?</p>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="button" data-slider-btn="slide3">YES</button>
+            <button class="button" data-slider-btn="slide3">NO</button>
+          </div>
         </div>
       </section>
-      <section class="page pageQuest" data-slider-item="slide4">
-        <p class="mainTitle">Question 2 of the 7</p>
-        <div class="pageQuest__img"><img src="./img/3.png" alt="" /></div>
-        <p class="subTitle">Are you over 18?</p>
-        <div class="buttonSelects">
-          <button class="button" data-slider-btn="slide5">Yes</button>
-          <button class="button" data-slider-btn="slide5">No</button>
+      <section class="page pageQuiz" data-slider-item="slide3">
+        <div class="pageQuiz__quiz">
+          <div class="pageQuiz__top">
+            <p class="pageQuiz__title text w700">Question 2 of 7</p>
+            <p class="pageQuiz__answer text">Are you over 18?</p>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="button" data-slider-btn="slide4">YES</button>
+            <button class="button" data-slider-btn="slide4">NO</button>
+          </div>
         </div>
       </section>
-      <section class="page pageQuest" data-slider-item="slide5">
-        <p class="mainTitle">Question 3 of the 7</p>
-        <div class="pageQuest__img"><img src="./img/3.png" alt="" /></div>
-        <p class="subTitle">Have you ever made a purchase in the online store SHEIN ?</p>
-        <div class="buttonSelects">
-          <button class="button" data-slider-btn="slide6">Yes</button>
-          <button class="button" data-slider-btn="slide6">No</button>
+      <section class="page pageQuiz" data-slider-item="slide4">
+        <div class="pageQuiz__quiz">
+          <div class="pageQuiz__top">
+            <p class="pageQuiz__title text w700">Question 3 of 7</p>
+            <p class="pageQuiz__answer text">
+              Have you ever made a purchase in the online store SHEIN ?
+            </p>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="button" data-slider-btn="slide5">YES</button>
+            <button class="button" data-slider-btn="slide5">NO</button>
+          </div>
         </div>
       </section>
-      <section class="page pageQuest" data-slider-item="slide6">
-        <p class="mainTitle">Question 4 of the 7</p>
-        <div class="pageQuest__img"><img src="./img/3.png" alt="" /></div>
-        <p class="subTitle">Are you comfortable with our online store??</p>
-        <div class="buttonSelects">
-          <button class="button" data-slider-btn="slide7">Yes</button>
-          <button class="button" data-slider-btn="slide7">No</button>
+      <section class="page pageQuiz" data-slider-item="slide5">
+        <div class="pageQuiz__quiz">
+          <div class="pageQuiz__top">
+            <p class="pageQuiz__title text w700">Question 4 of 7</p>
+            <p class="pageQuiz__answer text">Are you comfortable with our online store?</p>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="button" data-slider-btn="slide6">YES</button>
+            <button class="button" data-slider-btn="slide6">NO</button>
+          </div>
         </div>
       </section>
-      <section class="page pageQuest" data-slider-item="slide7">
-        <p class="mainTitle">Question 5 of the 7</p>
-        <div class="pageQuest__img"><img src="./img/3.png" alt="" /></div>
-        <p class="subTitle">Is our mobile app installed on your phone?</p>
-        <div class="buttonSelects">
-          <button class="button" data-slider-btn="slide8">Yes</button>
-          <button class="button" data-slider-btn="slide8">No</button>
+      <section class="page pageQuiz" data-slider-item="slide6">
+        <div class="pageQuiz__quiz">
+          <div class="pageQuiz__top">
+            <p class="pageQuiz__title text w700">Question 5 of 7</p>
+            <p class="pageQuiz__answer text">Is our mobile app installed on your phone?</p>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="button" data-slider-btn="slide7">YES</button>
+            <button class="button" data-slider-btn="slide7">NO</button>
+          </div>
         </div>
       </section>
-      <section class="page pageQuest" data-slider-item="slide8">
-        <p class="mainTitle">Question 6 of the 7</p>
-        <div class="pageQuest__img"><img src="./img/3.png" alt="" /></div>
-        <p class="subTitle">How do you plan to do with your gift card?</p>
-        <div class="buttonSelects">
-          <button class="button" data-slider-btn="slide9">Keep it</button>
-          <button class="button" data-slider-btn="slide9">Give to a freind</button>
+      <section class="page pageQuiz" data-slider-item="slide7">
+        <div class="pageQuiz__quiz">
+          <div class="pageQuiz__top">
+            <p class="pageQuiz__title text w700">Question 6 of 7</p>
+            <p class="pageQuiz__answer text">How do you plan to do with your gift card?</p>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="button" data-slider-btn="slide8">Keep it</button>
+            <button class="button" data-slider-btn="slide8">Give to a freind</button>
+          </div>
         </div>
       </section>
-      <section class="page pageQuest" data-slider-item="slide9">
-        <p class="mainTitle">Question 7 of the 7</p>
-        <div class="pageQuest__img"><img src="./img/3.png" alt="" /></div>
-        <p class="subTitle">Do your friends shop in our online store ?</p>
-        <div class="buttonSelects">
-          <button class="button" data-slider-btn="slide10">Yes</button>
-          <button class="button" data-slider-btn="slide10">No</button>
+      <section class="page pageQuiz" data-slider-item="slide8">
+        <div class="pageQuiz__quiz">
+          <div class="pageQuiz__top">
+            <p class="pageQuiz__title text w700">Question 7 of 7</p>
+            <p class="pageQuiz__answer text">Do your friends shop in our online store ?</p>
+          </div>
+          <div class="buttonsWrapper">
+            <button class="button" data-slider-btn="slide9">YES</button>
+            <button class="button" data-slider-btn="slide9">NO</button>
+          </div>
         </div>
       </section>
-      <section class="page pageQuest page10" data-slider-item="slide10">
-        <p class="mainTitle">Wait, we’re checking your answers...</p>
-        <div class="pageQuest__img">
-          <img src="./img/4.png" alt="" />
+      <section class="page page9" data-slider-item="slide9">
+        <div class="page9__block">
+          <p class="title">Congratulations, your answers have been successfully confirmed!</p>
+          <p class="text">
+            You have the chance to win one of SHEIN gift cards!You just need to choose the right
+            gift box.You have 3 attempts, good luck!
+          </p>
+          <button class="button" data-slider-btn="slide10">Okay</button>
         </div>
       </section>
-      <section class="page pageQuest page12" data-slider-item="slide11">
-        <p class="mainTitle">Congratulations, your answers have been successfully accepted!</p>
-        <div class="pageQuest__img mb40">
-          <img src="./img/gift.png" alt="" />
-        </div>
-        <p class="subTitle w600 mb22 cDr">You have the chance to win one of SHEIN gift cards!</p>
-        <p class="subTitle w600 mb22 cDr">You just need to choose the right gift box.</p>
-        <button class="button" data-slider-btn="slide12">Start</button>
-      </section>
-      <section class="page pageQuest page11" data-slider-item="slide12">
-        <p class="mainTitle">Now you have a chance to win one of our gift cards</p>
-        <div class="pageQuest__img">
-          <img src="./img/5-1.png" alt="" />
-        </div>
-        <div class="pageQuest__img">
-          <img src="./img/5-2.png" alt="" />
-        </div>
-        <p class="subTitle">Only 68 cards left out of 4000</p>
-      </section>
-      <section class="page pageQuest page13" data-slider-item="slide13">
-        <p class="mainTitle">You have 3 attempts, good luck!</p>
-        <div class="page13__boxs" data-slider-btn="slide14">
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
+      <section class="page pageBoxes page10" data-slider-item="slide10">
+        <div class="pageBoxes__wrapper" data-slider-btn="slide11">
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
         </div>
       </section>
-      <section class="page pageQuest page14" data-slider-item="slide14">
-        <p class="mainTitle mb32">OOPS...</p>
-        <p class="subTitle w600 mb22 cDr">
-          Unfortunately, the box is empty! You still have two tries left. Good Luck!
-        </p>
-        <div class="pageQuest__img mb40">
-          <img src="./img/emptyGift.png" alt="" />
-        </div>
-        <button class="button" data-slider-btn="slide15">OK</button>
-      </section>
-      <section class="page pageQuest page15" data-slider-item="slide15">
-        <p class="mainTitle">You have 3 attempts, good luck!</p>
-        <div class="page13__boxs" data-slider-btn="slide16">
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
-          <div class="page13__box"></div>
+      <section class="page page11" data-slider-item="slide11">
+        <div class="page9__block">
+          <p class="title">OOPS...</p>
+          <p class="text">
+            Unfortunately, the box is empty! You still have two tries left. Good Luck!
+          </p>
+          <div class="page11__img"><img src="./img/giftEmpty.png" alt="" /></div>
+          <button class="button" data-slider-btn="slide12">Okay</button>
         </div>
       </section>
-      <section class="page pageQuest page16" data-slider-item="slide16">
-        <div class="mainTitle mb40"></div>
-        <div class="pageQuest__img mb40">
-          <img src="./img/finRes.png" alt="" />
+      <section class="page pageBoxes page11" data-slider-item="slide12">
+        <div class="pageBoxes__wrapper" data-slider-btn="slide13">
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
+          <div class="pageBoxes__box"></div>
         </div>
       </section>
-      <section class="page pageQuest page17" data-slider-item="slide17">
-        <p class="mainTitle mb50">Congratulations!</p>
-        <div class="pageQuest__img mb40">
-          <img src="./img/finRes.png" alt="" />
+      <section class="page page13" data-slider-item="slide13">
+        <div class="page9__block">
+          <div class="page13__img"><img src="./img/2-500.png" alt="" /></div>
+          <p class="minTitle">Congratulations!</p>
+          <p class="text">
+            You have won the $500 SHEIN Gift Card!<br />
+            1. Click on "OK" below to access a shipping page.
+            <br /><br />
+            2. Fill in your address and pay $2 delivery costs to receive the SHEIN gift card with a
+            personal activation code.
+            <br /><br />
+            3. Your prize will be delivered within 2-3 days.
+          </p>
+          <button class="button">Okay</button>
         </div>
-        <p class="title mb12">You have wagered a gift card for 500 EURO</p>
-        <p class="txt16x20">1. Click OK to go to the order page</p>
-        <p class="txt16x20">
-          2. Fill in your address and pay EUR 2 for delivery, in order to receive a gift card with
-          activation code
-        </p>
-        <p class="txt16x20 mb40">3. Gift card will be delivered within 3 days by Spanish mail</p>
-        <a href="#" class="button">OK</a>
       </section>
     </main>
-    <div class="main-content" bis_skin_checked="1">
-      <link href="./css/css.css" rel="stylesheet" />
-      <link rel="stylesheet" type="text/css" href="./css/comments.min.css" />
-      <div class="comments_face" bis_skin_checked="1">
-        <div class="comments" bis_skin_checked="1">
-          <p style="margin: 0; padding: 0; float: left; display: block; width: 50%">
-            <span style="color: #3b5998">Opiniones mostradas</span>
-          </p>
-          <p
-            style="
-              margin: 0;
-              padding: 0;
-              float: right;
-              display: block;
-              width: 50%;
-              color: #a8a7a7;
-              text-align: right;
-            "
-          >
-            7 de 24
-          </p>
-          <div style="clear: both" bis_skin_checked="1"></div>
-        </div>
-        <div class="comments" id="comment0" style="display: block" bis_skin_checked="1">
-          <div class="profile" bis_skin_checked="1"><img src="./img/image/1.jpg" /></div>
-          <div class="comment-content" bis_skin_checked="1">
-            <p class="name">Anna Keenan</p>
-            <p>
-              Al principio no me lo creí, pero decidí probar y gané una tarjeta regalo de 800 euros,
-              ya he pedido 3 cajas grandes de cosas, ¡¡¡gracias SHEIN!!!)
-            </p>
-            <img
-              src="./img/image/photo_2021-08-27_12-18-29.jpg"
-              style="max-width: 400px; width: 100%; margin-bottom: 10px"
-            />
-          </div>
-          <div class="clr" bis_skin_checked="1"></div>
-          <div class="comment-status" bis_skin_checked="1">
-            <span
-              >Me gusta · Responder
-              <img src="./img/image/like.png" width="15px" height="15px" /> 20</span
-            >
-            · <span class="p_var-dia">16</span>&nbsp;<span class="p_var-mes_nombre">November</span>,
-            <span class="p_var-anyo">2022</span>
-          </div>
-        </div>
-        <div class="comments" id="comment1" style="display: block" bis_skin_checked="1">
-          <div class="profile" bis_skin_checked="1"><img src="./img/image/2.jpg" /></div>
-          <div class="comment-content" bis_skin_checked="1">
-            <p class="name">Catherine Morel</p>
-            <p>
-              Increíble, yo tuve menos suerte, gané una tarjeta de 500 euros, pero accidentalmente
-              introduje un número de tarjeta en el que no tenía dinero y no pude pagar el envío,
-              después de eso mi oportunidad se esfumó(((( pues nada, esperemos que la próxima vez
-              haya suerte(
-            </p>
-          </div>
-          <div class="clr" bis_skin_checked="1"></div>
-          <div class="comment-status" bis_skin_checked="1">
-            <span
-              >Me gusta · Responder
-              <img src="./img/image/like.png" width="15px" height="15px" /> 47</span
-            >
-            · <span class="p_var-dia">16</span>&nbsp;<span class="p_var-mes_nombre">November</span>,
-            <span class="p_var-anyo">2022</span>
-          </div>
-        </div>
-        <div class="comments" id="comment2" style="display: block" bis_skin_checked="1">
-          <div class="profile" bis_skin_checked="1"><img src="./img/image/3.jpg" /></div>
-          <div class="comment-content" bis_skin_checked="1">
-            <p class="name">Monika Dubuque</p>
-            <p>
-              ¡Jejejeje!, dice que sólo hay 1 oportunidad, es la protección de los bots, gané una
-              tarjeta de 25 euros, ¡Gracias Shein!
-            </p>
-            <img
-              src="./img/image/photo_2021-08-27_12-18-30.jpg"
-              style="max-width: 400px; width: 100%; margin-bottom: 10px"
-            />
-          </div>
-          <div class="clr" bis_skin_checked="1"></div>
-          <div class="comment-status" bis_skin_checked="1">
-            <span
-              >Me gusta · Responder
-              <img src="./img/image/like.png" width="15px" height="15px" /> 3</span
-            >
-            · <span class="p_var-dia">16</span>&nbsp;<span class="p_var-mes_nombre">November</span>,
-            <span class="p_var-anyo">2022</span>
-          </div>
-        </div>
-        <div class="comments" id="comment3" style="display: block" bis_skin_checked="1">
-          <div class="profile" bis_skin_checked="1"><img src="./img/image/4.jpg" /></div>
-          <div class="comment-content" bis_skin_checked="1">
-            <p class="name">Joel Duroy</p>
-            <p>
-              Sin duda no he ganado un premio de 800 euros, pero 75 no es malo, será un gran regalo
-              para mi novia.
-            </p>
-          </div>
-          <div class="clr" bis_skin_checked="1"></div>
-          <div class="comment-status" bis_skin_checked="1">
-            <span
-              >Me gusta · Responder
-              <img src="./img/image/like.png" width="15px" height="15px" /> 19</span
-            >
-            · <span class="p_var-dia">16</span>&nbsp;<span class="p_var-mes_nombre">November</span>,
-            <span class="p_var-anyo">2022</span>
-          </div>
-        </div>
-        <div class="comments" id="comment4" style="display: block" bis_skin_checked="1">
-          <div class="profile" bis_skin_checked="1"><img src="./img/image/5.jpg" /></div>
-          <div class="comment-content" bis_skin_checked="1">
-            <p class="name">Anne Dubois</p>
-            <p>Genial, no he ganado nada((.</p>
-          </div>
-          <div class="clr" bis_skin_checked="1"></div>
-          <div class="comment-status" bis_skin_checked="1">
-            <span
-              >Me gusta · Responder
-              <img src="./img/image/like.png" width="15px" height="15px" /> 26</span
-            >
-            · <span class="p_var-dia">16</span>&nbsp;<span class="p_var-mes_nombre">November</span>,
-            <span class="p_var-anyo">2022</span>
-          </div>
-        </div>
-        <div class="comments" id="comment5" style="display: block" bis_skin_checked="1">
-          <div class="profile" bis_skin_checked="1"><img src="./img/image/6.jpg" /></div>
-          <div class="comment-content" bis_skin_checked="1">
-            <p class="name">Chloe Canedo</p>
-            <p>
-              Me encanta Shein por sus promociones, esta vez no ha funcionado pero el año pasado
-              gané una tarjeta de 1000 euros, ¡mira cuántas cosas compré entonces! ¡Shein, te
-              quiero! Ojalá hubiera más eventos como éste
-            </p>
-            <img
-              src="./img/image/photo_2021-08-27_12-18-31.jpg"
-              style="max-width: 400px; width: 100%; margin-bottom: 10px"
-            />
-          </div>
-          <div class="clr" bis_skin_checked="1"></div>
-          <div class="comment-status" bis_skin_checked="1">
-            <span
-              >Me gusta · Responder
-              <img src="./img/image/like.png" width="15px" height="15px" /> 8</span
-            >
-            · <span class="p_var-dia">16</span>&nbsp;<span class="p_var-mes_nombre">November</span>,
-            <span class="p_var-anyo">2022</span>
-          </div>
-        </div>
-        <div class="comments" id="comment5" style="display: block" bis_skin_checked="1">
-          <div class="profile" bis_skin_checked="1"><img src="./img/image/7.jpg" /></div>
-          <div class="comment-content" bis_skin_checked="1">
-            <p class="name">Lily Morgan</p>
-            <p>Secundado) Recogí mi tarjeta ayer y voy a pedir cosas hoy</p>
-          </div>
-          <div class="clr" bis_skin_checked="1"></div>
-          <div class="comment-status" bis_skin_checked="1">
-            <span
-              >Me gusta · Responder
-              <img src="./img/image/like.png" width="15px" height="15px" /> 7</span
-            >
-            · <span class="p_var-dia">16</span>&nbsp;<span class="p_var-mes_nombre">November</span>,
-            <span class="p_var-anyo">2022</span>
-          </div>
-        </div>
+
+    <div class="timer">
+      <div class="timer__wrapper">
+        <p class="timer__text">Until the end of the promotion</p>
+        <p class="timer__timer" data-timer>
+          <span class="timer__timerItem">
+            <span class="timer__num" data-timer-hour>09</span>
+            <span class="timer__letter">H</span>
+          </span>
+          <span class="timer__timerItem">
+            <span class="timer__num" data-timer-minute>16</span>
+            <span class="timer__letter">M</span>
+          </span>
+          <span class="timer__timerItem">
+            <span class="timer__num" data-timer-sec>41</span>
+            <span class="timer__letter">S</span>
+          </span>
+        </p>
       </div>
-      <p style="font-size: 12px; color: #bcbcbc"></p>
     </div>
 
     <script type="text/javascript" src="./js/scripts.min.js"></script>

@@ -1,80 +1,41 @@
-const selectInp = (params) => {
-  const DEFAULTS = {
-    wrapper: 'data-select-wrapper',
-    mainBtn: 'data-select-btn',
-    mainBtnContent: 'data-select-cnt',
-    input: 'data-select-input',
-    variantsList: 'data-select-list',
-    variantBtn: 'data-select-variant',
-    variantContent: 'data-select-cont',
-    variantIcon: 'data-select-icon',
-    activeClass: 'active',
-  };
+const formToZero = (str) => {
+  const strNew = String(str);
+  return strNew.length < 2 ? '0' + strNew : strNew < 1 ? '00' : strNew;
+};
 
-  const objSet = { ...DEFAULTS, ...params };
-
-  const selectInput = document.querySelectorAll(`[${objSet.wrapper}]`);
-
-  if (selectInput) {
-    selectInput.forEach((itemSelect) => {
-      const mainBtn = itemSelect.querySelector(`[${objSet.mainBtn}]`);
-      const mainBtnContent = itemSelect.querySelector(`[${objSet.mainBtnContent}]`);
-      const input = itemSelect.querySelector(`[${objSet.input}]`);
-      const variantsList = itemSelect.querySelector(`[${objSet.variantsList}]`);
-      const variantBtn = variantsList.querySelectorAll(`[${objSet.variantBtn}]`);
-      const varIcons = document.querySelectorAll(`[${objSet.variantIcon}]`);
-
-      const closeSelect = () => {
-        itemSelect.classList.remove(objSet.activeClass);
-        window.removeEventListener('click', windowClosest);
-      };
-
-      const windowClosest = (event) => {
-        if (!event.target.closest(`[${objSet.wrapper}]`)) {
-          closeSelect();
-        }
-      };
-      const openSelect = () => {
-        itemSelect.classList.add(objSet.activeClass);
-        window.addEventListener('click', windowClosest);
-      };
-
-      const openClose = () => {
-        itemSelect.classList.contains(objSet.activeClass) ? closeSelect() : openSelect();
-      };
-
-      const selectIcon = (key) => {
-        varIcons.forEach((item) => {
-          if (item.dataset.selectIcon === key) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        });
-      };
-
-      const selectVariant = (kay, content) => {
-        input.value = kay;
-        mainBtnContent.innerHTML = content;
-        selectIcon(kay);
-        closeSelect();
-      };
-
-      mainBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        openClose();
-      });
-
-      variantBtn.forEach((btn) => {
-        const variantBtn = btn.dataset.selectVariant;
-        const variantBtnCnt = btn.querySelector(`[${objSet.variantContent}]`).innerHTML;
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          selectVariant(variantBtn, variantBtnCnt);
-        });
-      });
-    });
+const timer = () => {
+  let currentTime = new Date();
+  let endHour = 24;
+  if (!(currentTime.getHours() + 4 < 24)) {
+    endHour = 29;
   }
+
+  const setTime = (hour, min, sec) => {
+    const endTime = new Date(
+      currentTime.getFullYear(),
+      currentTime.getMonth(),
+      currentTime.getDate(),
+      endHour,
+    );
+    const calc = () => {
+      const leftTime = endTime.getTime() - new Date().getTime();
+      const secunds = Math.floor((leftTime % (1000 * 60)) / 1000);
+      const minutes = Math.floor((leftTime % (1000 * 60 * 60)) / (1000 * 60));
+      const hours = Math.floor((leftTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      sec.innerHTML = formToZero(secunds);
+      min.innerHTML = formToZero(minutes);
+      hour.innerHTML = formToZero(hours);
+    };
+    calc();
+    setInterval(calc, 1000);
+  };
+  document.querySelectorAll('[data-timer]').forEach((timerWrap) => {
+    const sec = timerWrap.querySelector('[data-timer-sec]'),
+      min = timerWrap.querySelector('[data-timer-minute]'),
+      hour = timerWrap.querySelector('[data-timer-hour]');
+
+    setTime(hour, min, sec);
+  });
 };
 
 const slider = () => {
@@ -82,20 +43,16 @@ const slider = () => {
   const slides = wrapper.querySelectorAll('[data-slider-item]');
   const ollBts = document.querySelectorAll('[data-slider-btn]');
 
-  const postHeight = () => {
-    wrapper.style.height = document.documentElement.clientHeight - 74 + 'px';
-  };
-  postHeight();
-
-  const themeBody = (id) => {
-    if (id === 'slide1' || id === 'slide2') {
-      document.body.classList.remove('red');
+  const postHeight = (id) => {
+    if (!isNaN(id)) {
+      wrapper.style.height = id + 'px';
     } else {
-      document.body.classList.add('red');
+      wrapper.style.height =
+        document.querySelector(`[data-slider-item="${id}"]`).offsetHeight + 'px';
     }
   };
 
-  const toSlide = (key) => {
+  const toSlide = (key, other = false) => {
     wrapper.scrollTo({ top: 0, behavior: 'smooth' });
     let state = true;
     slides.forEach((item) => {
@@ -105,7 +62,6 @@ const slider = () => {
           item.classList.remove('rightNone');
           item.classList.remove('leftNone');
           item.classList.add('active');
-          themeBody(item.dataset.sliderItem);
         } else {
           item.classList.remove('rightNone');
           item.classList.remove('active');
@@ -117,34 +73,55 @@ const slider = () => {
         item.classList.add('rightNone');
       }
     });
+    if (other) {
+      slides.forEach((item) => {
+        if (item.dataset.sliderItem === other) {
+          item.classList.remove('rightNone');
+          item.classList.remove('leftNone');
+          item.classList.add('active');
+        }
+      });
+    }
   };
 
   const btnID = (identifier) => {
     switch (identifier) {
+      case 'postHeight':
+        postHeight('slide1');
+        toSlide('slide1');
+        break;
+      case 'slide2':
+      case 'slide3':
+      case 'slide4':
+      case 'slide5':
+      case 'slide6':
+      case 'slide7':
+      case 'slide8':
+        toSlide(identifier, 'slide1');
+        break;
+      case 'slide9':
+        toSlide(identifier);
+        postHeight(454);
+        break;
       case 'slide10':
-        toSlide('slide10');
+        toSlide(identifier);
+        postHeight(454);
+        break;
+      case 'slide11':
         setTimeout(() => {
-          toSlide('slide11');
-        }, 3000);
+          toSlide(identifier, 'slide10');
+          postHeight(556);
+        }, 500);
         break;
       case 'slide12':
-        toSlide('slide12');
-        setTimeout(() => {
-          toSlide('slide13');
-        }, 3000);
+        toSlide(identifier);
+        postHeight(454);
         break;
-      case 'slide14':
+      case 'slide13':
         setTimeout(() => {
-          toSlide('slide14');
-        }, 300);
-        break;
-      case 'slide16':
-        setTimeout(() => {
-          toSlide('slide16');
-        }, 300);
-        setTimeout(() => {
-          toSlide('slide17');
-        }, 1500);
+          toSlide(identifier, 'slide12');
+          postHeight(546);
+        }, 500);
         break;
       default:
         toSlide(identifier);
@@ -160,30 +137,13 @@ const slider = () => {
     });
   });
 
-  return { toSlide };
-};
-
-const dateToday = () => {
-  const dateTod = document.querySelectorAll('.dateToday');
-  let currentTime = new Date();
-  let dd = String(currentTime.getDate()).padStart(2, '0');
-  let mm = String(currentTime.getMonth() + 1).padStart(2, '0'); //January is 0!
-  let yyyy = currentTime.getFullYear();
-
-  let formatDate = `${dd}.${mm}.${yyyy}`;
-  dateTod.forEach((item) => {
-    item.innerHTML = formatDate;
-  });
+  return { toSlide, btnID };
 };
 
 const init = () => {
-  selectInp();
-  dateToday();
+  timer();
   const sliderMet = slider();
-  sliderMet.toSlide('slide1');
-  setTimeout(() => {
-    sliderMet.toSlide('slide2');
-  }, 1000);
+  sliderMet.btnID('slide1');
 };
 
 window.addEventListener('DOMContentLoaded', init);
