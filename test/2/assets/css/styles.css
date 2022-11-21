@@ -97,15 +97,6 @@ ol {
 
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-ExtraBold.eot");
-  src: url("../fonts/Inter-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-ExtraBold.woff") format("woff"), url("../fonts/Inter-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
   src: url("../fonts/Inter-Bold.eot");
   src: url("../fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Inter-Bold.woff") format("woff"), url("../fonts/Inter-Bold.ttf") format("truetype");
   font-weight: 600;
@@ -286,15 +277,6 @@ ol {
   color: #ffffff;
 }
 
-.txt46x56 {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 1.21em;
-  color: #ffffff;
-}
-
 .txt40x48 {
   font-family: "Inter";
   font-style: normal;
@@ -336,10 +318,6 @@ ol {
 .w900,
 .button {
   font-weight: 900;
-}
-
-.w800 {
-  font-weight: 800;
 }
 
 .w600 {
@@ -620,7 +598,7 @@ ol {
   .head__img {
     width: 46.3636vw;
     height: 35.404vw;
-    margin-left: -21.2121vw;
+    margin-left: -19.2121vw;
   }
 
   .head__img img:nth-child(2) {
@@ -628,7 +606,7 @@ ol {
   }
 
   .head__cnt .txt40x48 {
-    max-width: 20.9595vw;
+    max-width: 22.9595vw;
     margin-bottom: 1.5151vw;
   }
 
@@ -695,11 +673,6 @@ ol {
 
   .txt40x48 {
     font-size: 2.202vw;
-  }
-
-  .txt46x56 {
-    font-size: 2.3232vw;
-    line-height: 1.21em;
   }
 
   .txt30x36,
@@ -1016,10 +989,6 @@ ol {
   }
 
   .txt50x60 {
-    font-size: 6.111vw;
-  }
-
-  .txt46x56 {
     font-size: 6.111vw;
   }
 
