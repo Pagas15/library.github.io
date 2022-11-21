@@ -58,21 +58,21 @@
           </div>
         </div>
       </div>
-      <ul class="timer">
+      <ul class="timer" data-timer>
         <li class="timer__item">
-          <p class="timer__num">07</p>
+          <p class="timer__num" data-timer-day>07</p>
           <p class="timer__name">дней</p>
         </li>
         <li class="timer__item">
-          <p class="timer__num">16</p>
+          <p class="timer__num" data-timer-hour>16</p>
           <p class="timer__name">часов</p>
         </li>
         <li class="timer__item">
-          <p class="timer__num">39</p>
+          <p class="timer__num" data-timer-minute>39</p>
           <p class="timer__name">минут</p>
         </li>
         <li class="timer__item">
-          <p class="timer__num">05</p>
+          <p class="timer__num" data-timer-sec>05</p>
           <p class="timer__name">секунд</p>
         </li>
       </ul>
@@ -87,7 +87,7 @@
         </ul>
         <p class="txt25x30">25+ победителей сегодня</p>
       </div>
-      <ul class="wrapper review__video swiper swiperWr">
+      <ul class="wrapper review__video">
         <li class="swiperSlide">
           <div class="video"><video controls src="./video/1.MP4"></video></div>
         </li>
@@ -101,16 +101,16 @@
           <div class="video"><video controls src="./video/4.mp4"></video></div>
         </li>
       </ul>
-      <div class="review__photo wrapper swiper swiperWr">
+      <div class="review__photo review__photo--slider wrapper swiper swiperWr">
         <div class="swiperSlide">
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/1.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Москва</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Александр</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">40 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Решил просто добавить карту и подтвердить личность, а как оказалось выиграл айфон!
                 Когда узнал об этом - был счастлив! Жду новых подарков от компании!
@@ -122,11 +122,11 @@
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/2.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Новосибирск</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Ольга</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">32 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Привет все!!! Хочу поделиться своей историей: Я никогда не верила, что люди просто
                 так могут выиграть что то. Как то вечером меня сын попросил меня как можно получить
@@ -141,11 +141,11 @@
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/3.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Екатеринбург</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Василий</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">61 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Я много раз учавствовал во многих розыграшах и лотореях, но никогда не везло… А тут
                 просто чудо! Дочка будет счастилива! Спасибо Вам!
@@ -173,11 +173,11 @@
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/5.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Нижний Новгород</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Айжан</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">44 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Здравствуйте! Хочу поблагодарить данный проект за розыгрыш и за приза! Прошла не
                 сложную процедуру верификации, добавила карту. А через время я оказалась
@@ -190,11 +190,11 @@
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/6.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Казань</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Тимур</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">54 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Никогда не побеждал в розыгрышах, и вот программа выбрала меня! Я даже не думал, что
                 всё будет так просто! Долго сомневался, но как оказалось деньги в безопасности, я
@@ -208,11 +208,11 @@
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/7.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Самара</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Всеслав</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">38 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Сегодня случилось нечто невероятное. Я считаю, что сорвал большой куш. Это удача и
                 очень хороший знак. Я выиграл iPhone 11 black 64gb. Сказать честно, я пол дня не
@@ -227,11 +227,11 @@
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/8.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Челябинск</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Антон</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">36 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Решил попробовать поучаствовать в конкурсе на айфон и как оказалось не зря! Прошел
                 верификацию, а следом мне говорят, что я победитель! Я не поверил этому и попросил
@@ -244,11 +244,11 @@
           <div class="photo">
             <div class="photo__img">
               <img src="./img/comments/9.JPG" alt="" />
-              <div class="photo__city txt25x30">Санкт-Петербург</div>
+              <div class="photo__city txt25x30">Омск</div>
             </div>
             <div class="photo__cnt">
               <p class="photo__name">Артем</p>
-              <p class="photo__old txt20x30">50 лет</p>
+              <p class="photo__old txt20x30">27 лет</p>
               <p class="photo__text txt20x30 w600 cDr">
                 Большое спасибо за конкурс! Был шокирован своей победой, хотя по началу и не верил.
                 Это чудо какое-то!!!
