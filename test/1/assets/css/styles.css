@@ -482,6 +482,7 @@ ol {
 }
 
 .button {
+  display: inline-block;
   padding: 30px 46px;
   background: -o-linear-gradient(334.08deg, #f6a8ff -10.69%, #ed99ff -0.76%, #ed99ff -0.75%, #a31aff 84.6%);
   background: linear-gradient(115.92deg, #f6a8ff -10.69%, #ed99ff -0.76%, #ed99ff -0.75%, #a31aff 84.6%);
