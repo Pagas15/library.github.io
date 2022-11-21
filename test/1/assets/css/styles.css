@@ -2410,7 +2410,7 @@ ol {
   }
 
   .headWin .timer {
-    top: 29.5%;
+    top: 82.38vw;
     bottom: auto;
   }
 
@@ -2457,10 +2457,19 @@ ol {
     align-items: center;
   }
 
+  .headWin__left {
+    margin-top: 33.33vw;
+  }
+
+  .headWin__block {
+    margin-top: 8.33vw;
+  }
+
   .headWin__img {
     width: 72.22vw;
     height: auto;
     margin-bottom: -16%;
+    margin-bottom: -25.555vw;
   }
 
   .headWin__img::before {
@@ -2470,8 +2479,10 @@ ol {
   }
 
   .headWin__img img {
-    -o-object-fit: contain;
-    object-fit: contain;
+    width: 260px;
+    height: 250px;
+    width: 72.22vw;
+    height: 69.444vw;
   }
 
   .headWin__img .headWin__cost {
