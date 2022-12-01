@@ -194,6 +194,7 @@ ol {
 }
 
 .header {
+  display: none;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 30px;
@@ -1431,7 +1432,7 @@ ol {
   }
 
   .headBg {
-    top: -0.909vw;
+    top: -10.909vw;
     left: -0.606vw;
     width: 24.8989vw;
     height: 25.0505vw;
@@ -1444,7 +1445,7 @@ ol {
   }
 
   .headBg3 {
-    top: 178.888vw;
+    top: 148.888vw;
     width: 21.3131vw;
     height: 36.4646vw;
   }
