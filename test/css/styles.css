@@ -743,6 +743,8 @@ ol {
   -o-object-fit: cover;
   object-fit: cover;
   display: block;
+  -o-object-position: top;
+  object-position: top;
 }
 
 .changes__times span {
