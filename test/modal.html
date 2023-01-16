@@ -18,7 +18,7 @@
     <link media="all" rel="stylesheet" type="text/css" href="./assets/css/styles.min.css" />
   </head>
   <body style="overflow: hidden">
-    <header class="header">
+    <header class="header" id="header">
       <div class="wrapper header__wrapper">
         <div class="header__cnt">
           <div class="logo"><img src="./assets/img/logo.png" alt="" /></div>
@@ -32,13 +32,16 @@
             <li class="navBar__item"><a href="#" class="navBar__link">Chcplay</a></li>
           </ul>
         </div>
+        <div class="header__btn" id="btnHeader"><span></span><span></span><span></span></div>
       </div>
     </header>
     <main class="main">
       <div class="wrapper main__wrapper">
         <h1 class="main__title">CHAMPION CASINO</h1>
         <section class="main__section block">
-          <div class="blockTitle">Общие сведения CHAMPION CASINO <span class="arrow"></span></div>
+          <header class="blockTitle">
+            Общие сведения CHAMPION CASINO <span class="arrow"></span>
+          </header>
           <div class="blockFullImage">
             <div class="blockFullImage__img"><img src="./assets/img/img1.jpg" alt="" /></div>
           </div>
@@ -52,9 +55,9 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle blockTitle--left">
-            Лицензия на игорную деятельность<span class="arrow"></span>
-          </div>
+          <header class="blockTitle blockTitle--left">
+            Лицензия на игорную деятельность <span class="arrow"></span>
+          </header>
           <div class="blockRow">
             <div class="blockText">
               <p class="txt22x33">
@@ -70,9 +73,9 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle blockTitle--right">
+          <header class="blockTitle blockTitle--right">
             <span class="arrow"></span>Мультиязычность игр от Champion
-          </div>
+          </header>
           <div class="blockRow">
             <div class="blockFullImage">
               <div class="blockFullImage__img"><img src="./assets/img/countries.png" alt="" /></div>
@@ -87,10 +90,10 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle blockTitle--left">
+          <header class="blockTitle blockTitle--left">
             Преемственность Champion casino<br />
             и Champion club <span class="arrow"></span>
-          </div>
+          </header>
           <div class="blockRow">
             <div class="blockText">
               <p class="txt22x33">
@@ -107,7 +110,9 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">Программное обеспечение Champion <span class="arrow"></span></div>
+          <header class="blockTitle">
+            Программное обеспечение Champion <span class="arrow"></span>
+          </header>
           <div class="blockText">
             <p class="txt22x33">
               >> Казино Чемпион – клуб, включающий практически все мировые бренды в программном
@@ -123,55 +128,55 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">
+          <header class="blockTitle">
             Наиболее популярные игры casino Champion <span class="arrow"></span>
-          </div>
+          </header>
           <ul class="blockGameList">
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">Aztec Century</button>
+                <div class="blockGameList__btn btnGame">Aztec Century</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/1.jpg" alt="" /></div>
               </a>
             </li>
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">Fruit Party Deluxe</button>
+                <div class="blockGameList__btn btnGame">Fruit Party Deluxe</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/2.jpg" alt="" /></div>
               </a>
             </li>
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">Book Of Winners (loto)</button>
+                <div class="blockGameList__btn btnGame">Book Of Winners (loto)</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/3.jpg" alt="" /></div>
               </a>
             </li>
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">FORTUNE Wheel</button>
+                <div class="blockGameList__btn btnGame">FORTUNE Wheel</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/4.jpg" alt="" /></div>
               </a>
             </li>
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">European Roulette NETWORK</button>
+                <div class="blockGameList__btn btnGame">European Roulette NETWORK</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/5.jpg" alt="" /></div>
               </a>
             </li>
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">Orca</button>
+                <div class="blockGameList__btn btnGame">Orca</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/6.jpg" alt="" /></div>
               </a>
             </li>
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">7 PLAY POKER N</button>
+                <div class="blockGameList__btn btnGame">7 PLAY POKER N</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/7.jpg" alt="" /></div>
               </a>
             </li>
             <li class="blockGameList__item">
               <a href="#" class="blockGameList__link">
-                <button class="blockGameList__btn btnGame">Multi-hand</button>
+                <div class="blockGameList__btn btnGame">Multi-hand</div>
                 <div class="blockGameList__img"><img src="./assets/img/games/8.jpg" alt="" /></div>
               </a>
             </li>
@@ -237,7 +242,7 @@
           </ul>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">Плюсы и минусы казино <span class="arrow"></span></div>
+          <header class="blockTitle">Плюсы и минусы казино <span class="arrow"></span></header>
           <div class="blockText">
             <p class="txt22x33">
               >> Champion casino имеет положительные отзывы от игроков. Гемблеры подчёркивают
@@ -256,7 +261,7 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">Система защиты данных <span class="arrow"></span></div>
+          <header class="blockTitle">Система защиты данных <span class="arrow"></span></header>
           <div class="blockText">
             <p class="txt22x33">
               >> Защита данных, введённых пользователем при регистрации, осуществляется с
@@ -271,7 +276,7 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">Бонусаная система Champion <span class="arrow"></span></div>
+          <header class="blockTitle">Бонусаная система Champion <span class="arrow"></span></header>
           <div class="blockText">
             <p class="txt22x33">
               >> Для новичков Champion casino предлагает щедрую систему поощрений. Согласно
@@ -290,7 +295,7 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">Розыгрыши по кодам <span class="arrow"></span></div>
+          <header class="blockTitle">Розыгрыши по кодам <span class="arrow"></span></header>
           <div class="blockText">
             <p class="txt22x33">
               >> Проводятся розыгрыша, в ходе которых можно получить дополнительные возможности. В
@@ -304,10 +309,10 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">
+          <header class="blockTitle">
             Fraud-контроль<br />
             бонусной программы “Чемпион-bonus” <span class="arrow"></span>
-          </div>
+          </header>
           <div class="blockText">
             <p class="txt22x33">
               >> Проводятся розыгрыша, в ходе которых можно получить дополнительные возможности. В
@@ -321,9 +326,9 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle blockTitle--right">
+          <header class="blockTitle blockTitle--right">
             <span class="arrow"></span> Вывод средств и пополнение аккаунта CHC
-          </div>
+          </header>
           <div class="blockRow">
             <div class="blockFullImage">
               <div class="blockFullImage__img"><img src="./assets/img/img2.jpg" alt="" /></div>
@@ -342,9 +347,9 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">
+          <header class="blockTitle">
             Политика защиты от игровой зависимости <span class="arrow"></span>
-          </div>
+          </header>
           <div class="blockText">
             <p class="txt22x33">
               >> Сотрудники Champion casino выработали определённые меры защиты, для тех игроков,
@@ -364,9 +369,9 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle blockTitle--left">
+          <header class="blockTitle blockTitle--left">
             Служба поддержки Champion casino <span class="arrow"></span>
-          </div>
+          </header>
           <div class="blockRow">
             <div class="blockText">
               <p class="txt22x33">
@@ -381,9 +386,9 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle">
+          <header class="blockTitle">
             Оригинальный Чемпион и официальный сайт <span class="arrow"></span>
-          </div>
+          </header>
           <div class="blockText">
             <p class="txt22x33">
               >> Из-за популярности бренда, в интернете многие сайты выдают себя за Champion casino,
@@ -393,7 +398,7 @@
           </div>
         </section>
         <section class="main__section block">
-          <div class="blockTitle blockTitle--right"><span class="arrow"></span> Отзывы</div>
+          <header class="blockTitle blockTitle--right"><span class="arrow"></span> Отзывы</header>
           <div class="blockText">
             <p class="txt22x33">
               >> “ Можно говорить о том, что Champion casino предлагает большое количество игр, а
