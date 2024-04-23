@@ -1,5 +1,15 @@
 [
   {
+    "Date(UTC)": "2024-04-23 22:18:33",
+    "Market": "ETNUSDT",
+    "Type": "BUY",
+    "Price": "0.004188",
+    "Amount": "16975.2956",
+    "Total": "71.09253797",
+    "Fee": "0",
+    "Fee Coin": "BNB"
+  },
+  {
     "Date(UTC)": "2022-11-13 05:09:18",
     "Market": "TWTUSDT",
     "Type": "SELL",
