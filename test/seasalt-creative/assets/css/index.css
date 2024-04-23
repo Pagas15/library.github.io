@@ -1,0 +1,72 @@
+:root {
+  --background-color: rgb(249, 244, 234);
+  --text-color: rgb(45, 46, 43);
+}
+
+.block {
+  background: var(--background-color);
+}
+.wrapper {
+  width: 1080px;
+  height: 100vh;
+  margin: auto;
+  padding-top: 100px;
+  padding-bottom: 17.777vh;
+}
+.top {
+  height: 524px;
+  position: relative;
+  transform: translateX(-4px);
+}
+.bottom {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 67px;
+}
+.txt {
+  font-family: 'Excalibur Nouveau';
+  font-weight: 700;
+  line-height: 1.2em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.title {
+  font-size: 136px;
+  white-space: nowrap;
+  text-align: start;
+  height: 100%;
+  display: block;
+  line-height: 1em;
+}
+.title span {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  transform-origin: bottom center;
+}
+.text {
+  font-size: 44px;
+  display: flex;
+  flex-direction: column;
+}
+.text1 {
+}
+.text2 {
+  transform: translate(0px, -6px);
+}
+
+@font-face {
+  font-family: 'Excalibur Nouveau';
+  src: url('../fonts/Excalibur Nouveau.eot');
+  src: url('../fonts/Excalibur Nouveau.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Excalibur Nouveau.woff') format('woff'),
+    url('../fonts/Excalibur Nouveau.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
