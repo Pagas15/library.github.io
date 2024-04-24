@@ -1,5 +1,25 @@
 [
   {
+    "Date(UTC)": "2024-04-24 23:15:05",
+    "Market": "TONUSDT",
+    "Type": "BUY",
+    "Price": "5.5816",
+    "Amount": "27.8198",
+    "Total": "155.27918756",
+    "Fee": "0",
+    "Fee Coin": "BNB"
+  },
+  {
+    "Date(UTC)": "2024-04-24 23:15:05",
+    "Market": "TWTUSDT",
+    "Type": "SELL",
+    "Price": "1.0952",
+    "Amount": "99",
+    "Total": "108.4248",
+    "Fee": "0",
+    "Fee Coin": "BNB"
+  },
+  {
     "Date(UTC)": "2024-04-24 15:38:33",
     "Market": "TONUSDT",
     "Type": "BUY",
@@ -24,8 +44,8 @@
     "Market": "TWTUSDT",
     "Type": "BUY",
     "Price": "0.9925",
-    "Amount": "100",
-    "Total": "99.25",
+    "Amount": "99",
+    "Total": "98.2575",
     "Fee": "0.1",
     "Fee Coin": "TWT"
   },
