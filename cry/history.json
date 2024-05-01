@@ -1,4 +1,13 @@
-[
+[{
+    "Date(UTC)": "2024-04-24 23:15:05",
+    "Market": "TONUSDT",
+    "Type": "BUY",
+    "Price": "4.6647",
+    "Amount": "18.80",
+    "Total": "155.27918756",
+    "Fee": "0",
+    "Fee Coin": "BNB"
+  },
   {
     "Date(UTC)": "2024-04-24 23:15:05",
     "Market": "TONUSDT",
