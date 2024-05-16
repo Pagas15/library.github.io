@@ -1,6 +1,16 @@
 [
   {
     "Date(UTC)": "2024-04-24 23:15:05",
+    "Market": "ETNUSDT",
+    "Type": "SELL",
+    "Price": "0.00319",
+    "Amount": "234.5",
+    "Total": "73487.3262",
+    "Fee": "0",
+    "Fee Coin": "BNB"
+  },
+  {
+    "Date(UTC)": "2024-04-24 23:15:05",
     "Market": "TONUSDT",
     "Type": "SELL",
     "Price": "6.9047",
