@@ -2,20 +2,20 @@
   {
     "Date(UTC)": "2024-04-24 23:15:05",
     "Market": "NOTUSDT",
-    "Type": "SELL",
+    "Type": "BUY",
     "Price": "0.007251",
-    "Amount": "100",
-    "Total": "13734",
+    "Amount": "13734",
+    "Total": "100",
     "Fee": "0",
     "Fee Coin": "BNB"
   },
   {
-    "Date(UTC)": "2024-04-24 23:15:05",
+    "Date(UTC)": "2024-05-15 14:40:07",
     "Market": "ETNUSDT",
     "Type": "SELL",
-    "Price": "0.00319",
-    "Amount": "234.5",
-    "Total": "73487.3262",
+    "Price": "0.003085",
+    "Amount": "73487.3262",
+    "Total": "225.39735437",
     "Fee": "0",
     "Fee Coin": "BNB"
   },
