@@ -1,0 +1,242 @@
+[
+  {
+    "Date(UTC)": "2024-06-22 04:03:16",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.014603",
+    "Amount": "3423",
+    "Total": "49.986069",
+    "Fee": "3.42",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-06-18 04:42:29",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.016173",
+    "Amount": "3091",
+    "Total": "49.990743",
+    "Fee": "3.09",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-06-18 01:43:47",
+    "Market": "TWTUSDT",
+    "Type": "BUY",
+    "Price": "0.94",
+    "Amount": "106",
+    "Total": "99.64",
+    "Fee": "0.106",
+    "Fee Coin": "TWT"
+  },
+  {
+    "Date(UTC)": "2024-06-17 15:34:33",
+    "Market": "SOLUSDT",
+    "Type": "BUY",
+    "Price": "142.35",
+    "Amount": "0.561",
+    "Total": "79.85835",
+    "Fee": "0.000561",
+    "Fee Coin": "SOL"
+  },
+  {
+    "Date(UTC)": "2024-06-17 12:07:22",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.018096",
+    "Amount": "2761",
+    "Total": "49.963056",
+    "Fee": "2.76",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-06-17 12:06:52",
+    "Market": "TWTUSDT",
+    "Type": "BUY",
+    "Price": "1.0729",
+    "Amount": "46",
+    "Total": "49.3534",
+    "Fee": "0.046",
+    "Fee Coin": "TWT"
+  },
+  {
+    "Date(UTC)": "2024-06-15 19:42:38",
+    "Market": "TWTUSDT",
+    "Type": "BUY",
+    "Price": "1.118",
+    "Amount": "61",
+    "Total": "68.198",
+    "Fee": "0.061",
+    "Fee Coin": "TWT"
+  },
+  {
+    "Date(UTC)": "2024-06-15 19:42:38",
+    "Market": "TWTUSDT",
+    "Type": "BUY",
+    "Price": "1.1181",
+    "Amount": "28",
+    "Total": "31.3068",
+    "Fee": "0.028",
+    "Fee Coin": "TWT"
+  },
+  {
+    "Date(UTC)": "2024-06-11 05:39:28",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.015841",
+    "Amount": "3151",
+    "Total": "49.914991",
+    "Fee": "3.15",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-06-11 05:39:04",
+    "Market": "TWTUSDT",
+    "Type": "BUY",
+    "Price": "1.1121",
+    "Amount": "44",
+    "Total": "48.9324",
+    "Fee": "0.044",
+    "Fee Coin": "TWT"
+  },
+  {
+    "Date(UTC)": "2024-06-07 21:09:41",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.018779",
+    "Amount": "2661",
+    "Total": "49.970919",
+    "Fee": "2.66",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-06-02 08:23:38",
+    "Market": "NOTUSDT",
+    "Type": "SELL",
+    "Price": "0.019289",
+    "Amount": "4347",
+    "Total": "83.849283",
+    "Fee": "0.08384928",
+    "Fee Coin": "USDT"
+  },
+  {
+    "Date(UTC)": "2024-05-30 14:46:23",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.011846",
+    "Amount": "4352",
+    "Total": "51.553792",
+    "Fee": "4.35",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-05-20 05:07:55",
+    "Market": "NOTUSDT",
+    "Type": "SELL",
+    "Price": "0.005571",
+    "Amount": "13720",
+    "Total": "76.43412",
+    "Fee": "0.07643412",
+    "Fee Coin": "USDT"
+  },
+  {
+    "Date(UTC)": "2024-05-16 21:22:01",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.007251",
+    "Amount": "5917",
+    "Total": "42.904167",
+    "Fee": "5.92",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-05-16 21:22:01",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.007252",
+    "Amount": "5918",
+    "Total": "42.917336",
+    "Fee": "5.92",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-05-16 21:22:01",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.007252",
+    "Amount": "1899",
+    "Total": "13.771548",
+    "Fee": "1.9",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-05-12 14:21:23",
+    "Market": "SOLUSDT",
+    "Type": "SELL",
+    "Price": "144.98",
+    "Amount": "1.075",
+    "Total": "155.8535",
+    "Fee": "0.1558535",
+    "Fee Coin": "USDT"
+  },
+  {
+    "Date(UTC)": "2024-04-24 20:16:34",
+    "Market": "TWTUSDT",
+    "Type": "SELL",
+    "Price": "1.0952",
+    "Amount": "18",
+    "Total": "19.7136",
+    "Fee": "0.0197136",
+    "Fee Coin": "USDT"
+  },
+  {
+    "Date(UTC)": "2024-04-24 20:16:32",
+    "Market": "TWTUSDT",
+    "Type": "SELL",
+    "Price": "1.0952",
+    "Amount": "43",
+    "Total": "47.0936",
+    "Fee": "0.0470936",
+    "Fee Coin": "USDT"
+  },
+  {
+    "Date(UTC)": "2024-04-24 20:15:47",
+    "Market": "TWTUSDT",
+    "Type": "SELL",
+    "Price": "1.0952",
+    "Amount": "8",
+    "Total": "8.7616",
+    "Fee": "0.00001086",
+    "Fee Coin": "BNB"
+  },
+  {
+    "Date(UTC)": "2024-04-24 20:15:41",
+    "Market": "TWTUSDT",
+    "Type": "SELL",
+    "Price": "1.0952",
+    "Amount": "30",
+    "Total": "32.856",
+    "Fee": "0.032856",
+    "Fee Coin": "USDT"
+  },
+  {
+    "Date(UTC)": "2024-04-17 15:21:00",
+    "Market": "TWTUSDT",
+    "Type": "BUY",
+    "Price": "0.9925",
+    "Amount": "84",
+    "Total": "83.37",
+    "Fee": "0.084",
+    "Fee Coin": "TWT"
+  },
+  {
+    "Date(UTC)": "2024-04-17 15:20:51",
+    "Market": "TWTUSDT",
+    "Type": "BUY",
+    "Price": "0.9925",
+    "Amount": "16",
+    "Total": "15.88",
+    "Fee": "0.016",
+    "Fee Coin": "TWT"
+  }
+]
