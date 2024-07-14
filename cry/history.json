@@ -1,5 +1,25 @@
 [
   {
+    "Date(UTC)": "2024-07-04 04:03:16",
+    "Market": "NOTUSDT",
+    "Type": "BUY",
+    "Price": "0.012454",
+    "Amount": "8029",
+    "Total": "99.99",
+    "Fee": "8.42",
+    "Fee Coin": "NOT"
+  },
+  {
+    "Date(UTC)": "2024-06-27 15:34:33",
+    "Market": "SOLUSDT",
+    "Type": "BUY",
+    "Price": "137.56",
+    "Amount": "1.1147",
+    "Total": "150",
+    "Fee": "0.000561",
+    "Fee Coin": "SOL"
+  },
+  {
     "Date(UTC)": "2024-06-22 04:03:16",
     "Market": "NOTUSDT",
     "Type": "BUY",
